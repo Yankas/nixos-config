@@ -25,6 +25,15 @@
     wallpaper = "hgss.png";
   };
 
+  wayland.windowManager.hyprland.settings = {    
+    monitor = [
+      "$m_left, 2560x1440@144, 0x0, 1, vrr, 2"
+      "$m_right, 2560x1440@144, 2560x0, 1, vrr, 2"
+      "HDMI-A-1, 3840x2160@60.00Hz, 5120x0, 1"
+    ];
+  };
+  
+
   gtk.gtk3.bookmarks = [
       "file:///home/yankas/source Source"
       "file:///doc/ Documents"
