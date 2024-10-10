@@ -1,0 +1,279 @@
+# Luke's lf settings
+
+# Basic vars
+set shell zsh
+set shellopts '-eu'
+set ifs "\n"
+set scrolloff 10
+set icons
+set period 1
+set hiddenfiles ".*"
+#set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
+set drawbox
+# preview options
+set preview 1
+set previewer lfpreview
+set cleaner lfpreview
+
+# cmds/functions
+cmd open ${{
+    case $(file --mime-type "$(readlink -f $f)" -b) in
+	image/vnd.djvu|application/pdf|application/octet-stream|application/postscript) setsid -f zathura $fx >/dev/null 2>&1 ;;
+        text/*) $EDITOR $fx;;
+	image/x-xcf) setsid -f gimp $f >/dev/null 2>&1 ;;
+	image/svg+xml) display -- $f ;;
+	image/*) rotdir $f | grep -i "\.\(png\|jpg\|jpeg\|gi      # vim:ft=conf
+      di					📁
+      fi					📃
+      tw					🤝
+      ow					📂
+      ln					⛓
+      or					❌
+      ex					🎯
+
+      # images
+      *.png				🖼
+      *.webp				🖼
+      *.ico				🖼
+      *.gif				🖼
+      *.svg				🖼
+      *.tif				🖼
+      *.tiff				🖼
+      *.jpg				📸
+      *.jpeg				📸
+      *.xcf				🖌
+      *.psd				🖌
+      *.pdn				🖌
+
+      # video
+      *.mkv				🎥
+      *.mp4				🎥
+      *.webm				🎥
+      *.mpeg				🎥
+      *.avi				🎥
+      *.mov				🎥
+      *.mpg				🎥
+      *.wmv				🎥
+      *.m4b				🎥
+      *.flv				🎥
+
+      # music
+      *.mp3				🎵
+      *.opus				🎵
+      *.ogg				🎵
+      *.m4a				🎵
+      *.flac				🎵
+      *.wav				🎵
+
+      # roms
+      *.z64				🎮
+      *.v64				🎮
+      *.n64				🎮
+      *.gba				🎮
+      *.nds				🎮
+      *.nes				🎮
+      *.gdi				🎮
+      *.nsp				🎮
+      *.xci				🎮
+      *.iso				📀
+      *.img				📀
+
+      # packages
+      *.zip				📦
+      *.rar				📦
+      *.7z				📦
+      *.tar.gz			📦
+
+      # configuration files
+      *.sh				⚙
+      *.zsh				⚙
+      *profile			⚙
+      *xprofile			⚙
+      *.zshrc				⚙
+      *aliasrc			⚙
+      *.xinitrc			⚙
+      *configrc			⚙
+      *.ini				⚙
+      *config				⚙
+      *dunstrc			⚙
+      *.cfg				⚙
+      *.desktop			⚙
+      *.conf				⚙
+      *.rc				⚙
+      *passwd				⚙
+      *.default			⚙
+      *paths				⚙
+      *bashrc				⚙
+      *zshrc				⚙
+
+      # exectuables
+      *.jar				☕
+      *.java				☕
+      *.exe				🪟
+
+      # documents
+      *.docx				📕
+      *.doc				📕
+      *.txt				📕
+      *.log				📙
+      *LICENSE			📕
+      *.pdf				📕
+      *.epub				📕
+      *.djvu				📕
+      *.xls				📊
+      *.xlsx				📊
+      *.csv				📊
+
+      # source code
+      *.ml				🐫
+      *.php				🐘
+      *.pl				⛔
+      *.c					🇨
+      *.h					🇭
+      *.json				📖
+      *.xml				📖
+      *.plist				📖
+      *.yml				📖
+      *.yaml				📖
+      *.toml				📖
+      *.o					🇴
+      *.cmx				🇴
+      *.cmi				🇴
+      *.html				🌎
+      *.md				🌎
+      *.url				🌎
+      *.fs				🇫
+      *.fsx				🇫
+      *.fsi				🇫
+      *.js				🇯
+
+      # git
+      .gitignore			🇬
+      .git				🇬
+
+      # miscellaneous 
+      *.vbox				🖥️
+      *.vbox-prev			🖥️
+      *.vdi				🖥️
+      *.torrent			🔽
+      *.1					ℹ
+      *.nfo				ℹ
+      *.info				ℹ
+      *.gpg				🔒
+      *.pub				🔒
+      *.pem				🔒f\|webp\|tif\|ico\)\(_large\)*$" | setsid -f sxiv -aio 2>/dev/null | lf-select & ;;
+	audio/*) mpv --audio-display=no $f ;;
+	video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
+	application/pdf|application/vnd*|application/epub*) setsid -f zathura $fx >/dev/null 2>&1 ;;
+	application/pgp-encrypted) $EDITOR $fx ;;
+        *) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
+    esac
+}}
+
+cmd mkdir ${{
+	printf "Directory Name: "
+	read ans
+	mkdir $ans
+}}
+
+cmd fzf_jump ${{
+  res="$(find . -maxdepth 3 | fzf --reverse --header='Jump to location')"
+  if [ -f "$res" ]; then
+    cmd="select"
+  elif [ -d "$res" ]; then
+    cmd="cd"
+  fi
+  lf -remote "send $id $cmd \"$res\""
+}}
+
+cmd trash ${{
+  files=$(printf "$fx" | tr '\n' ';')
+  while [ "$files" ]; do
+    # extract the substring from start of string up to delimiter.
+    # this is the first "element" of the string.
+    file=${files%%;*}
+
+    trash-put "$(basename "$file")"
+    # if there is only one element left, set `files` to an empty string.
+    # this causes us to exit this `while` loop.
+    # else, we delete the first `element`` of the string from files, and move onto the next.
+    if [ "$files" = "$file" ]; then
+      files=''
+    else
+      files="${files#*;}"
+    fi
+  done
+}}
+
+cmd extract ${{
+	clear; tput cup $(($(tput lines)/3)); tput bold
+	set -f
+	aunpack $fx
+}}
+
+
+cmd moveto ${{
+	clear; tput cup $(($(tput lines)/3)); tput bold
+	set -f
+	clear; echo "Move to where?"
+	dest="$(sed -e 's/\s*#.*//' -e '/^$/d' -e 's/^\S*\s*//' ${XDG_CONFIG_HOME:-$HOME/.config}/shell/bm-dirs | fzf | sed 's|~|$HOME|')" &&
+	for x in $fx; do
+		eval mv -iv \"$x\" \"$dest\"
+	done &&
+	notify-send "🚚 File(s) moved." "File(s) moved to $dest."
+}}
+
+cmd copyto ${{
+	clear; tput cup $(($(tput lines)/3)); tput bold
+	set -f
+	clear; echo "Copy to where?"
+	dest="$(sed -e 's/\s*#.*//' -e '/^$/d' -e 's/^\S*\s*//' ${XDG_CONFIG_HOME:-$HOME/.config}/shell/bm-dirs | fzf | sed 's|~|$HOME|')" &&
+	for x in $fx; do
+		eval cp -ivr \"$x\" \"$dest\"
+	done &&
+	notify-send "📋 File(s) copied." "File(s) copies to $dest."
+}}
+
+cmd paste %{{
+    set -- $(cat ~/.local/share/lf/files)
+    mode="$1"
+    shift
+    case "$mode" in
+        copy) cp -r --backup=numbered -- "$@" .;;
+        move) mv --backup=numbered -- "$@" .;;
+    esac
+    rm ~/.local/share/lf/files
+    lf -remote "send clear"
+}}
+
+# Bindings
+map <c-f> $lf -remote "send $id select '$(fzf)'"
+map J $lf -remote "send $id cd $(sed -e 's/\s*#.*//' -e '/^$/d' -e 's/^\S*\s*//' ${XDG_CONFIG_HOME:-$HOME/.config}/shell/bm-dirs | fzf)"
+map gh
+map g top
+map D trash
+map E extract
+map C copyto
+map M moveto
+map <c-n> push :mkdir<space>
+map <c-r> reload
+map <c-s> set hidden!
+map <enter> shell
+map x $$f
+map X !$f
+map o &mimeopen $f
+map O $mimeopen --ask $f
+map ~ cd ~
+map A rename # at the very end
+map c push A<c-u> # new rename
+map I push A<c-a> # at the very beginning
+map i push A<a-b><a-b><a-f> # before extention
+map a push A<a-b> # after extention
+map .
+map b mark-load
+map <c-e> down
+map <c-y> up
+map V push :!nvim<space>
+map S glob-select
+
+map W $setsid -f $TERMINAL >/dev/null 2>&1
