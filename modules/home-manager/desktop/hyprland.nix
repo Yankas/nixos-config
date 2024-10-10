@@ -244,10 +244,16 @@ in
       "float, initialClass:(^chrome.*Default$)"
 
       # godot 
+      "tile, initialTitle:(^Godot$)"
       "size 800 900, initialClass:(^Godot$), initialTitle:(^Create New Node$)"
+      "center, initialClass:(^Godot$), initialTitle:(^Create New Node$)"
       "size 600 800, initialClass:(^Godot$), initialTitle:(^Instantiate Child Scene$)"
+      "center, initialClass:(^Godot$), initialTitle:(^Instantiate Child Scene$)"
       "size 600 800, initialClass:(^Godot$), initialTitle:(^Resource$)"
+      "center, initialClass:(^Godot$), initialTitle:(^Resource$)"
       "size 1300 1000, initialClass:(^Godot$), initialTitle:(^Project Settings.*$)"
+      "center, initialClass:(^Godot$), initialTitle:(^Project Settings.*$)"
+
 
       # peazip
       "float, initialClass:(peazip)"
