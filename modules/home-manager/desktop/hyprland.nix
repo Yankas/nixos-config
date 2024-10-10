@@ -253,8 +253,8 @@ in
       "center, initialClass:(^Godot$), initialTitle:(^Resource$)"
       "size 1300 1000, initialClass:(^Godot$), initialTitle:(^Project Settings.*$)"
       "center, initialClass:(^Godot$), initialTitle:(^Project Settings.*$)"
-
-
+      "size 400 600, initialClass:(^Godot$), initialTitle:(^Pick a node to animate:$)"
+      "center, initialClass:(^Godot$), initialTitle:(^Pick a node to animate:*$)"
       # peazip
       "float, initialClass:(peazip)"
       "float, initialClass:(peazip)"

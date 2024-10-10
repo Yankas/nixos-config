@@ -81,6 +81,8 @@
     firefox
     tor-browser
     ark
+    imagemagick
+    
     # MULTIMEDIA
     jellyfin-media-player
     vlc
