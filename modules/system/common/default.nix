@@ -37,7 +37,7 @@
       eza # ls replacement
       jq
       tre # improved tree
-
+      rename 
       # ARCHIVE
       atool
       unzip
