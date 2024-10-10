@@ -65,7 +65,7 @@
 
     home.aliases = {
       ll = "ls -l";
-      update = "(cd /etc/nixos && git add * && git commit -m.)sudo nixos-rebuild switch --flake /etc/nixos#default";
+      update = "(cd /etc/nixos && git add . && git commit -m.)sudo nixos-rebuild switch --flake /etc/nixos#default";
       update-home = "home-manager switch --flake /etc/nixos/#yankas@yankas-desktop";
       cp = "cp -iv";
       mv = "mv -iv";
