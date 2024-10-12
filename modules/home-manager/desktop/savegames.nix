@@ -5,7 +5,7 @@
 
   config = {
     home.file {
-      ".local/share/NeposGames/Nebuchadnezzar" = config.lib.file.mkOutOfStoreSymlink "/home/${config.home.username}/.saves/
+      ".local/share/NeposGames/Nebuchadnezzar" = config.lib.file.mkOutOfStoreSymlink "/home/${config.home.username}/.saves/Nebuchadnezzar"
     };
   };
 }
