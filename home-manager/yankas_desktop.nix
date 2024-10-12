@@ -57,7 +57,4 @@
     userName = "yankas";
   };
 
-  home.file.local.share.Steam.steamapps.compatdata = {
-
-  }
 }
