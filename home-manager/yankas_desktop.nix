@@ -35,7 +35,7 @@
   
 
   gtk.gtk3.bookmarks = [
-      "file:///home/yankas/source Source"
+      "file:///home/${home.username}/source Source"
       "file:///doc/ Documents"
       "file:///pic/ Pictures"
       "file:///iso/ Iso"
@@ -56,4 +56,8 @@
     userEmail = "christopher.sbrisny@gmail.com";
     userName = "yankas";
   };
+
+  home.file.local.share.Steam.steamapps.compatdata = {
+
+  }
 }

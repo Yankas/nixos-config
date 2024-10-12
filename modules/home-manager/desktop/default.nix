@@ -5,6 +5,7 @@
     ./waybar.nix
     ./nintendo.nix
     ./misc.nix
+    ./savegames.nix
   ];
 
 
