@@ -30,6 +30,6 @@ in
       ".local/share/Steam/steamapps/compatdata/858820/pfx/drive_c/users/steamuser/AppData/Local/TOM/Saved".source = "${config.home.homeDirectory}/.saves/tribes-of-midgard";
       ".local/share/Steam/steamapps/compatdata/690830/pfx/drive_c/users/steamuser/My Documents/Polymorph Games/Foundation".source = "${config.home.homeDirectory}/.saves/foundation";
       ".local/share/share/Pokemon Rejuvenation".source = "${config.home.homeDirectory}/.saves/pokemon-rejuvenation";
-
+      };
     };
-  };
+  }
