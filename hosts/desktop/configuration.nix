@@ -19,7 +19,6 @@
     ];
 
   desktop.enable = true;
-
   networking = {
     hostName = "yankas-desktop";
     interfaces.enp6s0.ipv4.addresses = [ { 
@@ -82,6 +81,7 @@
     tor-browser
     ark
     imagemagick
+    rpcs3
     
     # MULTIMEDIA
     jellyfin-media-player
