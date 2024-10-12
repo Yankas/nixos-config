@@ -5,7 +5,7 @@ in
 {
   config = {
     home.file = {
-      ".local/share/NeposGames/Nebuchadnezzar" = link "/home/${config.home.username}/.saves/Nebuchadnezzar"
+      ".local/share/NeposGames/Nebuchadnezzar" = link "/home/${config.home.username}/.saves/Nebuchadnezzar";
     };
   };
 }
