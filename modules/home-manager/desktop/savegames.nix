@@ -15,7 +15,7 @@ in
       #".local/share/Steam/steamapps/compatdata/3984061722/pfx/drive_c/users/steamuser/AppData/Local/SANDLAND/Saved".source = link "${config.home.homeDirectory}/.saves/sandland";
       #".local/share/Steam/steamapps/compatdata/3983217185/pfx/drive_c/users/steamuser/Saved Games/Pokemon Parallax".source = link "${config.home.homeDirectory}/.saves/pokemon-parallax";
       #".local/share/Steam/steamapps/compatdata/3817464133/pfx/drive_c/users/steamuser/Saved Games/Pokemon Uranium".source = link "${config.home.homeDirectory}/.saves/pokemon-uranium";
-            #"/.local/share/Steam/steamapps/compatdata/2570660752/pfx/drive_c/users/steamuser/Saved Games/Pokemon Insurgence".source = link "${config.home.homeDirectory}/.saves/pokemon-insurgence";
+      #"/.local/share/Steam/steamapps/compatdata/2570660752/pfx/drive_c/users/steamuser/Saved Games/Pokemon Insurgence".source = link "${config.home.homeDirectory}/.saves/pokemon-insurgence";
       #".local/share/Steam/steamapps/compatdata/3307882437/pfx/drive_c/users/steamuser/Saved Games/Pokemon This Gym of Mine".source = link "${config.home.homeDirectory}/.saves/pokemon-this-gym-of-mine";
       #".local/share/Steam/steamapps/compatdata/2988605146/pfx/drive_c/users/steamuser/Saved Games/Pokemon The New Order".source = link "${config.home.homeDirectory}/.saves/pokemon-the-new-order";
       #".local/share/Steam/steamapps/compatdata/3963673293/pfx/drive_c/users/steamuser/Documents/Larian Studios/Divinity Original Sin 2 Definitive Edition".source = link "${config.home.homeDirectory}/.saves/divinity-original-sin2";
@@ -30,6 +30,9 @@ in
       ".local/share/Steam/steamapps/compatdata/858820/pfx/drive_c/users/steamuser/AppData/Local/TOM/Saved".source = link "${config.home.homeDirectory}/.saves/tribes-of-midgard";
       ".local/share/Steam/steamapps/compatdata/690830/pfx/drive_c/users/steamuser/My Documents/Polymorph Games/Foundation".source = link "${config.home.homeDirectory}/.saves/foundation";
       ".local/share/Pokemon Rejuvenation".source = link "${config.home.homeDirectory}/.saves/pokemon-rejuvenation";
+      ".local/share/Colossal Order/Cities_Skylines".source = link "${config.home.homeDirectory}/.saves/cities-skylines";
+      ".local/share/Colossal Order/Monster Sanctuary".source = link "${config.home.homeDirectory}/.saves/monster-sanctuary";
+      ".local/share/Steam/steamapps/compatdata/1218210/pfx/drive_c/users/steamuser/AppData/Roaming/TRAGsoft/Coromon".source = link "${config.home.homeDirectory}/.saves/coromon";
       };
     };
   }
