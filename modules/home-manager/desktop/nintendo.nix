@@ -1,7 +1,8 @@
 { config, pkgs, lib, ... }:
 let flash-switch = pkgs.writeShellScriptBin switch-flash ''
   $XDG_DATA_HOME/fusee-launcher/fusee-launcher.py $XDG_CONFIG_HOME/fusee-launcher/payload/fusee-primary.bin
-  ''
+  '';
+in
 {
   options = {
     programs.nintendo.gba.enable = lib.mkEnableOption "enables nintendo ds emulator";
