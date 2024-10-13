@@ -15,7 +15,8 @@ in
       ".local/share/Steam/steamapps/compatdata/690830/pfx/drive_c/users/steamuser/My Documents/Polymorph Games/Foundation".source = link "${config.home.homeDirectory}/.saves/foundation";
       ".local/share/Steam/steamapps/compatdata/1218210/pfx/drive_c/users/steamuser/AppData/Roaming/TRAGsoft/Coromon".source = link "${config.home.homeDirectory}/.saves/coromon";
       ".local/share/Steam/steamapps/compatdata/1822550/pfx/drive_c/users/steamuser/AppData/Roaming/MicroCivilization".source = link "${config.home.homeDirectory}/.saves/microcivilization";
-
+      ".local/share/Steam/steamapps/compatdata/1222670/pfx/drive_c/users/steamuser/Documents/Electronic Arts/The Sims 4".source = link "${config.home.homeDirectory}/.saves/the-sims4";
+      
       # Native Games
       ".local/share/NeposGames/Nebuchadnezzar".source = link "${config.home.homeDirectory}/.saves/nebuchadnezzar";
       ".local/share/Paradox Interactive/Crusader Kings III/".source = link "${config.home.homeDirectory}/.saves/crusader-kings3";
