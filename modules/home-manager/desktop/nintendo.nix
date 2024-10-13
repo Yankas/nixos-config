@@ -1,5 +1,5 @@
 { config, pkgs, lib, ... }:
-let switch-flash = pkgs.writeShellScriptBin 'switch-flash ''
+let switch-flash = pkgs.writeShellScriptBin "switch-flash" ''
   $XDG_DATA_HOME/fusee-launcher/fusee-launcher.py $XDG_CONFIG_HOME/fusee-launcher/payload/fusee-primary.bin
   '';
 in
