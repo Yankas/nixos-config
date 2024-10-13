@@ -15,8 +15,8 @@ fetchzip {
   '';
 
   meta = with lib; {
-    homepage = "";
-    description = "";
+    homepage = "https://comicfontsby.tehandeh.com/";
+    description = "Fighting Spirit comic font";
     license = lib.licenses.unfree;
     platforms = platforms.all;
   };

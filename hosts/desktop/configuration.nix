@@ -82,6 +82,7 @@
     ark
     imagemagick
     rpcs3
+    xdelta
     
     # MULTIMEDIA
     jellyfin-media-player
