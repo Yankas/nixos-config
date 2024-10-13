@@ -3,6 +3,10 @@ let
   link = config.lib.file.mkOutOfStoreSymlink;
 in
 {
+    options = {
+      home.manageSaves = lib.mkEnableOption "create symlinks for known save paths";
+    };
+
   config = {
     home.file = {
       # Proton Games
