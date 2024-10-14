@@ -82,15 +82,6 @@
       xwayland.enable = true;
     }; 
 
-    services.pam.loginLimits = [
-      {
-          domain = "@wheel";
-          type = "-";
-          item = "memlock";
-          value = "unlimited";
-      }
-    ];
-
     environment.pathsToLink = [ "/share/wallpapers" ];
 
     systemd = {
