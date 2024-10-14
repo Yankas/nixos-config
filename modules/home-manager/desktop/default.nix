@@ -1,6 +1,7 @@
 { config, pkgs, lib, ... }:
 {
   imports = [
+    ./gaming/default.nix
     ./hyprland.nix
     ./waybar.nix
     ./nintendo.nix

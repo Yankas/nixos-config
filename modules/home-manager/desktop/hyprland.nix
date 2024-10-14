@@ -286,6 +286,7 @@ in
       "noinitialfocus, initialClass:(^steam$), initialTitle:(^Steam$)"
       "workspace special:Steam, initialClass:(^steam$), initialTitle:(^Sign in to Steam$)"
       "noinitialfocus, initialClass:(^steam$), initialTitle:(^Sign in to Steam$)"
+  
 
       # steam games
       "noinitialfocus, class:($steam_game_class)"
@@ -308,6 +309,7 @@ in
       "float, initialClass:(discord)"
       "size 1400 1000, initialClass:(discord)"
       "center, initialClass:(discord)"
+      "focusonactivate 0, initialClass:(^discord$)"
     ];
 
 

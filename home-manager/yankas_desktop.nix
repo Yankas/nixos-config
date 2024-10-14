@@ -25,6 +25,11 @@
     wallpaper = "hgss.png";
   };
 
+  games = {
+    save.enable = true;
+    minecraft.enable = true;
+  };
+
   wayland.windowManager.hyprland.settings = {    
     monitor = [
       "$m_left, 2560x1440@144, 0x0, 1, vrr, 2"
@@ -44,7 +49,6 @@
 
   programs = {
     steam.enable = true;
-    minecraft.enable = true;
     nintendo = {
       switch.enable = true;
       gba.enable = true;

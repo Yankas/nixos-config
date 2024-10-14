@@ -4,11 +4,11 @@ let
 in
 {
     options = {
-      home.manageSaves = lib.mkEnableOption "create symlinks for known save paths";
+      games.saves.enable = lib.mkEnableOption "enable custom save manager";
     };
 
   config = {
-    home.file = {
+    home.file = lib.mkIf games.saves.enable {
       # Proton Games
       ".local/share/Steam/steamapps/compatdata/1623730/pfx/drive_c/users/steamuser/AppData/Local/Pal/Saved".source = link "${config.home.homeDirectory}/.saves/palworld";
       ".local/share/Steam/steamapps/compatdata/858820/pfx/drive_c/users/steamuser/AppData/Local/TOM/Saved".source = link "${config.home.homeDirectory}/.saves/tribes-of-midgard";

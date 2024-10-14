@@ -64,7 +64,6 @@
 
   programs = {
     rider.enable = true;
-    minecraft.enable = true;
     torrent.enable = true;
     godot.enable = true;
     tiled.enable = true;
