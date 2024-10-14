@@ -28,6 +28,12 @@
   games = {
     saves.enable = true;
     minecraft.enable = true;
+    nintendo = {
+      switch.enable = true;
+      gba.enable = true;
+      ds.enable = true;
+    };
+    
   };
 
   wayland.windowManager.hyprland.settings = {    
@@ -47,14 +53,6 @@
       "file:///mus/ Music"
   ];
   programs.steam.enable = true;
-  games = {
-    
-    nintendo = {
-      switch.enable = true;
-      gba.enable = true;
-      ds.enable = true;
-    };
-  };
 
   programs.git = {
     userEmail = "christopher.sbrisny@gmail.com";
