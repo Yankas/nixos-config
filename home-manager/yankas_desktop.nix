@@ -46,9 +46,9 @@
       "file:///iso/ Iso"
       "file:///mus/ Music"
   ];
-
-  programs = {
-    steam.enable = true;
+  programs.steam.enable = true;
+  games = {
+    
     nintendo = {
       switch.enable = true;
       gba.enable = true;
@@ -61,7 +61,4 @@
     userName = "yankas";
   };
 
-  #home.file.local.share.Steam.steamapps.compatdata = {
-  #
-  #};
 }
