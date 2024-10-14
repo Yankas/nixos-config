@@ -100,14 +100,14 @@
       };
     };
 
-    /*ecurity.pam.loginLimits = [
+    security.pam.loginLimits = [
       {
           domain = "*";
           type = "-";
           item = "memlock";
-          value = "unlimited";
+          value = "65000";
       }
-    ];*/
+    ];
 
 
     environment.sessionVariables.NIXOS_OZONE_WL = "1";
