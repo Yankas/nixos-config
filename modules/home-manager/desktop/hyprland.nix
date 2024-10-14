@@ -21,9 +21,6 @@ in
         #"swaybg -i /run/current-system/sw/share/wallpapers/${config.home.wallpaper}"
         "${set-bg}/bin/set-bg ${config.home.wallpaper}"
       ];
-    autostart.exec-once = lib.mkDefault [
-      ""
-    ];
 
     wayland.windowManager.hyprland.systemd.variables = ["--all"];
     wayland.windowManager.hyprland.enable = true;
