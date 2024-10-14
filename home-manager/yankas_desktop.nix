@@ -25,7 +25,7 @@
     wallpaper = "hgss.png";
   };
 
-  games = {
+  home.games = {
     save.enable = true;
     minecraft.enable = true;
   };
