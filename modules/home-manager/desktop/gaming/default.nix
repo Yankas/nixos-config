@@ -4,20 +4,19 @@ let switch-flash = pkgs.writeShellScriptBin "switch-flash" ''
   '';
 in
 {
-  import = [
-    ./savegames.nix
-    ./emulation.nix
-  ];
-
   options = {
     programs.minecraft.enable = lib.mkEnableOption "enables minecraft";
   };
 
-  config = lib.mkIf config.programs.minecraft.enable {
-    environment.systemPackages = with pkgs; [
-      prismlauncher
+  config = {
+    import = [
+    ./savegames.nix
+    ./emulation.nix
     ];
-  };
 
+
+    environment.systemPackages = with pkgs;
+    (if config.programs.nintendo.ds.enable then [ prismlauncher ] else [])
+  };
 
 }
