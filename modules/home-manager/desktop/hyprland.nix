@@ -304,6 +304,7 @@ in
 
       # discord
       "workspace special:discord, initialClass:(discord)"
+      "noinitialfocus, initialClass:(discord)"
       "float, initialClass:(discord)"
       "size 1400 1000, initialClass:(discord)"
       "center, initialClass:(discord)"
