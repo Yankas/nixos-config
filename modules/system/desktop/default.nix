@@ -43,6 +43,7 @@
     services.displayManager.sddm = {
       enable = true;
       wayland.enable = true;
+      defaultSession = hyprland.desktop;
       #theme="sugar-dark";
     };
 

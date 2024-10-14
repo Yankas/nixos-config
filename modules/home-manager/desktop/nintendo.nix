@@ -16,6 +16,7 @@ in
     home.packages = with pkgs;
     (if config.programs.nintendo.ds.enable then [ melonDS ] else [])
     ++ (if config.programs.nintendo.switch.enable then [ ryujinx ] else [])
-    ++ (if config.programs.nintendo.gba.enable then [ mgba ] else []);
+    ++ (if config.programs.nintendo.gba.enable then [ mgba ] else [])
+    ++ (if config.programs.nintendo.gba.enable then [ switch-flas ] else []);
   };
 }

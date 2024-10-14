@@ -281,6 +281,10 @@ in
       "size 1400 1000, class:(TeamSpeak), title:(TeamSpeak)"
       "center, class:(TeamSpeak), title:(TeamSpeak)"
       
+      # steam
+      "$workspace special:steam, initialClass:(^steam$), initialTitle:(^Steam$)"
+
+      # steam games
       "noinitialfocus, class:($steam_game_class)"
       #"windowdance, class:($steam_game_class)"
       "monitor $m_right, initialClass:($steam_game_class)"
