@@ -9,8 +9,7 @@
     [ # Include the results of the hardware scan.
       ./audio.nix
       ./minecraft.nix
-      ./gamedev.nix
-      ./dotnet-dev.nix
+      ./dev-tools.nix
       ./virt-manager.nix
     ];
 
