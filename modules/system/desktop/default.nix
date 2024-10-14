@@ -100,7 +100,7 @@
       };
     };
 
-    services.pam.loginLimits = [
+    security.pam.loginLimits = [
       {
           domain = "@wheel";
           type = "-";
