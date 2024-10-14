@@ -8,7 +8,6 @@
     imports =
     [ # Include the results of the hardware scan.
       ./audio.nix
-      ./minecraft.nix
       ./dev-tools.nix
       ./virt-manager.nix
     ];
@@ -16,14 +15,7 @@
   options = {
     desktop.enable = lib.mkEnableOption "enables torrent client";
     programs.torrent.enable = lib.mkEnableOption "enables torrent client";
-    programs.gimp.enable = lib.mkEnableOption "enables gimp";
-    programs.blender.enable = lib.mkEnableOption "enables blender";
-  };
-
-
-  config = lib.mkIf config.desktop.enable {
-
-    programs.steam = lib.mkIf config.programs.steam.enable {
+    programs.gimp.enable = lib.mkEnableOption "enamkdefaultm.enable {
       gamescopeSession.enable = true;
       remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
       dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
