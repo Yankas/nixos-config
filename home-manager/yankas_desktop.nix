@@ -33,8 +33,14 @@
       gba.enable = true;
       ds.enable = true;
     };
-    
   };
+
+  autostart.exec-once = [
+      #"/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+      #"waybar"
+      "steam"
+      "discord"
+  ];
 
   wayland.windowManager.hyprland.settings = {    
     monitor = [
