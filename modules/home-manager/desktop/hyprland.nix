@@ -13,7 +13,7 @@ in
     autostart.exec-once = lib.mkOption {
        type = with lib.types; attrsOf str;
        description = "list of commands to run on start";
-    }
+    };
 
   };
   config = {
