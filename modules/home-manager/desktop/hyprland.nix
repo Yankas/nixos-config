@@ -7,11 +7,11 @@ in
 {
   options = {
     autostart.exec = lib.mkOption {
-       type = with lib.types; attrsOf string;
+       type = with lib.types; listOf string;
        description = "list of commands to run on start";
     };
     autostart.exec-once = lib.mkOption {
-       type = with lib.types; attrsOf string;
+       type = with lib.types; listOf string;
        description = "list of commands to run on start";
     };
 
