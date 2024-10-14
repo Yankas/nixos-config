@@ -4,9 +4,7 @@
     ./gaming/default.nix
     ./hyprland.nix
     ./waybar.nix
-    ./nintendo.nix
     ./misc.nix
-    ./savegames.nix
   ];
 
 
