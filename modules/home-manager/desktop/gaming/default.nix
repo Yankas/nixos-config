@@ -5,7 +5,7 @@ let switch-flash = pkgs.writeShellScriptBin "switch-flash" ''
 in
 {
   options = {
-    programs.minecraft.enable = lib.mkEnableOption "enables minecraft";
+    games.minecraft.enable = lib.mkEnableOption "enables minecraft";
   };
 
   config = {
@@ -16,7 +16,7 @@ in
 
 
     environment.systemPackages = with pkgs;
-    (if config.programs.nintendo.ds.enable then [ prismlauncher ] else [])
+    (if config.games.minecraft.enable then [ prismlauncher ] else [])
   };
 
 }
