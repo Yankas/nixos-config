@@ -18,7 +18,7 @@ in
 
   options = {
     games.minecraft.enable = lib.mkEnableOption "enables minecraft";
-    games.thesims4-updater.enable = lib.mkEnableOption "enables tools to update the sims 4"
+    games.thesims4-updater.enable = lib.mkEnableOption "enables tools to update the sims 4";
   };
 
   config = {
