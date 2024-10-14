@@ -52,8 +52,7 @@
   services.teamviewer.enable = true;
   services.xserver.videoDrivers = [ "amdgpu" ]; 
   autostart.exec-once = [
-        #"/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
-        #"waybar"
+
         "steam"
         "discord"
     ];
