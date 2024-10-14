@@ -15,7 +15,7 @@ in
     ];
 
 
-    environment.systemPackages = with pkgs;
+    home.packages = with pkgs;
     (if config.games.minecraft.enable then [ prismlauncher ] else []);
   };
 
