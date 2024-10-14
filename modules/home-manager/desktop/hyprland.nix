@@ -22,7 +22,7 @@ in
         "${set-bg}/bin/set-bg ${config.home.wallpaper}"
       ];
     autostart.exec-once = lib.mkDefault [
-
+      ""
     ];
 
     wayland.windowManager.hyprland.systemd.variables = ["--all"];
