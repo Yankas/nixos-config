@@ -24,7 +24,7 @@ in
   config = {
     home.packages = with pkgs;
     (if config.games.minecraft.enable then [ prismlauncher ] else [])
-    ++ (if games.thesims4-updater.enable then [ ts4-update ts4-unlock] else []);
+    ++ (if config.games.thesims4-updater.enable then [ ts4-update ts4-unlock] else []);
   };
 
 }
