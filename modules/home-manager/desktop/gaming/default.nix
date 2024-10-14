@@ -16,7 +16,7 @@ in
 
 
     environment.systemPackages = with pkgs;
-    (if config.games.minecraft.enable then [ prismlauncher ] else [])
+    (if config.games.minecraft.enable then [ prismlauncher ] else []);
   };
 
 }
