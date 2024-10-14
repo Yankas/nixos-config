@@ -16,6 +16,7 @@ in
       ".local/share/Steam/steamapps/compatdata/1218210/pfx/drive_c/users/steamuser/AppData/Roaming/TRAGsoft/Coromon".source = link "${config.home.homeDirectory}/.saves/coromon";
       ".local/share/Steam/steamapps/compatdata/1822550/pfx/drive_c/users/steamuser/AppData/Roaming/MicroCivilization".source = link "${config.home.homeDirectory}/.saves/microcivilization";
       ".local/share/Steam/steamapps/compatdata/1222670/pfx/drive_c/users/steamuser/Documents/Electronic Arts/The Sims 4".source = link "${config.home.homeDirectory}/.saves/the-sims4";
+      ".local/share/Steam/steamapps/compatdata/1549250/pfx/drive_c/users/steamuser/AppData/Local/RzGame".source = link "${config.home.homeDirectory}/.saves/undecember";
       
       # Native Games
       ".local/share/NeposGames/Nebuchadnezzar".source = link "${config.home.homeDirectory}/.saves/nebuchadnezzar";
@@ -23,7 +24,7 @@ in
       ".local/share/Pokemon Rejuvenation".source = link "${config.home.homeDirectory}/.saves/pokemon-rejuvenation";
       ".local/share/Colossal Order/Cities_Skylines".source = link "${config.home.homeDirectory}/.saves/cities-skylines";
       ".local/share/Colossal Order/Monster Sanctuary".source = link "${config.home.homeDirectory}/.saves/monster-sanctuary";
-
+/home/yankas/
       #".local/share/Steam/steamapps/compatdata/4227765030/pfx/drive_c/users/steamuser/AppData/LocalLow/Oleg Kazakov/Gedonia".source = link "${config.home.homeDirectory}/.saves/gedonia";
       #".local/share/Steam/steamapps/compatdata/4031134044/pfx/drive_c/users/steamuser/Application Data/Reminiscencia".source = link "${config.home.homeDirectory}/.saves/pokemon-xenoverse";
       #".local/share/Steam/steamapps/compatdata/4000143998/pfx/drive_c/users/steamuser/Saved Games/Diablo II Resurrected".source = link "${config.home.homeDirectory}/.saves/diablo2-ressurected";
