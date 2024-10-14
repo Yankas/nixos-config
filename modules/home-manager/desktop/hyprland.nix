@@ -114,8 +114,8 @@ in
     ];
 
     exec-once = [
-      "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
-    #  "waybar"
+      #"/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+      #"waybar"
       "steam"
       "discord"
     ];

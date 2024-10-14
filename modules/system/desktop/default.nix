@@ -103,15 +103,9 @@
     security.pam.loginLimits = [
       {
           domain = "*";
-          type = "hard";
+          type = "-";
           item = "memlock";
-          value = "65000";
-      }
-      {
-          domain = "*";
-          type = "soft";
-          item = "memlock";
-          value = "65000";
+          value = "unlimited";
       }
     ];
 
