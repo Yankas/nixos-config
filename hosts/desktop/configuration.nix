@@ -17,6 +17,7 @@
       outputs.systemModules.desktop
       outputs.systemModules.ddclient
     ];
+  boot.supportedFilesystems = [ "ntfs" ];
 
   desktop.enable = true;
   networking = {
