@@ -1,6 +1,10 @@
 { config, pkgs, lib, ... }:
 let
   link = config.lib.file.mkOutOfStoreSymlink;
+  ts4-update = lib.mkBin "ts4-update" ''
+    cd $HOME/.local/share/Steam/steamapps/common/The\ Sims\ 4/
+    wine $HOME/.saves/the-sims4/TS4Updater/sims-4-updater-v1.3.4.exe
+    '';
 in
 {
     options = {
