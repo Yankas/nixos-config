@@ -282,7 +282,7 @@ in
       "center, class:(TeamSpeak), title:(TeamSpeak)"
       
       # steam
-      "$workspace special:steam, initialClass:(^steam$), initialTitle:(^Steam$)"
+      "workspace special:steam, initialClass:(^steam$), initialTitle:(^Steam$)"
 
       # steam games
       "noinitialfocus, class:($steam_game_class)"
