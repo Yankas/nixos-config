@@ -8,7 +8,7 @@ in
     programs.nintendo.gba.enable = lib.mkEnableOption "enables nintendo ds emulator";
     programs.nintendo.ds.enable = lib.mkEnableOption "enables nintendo ds emulator";
     programs.nintendo.switch.enable = lib.mkEnableOption "enables nintendo switch emulator";
-    programs.nintendo.swith-utils.enable = lib.mkEnableOption "enables tools to flash switch";
+    programs.nintendo.switch-utils.enable = lib.mkEnableOption "enables tools to flash switch";
   };
 
 
