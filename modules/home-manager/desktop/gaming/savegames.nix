@@ -9,7 +9,7 @@ in
 
   config = {
     games.saves.enable = lib.mkDefault false;
-    home.file = lib.mkIf games.saves.enable {
+    home.file = lib.mkIf home.games.saves.enable {
       # Proton Games
       ".local/share/Steam/steamapps/compatdata/1623730/pfx/drive_c/users/steamuser/AppData/Local/Pal/Saved".source = link "${config.home.homeDirectory}/.saves/palworld";
       ".local/share/Steam/steamapps/compatdata/858820/pfx/drive_c/users/steamuser/AppData/Local/TOM/Saved".source = link "${config.home.homeDirectory}/.saves/tribes-of-midgard";
