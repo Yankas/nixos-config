@@ -28,6 +28,7 @@
   games = {
     saves.enable = true;
     minecraft.enable = true;
+    thesims4-updater.enable = true;
     nintendo = {
       switch.enable = true;
       gba.enable = true;

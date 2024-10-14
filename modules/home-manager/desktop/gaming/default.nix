@@ -6,6 +6,9 @@ ts4-update = pkgs.writeShellScriptBin "ts4-update" ''
   cd $HOME/.local/share/Steam/steamapps/common/The\ Sims\ 4/
   wine $HOME/.saves/the-sims4/TS4Updater/sims-4-updater-v1.3.4.exe
   '';
+ts4-unlock = pkgs.writeShellScriptBin "ts4-update" ''
+  $HOME/.saves/the-sims4/DLCUnlockerV2/setup_linux.sh
+  '';
 in
 {
     imports = [
@@ -15,13 +18,13 @@ in
 
   options = {
     games.minecraft.enable = lib.mkEnableOption "enables minecraft";
+    games.thesims4-updater.enable = lib.mkEnableOption "enables tools to update the sims 4"
   };
 
   config = {
-
     home.packages = with pkgs;
     (if config.games.minecraft.enable then [ prismlauncher ] else [])
-    ++ (if config.games.nintendo.ds.enable then [ ts4-update ] else []);
+    ++ (if games.thesims4-updater.enable then [ ts4-update ts4-unlock] else []);
   };
 
 }
