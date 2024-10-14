@@ -8,6 +8,7 @@ in
     };
 
   config = {
+    games.saves.enable = lib.mkDefault false;
     home.file = lib.mkIf games.saves.enable {
       # Proton Games
       ".local/share/Steam/steamapps/compatdata/1623730/pfx/drive_c/users/steamuser/AppData/Local/Pal/Saved".source = link "${config.home.homeDirectory}/.saves/palworld";
