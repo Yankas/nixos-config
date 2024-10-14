@@ -17,6 +17,6 @@ in
     (if config.programs.nintendo.ds.enable then [ melonDS ] else [])
     ++ (if config.programs.nintendo.switch.enable then [ ryujinx ] else [])
     ++ (if config.programs.nintendo.gba.enable then [ mgba ] else [])
-    ++ (if config.programs.nintendo.gba.enable then [ switch-flas ] else []);
+    ++ (if config.programs.nintendo.gba.enable then [ switch-flash ] else []);
   };
 }
