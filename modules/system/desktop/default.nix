@@ -100,6 +100,16 @@
       };
     };
 
+    services.pam.loginLimits = [
+      {
+          domain = "@wheel";
+          type = "-";
+          item = "memlock";
+          value = "unlimited";
+      }
+    ];
+
+
     environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
     environment.systemPackages = with pkgs; [
