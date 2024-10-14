@@ -100,14 +100,14 @@
       };
     };
 
-    security.pam.loginLimits = [
+    /*ecurity.pam.loginLimits = [
       {
-          domain = "@wheel";
+          domain = "*";
           type = "-";
           item = "memlock";
           value = "unlimited";
       }
-    ];
+    ];*/
 
 
     environment.sessionVariables.NIXOS_OZONE_WL = "1";
