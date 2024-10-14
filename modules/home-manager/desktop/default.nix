@@ -62,6 +62,15 @@
     size = 24;
   };
 
+  services.pam.loginLimits = [
+    {
+        domain = "@wheel";
+        type = "-";
+        item = "memlock";
+        value = "unlimited";
+    }
+  ];
+
   programs.kitty = {
     enable = true;
     settings = {
