@@ -103,12 +103,17 @@
     security.pam.loginLimits = [
       {
           domain = "*";
-          type = "-";
+          type = "hard";
+          item = "memlock";
+          value = "65000";
+      }
+      {
+          domain = "*";
+          type = "soft";
           item = "memlock";
           value = "65000";
       }
     ];
-
 
     environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
