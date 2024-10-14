@@ -39,8 +39,8 @@ in
       "$fileManager" = "thunar";
       "$menu" = "fuzzel";
 
-      exec = autostart.exec;
-      exec-once = autostart.exec-once;
+      exec = config.autostart.exec;
+      exec-once = config.autostart.exec-once;
 
 
       env =
