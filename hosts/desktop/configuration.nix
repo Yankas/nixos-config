@@ -80,7 +80,6 @@
     tor-browser
     ark
     imagemagick
-    rpcs3
     xdelta
     
     # MULTIMEDIA

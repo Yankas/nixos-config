@@ -15,9 +15,9 @@ in
 
   config = {
     home.packages = with pkgs;
-    (if config.games.nintendo.ds.enable then [ melonDS ] else [])
+    (if config.games.nintendo.ds.enable then [ melonDS xdelta ] else [])
     ++ (if config.games.nintendo.switch.enable then [ ryujinx ] else [])
-    ++ (if config.games.nintendo.gba.enable then [ mgba ] else [])
+    ++ (if config.games.nintendo.gba.enable then [ mgba xdelta ] else [])
     ++ (if config.games.nintendo.switch-utils.enable then [ switch-flash ] else [])
     ++ (if config.games.ps3.enable then [ rpcs3 ] else []);
   };
