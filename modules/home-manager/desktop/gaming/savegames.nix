@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }:
 let
-  link = config.lib.file.mkOutOfStoreSymlink; in
+  link = path: config.lib.file.mkOutOfStoreSymlink "${config.games.saves.directory}/${path}"; in
   let compatData = ".local/share/Steam/steamapps/compatdata/"; in
   let steamPath = appId: subpath: "${compatData}${toString appId}/pfx/drive_c/users/steamuser/";
 in
