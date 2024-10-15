@@ -45,26 +45,26 @@ in
       #REPLACE #"${steamPath X "$1"}".source = link "$2"
 
 
-      "${steamPath 223220 "Documents/Giana Sisters - Twisted Dreams"}".source = link "giana-sisters";
-      "${steamPath 322330 "Documents/Klei/DoNotStarveTogether"}".source = link "dont-starve-together";
-      "${steamPath 243950 "Documents/Larian Studios/Dragon Commander"}".source = link "dragon-commander";
-      "${steamPath 22330 "Documents/My Games/Oblivion"}".source = link "the-elder-scrolls4-oblivion";
-      "${steamPath 40950 "Documents/stronghold"}".source = link "stronghold";
-      "${steamPath 40960 "Documents/Stronghold 2"}".source = link "stronghold2";
-      "${steamPath 40970 "Documents/stronghold crusader"}".source = link "stronghold-crusader";
-      "${steamPath 232890 "Documents/Stronghold Crusader 2"}".source = link "stronghold-crusader2";
-      "${steamPath 40980 "Documents/Stronghold Legends"}".source = link "stronghold-legends";
-      #"${steamPath X "AppData/LocalLow/Placeholder Gameworks/Death and Taxes/Saves"}".source = link "death-and-taxes";
-      #"${steamPath X "Red Alert 3"}".source = link "cnc-red-alert3";
-      #"${steamPath X "AppData/LocalLow/Tactical Adventures/Solasta"}".source = link "solasta";
-      #"${steamPath X "Nation Red"}".source = link "nation-red";
-      #"${steamPath X "AppData/Local/SherwoodExtreme/Saved"}".source = link "sherwood-extreme";
-      #"${steamPath X "Documents/Paradox Interactive/Crusader Kings II"}".source = link "crusader-kings2f";
-      #"${steamPath X "Documents/My Games/runic games/torchlight"}".source = link "torchlight";
-      #"${steamPath X "Documents/My Games/runic games/torchlight 2"}".source = link "torchlight2";
-      #"${steamPath X "Documents/My Games/Skyrim"}".source = link "the-elder-scrolls5-skyrim";
-      #"${steamPath X "Documents/My Games/Skyrim Special Edition"}".source = link "the-elder-scrolls5-skyrim-special-edition";
-      #"${steamPath X "Documents/My Games/SpecOps-TheLine"}".source = link "spec-ops-the-line";
+      "${steamPath 223220   "Documents/Giana Sisters - Twisted Dreams"}".source = link "giana-sisters";
+      "${steamPath 322330   "Documents/Klei/DoNotStarveTogether"}".source = link "dont-starve-together";
+      "${steamPath 243950   "Documents/Larian Studios/Dragon Commander"}".source = link "dragon-commander";
+      "${steamPath 22330    "Documents/My Games/Oblivion"}".source = link "the-elder-scrolls4-oblivion";
+      "${steamPath 40950    "Documents/stronghold"}".source = link "stronghold";
+      "${steamPath 40960    "Documents/Stronghold 2"}".source = link "stronghold2";
+      "${steamPath 40970    "Documents/stronghold crusader"}".source = link "stronghold-crusader";
+      "${steamPath 232890   "Documents/Stronghold Crusader 2"}".source = link "stronghold-crusader2";
+      "${steamPath 40980    "Documents/Stronghold Legends"}".source = link "stronghold-legends";
+      "${steamPath 1166290  "AppData/LocalLow/Placeholder Gameworks/Death and Taxes/Saves"}".source = link "death-and-taxes";
+      "${steamPath 17480    "Red Alert 3"}".source = link "cnc-red-alert3";
+      "${steamPath 1096530  "AppData/LocalLow/Tactical Adventures/Solasta"}".source = link "solasta";
+      "${steamPath 39800    "Nation Red"}".source = link "nation-red";
+      "${steamPath 1340180  "AppData/Local/SherwoodExtreme/Saved"}".source = link "sherwood-extreme";
+      "${steamPath 203770   "Documents/Paradox Interactive/Crusader Kings II"}".source = link "crusader-kings2f";
+      "${steamPath 41500    "Documents/My Games/runic games/torchlight"}".source = link "torchlight";
+      "${steamPath 200710   "Documents/My Games/runic games/torchlight 2"}".source = link "torchlight2";
+      "${steamPath 72850    "Documents/My Games/Skyrim"}".source = link "the-elder-scrolls5-skyrim";
+      "${steamPath 489830   "Documents/My Games/Skyrim Special Edition"}".source = link "the-elder-scrolls5-skyrim-special-edition";
+      "${steamPath 50300    "Documents/My Games/SpecOps-TheLine"}".source = link "spec-ops-the-line";
 
 
       # Saved Games/
