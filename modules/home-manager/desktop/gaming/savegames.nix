@@ -25,7 +25,7 @@ in
       ".local/share/Steam/steamapps/compatdata/1822550/pfx/drive_c/users/steamuser/AppData/Roaming/MicroCivilization".source = link "${config.home.homeDirectory}/.saves/microcivilization";
       ".local/share/Steam/steamapps/compatdata/1222670/pfx/drive_c/users/steamuser/Documents/Electronic Arts/The Sims 4".source = link "${config.home.homeDirectory}/.saves/the-sims4";
       ".local/share/Steam/steamapps/compatdata/1549250/pfx/drive_c/users/steamuser/AppData/Local/RzGame".source = link "${config.home.homeDirectory}/.saves/undecember";
-      "${steamUser 560130}Saved Games/Local/".source = link "pillars-of-eternity2";
+      "${steamUser 560130}Saved Games/Pillars of Eternity II".source = link "pillars-of-eternity2";
       #linkSteamSave 560130 Saved Games/Pillars of Eternity II pillars-of-eternity2;
       #".local/share/Steam/steamapps/compatdata/560130/pfx/drive_c/users/steamuser/Saved Games/Pillars of Eternity II".source =  link "${config.home.homeDirectory}/.saves/pillars-of-eternity2";
       #${}
