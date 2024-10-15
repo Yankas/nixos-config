@@ -15,7 +15,7 @@ in
   config = {
       #steamLink 1623730 "AppData/Local/Pal/Saved" "palworld"
     home.file = lib.mkIf config.games.saves.enable {
-      config.games.saves.directory = lib.mkDefault "${config.home.homeDirectory}/.saves";
+      games.saves.directory = lib.mkDefault "${config.home.homeDirectory}/.saves";
       # Proton Games
       
       ".local/share/Steam/steamapps/compatdata/1623730/pfx/drive_c/users/steamuser/AppData/Local/Pal/Saved".source = link "${config.home.homeDirectory}/.saves/palworld";
