@@ -2,7 +2,7 @@
 let
   link = path: config.lib.file.mkOutOfStoreSymlink "${config.games.saves.directory}/${path}"; in
   let compatData = ".local/share/Steam/steamapps/compatdata/"; in
-  let steamPath = appId: subpath: "${compatData}${toString appId}/pfx/drive_c/users/steamuser/";
+  let steamPath = appId: subpath: "${compatData}${toString appId}/pfx/drive_c/users/steamuser/${subpath}";
 in
 {
     options = {
@@ -33,12 +33,12 @@ in
       "${steamPath 466240 "Saved Games/deceit"}".source = link "deceit";
       "${steamPath 24810  "Saved Games/Command & Conquer 3 Kane's Wrath"}".source = link "cnc3-kanes-wrath";
       "${steamPath 24790  "Command & Conquer 3 Tiberium Wars"}".source = link "cnc3-tiberium-wars";
-      "${steamPath 858820    "AppData/Local/TOM/Saved"}".source = link "tribes-of-midgard";
-      "${steamPath 1623730    "AppData/Local/Pal/Saved"}".source = link "palworld";
-      "${steamPath 690830    "Documents/Polymorph Games/Foundation"}".source = link "foundation";
-      "${steamPath 1218210    "AppData/Roaming/TRAGsoft/Coromon"}".source = link "coromon";
-      "${steamPath 1222670  "Documents/Electronic Arts/The Sims 4"}".source = link "the-sims4";
-      "${steamPath 1549250    "AppData/Local/RzGame"}".source = link "undecember";
+      "${steamPath 858820 "AppData/Local/TOM/Saved"}".source = link "tribes-of-midgard";
+      "${steamPath 1623730 "AppData/Local/Pal/Saved"}".source = link "palworld";
+      "${steamPath 690830  "Documents/Polymorph Games/Foundation"}".source = link "foundation";
+      "${steamPath 1218210 "AppData/Roaming/TRAGsoft/Coromon"}".source = link "coromon";
+      "${steamPath 1222670 "Documents/Electronic Arts/The Sims 4"}".source = link "the-sims4";
+      "${steamPath 1549250  "AppData/Local/RzGame"}".source = link "undecember";
       "${steamPath 1822550  "AppData/Roaming/MicroCivilization"}".source = link "microcivilization";
       "${steamPath 345180   "AppData/Roaming/Victor Vran"}".source = link "victor-vran";
       "${steamPath 1340180  "AppData/Local/SherwoodExtreme/Saved"}".source = link "sherwood-extreme";
