@@ -8,7 +8,7 @@ in
     options = {
       games.saves.enable = lib.mkEnableOption "enable custom save manager";
       games.saves.directory = lib.mkOption {
-        type = with types; str;
+        type = with lib.types; str;
       };
     };
 
