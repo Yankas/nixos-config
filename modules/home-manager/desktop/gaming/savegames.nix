@@ -31,6 +31,9 @@ in
       "${steamPath 466240 "Saved Games/deceit"}".source = link "deceit";
       "${steamPath 24810  "Saved Games/Command & Conquer 3 Kane's Wrath"}".source = link "cnc3-kanes-wrath";
       "${steamPath 24790  "Command & Conquer 3 Tiberium Wars"}".source = link "cnc3-tiberium-wars";
+      "${steamPath 48240 "Documents/ANNO 2070"}".source = link "anno2070";
+      "${steamPath 47810 "Documents/BioWare/Dragon Age"}".source = link "dragon-age";
+      "${steamPath 98800 "Documents/Dungeons of Dredmor"}".source = link "dungeons-of-dreadmor";
 
       # Native Games
       ".local/share/NeposGames/Nebuchadnezzar".source = link "${config.home.homeDirectory}/.saves/nebuchadnezzar";
@@ -38,32 +41,30 @@ in
       ".local/share/Pokemon Rejuvenation".source = link "${config.home.homeDirectory}/.saves/pokemon-rejuvenation";
       ".local/share/Colossal Order/Cities_Skylines".source = link "${config.home.homeDirectory}/.saves/cities-skylines";
       ".local/share/Colossal Order/Monster Sanctuary".source = link "${config.home.homeDirectory}/.saves/monster-sanctuary";
-      #REGEX #"STEAM_PREFIX/(.*)".*saves/(.*)"
-      #REPLACE #${steamPath X "$1"}.source = link "$2"
+      #REGEX #"STEAM_PREFIX/(.*)".source.*saves/(.*)"
+      #REPLACE #"${steamPath X "$1"}".source = link "$2"
 
-      "${steamPath 48240 "Documents/ANNO 2070"}".source = link "anno2070";
-      #"${steamPath X "Documents/BioWare/Dragon Age"}".source = link "dragon-age";
-      #"${steamPath X "Documents/Dungeons of Dredmor"}".source = link "dungeons-of-dreadmor";
-      #"STEAM_PREFIX/Documents/Giana Sisters - Twisted Dreams".source =  link "${config.home.homeDirectory}/.saves/giana-sisters";
-      #"STEAM_PREFIX/Documents/Klei/DoNotStarveTogether".source =  link "${config.home.homeDirectory}/.saves/dont-starve-together";
-      #"STEAM_PREFIX/Documents/Larian Studios/Dragon Commander".source =  link "${config.home.homeDirectory}/.saves/dragon-commander";
-      #"STEAM_PREFIX/Documents/My Games/Oblivion".source =  link "${config.home.homeDirectory}/.saves/the-elder-scrolls4-oblivion";
-      #"STEAM_PREFIX/Documents/stronghold".source =  link "${config.home.homeDirectory}/.saves/stronghold";
-      #"STEAM_PREFIX/Documents/Stronghold 2".source =  link "${config.home.homeDirectory}/.saves/stronghold2";
-      #"STEAM_PREFIX/Documents/stronghold crusader".source =  link "${config.home.homeDirectory}/.saves/stronghold-crusader";
-      #"STEAM_PREFIX/Documents/Stronghold Crusader 2".source =  link "${config.home.homeDirectory}/.saves/stronghold-crusader2";
-      #"STEAM_PREFIX/Documents/Stronghold Legends".source =  link "${config.home.homeDirectory}/.saves/stronghold-legends";
-      #"STEAM_PREFIX/AppData/LocalLow/Placeholder Gameworks/Death and Taxes/Saves".source = link "${config.home.homeDirectory}/.saves/death-and-taxes";
-      #"STEAM_PREFIX/Red Alert 3".source = link "${config.home.homeDirectory}/.saves/cnc-red-alert3";
-      #"STEAM_PREFIX/AppData/LocalLow/Tactical Adventures/Solasta".source = link "${config.home.homeDirectory}/.saves/solasta";
-      #"STEAM_PREFIX/Nation Red".source = link "${config.home.homeDirectory}/.saves/nation-red";
-      #"STEAM_PREFIX/AppData/Local/SherwoodExtreme/Saved".source = link "${config.home.homeDirectory}/.saves/sherwood-extreme";
-      #"STEAM_PREFIX/Documents/Paradox Interactive/Crusader Kings II".source =  link "${config.home.homeDirectory}/.saves/crusader-kings2f";
-      #"STEAM_PREFIX/Documents/My Games/runic games/torchlight".source =  link "${config.home.homeDirectory}/.saves/torchlight";
-      #"STEAM_PREFIX/Documents/My Games/runic games/torchlight 2".source =  link "${config.home.homeDirectory}/.saves/torchlight2";
-      #"STEAM_PREFIX/Documents/My Games/Skyrim".source =  link "${config.home.homeDirectory}/.saves/the-elder-scrolls5-skyrim";
-      #"STEAM_PREFIX/Documents/My Games/Skyrim Special Edition".source =  link "${config.home.homeDirectory}/.saves/the-elder-scrolls5-skyrim-special-edition";
-      #"STEAM_PREFIX/Documents/My Games/SpecOps-TheLine".source =  link "${config.home.homeDirectory}/.saves/spec-ops-the-line";
+
+      "${steamPath 223220 "Documents/Giana Sisters - Twisted Dreams"}".source = link "giana-sisters";
+      "${steamPath 322330 "Documents/Klei/DoNotStarveTogether"}".source = link "dont-starve-together";
+      "${steamPath 243950 "Documents/Larian Studios/Dragon Commander"}".source = link "dragon-commander";
+      "${steamPath 22330 "Documents/My Games/Oblivion"}".source = link "the-elder-scrolls4-oblivion";
+      "${steamPath 40950 "Documents/stronghold"}".source = link "stronghold";
+      "${steamPath 40960 "Documents/Stronghold 2"}".source = link "stronghold2";
+      "${steamPath 40970 "Documents/stronghold crusader"}".source = link "stronghold-crusader";
+      "${steamPath 232890 "Documents/Stronghold Crusader 2"}".source = link "stronghold-crusader2";
+      "${steamPath 40980 "Documents/Stronghold Legends"}".source = link "stronghold-legends";
+      #"${steamPath X "AppData/LocalLow/Placeholder Gameworks/Death and Taxes/Saves"}".source = link "death-and-taxes";
+      #"${steamPath X "Red Alert 3"}".source = link "cnc-red-alert3";
+      #"${steamPath X "AppData/LocalLow/Tactical Adventures/Solasta"}".source = link "solasta";
+      #"${steamPath X "Nation Red"}".source = link "nation-red";
+      #"${steamPath X "AppData/Local/SherwoodExtreme/Saved"}".source = link "sherwood-extreme";
+      #"${steamPath X "Documents/Paradox Interactive/Crusader Kings II"}".source = link "crusader-kings2f";
+      #"${steamPath X "Documents/My Games/runic games/torchlight"}".source = link "torchlight";
+      #"${steamPath X "Documents/My Games/runic games/torchlight 2"}".source = link "torchlight2";
+      #"${steamPath X "Documents/My Games/Skyrim"}".source = link "the-elder-scrolls5-skyrim";
+      #"${steamPath X "Documents/My Games/Skyrim Special Edition"}".source = link "the-elder-scrolls5-skyrim-special-edition";
+      #"${steamPath X "Documents/My Games/SpecOps-TheLine"}".source = link "spec-ops-the-line";
 
 
       # Saved Games/
