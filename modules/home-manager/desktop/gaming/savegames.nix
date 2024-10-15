@@ -2,7 +2,7 @@
 let
   link = config.lib.file.mkOutOfStoreSymlink; in
   let compatData = ".local/share/Steam/steamapps/compatdata/"; in
-  let linkSteamSave = appId: path: saveName:  { "${compatData}${appId}/pfx/drive_c/users/steamuser/${path}" = link "${config.saves.directory}/${saveName}"; };
+  let linkSteamSave = appId: path: saveName:  { "${compatData}${appId}/pfx/drive_c/users/steamuser/${path}" = link "${config.games.saves.directory}/${saveName}"; };
 in
 {
     options = {
@@ -15,7 +15,7 @@ in
   config = {
       #steamLink 1623730 "AppData/Local/Pal/Saved" "palworld"
     home.file = lib.mkIf config.games.saves.enable {
-      games.saves.directory = lib.mkDefault "${config.home.homeDirectory}/.saves";
+      config.games.saves.directory = lib.mkDefault "${config.home.homeDirectory}/.saves";
       # Proton Games
       
       ".local/share/Steam/steamapps/compatdata/1623730/pfx/drive_c/users/steamuser/AppData/Local/Pal/Saved".source = link "${config.home.homeDirectory}/.saves/palworld";
