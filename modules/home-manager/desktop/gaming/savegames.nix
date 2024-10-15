@@ -43,7 +43,7 @@ in
       #REGEX #"STEAM_PREFIX/(.*)".source.*saves/(.*)"
       #REPLACE #"${steamPath X "$1"}".source = link "$2"
 
-      "${steamPath 1822550  "AppData/Roaming/MicroCivilization"}".source = link "microcivilization";
+      #"${steamPath 1822550  "AppData/Roaming/MicroCivilization"}".source = link "microcivilization";
       "${steamPath 223220   "Documents/Giana Sisters - Twisted Dreams"}".source = link "giana-sisters";
       "${steamPath 322330   "Documents/Klei/DoNotStarveTogether"}".source = link "dont-starve-together";
       "${steamPath 243950   "Documents/Larian Studios/Dragon Commander"}".source = link "dragon-commander";
