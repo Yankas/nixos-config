@@ -28,7 +28,7 @@ in
       
       #"${steamPath 560130 "Saved Games/Pillars of Eternity II"}".source = link "pillars-of-eternity2";
       "${steamPath 40390 "Saved Games/Risen2/SaveGames"}".source = link "risen2";
-
+      "${steamPath 466240 "Saved Games/deceit"}".source = link "deceit";
       #linkSteamSave 560130 Saved Games/Pillars of Eternity II pillars-of-eternity2;
       #".local/share/Steam/steamapps/compatdata/560130/pfx/drive_c/users/steamuser/Saved Games/Pillars of Eternity II".source =  link "${config.home.homeDirectory}/.saves/pillars-of-eternity2";
       #${}
