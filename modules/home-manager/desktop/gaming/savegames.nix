@@ -25,8 +25,8 @@ in
       "${steamPath 466240 "Saved Games/deceit"}".source = link "deceit";
       "${steamPath 24810  "Saved Games/Command & Conquer 3 Kane's Wrath"}".source = link "cnc3-kanes-wrath";
       "${steamPath 24790  "Command & Conquer 3 Tiberium Wars"}".source = link "cnc3-tiberium-wars";
-      "${steamPath 48240 "Documents/ANNO 2070"}".source = link "anno2070";
-      "${steamPath 47810 "Documents/BioWare/Dragon Age"}".source = link "dragon-age";
+
+
       "${steamPath 98800 "Documents/Dungeons of Dredmor"}".source = link "dungeons-of-dreadmor";
 
       # Native Games
@@ -48,6 +48,20 @@ in
       #"${steamPath 1549250    "AppData/Local/RzGame"}".source = link "undecember";
       #"${steamPath 1822550  "AppData/Roaming/MicroCivilization"}".source = link "microcivilization";
 
+      "${steamPath 345180   "AppData/Roaming/Victor Vran"}".source = link "victor-vran";
+      "${steamPath 1340180  "AppData/Local/SherwoodExtreme/Saved"}".source = link "sherwood-extreme";
+      "${steamPath 1217060  "AppData/LocalLow/duoyi/Gunfire Reborn"}".source = link "gunfire-reborn";
+      "${steamPath 899770   "AppData/LocalLow/Eleventh Hour Games/Last Epoch"}".source = link "last-epoch";
+      "${steamPath 404590   "AppData/LocalLow/Games Farm s_r_o_/Vikings_ Wolves of Midgard/saves"}".source = link "vikings-wolfs-of-midgard";
+      "${steamPath 892970   "AppData/LocalLow/IronGate/Valheim"}".source = link "valheim";
+      "${steamPath 527230   "AppData/LocalLow/LocalLow/IronOak Games/FTK/save"}".source = link "for-the-king";   
+      "${steamPath 1166290  "AppData/LocalLow/Placeholder Gameworks/Death and Taxes/Saves"}".source = link "death-and-taxes";
+      "${steamPath 1096530  "AppData/LocalLow/Tactical Adventures/Solasta"}".source = link "solasta";  
+      "${steamPath 287390   "Documents/4a games/Metro Last Light"}".source = link "metro-last-light";
+      "${steamPath 43110    "Documents/4a games/metro 2033"}".source = link "metro-2033";
+      "${steamPath 48240    "Documents/ANNO 2070"}".source = link "anno2070";
+      "${steamPath 47810    "Documents/BioWare/Dragon Age"}".source = link "dragon-age";
+      "${steamPath 1213210  "Documents/CnCRemastered"}".source = link "cnc-remastered";
       "${steamPath 223220   "Documents/Giana Sisters - Twisted Dreams"}".source = link "giana-sisters";
       "${steamPath 322330   "Documents/Klei/DoNotStarveTogether"}".source = link "dont-starve-together";
       "${steamPath 243950   "Documents/Larian Studios/Dragon Commander"}".source = link "dragon-commander";
@@ -57,35 +71,23 @@ in
       "${steamPath 40970    "Documents/stronghold crusader"}".source = link "stronghold-crusader";
       "${steamPath 232890   "Documents/Stronghold Crusader 2"}".source = link "stronghold-crusader2";
       "${steamPath 40980    "Documents/Stronghold Legends"}".source = link "stronghold-legends";
-      "${steamPath 1166290  "AppData/LocalLow/Placeholder Gameworks/Death and Taxes/Saves"}".source = link "death-and-taxes";
-      "${steamPath 17480    "Red Alert 3"}".source = link "cnc-red-alert3";
-      "${steamPath 1096530  "AppData/LocalLow/Tactical Adventures/Solasta"}".source = link "solasta";
-      "${steamPath 39800    "Nation Red"}".source = link "nation-red";
-      "${steamPath 1340180  "AppData/Local/SherwoodExtreme/Saved"}".source = link "sherwood-extreme";
       "${steamPath 203770   "Documents/Paradox Interactive/Crusader Kings II"}".source = link "crusader-kings2f";
       "${steamPath 41500    "Documents/My Games/runic games/torchlight"}".source = link "torchlight";
       "${steamPath 200710   "Documents/My Games/runic games/torchlight 2"}".source = link "torchlight2";
       "${steamPath 72850    "Documents/My Games/Skyrim"}".source = link "the-elder-scrolls5-skyrim";
       "${steamPath 489830   "Documents/My Games/Skyrim Special Edition"}".source = link "the-elder-scrolls5-skyrim-special-edition";
       "${steamPath 50300    "Documents/My Games/SpecOps-TheLine"}".source = link "spec-ops-the-line";
-      #"${steamPath X "AppData/LocalLow/duoyi/Gunfire Reborn"}".source = link "gunfire-reborn";
-      #"${steamPath X "AppData/LocalLow/Eleventh Hour Games/Last Epoch"}".source = link "last-epoch";
-      #"${steamPath X "AppData/LocalLow/Games Farm s_r_o_/Vikings_ Wolves of Midgard/saves"}".source = link "vikings-wolfs-of-midgard";
-      #"${steamPath X "AppData/LocalLow/IronGate/Valheim"}".source = link "valheim";
-      #"${steamPath X "AppData/LocalLow/LocalLow/IronOak Games/FTK/save"}".source = link "for-the-king";
-      #"${steamPath X "Games/Age of Empires 2 DE"}".source = link "age-of-empires2-de";
-      #"${steamPath X "AppData/Roaming/Victor Vran"}".source = link "victor-vran";
-      #"${steamPath X "Documents/4a games/Metro Last Light"}".source = link "metro-last-light";
-      #"${steamPath X "Documents/4a games/metro 2033"}".source = link "metro-2033";
-      #"${steamPath X "Documents/CnCRemastered"}".source = link "cnc-remastered";
-      #"${steamPath X "Documents/My Games/A Way Out"}".source = link "a-way-out";
-      #"${steamPath X "Documents/My Games/Grim Dawn"}".source = link "grim-dawn";
-      #"${steamPath X "Documents/My Games/Expeditions Viking"}".source = link "expeditions-viking";
-      #"${steamPath X "Documents/My Games/Borderlands 2/WillowGame"}".source = link "borderlands2";
-      #"${steamPath X "Documents/My Games/Borderlands The Pre-Sequel/WillowGame"}".source = link "borderlands-the-pre-sequel";
-      #"${steamPath X "Documents/My Games/Age of Empires 3"}".source = link "age-of-empires3";
-      #"${steamPath X "Documents/My Games/BioShock Infinite"}".source = link "bioshock-infinite";
-      #"${steamPath X "Documents/My Games/Rise of Nations"}".source = link "rise-of-nations";
+      "${steamPath 1222700  "Documents/My Games/A Way Out"}".source = link "a-way-out";
+      "${steamPath 219990   "Documents/My Games/Grim Dawn"}".source = link "grim-dawn";
+      "${steamPath 445190   "Documents/My Games/Expeditions Viking"}".source = link "expeditions-viking";
+      "${steamPath 49520    "Documents/My Games/Borderlands 2/WillowGame"}".source = link "borderlands2";
+      "${steamPath 261640   "Documents/My Games/Borderlands The Pre-Sequel/WillowGame"}".source = link "borderlands-the-pre-sequel";
+      "${steamPath 105450   "Documents/My Games/Age of Empires 3"}".source = link "age-of-empires3";
+      "${steamPath 8870     "Documents/My Games/BioShock Infinite"}".source = link "bioshock-infinite";
+      "${steamPath 287450   "Documents/My Games/Rise of Nations"}".source = link "rise-of-nations";
+      "${steamPath 813780   "Games/Age of Empires 2 DE"}".source = link "age-of-empires2-de";
+      "${steamPath 39800    "Nation Red"}".source = link "nation-red";
+      "${steamPath 17480    "Red Alert 3"}".source = link "cnc-red-alert3";
 
       # Saved Games/
       #"STEAM_PREFIX/Saved Games/Fire Ash".source =  link "${config.home.homeDirectory}/.saves/pokemon-fire-ash";
