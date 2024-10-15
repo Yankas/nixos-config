@@ -26,6 +26,8 @@ in
       ".local/share/Steam/steamapps/compatdata/1222670/pfx/drive_c/users/steamuser/Documents/Electronic Arts/The Sims 4".source = link "${config.home.homeDirectory}/.saves/the-sims4";
       ".local/share/Steam/steamapps/compatdata/1549250/pfx/drive_c/users/steamuser/AppData/Local/RzGame".source = link "${config.home.homeDirectory}/.saves/undecember";
       "${steamPath 560130 "Saved Games/Pillars of Eternity II"}".source = link "pillars-of-eternity2";
+      "${steamPath 40390 "Saved Games/Risen2/SaveGames"}".source = link "risen2";
+
       #linkSteamSave 560130 Saved Games/Pillars of Eternity II pillars-of-eternity2;
       #".local/share/Steam/steamapps/compatdata/560130/pfx/drive_c/users/steamuser/Saved Games/Pillars of Eternity II".source =  link "${config.home.homeDirectory}/.saves/pillars-of-eternity2";
       #${}
@@ -42,8 +44,6 @@ in
       #"STEAM_PREFIX/Saved Games/Pokemon Bushido".source =  link "${config.home.homeDirectory}/.saves/pokemon-bushido";
       #"STEAM_PREFIX/Saved Games/Pokemon Reborn".source =  link "${config.home.homeDirectory}/.saves/pokemon-reborn";
       #"STEAM_PREFIX/Saved Games/Pillars of Eternity".source =  link "${config.home.homeDirectory}/.saves/pillars-of-eternity";
-      #"STEAM_PREFIX/Saved Games/Pillars of Eternity II".source =  link "${config.home.homeDirectory}/.saves/pillars-of-eternity2";
-      #"STEAM_PREFIX/Saved Games/Risen2/SaveGames".source =  link "${config.home.homeDirectory}/.saves/risen2";
       #"STEAM_PREFIX/Saved Games/wolcen/savegames".source =  link "${config.home.homeDirectory}/.saves/wolcen";
       #"STEAM_PREFIX/Saved Games/deceit".source =  link "${config.home.homeDirectory}/.saves/deceit";
       #"STEAM_PREFIX/Saved Games/Command & Conquer 3 Tiberium Wars".source =  link "${config.home.homeDirectory}/.saves/cnc3-tiberium-wars";
