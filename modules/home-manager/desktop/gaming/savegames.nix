@@ -40,14 +40,13 @@ in
 
       #".local/share/Steam/steamapps/compatdata/1623730/pfx/drive_c/users/steamuser/AppData/Local/Pal/Saved".source = link "${config.home.homeDirectory}/.saves/palworld";
 
-      #"${steamPath 858820    "AppData/Local/TOM/Saved"}".source = link "tribes-of-midgard";
-      #"${steamPath 1623730    "AppData/Local/Pal/Saved"}".source = link "palworld";
-      #"${steamPath 690830    "Documents/Polymorph Games/Foundation"}".source = link "foundation";
-      #"${steamPath 1218210    "AppData/Roaming/TRAGsoft/Coromon"}".source = link "coromon";
-      #"${steamPath 1222670  "Documents/Electronic Arts/The Sims 4"}".source = link "the-sims4";
-      #"${steamPath 1549250    "AppData/Local/RzGame"}".source = link "undecember";
-      #"${steamPath 1822550  "AppData/Roaming/MicroCivilization"}".source = link "microcivilization";
-
+      "${steamPath 858820    "AppData/Local/TOM/Saved"}".source = link "tribes-of-midgard";
+      "${steamPath 1623730    "AppData/Local/Pal/Saved"}".source = link "palworld";
+      "${steamPath 690830    "Documents/Polymorph Games/Foundation"}".source = link "foundation";
+      "${steamPath 1218210    "AppData/Roaming/TRAGsoft/Coromon"}".source = link "coromon";
+      "${steamPath 1222670  "Documents/Electronic Arts/The Sims 4"}".source = link "the-sims4";
+      "${steamPath 1549250    "AppData/Local/RzGame"}".source = link "undecember";
+      "${steamPath 1822550  "AppData/Roaming/MicroCivilization"}".source = link "microcivilization";
       "${steamPath 345180   "AppData/Roaming/Victor Vran"}".source = link "victor-vran";
       "${steamPath 1340180  "AppData/Local/SherwoodExtreme/Saved"}".source = link "sherwood-extreme";
       "${steamPath 1217060  "AppData/LocalLow/duoyi/Gunfire Reborn"}".source = link "gunfire-reborn";
