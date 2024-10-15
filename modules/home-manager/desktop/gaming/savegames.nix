@@ -18,12 +18,7 @@ in
     home.file = lib.mkIf config.games.saves.enable {
       # Proton Games
       
-      ".local/share/Steam/steamapps/compatdata/1623730/pfx/drive_c/users/steamuser/AppData/Local/Pal/Saved".source = link "${config.home.homeDirectory}/.saves/palworld";
-      ".local/share/Steam/steamapps/compatdata/858820/pfx/drive_c/users/steamuser/AppData/Local/TOM/Saved".source = link "${config.home.homeDirectory}/.saves/tribes-of-midgard";
-      ".local/share/Steam/steamapps/compatdata/690830/pfx/drive_c/users/steamuser/My Documents/Polymorph Games/Foundation".source = link "${config.home.homeDirectory}/.saves/foundation";
-      ".local/share/Steam/steamapps/compatdata/1218210/pfx/drive_c/users/steamuser/AppData/Roaming/TRAGsoft/Coromon".source = link "${config.home.homeDirectory}/.saves/coromon";
-      ".local/share/Steam/steamapps/compatdata/1222670/pfx/drive_c/users/steamuser/Documents/Electronic Arts/The Sims 4".source = link "${config.home.homeDirectory}/.saves/the-sims4";
-      ".local/share/Steam/steamapps/compatdata/1549250/pfx/drive_c/users/steamuser/AppData/Local/RzGame".source = link "${config.home.homeDirectory}/.saves/undecember";
+
 
       "${steamPath 560130 "Saved Games/Pillars of Eternity II"}".source = link "pillars-of-eternity2";
       "${steamPath 40390  "Saved Games/Risen2/SaveGames"}".source = link "risen2";
@@ -43,7 +38,16 @@ in
       #REGEX #"STEAM_PREFIX/(.*)".source.*saves/(.*)"
       #REPLACE #"${steamPath X "$1"}".source = link "$2"
 
+      #".local/share/Steam/steamapps/compatdata/1623730/pfx/drive_c/users/steamuser/AppData/Local/Pal/Saved".source = link "${config.home.homeDirectory}/.saves/palworld";
+
+      #"${steamPath 858820    "AppData/Local/TOM/Saved"}".source = link "tribes-of-midgard";
+      #"${steamPath 1623730    "AppData/Local/Pal/Saved"}".source = link "palworld";
+      #"${steamPath 690830    "Documents/Polymorph Games/Foundation"}".source = link "foundation";
+      #"${steamPath 1218210    "AppData/Roaming/TRAGsoft/Coromon"}".source = link "coromon";
+      #"${steamPath 1222670  "Documents/Electronic Arts/The Sims 4"}".source = link "the-sims4";
+      #"${steamPath 1549250    "AppData/Local/RzGame"}".source = link "undecember";
       #"${steamPath 1822550  "AppData/Roaming/MicroCivilization"}".source = link "microcivilization";
+
       "${steamPath 223220   "Documents/Giana Sisters - Twisted Dreams"}".source = link "giana-sisters";
       "${steamPath 322330   "Documents/Klei/DoNotStarveTogether"}".source = link "dont-starve-together";
       "${steamPath 243950   "Documents/Larian Studios/Dragon Commander"}".source = link "dragon-commander";
@@ -64,23 +68,24 @@ in
       "${steamPath 72850    "Documents/My Games/Skyrim"}".source = link "the-elder-scrolls5-skyrim";
       "${steamPath 489830   "Documents/My Games/Skyrim Special Edition"}".source = link "the-elder-scrolls5-skyrim-special-edition";
       "${steamPath 50300    "Documents/My Games/SpecOps-TheLine"}".source = link "spec-ops-the-line";
-      #"STEAM_PREFIX/AppData/LocalLow/duoyi/Gunfire Reborn".source = link "${config.home.homeDirectory}/.saves/gunfire-reborn";
-      #"STEAM_PREFIX/AppData/LocalLow/Eleventh Hour Games/Last Epoch".source = link "${config.home.homeDirectory}/.saves/last-epoch";
-      #"STEAM_PREFIX/AppData/LocalLow/Games Farm s_r_o_/Vikings_ Wolves of Midgard/saves".source = link "${config.home.homeDirectory}/.saves/vikings-wolfs-of-midgard";
-      #"STEAM_PREFIX/AppData/LocalLow/IronGate/Valheim".source = link "${config.home.homeDirectory}/.saves/valheim";
-      #"STEAM_PREFIX/AppData/LocalLow/LocalLow/IronOak Games/FTK/save".source = link "${config.home.homeDirectory}/.saves/for-the-king";
-      #"STEAM_PREFIX/Games/Age of Empires 2 DE".source = link "${config.home.homeDirectory}/.saves/age-of-empires2-de";
-      #"STEAM_PREFIX/AppData/Roaming/Victor Vran".source = link "${config.home.homeDirectory}/.saves/victor-vran";
-      #"STEAM_PREFIX/Documents/4a games/Metro Last Light".source = link "${config.home.homeDirectory}/.saves/metro-last-light";
-      #"STEAM_PREFIX/Documents/4a games/metro 2033".source = link "${config.home.homeDirectory}/.saves/metro-2033";
-      #"STEAM_PREFIX/Documents/CnCRemastered".source =  link "${config.home.homeDirectory}/.saves/cnc-remastered";
-      #"STEAM_PREFIX/Documents/My Games/A Way Out".source =  link "${config.home.homeDirectory}/.saves/a-way-out";
-      #"STEAM_PREFIX/Documents/My Games/Grim Dawn".source =  link "${config.home.homeDirectory}/.saves/grim-dawn";
-      #"STEAM_PREFIX/Documents/My Games/Expeditions Viking".source =  link "${config.home.homeDirectory}/.saves/expeditions-viking";
-      #"STEAM_PREFIX/Documents/My Games/Borderlands 2/WillowGame".source =  link "${config.home.homeDirectory}/.saves/borderlands2";
-      #"STEAM_PREFIX/Documents/My Games/Borderlands The Pre-Sequel/WillowGame".source =  link "${config.home.homeDirectory}/.saves/borderlands-the-pre-sequel";
-      #"STEAM_PREFIX/Documents/My Games/Age of Empires 3".source =  link "${config.home.homeDirectory}/.saves/age-of-empires3";
-      #"STEAM_PREFIX/Documents/My Games/BioShock Infinite".source =  link "${config.home.homeDirectory}/.saves/bioshock-infinite";
+      #"${steamPath X "AppData/LocalLow/duoyi/Gunfire Reborn"}".source = link "gunfire-reborn";
+      #"${steamPath X "AppData/LocalLow/Eleventh Hour Games/Last Epoch"}".source = link "last-epoch";
+      #"${steamPath X "AppData/LocalLow/Games Farm s_r_o_/Vikings_ Wolves of Midgard/saves"}".source = link "vikings-wolfs-of-midgard";
+      #"${steamPath X "AppData/LocalLow/IronGate/Valheim"}".source = link "valheim";
+      #"${steamPath X "AppData/LocalLow/LocalLow/IronOak Games/FTK/save"}".source = link "for-the-king";
+      #"${steamPath X "Games/Age of Empires 2 DE"}".source = link "age-of-empires2-de";
+      #"${steamPath X "AppData/Roaming/Victor Vran"}".source = link "victor-vran";
+      #"${steamPath X "Documents/4a games/Metro Last Light"}".source = link "metro-last-light";
+      #"${steamPath X "Documents/4a games/metro 2033"}".source = link "metro-2033";
+      #"${steamPath X "Documents/CnCRemastered"}".source = link "cnc-remastered";
+      #"${steamPath X "Documents/My Games/A Way Out"}".source = link "a-way-out";
+      #"${steamPath X "Documents/My Games/Grim Dawn"}".source = link "grim-dawn";
+      #"${steamPath X "Documents/My Games/Expeditions Viking"}".source = link "expeditions-viking";
+      #"${steamPath X "Documents/My Games/Borderlands 2/WillowGame"}".source = link "borderlands2";
+      #"${steamPath X "Documents/My Games/Borderlands The Pre-Sequel/WillowGame"}".source = link "borderlands-the-pre-sequel";
+      #"${steamPath X "Documents/My Games/Age of Empires 3"}".source = link "age-of-empires3";
+      #"${steamPath X "Documents/My Games/BioShock Infinite"}".source = link "bioshock-infinite";
+      #"${steamPath X "Documents/My Games/Rise of Nations"}".source = link "rise-of-nations";
 
       # Saved Games/
       #"STEAM_PREFIX/Saved Games/Fire Ash".source =  link "${config.home.homeDirectory}/.saves/pokemon-fire-ash";
@@ -107,7 +112,6 @@ in
       #"STEAM_PREFIX/Documents/My Games/Borderlands 3/Saved".source =  link "${config.home.homeDirectory}/.saves/borderlands3";
       #"STEAM_PREFIX/Documents/My Games/FalloutNV".source =  link "${config.home.homeDirectory}/.saves/fallout-new-vegas";
       #"STEAM_PREFIX/Documents/My Games/Rise Of Legends".source =  link "${config.home.homeDirectory}/.saves/rise-of-legends";
-      #"STEAM_PREFIX/Documents/My Games/Rise of Nations".source =  link "${config.home.homeDirectory}/.saves/rise-of-nations";
 
       #"STEAM_PREFIX/Documents/My Games/Terraria".source =  link "${config.home.homeDirectory}/.saves/terraria";
       #"STEAM_PREFIX/Documents/My Games/Titan Quest".source =  link "${config.home.homeDirectory}/.saves/titan-quest";
