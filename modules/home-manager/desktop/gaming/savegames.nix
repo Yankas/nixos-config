@@ -20,14 +20,6 @@ in
       
 
 
-      "${steamPath 560130 "Saved Games/Pillars of Eternity II"}".source = link "pillars-of-eternity2";
-      "${steamPath 40390  "Saved Games/Risen2/SaveGames"}".source = link "risen2";
-      "${steamPath 466240 "Saved Games/deceit"}".source = link "deceit";
-      "${steamPath 24810  "Saved Games/Command & Conquer 3 Kane's Wrath"}".source = link "cnc3-kanes-wrath";
-      "${steamPath 24790  "Command & Conquer 3 Tiberium Wars"}".source = link "cnc3-tiberium-wars";
-
-
-      "${steamPath 98800 "Documents/Dungeons of Dredmor"}".source = link "dungeons-of-dreadmor";
 
       # Native Games
       ".local/share/NeposGames/Nebuchadnezzar".source = link "${config.home.homeDirectory}/.saves/nebuchadnezzar";
@@ -35,18 +27,19 @@ in
       ".local/share/Pokemon Rejuvenation".source = link "${config.home.homeDirectory}/.saves/pokemon-rejuvenation";
       ".local/share/Colossal Order/Cities_Skylines".source = link "${config.home.homeDirectory}/.saves/cities-skylines";
       ".local/share/Colossal Order/Monster Sanctuary".source = link "${config.home.homeDirectory}/.saves/monster-sanctuary";
-      #REGEX #"STEAM_PREFIX/(.*)".source.*saves/(.*)"
-      #REPLACE #"${steamPath X "$1"}".source = link "$2"
-
-      #".local/share/Steam/steamapps/compatdata/1623730/pfx/drive_c/users/steamuser/AppData/Local/Pal/Saved".source = link "${config.home.homeDirectory}/.saves/palworld";
-
-      #"${steamPath 858820    "AppData/Local/TOM/Saved"}".source = link "tribes-of-midgard";
-      #"${steamPath 1623730    "AppData/Local/Pal/Saved"}".source = link "palworld";
-      #"${steamPath 690830    "Documents/Polymorph Games/Foundation"}".source = link "foundation";
-      #"${steamPath 1218210    "AppData/Roaming/TRAGsoft/Coromon"}".source = link "coromon";
-      #"${steamPath 1222670  "Documents/Electronic Arts/The Sims 4"}".source = link "the-sims4";
-      #"${steamPath 1549250    "AppData/Local/RzGame"}".source = link "undecember";
-      #"${steamPath 1822550  "AppData/Roaming/MicroCivilization"}".source = link "microcivilization";
+     
+      "${steamPath 560130 "Saved Games/Pillars of Eternity II"}".source = link "pillars-of-eternity2";
+      "${steamPath 40390  "Saved Games/Risen2/SaveGames"}".source = link "risen2";
+      "${steamPath 466240 "Saved Games/deceit"}".source = link "deceit";
+      "${steamPath 24810  "Saved Games/Command & Conquer 3 Kane's Wrath"}".source = link "cnc3-kanes-wrath";
+      "${steamPath 24790  "Command & Conquer 3 Tiberium Wars"}".source = link "cnc3-tiberium-wars";
+      "${steamPath 858820    "AppData/Local/TOM/Saved"}".source = link "tribes-of-midgard";
+      "${steamPath 1623730    "AppData/Local/Pal/Saved"}".source = link "palworld";
+      "${steamPath 690830    "Documents/Polymorph Games/Foundation"}".source = link "foundation";
+      "${steamPath 1218210    "AppData/Roaming/TRAGsoft/Coromon"}".source = link "coromon";
+      "${steamPath 1222670  "Documents/Electronic Arts/The Sims 4"}".source = link "the-sims4";
+      "${steamPath 1549250    "AppData/Local/RzGame"}".source = link "undecember";
+      "${steamPath 1822550  "AppData/Roaming/MicroCivilization"}".source = link "microcivilization";
       "${steamPath 345180   "AppData/Roaming/Victor Vran"}".source = link "victor-vran";
       "${steamPath 1340180  "AppData/Local/SherwoodExtreme/Saved"}".source = link "sherwood-extreme";
       "${steamPath 1217060  "AppData/LocalLow/duoyi/Gunfire Reborn"}".source = link "gunfire-reborn";
@@ -61,6 +54,7 @@ in
       "${steamPath 48240    "Documents/ANNO 2070"}".source = link "anno2070";
       "${steamPath 47810    "Documents/BioWare/Dragon Age"}".source = link "dragon-age";
       "${steamPath 1213210  "Documents/CnCRemastered"}".source = link "cnc-remastered";
+      "${steamPath 98800    "Documents/Dungeons of Dredmor"}".source = link "dungeons-of-dreadmor";
       "${steamPath 223220   "Documents/Giana Sisters - Twisted Dreams"}".source = link "giana-sisters";
       "${steamPath 322330   "Documents/Klei/DoNotStarveTogether"}".source = link "dont-starve-together";
       "${steamPath 243950   "Documents/Larian Studios/Dragon Commander"}".source = link "dragon-commander";
@@ -88,6 +82,10 @@ in
       "${steamPath 39800    "Nation Red"}".source = link "nation-red";
       "${steamPath 17480    "Red Alert 3"}".source = link "cnc-red-alert3";
 
+
+      
+      #REGEX #"STEAM_PREFIX/(.*)".source.*saves/(.*)"
+      #REPLACE #"${steamPath X "$1"}".source = link "$2"
       # Saved Games/
       #"STEAM_PREFIX/Saved Games/Fire Ash".source =  link "${config.home.homeDirectory}/.saves/pokemon-fire-ash";
       #"STEAM_PREFIX/Saved Games/Pokemon Bushido".source =  link "${config.home.homeDirectory}/.saves/pokemon-bushido";
