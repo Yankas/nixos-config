@@ -2,7 +2,7 @@
 let
   link = config.lib.file.mkOutOfStoreSymlink; in
   let compatData = ".local/share/Steam/steamapps/compatdata/"; in
-  let steamUser = appId: "${compatData}${appId}/pfx/drive_c/users/steamuser/";
+  let steamUser = appId: "${compatData}${toString appId}/pfx/drive_c/users/steamuser/";
 in
 {
     options = {
