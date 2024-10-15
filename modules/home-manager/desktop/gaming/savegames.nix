@@ -64,7 +64,7 @@ in
       "${steamPath 40970    "Documents/stronghold crusader"}".source = link "stronghold-crusader";
       "${steamPath 232890   "Documents/Stronghold Crusader 2"}".source = link "stronghold-crusader2";
       "${steamPath 40980    "Documents/Stronghold Legends"}".source = link "stronghold-legends";
-      "${steamPath 203770   "Documents/Paradox Interactive/Crusader Kings II"}".source = link "crusader-kings2f";
+      "${steamPath 203770   "Documents/Paradox Interactive/Crusader Kings II"}".source = link "crusader-kings2";
       "${steamPath 41500    "Documents/My Games/runic games/torchlight"}".source = link "torchlight";
       "${steamPath 200710   "Documents/My Games/runic games/torchlight 2"}".source = link "torchlight2";
       "${steamPath 72850    "Documents/My Games/Skyrim"}".source = link "the-elder-scrolls5-skyrim";
