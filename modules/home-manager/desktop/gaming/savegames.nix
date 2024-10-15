@@ -9,13 +9,13 @@ in
       games.saves.enable = lib.mkEnableOption "enable custom save manager";
       games.saves.directory = lib.mkOption {
         type = with lib.types; str;
+        default = "${config.home.homeDirectory}/.saves";
       };
     };
 
   config = {
       #steamLink 1623730 "AppData/Local/Pal/Saved" "palworld"
     home.file = lib.mkIf config.games.saves.enable {
-      games.saves.directory = lib.mkDefault "${config.home.homeDirectory}/.saves";
       # Proton Games
       
       ".local/share/Steam/steamapps/compatdata/1623730/pfx/drive_c/users/steamuser/AppData/Local/Pal/Saved".source = link "${config.home.homeDirectory}/.saves/palworld";
