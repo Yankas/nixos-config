@@ -11,6 +11,7 @@ in
     games.nintendo.switch.enable = lib.mkEnableOption "enables nintendo switch emulator";
     games.nintendo.switch-utils.enable = lib.mkEnableOption "enables tools to flash switch";
     games.ps3.enable = lib.mkEnableOption "enable PS3 emulator";
+    games.psp.enable = lib.mkEnableOption "enable Playstation Portable emulator";
   };
 
 
@@ -21,6 +22,8 @@ in
     ++ (if config.games.nintendo.switch.enable then [ ryujinx ] else [])
     ++ (if config.games.nintendo.gba.enable then [ mgba xdelta ] else [])
     ++ (if config.games.nintendo.switch-utils.enable then [ switch-flash ] else [])
+    ++ (if config.games.psp.enable then [ ppsspp-sdl-wayland ] else [])
     ++ (if config.games.ps3.enable then [ rpcs3 ] else []);
+
   };
 }

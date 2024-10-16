@@ -30,6 +30,7 @@
     minecraft.enable = true;
     thesims4-updater.enable = true;
     ps3.enable = true;
+    psp.enable = true;
     nintendo = {
       switch.enable = true;
       gba.enable = true;
