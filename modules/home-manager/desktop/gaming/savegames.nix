@@ -22,11 +22,11 @@ in
 
 
       # Native Games
-      ".local/share/NeposGames/Nebuchadnezzar".source = link "${config.home.homeDirectory}/.saves/nebuchadnezzar";
-      ".local/share/Paradox Interactive/Crusader Kings III/".source = link "${config.home.homeDirectory}/.saves/crusader-kings3";
-      ".local/share/Pokemon Rejuvenation".source = link "${config.home.homeDirectory}/.saves/pokemon-rejuvenation";
-      ".local/share/Colossal Order/Cities_Skylines".source = link "${config.home.homeDirectory}/.saves/cities-skylines";
-      ".local/share/Colossal Order/Monster Sanctuary".source = link "${config.home.homeDirectory}/.saves/monster-sanctuary";
+      ".local/share/NeposGames/Nebuchadnezzar".source = link "nebuchadnezzar";
+      ".local/share/Paradox Interactive/Crusader Kings III/".source = link "saves/crusader-kings3";
+      ".local/share/Pokemon Rejuvenation".source = link "pokemon-rejuvenation";
+      ".local/share/Colossal Order/Cities_Skylines".source = link "cities-skylines";
+      ".local/share/Colossal Order/Monster Sanctuary".source = link "monster-sanctuary";
      
       "${steamPath 560130 "Saved Games/Pillars of Eternity II"}".source = link "pillars-of-eternity2";
       "${steamPath 40390  "Saved Games/Risen2/SaveGames"}".source = link "risen2";
