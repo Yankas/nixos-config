@@ -65,6 +65,7 @@
         color: #6c71c4;
       }
       #battery {
+        font-family: "Fighting Spirit turbo", "Noto Color Emoji";
         color: #859900;
       }
       #disk {
