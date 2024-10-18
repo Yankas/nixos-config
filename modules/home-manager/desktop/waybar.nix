@@ -47,7 +47,7 @@
         font-size: 20px;
       }
 
-      #workspaces {
+      #workspaces * {
         padding: 0px 3px;
       }
       #workspaces button {
