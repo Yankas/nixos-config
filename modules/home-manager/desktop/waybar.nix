@@ -160,7 +160,7 @@
       ];
       "custom/weather" = {
         exec = "curl 'wttr.in?format=%c%t'";
-        interval = 60;
+        interval = 360;
       };
       "group/hardware" = {
           orientation = "horizontal";

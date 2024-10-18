@@ -74,7 +74,9 @@
       proggyfonts
       corefonts
       vistafonts
+
       fighting-spirit
+      die-in-a-fire
     ];
 
     programs.hyprland = {
