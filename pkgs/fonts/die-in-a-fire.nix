@@ -10,7 +10,7 @@ fetchzip {
   stripRoot = false;
   postFetch = ''
     mkdir -p $out/share/fonts/opentype
-    unzip -j /build/fighting_spirit_tbs.zip \*.otf -d $out/share/fonts/opentype
+    unzip -j /build/die_in_a_fire_pg.zip \*.otf -d $out/share/fonts/opentype
   '';
 
   meta = with lib; {
