@@ -47,17 +47,15 @@
         font-size: 20px;
       }
 
-      #workspaces * {
-        padding: 0px 3px;
-      }
+
       #workspaces button {
-        padding: 0px 3px;
+        padding: 0px 5px;
         color: #fdf6e3;
       }
 
       #workspaces button:hover {
         color: #FF4221;
-        padding: 0px 3px;
+        padding: 0px 5px;
       }
 
       #workspaces button.visible {
@@ -88,6 +86,7 @@
 
       #mpris {
         font-family: "Die in a fire PG", sans-serif;
+        #text-shadow: unset;
         font-size: 20px;
         padding: 0px 10px;
       }
