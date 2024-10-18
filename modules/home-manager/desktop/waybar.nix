@@ -164,7 +164,7 @@
             "cpu"
             "disk"
             "memory"
-          ]
+          ];
       };
 
       "custom/left-arrow-dark" = {
