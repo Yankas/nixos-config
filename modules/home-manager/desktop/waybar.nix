@@ -6,7 +6,7 @@
     style = ''
       * {
         font-size: 20px;
-        font-family: "Fighting Spirit turbo", serif, "Noto Color Emoji";
+        font-family: "Fighting Spirit turbo", "Noto Color Emoji";
       }
 
       window#waybar {
@@ -205,6 +205,7 @@
         status-icons = {
           "paused" = "⏸";
         };
+        tooltip = false;
       };
 
       "disk" = {
