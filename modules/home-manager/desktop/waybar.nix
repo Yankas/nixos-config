@@ -65,6 +65,10 @@
       #memory {
         color: #2aa198;
       }
+
+      #tray {
+        padding: 10px
+      }
       
       #cpu {
         color: #6c71c4;
