@@ -56,7 +56,7 @@
         color: #FF4221;
         padding: 0px 3px;
       }
-      
+
       #workspaces button.active {
         color: #FF4221;
         padding: 0px 5px;
@@ -265,6 +265,10 @@
           ""
           ""
         ];
+      };
+
+      "hyprland/workspaces" = {
+        special-visible-only = true;
       };
 
       mpris = {
