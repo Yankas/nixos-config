@@ -34,7 +34,7 @@
       #battery,
       #disk,
       #mpris,
-      #custom-weather
+      #custom-weather,
       #tray {
         background: #1a1a1a;
         text-shadow: 1px 1px #DDD;
