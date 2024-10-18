@@ -36,7 +36,7 @@
       #mpris,
       #tray {
         background: #1a1a1a;
-        text-shadow: 1px 2px #DDD;
+        text-shadow: 1px 1px #DDD;
       }
 
       #workspaces button {
