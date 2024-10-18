@@ -1,7 +1,7 @@
 { lib, fetchzip, fetchurl, pkgs }:
 fetchzip {
   name = "die-in-a-fire";
-  #hash = "sha256-H54xoaW1rHUdX90CjGbTd3GhewmSWEILmh5YDcb5SC4=";
+  hash = "sha256-tcNyIXPXq68/+Hv8HsKx5z64xnY6zn8pbO6YQ3biUUI=";
   url = "http://nix.yank.as/fonts/die_in_a_fire_pg.zip";
 
   nativeBuildInputs = [ pkgs.unzip ];
