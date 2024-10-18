@@ -78,6 +78,7 @@
       #battery {
         color: #859900;
       }
+
       #disk {
         color: #b58900;
       }
@@ -112,7 +113,6 @@
       modules-left = [ 
         "hyprland/workspaces" 
         "custom/right-arrow-dark"
-
         ];
 
       modules-center = [
@@ -264,11 +264,11 @@
         format = "{player_icon} {title} ";
         format-paused = "{status_icon} {title} ";
         player-icons = {
-          default = " ▶";
+          default = " ▶️ ";
           mpv = " 🎵";
         };
         status-icons = {
-          "paused" = " ⏸️";
+          "paused" = " ⏸️ ";
         };
         tooltip = false;
       };
