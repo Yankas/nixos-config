@@ -59,8 +59,7 @@
 
       #workspaces button:hover {
         color: #FF4221;
-        background: #1a1a1a;
-        border: #1a1a1a;
+        padding: 0px 2px;
       }
 
       #pulseaudio {
@@ -116,7 +115,9 @@
       height = 28;
       layer = "top";
       position = "top";
-      tray = { spacing = 10; };
+      tray = { 
+        spacing = 10; 
+      };
 
       modules-left = [ 
         "hyprland/workspaces" 
