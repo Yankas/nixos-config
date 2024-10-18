@@ -57,6 +57,7 @@
       #pulseaudio {
         color: #268bd2;
       }
+
       #memory {
         color: #2aa198;
       }
@@ -81,17 +82,18 @@
     '';
 
     settings = [{
-      height = 30;
+      height = 35;
       layer = "top";
       position = "top";
       tray = { spacing = 10; };
-      #modules-center = [ "sway/window" ];
+
       modules-left = [ 
         "hyprland/workspaces" 
         "custom/right-arrow-dark"
         ];
 
       modules-center = [
+        "mpris"
         "custom/left-arrow-dark"
         "clock#1"
         "custom/left-arrow-light"
