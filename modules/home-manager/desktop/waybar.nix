@@ -84,9 +84,9 @@
       }
 
       #mpris {
-        font-family: sans-sarif; 
+        font-family: "Die in a fire PG", sans-serif;
         text-shadow: unset;
-        font-size: 15px;
+        font-size: 20px;
       }
 
       #clock,
@@ -153,7 +153,7 @@
         #"disk"
         "custom/left-arrow-light"
         "custom/left-arrow-dark"
-        "custom/weather"
+        #"custom/weather"
         "custom/left-arrow-light"
         "custom/left-arrow-dark"
         "tray"
