@@ -183,10 +183,10 @@
         format-bluetooth = "{icon}  {volume}%";
         format-muted = "MUTE";
         format-icons = {
-          headphones = "SFX";
+          headphones = "SFX: ";
           default = [
-            "SFX"
-            "SFX"
+            "SFX: "
+            "SFX: "
           ];
         };
         "scroll-step" = 5;
