@@ -142,6 +142,7 @@
         "custom/left-arrow-dark"
         "tray"
       ];
+
       "custom/left-arrow-dark" = {
         "format" = "";
         "tooltip" = false;
@@ -173,19 +174,19 @@
 
       # DATE
       "clock#3" = {
-        "format" = "{:%m/%d}";
-        "tooltip" = false;
+        format = "{:%m/%d}";
+        tooltip = false;
       };
 
-      "pulseaudio" = {
-        "format" = "{icon} {volume:2}%";
-        "format-bluetooth" = "{icon}  {volume}%";
-        "format-muted" = "MUTE";
-        "format-icons" = {
-          "headphones" = "";
-          "default" = [
-            ""
-            ""
+      pulseaudio = {
+        format = "{icon} {volume:2}%";
+        format-bluetooth = "{icon}  {volume}%";
+        format-muted = "MUTE";
+        format-icons = {
+          headphones = "SFX";
+          default = [
+            "SFX"
+            "SFX"
           ];
         };
         "scroll-step" = 5;
