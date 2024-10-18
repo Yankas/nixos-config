@@ -221,8 +221,8 @@
       };
 
       mpris = {
-        format = "{player_icon} {dynamic}";
-        format-paused = "{status_icon} {dynamic}";
+        format = "{player_icon} {title}";
+        format-paused = "{status_icon} {title}";
         player-icons = {
           default = "▶";
           mpv = "🎵";
