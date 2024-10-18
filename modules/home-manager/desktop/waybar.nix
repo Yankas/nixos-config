@@ -51,6 +51,7 @@
       #workspaces button {
         padding: 0px 5px;
         color: #fdf6e3;
+        background: #1a1a1a;
       }
 
       #workspaces button:hover {
@@ -102,7 +103,7 @@
       #battery,
       #disk,
       #tray {
-        padding: 0 10px;
+        padding: 0px 10px;
       }
 
       tooltip label {
