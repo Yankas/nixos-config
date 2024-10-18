@@ -227,6 +227,7 @@
       memory = {
         interval = 5;
         format = "Mem {}%";
+        tooltip = false;
       };
 
       cpu = {
@@ -268,6 +269,7 @@
         interval = 5;
         format = "SSD: {percentage_used:2}%";
         path = "/";
+        tooltip = false;
       };
       tray = {
         icon-size = 25;
