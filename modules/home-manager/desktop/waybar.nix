@@ -146,13 +146,13 @@
         #"memory"
         #"custom/left-arrow-light"
         #"custom/left-arrow-dark"
-        "cpu"
+        #"cpu"
         "custom/left-arrow-light"
         "custom/left-arrow-dark"
         "battery"
         "custom/left-arrow-light"
         "custom/left-arrow-dark"
-        "disk"
+        #"disk"
         "custom/left-arrow-light"
         "custom/left-arrow-dark"
         "tray"
@@ -168,7 +168,7 @@
           drawer = {
             transition-duration = 500;
             transition-left-to-right = true;
-            children-class = "drawer";
+            #children-class = "drawer";
             click-to-reveal = true;
           };
       };
