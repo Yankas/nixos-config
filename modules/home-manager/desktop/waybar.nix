@@ -41,9 +41,11 @@
         padding: 0 2px;
         color: #fdf6e3;
       }
+
       #workspaces button.focused {
         color: #268bd2;
       }
+
       #workspaces button:hover {
         box-shadow: inherit;
         text-shadow: inherit;
@@ -61,16 +63,18 @@
       #memory {
         color: #2aa198;
       }
+      
       #cpu {
         color: #6c71c4;
       }
-      #battery {
 
+      #battery {
         color: #859900;
       }
       #disk {
         color: #b58900;
       }
+
       #mpris {
         font-family: sans-serif
       }
@@ -84,7 +88,10 @@
         padding: 0 10px;
       }
 
-
+      tooltip label {
+        font-family: Consolas, monospace;
+        font-size: 25;
+      }
     '';
 
     settings = [{
