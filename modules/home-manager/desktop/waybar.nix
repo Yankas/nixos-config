@@ -106,7 +106,9 @@
         ];
 
       modules-center = [
+        "custom/left-arrow-dark"
         "mpris"
+        "custom/right-arrow-dark"
 
       ];
       modules-right = [
