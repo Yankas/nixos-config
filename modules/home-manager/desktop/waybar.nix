@@ -65,11 +65,10 @@
         color: #6c71c4;
       }
       #battery {
-        font-family: "Fighting Spirit turbo", "Noto Color Emoji";
+
         color: #859900;
       }
       #disk {
-        font-family: "Fighting Spirit turbo", "Noto Color Emoji";
         color: #b58900;
       }
       #mpris {
@@ -89,7 +88,7 @@
     '';
 
     settings = [{
-      height = 40;
+      height = 30;
       layer = "top";
       position = "top";
       tray = { spacing = 10; };
@@ -116,9 +115,9 @@
         "pulseaudio"
         "custom/left-arrow-light"
         "custom/left-arrow-dark"
-        "memory"
-        "custom/left-arrow-light"
-        "custom/left-arrow-dark"
+        #"memory"
+        #"custom/left-arrow-light"
+        #"custom/left-arrow-dark"
         "cpu"
         "custom/left-arrow-light"
         "custom/left-arrow-dark"
