@@ -109,8 +109,10 @@
       tray = { spacing = 10; };
 
       modules-left = [ 
+        "group/hardware"
         "hyprland/workspaces" 
         "custom/right-arrow-dark"
+
         ];
 
       modules-center = [
@@ -155,6 +157,15 @@
         "custom/left-arrow-dark"
         "tray"
       ];
+
+      "group/hardware" = {
+          orientation = "vertical";
+          "modules" = [
+            "cpu"
+            "disk"
+            "memory"
+          ]
+      };
 
       "custom/left-arrow-dark" = {
         "format" = "";
