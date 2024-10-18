@@ -78,7 +78,7 @@
       }
 
       #mpris {
-        font-family: sans-serif
+        font-family: sans-serif;
         text-shadow: unset;
       }
 
