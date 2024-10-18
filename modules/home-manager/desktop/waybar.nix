@@ -1,5 +1,13 @@
 { config, pkgs, lib, ... }:
+let style = {
+  color = {
+    background = "#292b2e";
+    background2 = "#1a1a1a";
+  };
+};
+in
 {
+  
     programs.waybar = {
     enable = true;
     systemd.enable = true;
