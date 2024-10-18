@@ -2,7 +2,7 @@
 let style = {
   color = {
     background = "#292b2e";
-    background2 = "#1a1a1a";
+    background-accent = "#1a1a1a";
   };
 };
 in
@@ -21,7 +21,7 @@ in
         background: ${style.color.background};
         color: #fdf6e3;
         border-style: solid;
-        border-color: #1a1a1a;
+        border-color: ${style.color.background-accent};
         border-width: 0px 0px 0px 0px
       }
 
