@@ -18,7 +18,7 @@ in
       }
 
       window#waybar {
-        background: #292b2e;
+        background: ${style.color.background};
         color: #fdf6e3;
         border-style: solid;
         border-color: #1a1a1a;
