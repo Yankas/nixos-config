@@ -231,6 +231,7 @@
       cpu = {
         interval = 5;
         format = "CPU: {usage:2}%";
+        tooltip = false;
       };
 
       battery = {
