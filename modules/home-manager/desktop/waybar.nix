@@ -47,6 +47,9 @@
         font-size: 20px;
       }
 
+      #workspaces {
+        padding: 0px 3px;
+      }
       #workspaces button {
         padding: 0px 3px;
         color: #fdf6e3;
