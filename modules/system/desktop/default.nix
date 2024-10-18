@@ -119,6 +119,8 @@
       seahorse
       kitty
 
+      playerctl
+
       fuzzel
       waybar
       satty
