@@ -41,7 +41,7 @@
       }
 
       #custom-weather {
-        max-height: 30px;
+        font-size: 20px;
       }
       #workspaces button {
         padding: 0px 2px;
@@ -59,7 +59,7 @@
       #workspaces button:hover {
         background: #1a1a1a;
         border: #1a1a1a;
-        padding: 0 3px;
+        padding: 0px 3px;
       }
 
       #pulseaudio {
