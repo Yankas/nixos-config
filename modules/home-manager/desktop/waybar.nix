@@ -72,7 +72,7 @@
         color: #b58900;
       }
       #mpris {
-        font-family: sans-serif;
+        font-family: Noto Color Emoji, sans-serif;
       }
 
       #clock,
