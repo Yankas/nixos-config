@@ -159,7 +159,7 @@
       ];
 
       "group/hardware" = {
-          orientation = "vertical";
+          orientation = "horizontal";
           modules = [
             "cpu"
             "disk"
