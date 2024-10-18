@@ -6,7 +6,7 @@
     style = ''
       * {
         font-size: 20px;
-        font-family: "Fighting Spirit turbo", "Noto Color Emoji", sans-serif
+        font-family: "Fighting Spirit turbo", sans-serif
       }
 
       window#waybar {
