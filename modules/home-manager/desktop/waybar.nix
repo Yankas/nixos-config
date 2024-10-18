@@ -33,6 +33,7 @@
       #cpu,
       #battery,
       #disk,
+      #mpris,
       #tray {
         background: #1a1a1a;
       }
