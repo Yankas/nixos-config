@@ -153,8 +153,12 @@
         "custom/left-arrow-light"
         "custom/left-arrow-dark"
         "tray"
+        wttr.in/oberhausen
       ];
-
+      "custom/weather" = {
+        exec = "curl 'wttr.in?format=%c%t'";
+        interval = 60;
+      };
       "group/hardware" = {
           orientation = "horizontal";
           modules = [
