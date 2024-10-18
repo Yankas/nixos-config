@@ -204,8 +204,7 @@
           ];
         };
         "scroll-step" = 5;
-        "on-click" = "pamixer -t";
-        "on-click-right" = "pavucontrol";
+        "on-click" = "${pkgs.pavucontrol}/bin/pavucontrol";
       };
       
       memory = {
