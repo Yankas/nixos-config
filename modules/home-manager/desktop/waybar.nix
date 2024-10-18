@@ -113,7 +113,7 @@
     '';
 
     settings = [{
-      height = 30;
+      height = 28;
       layer = "top";
       position = "top";
       tray = { spacing = 10; };
