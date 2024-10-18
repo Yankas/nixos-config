@@ -158,7 +158,7 @@
         #"battery"
         #"custom/left-arrow-light"
         #"custom/left-arrow-dark"
-        #"disk"
+        #"battery"
         "custom/left-arrow-light"
         "custom/left-arrow-dark"
         "custom/weather"
@@ -281,7 +281,7 @@
           mpv = " 🎵";
         };
         status-icons = {
-          "paused" = " ⏸️ ";
+          "paused" = "⏸️ ";
         };
         tooltip = false;
       };

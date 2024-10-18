@@ -95,7 +95,7 @@
     } // lib.optionalAttrs config.programs.steam.enable { 
       STEAM_EXTRA_COMBAT_TOOLS_PATHS = lib.mkIf config.programs.steam.enable "\${HOME}/.steam/root/compatibilitytools.d";
     } // lib.optionalAttrs config.programs.minecraft.enable { 
-      MINECRAFT_HOME = lib.mkIf config.programs.steam.enable "\${HOME}/.local/share/PrismLauncher/instances";
+      MINECRAFT_HOME = lib.mkIf config.games.minecraft.enable "\${HOME}/.local/share/PrismLauncher/instances";
     };
 
   };
