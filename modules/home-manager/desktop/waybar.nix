@@ -82,6 +82,8 @@
       #disk {
         padding: 0 10px;
       }
+
+
     '';
 
     settings = [{
@@ -192,6 +194,18 @@
           ""
         ];
       };
+      mpris = {
+        format = "DEFAULT: {player_icon} {dynamic}";
+        format-paused = "DEFAULT: {status_icon} <i>{dynamic}</i>"
+        player-icons: {
+          default = "▶";
+          mpv = "🎵";
+        };
+        status-icons = {
+          "paused" = "⏸";
+        };
+      };
+
       "disk" = {
         "interval" = 5;
         "format" = "Disk {percentage_used:2}%";
