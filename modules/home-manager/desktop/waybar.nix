@@ -95,6 +95,10 @@
         font-size: 20px;
       }
 
+      #clock {
+        color: #FF4221;
+      }
+
       #clock,
       #pulseaudio,
       #memory,
