@@ -66,6 +66,9 @@
         color: #2aa198;
       }
 
+      #tray {
+        padding: 0px 10px;
+      }
       
       #cpu {
         color: #6c71c4;
