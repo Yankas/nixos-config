@@ -46,22 +46,21 @@
       #custom-weather {
         font-size: 20px;
       }
+
       #workspaces button {
         padding: 0px 2px;
         color: #fdf6e3;
       }
 
-      #workspaces button.focused {
+      #workspaces button.active {
         color: #FF4221;
+        padding: 0px 5px;
       }
 
       #workspaces button:hover {
         color: #FF4221;
-        box-shadow: inherit;
-        text-shadow: inherit;
         background: #1a1a1a;
         border: #1a1a1a;
-        padding: 0px 3px;
       }
 
       #pulseaudio {
