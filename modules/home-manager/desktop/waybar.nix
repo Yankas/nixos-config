@@ -165,7 +165,10 @@
             "disk"
             "memory"
           ];
-          drawer = true;
+          drawer = {
+            transition-duration = 500;
+            transition-left-to-right = true;
+          };
       };
 
       "custom/left-arrow-dark" = {
