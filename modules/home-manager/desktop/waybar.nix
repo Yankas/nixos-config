@@ -52,14 +52,13 @@
       }
 
       #workspaces button.focused {
-        color: #268bd2;
+        color: #FF4221;
       }
 
       #workspaces button:hover {
+        color: #FF4221;
         box-shadow: inherit;
         text-shadow: inherit;
-      }
-      #workspaces button:hover {
         background: #1a1a1a;
         border: #1a1a1a;
         padding: 0px 3px;
