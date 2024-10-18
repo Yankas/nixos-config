@@ -247,7 +247,7 @@
 
       disk = {
         interval = 5;
-        format = "DISK: {percentage_used:2}%";
+        format = "SSD: {percentage_used:2}%";
         path = "/";
       };
       tray = {
