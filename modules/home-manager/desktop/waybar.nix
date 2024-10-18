@@ -162,7 +162,7 @@
         "tray"
       ];
       "custom/weather" = {
-        exec = "curl 'wttr.in?format=%c%t'";
+        exec = "curl 'wttr.in?format=%t'";
         interval = 360;
       };
       "group/hardware" = {
