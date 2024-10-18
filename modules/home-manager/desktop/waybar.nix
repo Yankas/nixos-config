@@ -168,6 +168,7 @@
           drawer = {
             transition-duration = 500;
             transition-left-to-right = true;
+            children-class = "drawer";
           };
       };
 
