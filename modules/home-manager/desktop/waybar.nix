@@ -84,7 +84,7 @@
       }
 
       #mpris {
-        font-family: "Die in a fire PG", sans-serif;
+        font-family: sans-sarif #"Die in a fire PG", sans-serif;
         text-shadow: unset;
         font-size: 15px;
       }
