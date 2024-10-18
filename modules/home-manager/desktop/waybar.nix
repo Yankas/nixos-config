@@ -22,7 +22,7 @@ in
         color: #fdf6e3;
         border-style: solid;
         border-color: ${style.color.background-accent};
-        border-width: 0px 0px 0px 0px
+        border-width: 0px 0px 3px 0px
       }
 
       #custom-right-arrow-dark,
