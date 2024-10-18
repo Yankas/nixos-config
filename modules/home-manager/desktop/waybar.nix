@@ -108,9 +108,12 @@
 
       modules-center = [
         "custom/left-arrow-dark"
+        "custom/left-arrow-light"
+        "custom/left-arrow-dark"
         "mpris"
         "custom/right-arrow-dark"
-
+        "custom/right-arrow-light"
+        "custom/right-arrow-dark"
       ];
       modules-right = [
         # CLOCK
