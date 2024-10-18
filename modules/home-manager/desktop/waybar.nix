@@ -84,7 +84,7 @@
       }
 
       #mpris {
-        font-family: "Fighting Spirit turbo", sans-serif;
+        font-family: "Die in a fire PG", sans-serif;
         text-shadow: unset;
         font-size: 15px;
       }
