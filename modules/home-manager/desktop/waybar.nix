@@ -82,8 +82,9 @@
       }
 
       #mpris {
-        font-family: sans-serif;
+        font-family: "Fighting Spirit turbo", sans-serif;
         text-shadow: unset;
+        font-size: 15px;
       }
 
       #clock,
