@@ -109,7 +109,6 @@
       tray = { spacing = 10; };
 
       modules-left = [ 
-        "group/hardware"
         "hyprland/workspaces" 
         "custom/right-arrow-dark"
 
@@ -146,12 +145,10 @@
         #"memory"
         #"custom/left-arrow-light"
         #"custom/left-arrow-dark"
-        #"cpu"
-        "custom/left-arrow-light"
-        "custom/left-arrow-dark"
-        "battery"
-        "custom/left-arrow-light"
-        "custom/left-arrow-dark"
+        "group/hardware"
+        #"battery"
+        #"custom/left-arrow-light"
+        #"custom/left-arrow-dark"
         #"disk"
         "custom/left-arrow-light"
         "custom/left-arrow-dark"
@@ -162,7 +159,11 @@
           orientation = "horizontal";
           modules = [
             "cpu"
+            "custom/left-arrow-light"
+            "custom/left-arrow-dark"
             "disk"
+            "custom/left-arrow-light"
+            "custom/left-arrow-dark"
             "memory"
           ];
           drawer = {
