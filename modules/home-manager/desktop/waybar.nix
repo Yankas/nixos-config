@@ -6,7 +6,7 @@
     style = ''
       * {
         font-size: 20px;
-        font-family: "Fighting Spirit 2";
+        font-family: "Fighting Spirit";
       }
 
       window#waybar {
