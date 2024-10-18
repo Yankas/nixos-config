@@ -66,9 +66,6 @@
         color: #2aa198;
       }
 
-      #tray {
-
-      }
       
       #cpu {
         color: #6c71c4;
