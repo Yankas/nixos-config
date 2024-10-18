@@ -107,7 +107,7 @@
 
       modules-center = [
         "mpris"
-        "custom/left-arrow-dark"
+
       ];
       modules-right = [
         # CLOCK
@@ -158,18 +158,25 @@
         "format" = "";
         "tooltip" = false;
       };
+
+      # DAY OF THE WEEK
       "clock#1" = {
-        "format" = "{:%a}";
-        "tooltip" = false;
+        format = "{:%a}";
+        tooltip = false;
       };
+
+      # TIME
       "clock#2" = {
-        "format" = "{:%H:%M}";
-        "tooltip" = false;
+        format = "{:%H:%M}";
+        tooltip = false;
       };
+
+      # DATE
       "clock#3" = {
-        "format" = "{:%m-%d}";
+        "format" = "{:%m/%d}";
         "tooltip" = false;
       };
+
       "pulseaudio" = {
         "format" = "{icon} {volume:2}%";
         "format-bluetooth" = "{icon}  {volume}%";
@@ -185,19 +192,22 @@
         "on-click" = "pamixer -t";
         "on-click-right" = "pavucontrol";
       };
-      "memory" = {
-        "interval" = 5;
-        "format" = "Mem {}%";
+      
+      memory = {
+        interval = 5;
+        format = "Mem {}%";
       };
-      "cpu" = {
-        "interval" = 5;
-        "format" = "CPU {usage:2}%";
+
+      cpu = {
+        interval = 5;
+        format = "CPU {usage:2}%";
       };
-      "battery" = {
-        "states" = {
-          "good" = 95;
-          "warning" = 30;
-          "critical" = 15;
+
+      battery = {
+        states = {
+          good = 95;
+          warning = 30;
+          critical = 15;
         };
         format = "{icon} {capacity}%";
         format-icons = [
@@ -208,6 +218,7 @@
           ""
         ];
       };
+
       mpris = {
         format = "{player_icon} {dynamic}";
         format-paused = "{status_icon} {dynamic}";
@@ -221,13 +232,13 @@
         tooltip = false;
       };
 
-      "disk" = {
-        "interval" = 5;
-        "format" = "Disk {percentage_used:2}%";
-        "path" = "/";
+      disk = {
+        interval = 5;
+        format = "Disk {percentage_used:2}%";
+        path = "/";
       };
-      "tray" = {
-        "icon-size" = 20;
+      tray = {
+        icon-size = 20;
       };
 
     }];
