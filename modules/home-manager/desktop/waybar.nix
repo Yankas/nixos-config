@@ -203,7 +203,7 @@
           mpv = "🎵";
         };
         status-icons = {
-          "paused" = "⏸";
+          "paused" = "⏸️";
         };
         tooltip = false;
       };
