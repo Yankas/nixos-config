@@ -57,7 +57,7 @@
         padding: 0px 3px;
       }
 
-      #workspaces button.active {
+      #workspaces button.visible {
         color: #FF4221;
         padding: 0px 5px;
       }
