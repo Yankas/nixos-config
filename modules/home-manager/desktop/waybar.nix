@@ -6,7 +6,8 @@
     style = ''
       * {
         font-size: 20px;
-        font-family: "Fighting Spirit turbo";
+        font: "Fighting Spirit turbo";
+        font-family: "Noto Color Emoji"
       }
 
       window#waybar {
@@ -72,7 +73,7 @@
         color: #b58900;
       }
       #mpris {
-        font-family: sans-serif, Noto Color Emoji;
+        font-family: sans-serif
       }
 
       #clock,
