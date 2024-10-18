@@ -2,7 +2,7 @@
 fetchzip {
   name = "die-in-a-fire";
   #hash = "sha256-H54xoaW1rHUdX90CjGbTd3GhewmSWEILmh5YDcb5SC4=";
-  url = "http://nix.yank.as/fonts/die_in_a_fire_pg.zip.zip";
+  url = "http://nix.yank.as/fonts/die_in_a_fire_pg.zip";
 
   nativeBuildInputs = [ pkgs.unzip ];
   #stripRoot = false;
