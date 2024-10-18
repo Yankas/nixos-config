@@ -70,6 +70,9 @@
       #disk {
         color: #b58900;
       }
+      #mpris {
+        font-family: mono;
+      }
 
       #clock,
       #pulseaudio,
