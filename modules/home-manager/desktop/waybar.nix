@@ -189,6 +189,7 @@
       "clock#3" = {
         format = "{:%m/%d}";
         tooltip = false;
+        on-click = "date --iso-8601 | ${pkgs.wl-clipboard}/bin/wl-copy"
       };
 
       pulseaudio = {
