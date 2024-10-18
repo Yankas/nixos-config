@@ -6,7 +6,7 @@
     style = ''
       * {
         font-size: 20px;
-        font-family: "Fighting Spirit turbo", "Noto Color Emoji";
+        font-family: "Fighting Spirit turbo";
       }
 
       window#waybar {
@@ -63,7 +63,6 @@
       }
       #cpu {
         color: #6c71c4;
-        font-family: "Fighting Spirit turbo";
       }
       #battery {
 
