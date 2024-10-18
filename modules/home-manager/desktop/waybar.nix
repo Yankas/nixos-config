@@ -40,8 +40,11 @@
         text-shadow: 1px 1px #DDD;
       }
 
+      #custom-weather {
+        max-height: 30px;
+      }
       #workspaces button {
-        padding: 0 2px;
+        padding: 0px 2px;
         color: #fdf6e3;
       }
 
@@ -153,7 +156,7 @@
         #"disk"
         "custom/left-arrow-light"
         "custom/left-arrow-dark"
-        #"custom/weather"
+        "custom/weather"
         "custom/left-arrow-light"
         "custom/left-arrow-dark"
         "tray"
