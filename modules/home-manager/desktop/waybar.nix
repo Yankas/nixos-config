@@ -59,7 +59,7 @@
 
       #workspaces button:hover {
         color: #FF4221;
-        padding: 0px 2px;
+        padding: 0px 3px;
       }
 
       #pulseaudio {
@@ -68,10 +68,6 @@
 
       #memory {
         color: #2aa198;
-      }
-
-      #tray {
-        padding: 0px 10px;
       }
       
       #cpu {
@@ -101,7 +97,8 @@
       #memory,
       #cpu,
       #battery,
-      #disk {
+      #disk,
+      #tray {
         padding: 0 10px;
       }
 
