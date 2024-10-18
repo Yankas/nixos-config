@@ -268,6 +268,7 @@
       };
 
       "hyprland/workspaces" = {
+        show-special = true;
         special-visible-only = true;
       };
 
