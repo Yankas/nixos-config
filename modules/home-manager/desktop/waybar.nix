@@ -6,7 +6,7 @@
     style = ''
       * {
         font-size: 20px;
-        font-family: "Fighting Spirit turbo";
+        font-family: "Fighting Spirit turbo, "Noto Color Emoji";
       }
 
       window#waybar {
@@ -195,8 +195,8 @@
         ];
       };
       mpris = {
-        format = "DEFAULT: {player_icon} {dynamic}";
-        format-paused = "DEFAULT: {status_icon} <i>{dynamic}</i>";
+        format = "{player_icon} {dynamic}";
+        format-paused = "{status_icon} {dynamic}";
         player-icons = {
           default = "▶";
           mpv = "🎵";
