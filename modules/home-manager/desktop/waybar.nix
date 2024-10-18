@@ -87,6 +87,7 @@
         font-family: "Die in a fire PG", sans-serif;
         text-shadow: unset;
         font-size: 20px;
+        padding: 0px 10px;
       }
 
       #clock {
