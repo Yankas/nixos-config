@@ -36,6 +36,7 @@
       #mpris,
       #tray {
         background: #1a1a1a;
+        text-shadow: 1px 2px #BBB;
       }
 
       #workspaces button {
@@ -78,6 +79,7 @@
 
       #mpris {
         font-family: sans-serif
+        text-shadow: unset;
       }
 
       #clock,
