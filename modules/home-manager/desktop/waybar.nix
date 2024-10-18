@@ -6,7 +6,7 @@
     style = ''
       * {
         font-size: 20px;
-        font: "Fighting Spirit turbo";
+        font-variant: "Fighting Spirit turbo";
         font-family: "Noto Color Emoji"
       }
 
