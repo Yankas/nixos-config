@@ -72,7 +72,7 @@
         color: #b58900;
       }
       #mpris {
-        font-family: mono;
+        font-family: serif;
       }
 
       #clock,
