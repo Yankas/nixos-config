@@ -227,14 +227,14 @@
       };
 
       mpris = {
-        format = "{player_icon} {title}";
-        format-paused = "{status_icon} {title}";
+        format = "{player_icon} {title} ";
+        format-paused = "{status_icon} {title} ";
         player-icons = {
-          default = "▶";
-          mpv = "🎵";
+          default = " ▶";
+          mpv = " 🎵";
         };
         status-icons = {
-          "paused" = "⏸️";
+          "paused" = " ⏸️";
         };
         tooltip = false;
       };
