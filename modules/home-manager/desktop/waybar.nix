@@ -48,19 +48,20 @@
       }
 
       #workspaces button {
-        padding: 0px 2px;
+        padding: 0px 3px;
         color: #fdf6e3;
-      }
-
-      #workspaces button.active {
-        color: #FF4221;
-        padding: 0px 5px;
       }
 
       #workspaces button:hover {
         color: #FF4221;
         padding: 0px 3px;
       }
+      
+      #workspaces button.active {
+        color: #FF4221;
+        padding: 0px 5px;
+      }
+
 
       #pulseaudio {
         color: #268bd2;
