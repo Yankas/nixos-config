@@ -69,6 +69,7 @@
         color: #859900;
       }
       #disk {
+        font-family: "Fighting Spirit turbo", "Noto Color Emoji";
         color: #b58900;
       }
       #mpris {
