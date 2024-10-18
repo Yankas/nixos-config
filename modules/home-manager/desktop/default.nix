@@ -61,6 +61,10 @@
     size = 24;
   };
 
+  services = {
+    mpris-proxy.enable = true;
+  };
+
   programs.kitty = {
     enable = true;
     settings = {
