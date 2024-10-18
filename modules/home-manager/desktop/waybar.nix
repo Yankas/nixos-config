@@ -60,10 +60,10 @@
 
       #memory {
         color: #2aa198;
-        font-family: "Fighting Spirit turbo";
       }
       #cpu {
         color: #6c71c4;
+        font-family: "Fighting Spirit turbo";
       }
       #battery {
 
