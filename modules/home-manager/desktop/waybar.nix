@@ -245,7 +245,7 @@
         path = "/";
       };
       tray = {
-        icon-size = 30;
+        icon-size = 25;
       };
 
     }];
