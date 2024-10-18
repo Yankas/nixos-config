@@ -120,6 +120,7 @@
       kitty
 
       playerctl
+      wl-clipboard
 
       fuzzel
       waybar
