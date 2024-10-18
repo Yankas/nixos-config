@@ -152,8 +152,10 @@
         #"disk"
         "custom/left-arrow-light"
         "custom/left-arrow-dark"
+        "custom/weather"
+        "custom/left-arrow-light"
+        "custom/left-arrow-dark"
         "tray"
-        wttr.in/oberhausen
       ];
       "custom/weather" = {
         exec = "curl 'wttr.in?format=%c%t'";
