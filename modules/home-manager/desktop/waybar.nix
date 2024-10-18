@@ -160,11 +160,12 @@
 
       "group/hardware" = {
           orientation = "vertical";
-          "modules" = [
+          modules = [
             "cpu"
             "disk"
             "memory"
           ];
+          drawer = true;
       };
 
       "custom/left-arrow-dark" = {
