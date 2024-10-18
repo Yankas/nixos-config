@@ -61,7 +61,7 @@
 
       #workspaces button.visible {
         color: #FF4221;
-        padding: 0px 5px;
+        padding: 0px 10px;
       }
 
 
