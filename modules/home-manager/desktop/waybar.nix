@@ -12,6 +12,9 @@
       window#waybar {
         background: #292b2e;
         color: #fdf6e3;
+        border-style: solid;
+        border-color: #1a1a1a;
+        border-width: 0px 0px 3px 0px
       }
 
       #custom-right-arrow-dark,
@@ -108,7 +111,7 @@
     '';
 
     settings = [{
-      height = 30;
+      height = 33;
       layer = "top";
       position = "top";
       tray = { spacing = 10; };
