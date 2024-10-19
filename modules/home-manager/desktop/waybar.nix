@@ -122,7 +122,7 @@ in
     '';
 
     settings = [{
-      height = 28;
+      height = 30;
       layer = "top";
       position = "top";
       tray = { 
@@ -193,7 +193,7 @@ in
             "memory"
           ];
           drawer = {
-            transition-duration = 500;
+            transition-duration = 250;
             transition-left-to-right = true;
             #children-class = "drawer";
             click-to-reveal = true;
