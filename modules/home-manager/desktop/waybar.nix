@@ -128,6 +128,7 @@ in
       modules-left = [ 
         "hyprland/workspaces" 
         "custom/right-arrow-dark"
+        "privacy"
         ];
 
       modules-center = [
@@ -224,6 +225,7 @@ in
         format = "{:%H:%M}";
         tooltip = false;
       };
+
 
       # DATE
       "clock#3" = {

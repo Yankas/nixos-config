@@ -302,9 +302,11 @@ in
 
         # steam games
         "noinitialfocus, class:($steam_game_class)"
+        "tile, class:($steam_game_class)"
+        "workspace name:$ws_games, initialClass:($steam_game_class)"
         #"windowdance, class:($steam_game_class)"
         "monitor $m_right, initialClass:($steam_game_class)"
-        "workspace name:$ws_games, initialClass:($steam_game_class)"
+
 
         # gamescope
         "workspace name:$ws_games, class:(^gamescope$)"
