@@ -99,6 +99,7 @@ in
       #clock, #custom-weather  {
         font-size: 20px;
         color: ${color.text-highlight};
+        text-transform: upper-case;
       }
 
       #clock,
@@ -235,7 +236,7 @@ in
       pulseaudio = {
         format = "{icon} {volume:2}%";
         format-bluetooth = "{icon}  {volume}%";
-        format-muted = "MUTE";
+        format-muted = "Mute";
         format-icons = {
           headphones = "SFX: ";
           default = [
