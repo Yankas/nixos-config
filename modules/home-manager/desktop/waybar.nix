@@ -1,8 +1,9 @@
 { config, pkgs, lib, ... }:
 let style = {
   color = {
-    background = "#292b2e";
-    background-accent = "#1a1a1a";
+    background = "#292B2E";
+    background-accent = "#1A1A1A";
+    text = "#FDF6E3";
   };
 };
 in
@@ -19,7 +20,7 @@ in
 
       window#waybar {
         background: ${style.color.background};
-        color: #fdf6e3;
+        color: ${style.color.text};
         border-style: solid;
         border-color: ${style.color.background-accent};
         border-width: 0px 0px 3px 0px
@@ -27,12 +28,12 @@ in
 
       #custom-right-arrow-dark,
       #custom-left-arrow-dark {
-        color: #1a1a1a;
+        color: ${style.color.background-accent};
       }
       #custom-right-arrow-light,
       #custom-left-arrow-light {
-        color: #292b2e;
-        background: #1a1a1a;
+        color: ${style.color.background};
+        background: ${style.color.background-accent};
       }
 
       #workspaces,
