@@ -1,9 +1,9 @@
 { config, pkgs, lib, ... }:
 let color = {
-  background = "#292B2E";
+  background        = "#292B2E";
   background-accent = "#1A1A1A";
-  text = "#FDF6E3";
-  text-highlight = "#FF4221";
+  text              = "#FDF6E3";
+  text-highlight    = "#FF4221";
 };
 
 in
@@ -102,7 +102,7 @@ in
       }
 
       #clock {
-        color: #FF4221;
+        color: ${color.text-highlight};
       }
 
       #clock,
