@@ -52,11 +52,6 @@ in
         text-shadow: 1px 1px #DDD;
       }
 
-      #custom-weather {
-        color: ${color.text-highlight};
-      }
-
-
       #workspaces button {
         padding: 0px 5px;
         color: ${color.text};
@@ -101,7 +96,8 @@ in
         padding: 0px 10px;
       }
 
-      #clock {
+      #clock, #custom-weather  {
+        font-size: 20px;
         color: ${color.text-highlight};
       }
 
