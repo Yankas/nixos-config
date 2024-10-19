@@ -99,7 +99,6 @@ in
       #clock, #custom-weather  {
         font-size: 20px;
         color: ${color.text-highlight};
-        text-transform: upper-case;
       }
 
       #clock,
@@ -114,7 +113,7 @@ in
 
       tooltip label {
         font-family: Consolas, monospace;
-        font-size: 25;
+        font-size: 25px;
       }
     '';
 
