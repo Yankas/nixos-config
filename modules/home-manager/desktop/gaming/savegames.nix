@@ -18,9 +18,6 @@ in
     home.file = lib.mkIf config.games.saves.enable {
       # Proton Games
       
-
-
-
       # Native Games
       ".local/share/NeposGames/Nebuchadnezzar".source = link "nebuchadnezzar";
       ".local/share/Paradox Interactive/Crusader Kings III/".source = link "crusader-kings3";
@@ -39,6 +36,8 @@ in
       "${steamPath 690830  "Documents/Polymorph Games/Foundation"}".source = link "foundation";
       "${steamPath 1218210 "AppData/Roaming/TRAGsoft/Coromon"}".source = link "coromon";
       "${steamPath 1222670 "Documents/Electronic Arts/The Sims 4"}".source = link "the-sims4";
+      "${config.games.saves.directory}/Mods/.savecc".source = link link "the-sims4/Mods/SaveCC  
+
       "${steamPath 1549250  "AppData/Local/RzGame"}".source = link "undecember";
       "${steamPath 1822550  "AppData/Roaming/MicroCivilization"}".source = link "microcivilization";
       "${steamPath 345180   "AppData/Roaming/Victor Vran"}".source = link "victor-vran";
