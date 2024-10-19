@@ -53,7 +53,7 @@ in
       }
 
       #custom-weather {
-        font-size: 20px;
+        color: ${color.text-highlight};
       }
 
 
