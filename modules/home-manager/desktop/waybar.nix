@@ -1,11 +1,11 @@
 { config, pkgs, lib, ... }:
-let style = {
-  color = {
-    background = "#292B2E";
-    background-accent = "#1A1A1A";
-    text = "#FDF6E3";
-  };
+let color = {
+  background = "#292B2E";
+  background-accent = "#1A1A1A";
+  text = "#FDF6E3";
+  text-highlight = "#FF4221";
 };
+
 in
 {
   
@@ -19,21 +19,21 @@ in
       }
 
       window#waybar {
-        background: ${style.color.background};
-        color: ${style.color.text};
+        background: ${color.background};
+        color: ${color.text};
         border-style: solid;
-        border-color: ${style.color.background-accent};
+        border-color: ${color.background-accent};
         border-width: 0px 0px 3px 0px
       }
 
       #custom-right-arrow-dark,
       #custom-left-arrow-dark {
-        color: ${style.color.background-accent};
+        color: ${color.background-accent};
       }
       #custom-right-arrow-light,
       #custom-left-arrow-light {
-        color: ${style.color.background};
-        background: ${style.color.background-accent};
+        color: ${color.background};
+        background: ${color.background-accent};
       }
 
       #workspaces,
@@ -48,7 +48,7 @@ in
       #mpris,
       #custom-weather,
       #tray {
-        background: #1a1a1a;
+        background: ${color.background-accent};
         text-shadow: 1px 1px #DDD;
       }
 
@@ -59,18 +59,17 @@ in
 
       #workspaces button {
         padding: 0px 5px;
-        color: #fdf6e3;
+        color: ${color.text};
         border-width: 0px;
-        background: #1a1a1a;
+        background: ${color.background-accent};
       }
 
       #workspaces button:hover {
-        color: #FF4221;
-        padding: 0px 5px;
+        color: ${color.text-highlight};
       }
 
       #workspaces button.visible {
-        color: #FF4221;
+        color: ${color.text-highlight};
         padding: 0px 7px;
       }
 
