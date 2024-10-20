@@ -80,7 +80,7 @@
     ];
 
     fontconfig.defaultFonts = {
-      monospace = [ "Consolas" "Fira Code" ]
+      monospace = [ "Consolas" "Fira Code" ];
     };
 
     programs.hyprland = {
