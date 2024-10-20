@@ -7,7 +7,7 @@
 {
   options = {
     programs.rider.enable = lib.mkEnableOption "enables dotnet development enviornment";
-    programs.sddm-dev = lib.mkEnableOption "enables tools for sddm theme creation";  
+    programs.sddm-dev.enable = lib.mkEnableOption "enables tools for sddm theme creation";  
     programs.godot.enable = lib.mkEnableOption "enables godot 4 engine";
     programs.tiled.enable = lib.mkEnableOption "enables tiled map editor";
   };
