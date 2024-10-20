@@ -4,7 +4,7 @@ let switch-flash = pkgs.writeShellScriptBin "switch-flash" ''
   '';
 ts4-update = pkgs.writeShellScriptBin "ts4-update" ''
   cd $HOME/.local/share/Steam/steamapps/common/The\ Sims\ 4/
-  ${wineWowPackages.stable}/bin/wine $HOME/.saves/the-sims4/TS4Updater/sims-4-updater-v1.3.4.exe
+  ${pkgs.wineWowPackages.stable}/bin/wine $HOME/.saves/the-sims4/TS4Updater/sims-4-updater-v1.3.4.exe
   '';
 ts4-unlock = pkgs.writeShellScriptBin "ts4-unlock" ''
   $HOME/.saves/the-sims4/DLCUnlockerV2/setup_linux.sh
