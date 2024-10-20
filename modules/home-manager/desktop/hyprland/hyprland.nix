@@ -52,12 +52,13 @@ in
         layout = "master";
         gaps_in = 5;
         gaps_out = 5;
-        border_size = 3;
+        border_size = 2;
         "col.active_border" = "rgba(${color.text-highlight}FF) ";
         "col.inactive_border" = "rgba(${color.text}FF) rgba(${color.background-accent}FF) 45deg";
         # Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
         allow_tearing = false;
         resize_on_border = true;
+        extend_border_grab_area = 20;
       };
 
       master = {
