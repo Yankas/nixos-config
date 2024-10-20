@@ -116,13 +116,12 @@
     ];
 
     environment.sessionVariables.NIXOS_OZONE_WL = "1";
-    environment.extraOutputsToInstall = [ "dev" ]; 
     environment.systemPackages = with pkgs; [
       pcmanfm
       peazip
 
       pragha
-      glib
+      wrapGAppsHook
 
       chromium
       seahorse
