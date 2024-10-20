@@ -4,7 +4,6 @@
   imports = [
     ./gaming/default.nix
     ./hyprland/default.nix
-    ./waybar.nix
     ./misc.nix
   ];
 
