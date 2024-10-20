@@ -58,7 +58,7 @@ in
         # Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
         allow_tearing = false;
         resize_on_border = true;
-        extend_border_grab_area = 30;
+        extend_border_grab_area = 50;
       };
 
       master = {
