@@ -70,6 +70,7 @@
     steam.enable = true;
     gimp.enable = true;
     blender.enable = true;
+    sddm-dev.enable = true;
   };
 
 

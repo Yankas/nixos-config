@@ -79,12 +79,16 @@
       die-in-a-fire
     ];
 
+    fontconfig.defaultFonts = {
+      monospace = [ "Consolas" "Fira Code" ]
+    };
+
     programs.hyprland = {
       enable = true;
       xwayland.enable = true;
     }; 
 
-    environment.pathsToLink = [ "/share/wallpapers" ];
+    environment.pathsToLink = [ "/share/wallpapeBrs" ];
 
     systemd = {
       user.services.polkit-gnome-authentication-agent-1 = {

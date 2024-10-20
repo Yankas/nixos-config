@@ -5,6 +5,8 @@
     ./gaming/default.nix
     ./hyprland/default.nix
     ./misc.nix
+    ./pcmanfm/default.nix
+
   ];
 
   xdg.enable = true;

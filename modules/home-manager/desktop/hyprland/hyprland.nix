@@ -34,7 +34,7 @@
         float_switch_override_focus = 0;
         natural_scroll = 0;
         special_fallthrough = true;
-        mouse_refocus=false; # fixes steam menus disappearing
+        mouse_refocus = false; # fixes steam menus disappearing
         sensitivity = 0; # -1.0 - 1.0, 0 means no modification.
         touchpad = {
           natural_scroll = false;
