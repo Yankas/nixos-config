@@ -55,6 +55,9 @@
     ];
   };
   
+  home.packages = [
+    pkgs.pragha
+  ];
 
   gtk.gtk3.bookmarks = [
       "file:///home/${config.home.username}/source Source"
