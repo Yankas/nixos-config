@@ -1,11 +1,5 @@
 { config, pkgs, lib, ... }:
-let color = {
-  background        = "292B2E";
-  background-accent = "1A1A1A";
-  text              = "FDF6E3";
-  text-highlight    = "FF4221";
-};
-in
+
 {
   config = lib.mkIf config.hyprland.enable {
     wayland.windowManager.hyprland.systemd.variables = ["--all"];
