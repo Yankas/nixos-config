@@ -17,7 +17,7 @@
     enableNixpkgsReleaseCheck = false;
     stateVersion = "24.05";
     packages = [
-      pkgs.pragha
+
 
     ];
     file = {};

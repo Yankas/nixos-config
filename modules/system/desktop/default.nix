@@ -120,7 +120,7 @@
     environment.systemPackages = with pkgs; [
       pcmanfm
       peazip
-
+      pkgs.pragha
       chromium
       seahorse
       kitty
