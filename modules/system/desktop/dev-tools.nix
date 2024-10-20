@@ -21,7 +21,7 @@
         dotnet-sdk_7 
         dotnet-sdk_6 
         ] else [])
-      ++ (if config.sddm-dev.enable then [
+      ++ (if config.programs.sddm-dev.enable then [
         qt5.full
         qtcreator
         cmake
