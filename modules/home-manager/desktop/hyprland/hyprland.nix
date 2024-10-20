@@ -52,9 +52,9 @@ in
         layout = "master";
         gaps_in = 5;
         gaps_out = 5;
-        border_size = 2;
-        "col.active_border" = "rgba(${color.text-highlight}AA) rgba(${color.background-accent}AA) 45deg";
-        "col.inactive_border" = "rgba(${color.text}AA)";
+        border_size = 1;
+        "col.active_border" = "rgba(${color.text-highlight}FF) rgba(${color.background-accent}FF) 45deg";
+        "col.inactive_border" = "rgba(${color.text}FF)";
         # Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
         allow_tearing = false;
         resize_on_border = true;
