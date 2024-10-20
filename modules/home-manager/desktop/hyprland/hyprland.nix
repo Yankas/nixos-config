@@ -68,9 +68,11 @@ in
 
       misc = {
         vrr = 1;
+        animate_manual_resizes = true;
+        animate_mouse_windowdragging = true;
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
-        force_default_wallpaper = -1; # Set to 0 or 1 to disable the anime mascot wallpapers
+        force_default_wallpaper = 0; # Set to 0 or 1 to disable the anime mascot wallpapers
       };
       
       decoration = {
@@ -90,7 +92,7 @@ in
       };
 
       animations = {
-        enabled = false;
+        enabled = true;
         bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
         animation = 
         [
