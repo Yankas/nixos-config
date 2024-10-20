@@ -27,4 +27,5 @@ in
     ++ (if config.games.thesims4-updater.enable then [ ts4-update ts4-unlock] else []);
   };
 
+
 }

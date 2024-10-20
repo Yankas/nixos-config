@@ -5,28 +5,9 @@ let
     '';
 in
 {
-  options = {
-    autostart.exec = lib.mkOption {
-       type = with lib.types; listOf string;
-       description = "list of commands to run on start";
-    };
-    autostart.exec-once = lib.mkOption {
-       type = with lib.types; listOf string;
-       description = "list of commands to run on start";
-    };
-
-  };
-  config = {
-    autostart.exec = lib.mkDefault [
-        #"swaybg -i /run/current-system/sw/share/wallpapers/${config.home.wallpaper}"
-        "${set-bg}/bin/set-bg ${config.home.wallpaper}"
-      ];
-    autostart.exec-once = lib.mkDefault [];
-
+  config = lib.mkIf hyprland.enable {
     wayland.windowManager.hyprland.systemd.variables = ["--all"];
     wayland.windowManager.hyprland.enable = true;
-    
-
     wayland.windowManager.hyprland.settings = {    
       "$mod" = "SUPER";
       "$ws_steam" = "Steam";
@@ -37,8 +18,8 @@ in
       "$fileManager" = "thunar";
       "$menu" = "fuzzel";
 
-      exec = config.autostart.exec;
-      exec-once = config.autostart.exec-once;
+      exec = config.hyprland.autostart.onReload;
+      exec-once = hyprland.autostart.onStart;
 
 
       env =
@@ -128,9 +109,6 @@ in
         # See https://wiki.hyprland.org/Configuring/Variables/ for more
         workspace_swipe = false;
       };
-
-
-
 
       workspace =
       [
@@ -327,4 +305,4 @@ in
       ];
     };
   };
-}
+}    ./gaming/default.nix

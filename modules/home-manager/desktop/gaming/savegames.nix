@@ -81,9 +81,21 @@ in
       "${steamPath 813780   "Games/Age of Empires 2 DE"}".source = link "age-of-empires2-de";
       "${steamPath 39800    "Nation Red"}".source = link "nation-red";
       "${steamPath 17480    "Red Alert 3"}".source = link "cnc-red-alert3";
+      "${steamPath 215530   "Documents/Van Helsing/SaveGame"}".source = link "van-helsing";
+      "${steamPath 20900    "Documents/The Witcher"}".source = link "the-witcher";
+      "${steamPath 290340   "AppData/LocalLow/League of Geeks/Armello"}".source = link "armello";
+      "${steamPath 301640   "AppData/Local/Zombie Army Trilogy"}".source = link "zombie-army-trilogy";
+      "${steamPath 230070   "Documents/Klei/My Games/Age Of Decadence"}".source = link "age-of-decadence";
+      "${steamPath 22380    "Documents/My Games/FalloutNV"}".source = link "fallout-new-vegas";
+      "${steamPath 105600   "Documents/My Games/Terraria"}".source = link "terraria";
+      "${steamPath 17410    "Documents/EA Games/Mirror's Edge"}".source = link "mirrors-edge";
+      "${steamPath 261550   "/Documents/Mount and Blade II Bannerlord"}".source = link "mount-and-blade2-bannerlord";
+
+      #"STEAM_PREFIX/Documents/Documents/Mount and Blade II Bannerlord".source =  link "${config.home.homeDirectory}/.saves/mount-and-blade2-bannerlord";
+
+      #"STEAM_PREFIX/Documents/My Games/Titan Quest".source =  link "${config.home.homeDirectory}/.saves/titan-quest";
 
 
-      
       #REGEX #"STEAM_PREFIX/(.*)".source.*saves/(.*)"
       #REPLACE #"${steamPath X "$1"}".source = link "$2"
       # Saved Games/
@@ -100,45 +112,28 @@ in
       #"STEAM_PREFIX/Documents/Avalanche Studios/theHunter Call of the Wild/Saves".source =  link "${config.home.homeDirectory}/.saves/the-hunter-call-of-the-wild";
       #"STEAM_PREFIX/Documents/BioWare/Dragon Age Inquisition".source =  link "${config.home.homeDirectory}/.saves/dragon-age-inquisition";
       #"STEAM_PREFIX/Documents/Larian Studios/Divinity Original Sin".source =  link "${config.home.homeDirectory}/.saves/divinity-original-sin";
-      #"STEAM_PREFIX/Documents/Documents/Mount and Blade II Bannerlord".source =  link "${config.home.homeDirectory}/.saves/mount-and-blade2-bannerlord";
-      #"STEAM_PREFIX/Documents/EA Games/Mirror's Edge".source =  link "${config.home.homeDirectory}/.saves/mirrors-edge";
-      #"STEAM_PREFIX/Documents/Klei/My Games/Age Of Decadence".source =  link "${config.home.homeDirectory}/.saves/age-of-decadence";
       #"STEAM_PREFIX/Documents/My Games/Binding of Isaac Rebirth".source =  link "${config.home.homeDirectory}/.saves/the-binding-of-isaac-rebirth";
       #"STEAM_PREFIX/Documents/My Games/Binding of Isaac Afterbirth+".source =  link "${config.home.homeDirectory}/.saves/the-binding-of-isaac-afterbirth+";
       #"STEAM_PREFIX/Documents/My Games/Binding of Isaac Afterbirth".source =  link "${config.home.homeDirectory}/.saves/the-binding-of-isaac-afterbirth";
       #"STEAM_PREFIX/Documents/My Games/Binding of Isaac Afterbirth+ Mods".source =  link "${config.home.homeDirectory}/.saves/the-binding-of-isaac-afterbirth-mods";
 
       #"STEAM_PREFIX/Documents/My Games/Borderlands 3/Saved".source =  link "${config.home.homeDirectory}/.saves/borderlands3";
-      #"STEAM_PREFIX/Documents/My Games/FalloutNV".source =  link "${config.home.homeDirectory}/.saves/fallout-new-vegas";
       #"STEAM_PREFIX/Documents/My Games/Rise Of Legends".source =  link "${config.home.homeDirectory}/.saves/rise-of-legends";
 
-      #"STEAM_PREFIX/Documents/My Games/Terraria".source =  link "${config.home.homeDirectory}/.saves/terraria";
-      #"STEAM_PREFIX/Documents/My Games/Titan Quest".source =  link "${config.home.homeDirectory}/.saves/titan-quest";
       #"STEAM_PREFIX/Documents/My Games/Titan Quest - Immortal Throne".source =  link "${config.home.homeDirectory}/.saves/titan-quest-immortal-throne";
       #"STEAM_PREFIX/Documents/My Games/Wasteland3/Save Games".source =  link "${config.home.homeDirectory}/.saves/wasteland3";
       
-      #"STEAM_PREFIX/Documents/Van Helsing/SaveGame".source =  link "${config.home.homeDirectory}/.saves/van-helsing";
       #"STEAM_PREFIX/Documents/NStW".source =  link "${config.home.homeDirectory}/.saves/nobody-saves-the-world";
       #"STEAM_PREFIX/Documents/Prince of Persia/Save".source =  link "${config.home.homeDirectory}/.saves/prince-of-persia";
       #"STEAM_PREFIX/Documents/Shadow Warrior DX11".source =  link "${config.home.homeDirectory}/.saves/shadow-warrior";
-
-      #"STEAM_PREFIX/Documents/".source =  link "${config.home.homeDirectory}/.saves/";
-    
-      #"STEAM_PREFIX/Documents/The Witcher/saves".source = link "${config.home.homeDirectory}/.saves/the-witcher";
-
       #"STEAM_PREFIX/Games/Deep Rock Galactic".source = link "${config.home.homeDirectory}/.saves/deep-rock-galactic";
 
-      
       #"STEAM_PREFIX/AppData/LocalLow/Beam Team Games/Stranded Deep".source = link "${config.home.homeDirectory}/.saves/Stranded Deep";
       #"STEAM_PREFIX/AppData/LocalLow/Daybreak Game Company".source = link "${config.home.homeDirectory}/.saves/root";
 
-      #"STEAM_PREFIX/AppData/LocalLow/League of Geeks/Armello".source = link "${config.home.homeDirectory}/.saves/armello";
       #"STEAM_PREFIX/AppData/LocalLow/Redbeet Interactive/Raft/User".source = link "${config.home.homeDirectory}/.saves/raft";
-      #"STEAM_PREFIX/AppData/LocalLow/".source = link "${config.home.homeDirectory}/.saves/";
-
 
       #"STEAM_PREFIX/AppData/Local/Divinity 2/Savegames".source = link "${config.home.homeDirectory}/.saves/divinity2";
-      #"STEAM_PREFIX/AppData/Local/Zombie Army Trilogy".source = link "${config.home.homeDirectory}/.saves/zombie-army-trilogy";
 
 
       #".local/share/Steam/steamapps/compatdata/4227765030/pfx/drive_c/users/steamuser/AppData/LocalLow/Oleg Kazakov/Gedonia".source = link "${config.home.homeDirectory}/.saves/gedonia";

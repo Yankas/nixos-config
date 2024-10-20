@@ -75,6 +75,7 @@
 
 
   environment.systemPackages = with pkgs; [
+    
     # BROWSER
     firefox
     tor-browser
@@ -84,6 +85,7 @@
     # MULTIMEDIA
     jellyfin-media-player
     vlc
+
     # COMMS
     mumble
     teamspeak5_client
