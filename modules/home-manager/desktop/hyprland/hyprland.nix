@@ -50,7 +50,7 @@ in
 
       general = {
         layout = "master";
-        gaps_in = 5;
+        gaps_in = "3, 5, 5, 5";
         gaps_out = "5,0,0,0"; # top, right, bottom, left
         border_size = 2;
         "col.active_border" = "rgba(${color.text-highlight}FF) ";
