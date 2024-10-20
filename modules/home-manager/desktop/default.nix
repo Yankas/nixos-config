@@ -3,11 +3,11 @@
 {
   imports = [
     ./gaming/default.nix
-    ./hyprland.nix
+    ./hyprland/default.nix
     ./waybar.nix
     ./misc.nix
   ];
-  
+
   xdg.enable = true;
   xdg.mimeApps = {
     enable = true;
