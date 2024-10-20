@@ -39,7 +39,7 @@
     };
   };
 
-  config.autostart.exec-once = [
+  hyprland.autostart.onStart = [
       #"/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
       #"waybar"
       "steam"
