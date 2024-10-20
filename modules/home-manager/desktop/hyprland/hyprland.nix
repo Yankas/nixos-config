@@ -75,7 +75,7 @@ in
       
       decoration = {
         # See https://wiki.hyprland.org/Configuring/Variables/ for more
-        rounding = 10;
+        rounding = 0;
         blur = {
             enabled = true;
             size = 3;
