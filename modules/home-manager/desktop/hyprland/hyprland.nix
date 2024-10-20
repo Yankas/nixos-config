@@ -1,4 +1,11 @@
 { config, pkgs, lib, ... }:
+let color = {
+  background        = "292B2E";
+  background-accent = "1A1A1A";
+  text              = "FDF6E3";
+  text-highlight    = "FF4221";
+};
+in
 {
   config = lib.mkIf config.hyprland.enable {
     wayland.windowManager.hyprland.systemd.variables = ["--all"];
@@ -46,8 +53,8 @@
         gaps_in = 5;
         gaps_out = 5;
         border_size = 2;
-        "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-        "col.inactive_border" = "rgba(595959aa)";
+        "col.active_border" = "rgba(FF4221) rgba(FF4221) 45deg";
+        "col.inactive_border" = "rgba(text)";
         # Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
         allow_tearing = false;
         resize_on_border = true;

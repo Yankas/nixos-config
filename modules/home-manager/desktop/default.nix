@@ -6,17 +6,18 @@
     ./misc.nix
   ];
 
+
   colorScheme = {
     slug = "rocket";
     name = "Rocket";
     author = "Gabriel Fontes (https://github.com/Misterio77)";
     palette = {
-      base00 = "#271C3A";
-      base01 = "#100323";
+      base00 = "#1A1A1A"; # Default background
+      base01 = "#292B2E"; # Lighter Background
       base02 = "#3E2D5C";
       base03 = "#5D5766";
       base04 = "#BEBCBF";
-      base05 = "#DEDCDF";
+      base05 = "#FDF6E3"; # Default foreground
       base06 = "#EDEAEF";
       base07 = "#BBAADD";
       base08 = "#A92258";
