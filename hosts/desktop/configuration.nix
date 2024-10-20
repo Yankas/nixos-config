@@ -86,6 +86,7 @@
     # MULTIMEDIA
     jellyfin-media-player
     vlc
+    zim
 
     # COMMS
     mumble
