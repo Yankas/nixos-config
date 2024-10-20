@@ -5,7 +5,6 @@ let color = {
   text              = "#FDF6E3";
   text-highlight    = "#FF4221";
 };
-
 in
 {
   programs.waybar = lib.mkIf config.hyprland.enable {
