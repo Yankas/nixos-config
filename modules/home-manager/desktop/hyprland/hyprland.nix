@@ -14,7 +14,7 @@
       "$menu" = "fuzzel";
 
       exec = config.hyprland.autostart.onReload;
-      exec-once = hyprland.autostart.onStart;
+      exec-once = config.hyprland.autostart.onStart;
 
 
       env =
