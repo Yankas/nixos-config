@@ -11,12 +11,7 @@ in
     ./waybar.nix
   ];
 
-  let color = {
-  background        = "#292B2E";
-  background-accent = "#1A1A1A";
-  text              = "#FDF6E3";
-  text-highlight    = "#FF4221";
-};
+
 
   options = {
     hyprland.enable = lib.mkEnableOption "enable custom hyprland config";
