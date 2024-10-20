@@ -8,7 +8,7 @@ let color = {
 
 in
 {
-  programs.waybar = mkIf config.hyprland.enable {
+  programs.waybar = lib.mkIf config.hyprland.enable {
     enable = true;
     systemd.enable = true;
     style = ''
