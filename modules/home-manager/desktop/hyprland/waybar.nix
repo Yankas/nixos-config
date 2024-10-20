@@ -8,7 +8,7 @@ let color = {
 
 in
 {
-    programs.waybar = {
+  programs.waybar = mkIf config.hyprland.enable {
     enable = true;
     systemd.enable = true;
     style = ''
@@ -153,6 +153,7 @@ in
         "custom/left-arrow-light"
         "custom/left-arrow-dark"
         "custom/left-arrow-light"
+
         "custom/left-arrow-dark"
 
         "pulseaudio"

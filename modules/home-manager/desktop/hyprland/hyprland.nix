@@ -15,8 +15,6 @@
 
       exec = config.hyprland.autostart.onReload;
       exec-once = config.hyprland.autostart.onStart;
-
-
       env =
       [
         "QT_AUTO_SCREEN_SCALE_FACTOR,1"
@@ -42,6 +40,7 @@
           natural_scroll = false;
         };
       };
+
       general = {
         layout = "master";
         gaps_in = 5;
