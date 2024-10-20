@@ -75,12 +75,13 @@ in
       
       decoration = {
         # See https://wiki.hyprland.org/Configuring/Variables/ for more
-        rounding = 0;
+        rounding = 0; # was 10
         blur = {
             enabled = true;
             size = 3;
             passes = 1;
             vibrancy = 0.1696;
+            special = false;
           };
         drop_shadow = true;
         shadow_range = 4;
