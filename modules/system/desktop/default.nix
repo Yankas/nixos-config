@@ -79,7 +79,7 @@
       die-in-a-fire
     ];
 
-    fontconfig.defaultFonts = {
+    fonts.fontconfig.defaultFonts = {
       monospace = [ "Consolas" "Fira Code" ];
     };
 
