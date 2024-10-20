@@ -1,26 +1,5 @@
 { config, pkgs, lib, ... }:
-let pkgs  pkgs.stdenv.mkDerivation rec {
-  name = "my-script";
-  buildCommand = let
-    script = pkgs.writeShellApplication {
-      name = name;
-      runtimeInputs = with pkgs; [ curl coreutils ];
-      text = builtins.readFile "./my-script.sh";
-    };
-    desktopEntry = pkgs.makeDesktopItem {
-      name = name;
-      desktopName = name;
-      exec = "${script}/bin/${name} %f";
-      terminal = true;
-    };
-  in ''
-    mkdir -p $out/bin
-    cp ${script}/bin/${name} $out/bin
-    mkdir -p $out/share/applications
-    cp ${desktopEntry}/share/applications/${name}.desktop $out/share/applications/${name}.desktop
-  '';
-  dontBuild = true;
-}
+
 {
   imports = [
     ./gaming/default.nix
@@ -28,8 +7,6 @@ let pkgs  pkgs.stdenv.mkDerivation rec {
     ./waybar.nix
     ./misc.nix
   ];
-
-
   
   xdg.enable = true;
   xdg.mimeApps = {
