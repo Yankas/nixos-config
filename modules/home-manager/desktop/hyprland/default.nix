@@ -26,6 +26,8 @@ in
         "${set-bg}/bin/set-bg ${config.home.wallpaper}"
        ];
     };
+
+    hyprland.hardwareCursor = lib.mkOption  "disable the hardware cursor";
     
   };
 }

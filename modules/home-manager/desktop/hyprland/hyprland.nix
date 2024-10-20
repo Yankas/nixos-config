@@ -7,8 +7,8 @@
       "$mod" = "SUPER";
       "$ws_steam" = "Steam";
       "$ws_games" = "🎮";
-      "$m_left"="DP-1";
-      "$m_right"="DP-2";
+      "$m_left" = "DP-1";
+      "$m_right" = "DP-2";
       "$terminal" = "kitty";
       "$fileManager" = "thunar";
       "$menu" = "fuzzel";
@@ -25,8 +25,9 @@
         "QT_QPA_PLATFORMTHEME,qt5ct"
         "GDK_BACKEND,wayland,x11"
         "_JAVA_AWT_WM_NONREPARENTING,1"
-        "WLR_NO_HARDWARE_CURSORS,1"
-      ];
+        "SDL_VIDEO_DRIVER,x11"
+      ]
+      ++ (if config.hyprland.disableHardwareCursor then [ "WLR_NO_HARDWARE_CURSORS,1" ] else []);
 
       input = {
         kb_layout = "us";
