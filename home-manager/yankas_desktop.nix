@@ -16,7 +16,10 @@
     isSudoer = true;
     enableNixpkgsReleaseCheck = false;
     stateVersion = "24.05";
-    packages = [];
+    packages = [
+      pkgs.pragha
+
+    ];
     file = {};
     sessionVariables = {
       BROWSER = "chromium";
@@ -55,9 +58,6 @@
     ];
   };
   
-  home.packages = [
-    pkgs.pragha
-  ];
 
   gtk.gtk3.bookmarks = [
       "file:///home/${config.home.username}/source Source"
