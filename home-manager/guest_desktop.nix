@@ -3,6 +3,7 @@
   imports = [ 
     outputs.homeManagerModules.common
     outputs.homeManagerModules.desktop
+    nix-colors.homeManagerModules.default
   ];
 
   home = {
