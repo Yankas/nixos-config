@@ -13,6 +13,7 @@ in
 
   options = {
     hyprland.enable = lib.mkEnableOption "enable custom hyprland config";
+    hyprland.disableHardwareCursor = lib.mkOption  "disable the hardware cursor";
 
     hyprland.autostart.onStart = lib.mkOption {
        type = with lib.types; listOf str;
@@ -27,7 +28,7 @@ in
        ];
     };
 
-    hyprland.hardwareCursor = lib.mkOption  "disable the hardware cursor";
+
     
   };
 }
