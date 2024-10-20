@@ -74,7 +74,7 @@
       scrollback_pager_history_size = 8;
       font_size = 22;
       adjust_baseline = -3;
-      font_family = "Consolas";
+      font_family = "Fira Code";
       bold_font = "auto";
       italic_font = "auto";
       bold_italic_font = "auto";
