@@ -1,11 +1,6 @@
 { config, pkgs, lib, ... }:
-let
-    set-bg = pkgs.writeShellScriptBin "set-bg" ''
-      ${pkgs.swaybg}/bin/swaybg -i /run/current-system/sw/share/wallpapers/$1
-    '';
-in
 {
-  config = lib.mkIf hyprland.enable {
+  config = lib.mkIf config.hyprland.enable {
     wayland.windowManager.hyprland.systemd.variables = ["--all"];
     wayland.windowManager.hyprland.enable = true;
     wayland.windowManager.hyprland.settings = {    
@@ -305,4 +300,4 @@ in
       ];
     };
   };
-}    ./gaming/default.nix
+}
