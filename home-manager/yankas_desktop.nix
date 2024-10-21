@@ -30,7 +30,7 @@
   };
 
   programs = {
-    #torrent.enable = true;
+    torrent.enable = true;
   };
 
   games = {
