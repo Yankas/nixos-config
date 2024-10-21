@@ -67,7 +67,7 @@
     };
     iconTheme = {
       package = pkgs.qogir-icon-theme;
-      name = "Qogir-manjaro-dark";
+      name = "Qogir-ubuntu-dark";
     };
 
     gtk3.bookmarks = [

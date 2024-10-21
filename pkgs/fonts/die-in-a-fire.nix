@@ -15,7 +15,7 @@ fetchzip {
 
   meta = with lib; {
     homepage = "https://comicfontsby.tehandeh.com/";
-    description = "Fighting Spirit comic font";
+    description = "Die in a Fire comic font ";
     license = lib.licenses.unfree;
     platforms = platforms.all;
   };

@@ -44,6 +44,7 @@
     };
   };
 
+
   hyprland.enable = true;
   hyprland.autostart.onStart = [
       #"/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"

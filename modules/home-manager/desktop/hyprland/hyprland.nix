@@ -58,7 +58,7 @@ in
         # Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
         allow_tearing = false;
         resize_on_border = true;
-        extend_border_grab_area = 50;
+        extend_border_grab_area = 20;
       };
 
       master = {
@@ -73,6 +73,7 @@ in
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
         force_default_wallpaper = 0; # Set to 0 or 1 to disable the anime mascot wallpapers
+        initial_workspace_tracking = 2;
       };
       
       decoration = {
@@ -89,6 +90,10 @@ in
         shadow_range = 4;
         shadow_render_power = 3;
         "col.shadow" = "rgba(1a1a1aee)";
+      };
+      
+      render = {
+        direct_scanout = true;
       };
 
       animations = {
