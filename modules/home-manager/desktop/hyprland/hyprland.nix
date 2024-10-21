@@ -124,6 +124,7 @@ chromium --new-window --app=https://web.whatsapp.com/''; in
       };
       
       render = {
+        #TODO: reevaluate causes flicker in fullscreen
         direct_scanout = false;
       };
 
