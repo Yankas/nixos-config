@@ -5,6 +5,11 @@ let color = {
   text              = "FDF6E3";
   text-highlight    = "FF4221";
 }; in
+let
+    set-bg = pkgs.writeShellScriptBin "set-bg" ''
+      ${pkgs.swaybg}/bin/swaybg -i /run/current-system/sw/share/wallpapers/$1
+    '';
+in
 let whatsapp = pkgs.writeShellScriptBin "whatsapp"  ''
 #!/bin/sh
 chromium --new-window --app=https://web.whatsapp.com/''; in
