@@ -61,7 +61,10 @@
   };
   
   gtk = {
-    font = "Die in a fire PG";
+    font = { 
+      name = "Die in a fire PG";
+      size = 20;
+    };
   };
 
   gtk.gtk3.bookmarks = [
