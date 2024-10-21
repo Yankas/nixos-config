@@ -27,10 +27,12 @@
         qtcreator
         cmake
       ] else []);
-  };
 
-  virtualisation.libvirtd = lib.mkIf config.programs.virtualization.enable  {
+    virtualisation.libvirtd = lib.mkIf config.programs.virtualization.enable  {
       enable = true;
+    };
+    programs.virt-manager.enable = lib.mkIf config.programs.virtualization.enable true;
   };
-  programs.virt-manager.enable = lib.mkIf config.programs.virtualization.enable true;
 }
+
+
