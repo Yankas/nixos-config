@@ -60,6 +60,9 @@
     ];
   };
   
+  gtk = {
+    font = "Die in a fire PG";
+  };
 
   gtk.gtk3.bookmarks = [
       "file:///home/${config.home.username}/source Source"
