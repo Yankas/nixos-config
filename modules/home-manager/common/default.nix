@@ -96,7 +96,7 @@ in
     };
 
     home.packages = 
-      (if config.home.isSudoer then [ update ] else [])
+      (if config.home.isSudoer then [ update ] else []);
     
 
     home.sessionVariables = {
