@@ -4,14 +4,40 @@ let color = {
   background-accent = "1A1A1A";
   text              = "FDF6E3";
   text-highlight    = "FF4221";
-};
-in
+}; in
+let whatsapp = pkgs.writeShellScriptBin "whatsapp"  ''
+#!/bin/sh
+chromium --new-window --app=https://web.whatsapp.com/''; in
 {
+    options = {
+      hyprland.enable = lib.mkEnableOption "enable custom hyprland config";
+      hyprland.disableHardwareCursor = lib.mkEnableOption  "disable the hardware cursor";
+
+      hyprland.modKey = lib.mkOption {
+        default = "SUPER";
+        type = with lib.types.str;
+      };
+
+      hyprland.autostart.onStart = lib.mkOption {
+        type = with lib.types; listOf str;
+        description = "list of commands to run when hyprland first initializes";
+        default = [];
+      };
+      hyprland.autostart.onReload = lib.mkOption {
+        type = with lib.types; listOf str;
+        description = "list of commands to every time hyprland reloads";
+        default = [ 
+          "${set-bg}/bin/set-bg ${config.home.wallpaper}"
+        ];
+      };
+    }
+
   config = lib.mkIf config.hyprland.enable {
     wayland.windowManager.hyprland.systemd.variables = ["--all"];
     wayland.windowManager.hyprland.enable = true;
     wayland.windowManager.hyprland.settings = {    
-      "$mod" = "SUPER";
+
+      "$mod" = config.hyprland.modKey;
       "$ws_steam" = "Steam";
       "$ws_games" = "🎮";
       "$m_left" = "DP-1";
@@ -68,8 +94,8 @@ in
 
       misc = {
         vrr = 1;
-        animate_manual_resizes = true;
-        animate_mouse_windowdragging = true;
+        animate_manual_resizes = false;
+        animate_mouse_windowdragging = false;
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
         force_default_wallpaper = 0; # Set to 0 or 1 to disable the anime mascot wallpapers
@@ -137,7 +163,7 @@ in
         "special:qbittorrent, on-created-empty:qbittorrent"
         "special:$ws_steam, on-created-empty:steam"
         "special:teamspeak, on-created-empty:TeamSpeak"
-        "special:whatsapp, on-created-empty:whatsapp"
+        "special:whatsapp, on-created-empty:${whatsapp}/bin/whatsapp"
         "special:discord, on-created-empty:discord"
       ];
 

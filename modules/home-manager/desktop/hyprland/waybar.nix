@@ -217,12 +217,14 @@ in
       "clock#1" = {
         format = "<span text_transform=\"uppercase\">{:%a}</span>";
         tooltip = false;
+        interval = 5;
       };
 
       # TIME
       "clock#2" = {
         format = "{:%H:%M}";
         tooltip = false;
+        interval = 1;
       };
 
 
@@ -230,6 +232,7 @@ in
       "clock#3" = {
         format = "{:%m/%d}";
         tooltip = false;
+        interval = 5;
         on-click = "date --iso-8601 | tr -d '\n' | ${pkgs.wl-clipboard}/bin/wl-copy";
       };
 
