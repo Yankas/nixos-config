@@ -6,10 +6,10 @@
     ./misc.nix
   ];
 
-  options = {
-    programs.torrent.enable = lib.mkEnableOption "enables torrent client";
-    programs.gimp.enable = lib.mkEnableOption "enables gimp";
-    programs.blender.enable = lib.mkEnableOption "enables blender";
+  options = with lib; {
+    programs.torrent.enable = mkEnableOption "enables torrent client";
+    programs.gimp.enable = mkEnableOption "enables gimp";
+    programs.blender.enable = mkEnableOption "enables blender";
   };
 
   config = {
