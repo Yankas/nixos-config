@@ -81,16 +81,20 @@ in
         gaps_in = "3, 3, 3, 3";
         gaps_out = "5,0,0,0"; # top, right, bottom, left
         border_size = 2;
-        "col.active_border" = "rgba(${color.text-highlight}FF) ";
+        "col.active_border" = "rgba(${color.text-highlight}FF)";
         "col.inactive_border" = "rgba(${color.text}FF) rgba(${color.background-accent}FF) 45deg";
         # Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
         allow_tearing = false;
         resize_on_border = true;
         extend_border_grab_area = 20;
-        disable_splash_rendering = true;
-        force_default_wallpaper = 0; # Set to 0 or 1 to disable the anime mascot wallpapers
-        initial_workspace_tracking = 2;
       };
+
+      misc = {
+        disable_hyprland_logo = true;
+        disable_splash_rendering = true;
+        initial_workspace_tracking = 2;
+        force_default_wallpaper = 0; # Set to 0 or 1 to disable the anime mascot wallpapers
+      }
       
       decoration = {
         # See https://wiki.hyprland.org/Configuring/Variables/ for more

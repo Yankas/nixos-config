@@ -31,6 +31,7 @@
 
   programs = {
     torrent.enable = true;
+    whatsappweb.enable = true;
   };
 
   games = {
