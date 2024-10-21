@@ -73,7 +73,6 @@ in
 
     home.aliases = {
       ll = "ls -l";
-      update = "(cd /etc/nixos && git add . && git commit -m.); sudo nixos-rebuild switch --flake /etc/nixos#default";
       cp = "cp -iv";
       mv = "mv -iv";
       rm = "rm -Iv";
@@ -95,6 +94,9 @@ in
       poweroff = "sudo poweroff";
       shutdown = "sudo shutdown";
     };
+
+    home.packages = 
+      (if config.home.isSudoer then [ update ] else [])
     
 
     home.sessionVariables = {
