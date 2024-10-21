@@ -63,7 +63,7 @@
   gtk = {
     font = { 
       name = "Die in a fire PG";
-      size = 20;
+      size = 14;
     };
   };
 
