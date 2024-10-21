@@ -86,7 +86,7 @@ in
         # Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
         allow_tearing = false;
         resize_on_border = true;
-        extend_border_grab_area = 20;whatsapp
+        extend_border_grab_area = 20;
         disable_splash_rendering = true;
         force_default_wallpaper = 0; # Set to 0 or 1 to disable the anime mascot wallpapers
         initial_workspace_tracking = 2;
