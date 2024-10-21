@@ -83,6 +83,7 @@
     home.packages = with pkgs;
       (if config.programs.torrent.enable then [ qbittorrent ] else []);
     
+    
     home.pointerCursor = {
       gtk.enable = true;
       # x11.enable = true;
