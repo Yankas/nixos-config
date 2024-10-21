@@ -124,7 +124,7 @@ chromium --new-window --app=https://web.whatsapp.com/''; in
       };
       
       render = {
-        direct_scanout = true;
+        direct_scanout = false;
       };
 
       animations = {
