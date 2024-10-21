@@ -15,7 +15,7 @@ chromium --new-window --app=https://web.whatsapp.com/''; in
 
       hyprland.modKey = lib.mkOption {
         default = "SUPER";
-        type = with lib.types.str;
+        type = lib.types.str; 
       };
 
       hyprland.autostart.onStart = lib.mkOption {
