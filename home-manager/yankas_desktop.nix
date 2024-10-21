@@ -25,7 +25,6 @@
     file = {};
     sessionVariables = {
       BROWSER = "chromium";
-      TEST = "TEST";
     };
     wallpaper = "hgss.png";
   };
