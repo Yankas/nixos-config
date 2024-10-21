@@ -93,7 +93,6 @@
     home.sessionVariables = {
       EDITOR = "nvim";
       VISUAL = "nvim";
-      XDG_STATE_HOME  = "\$HOME/.local/state";
       XDG_DOCUMENTS_DIR="/doc";
       XDG_DOWNLOAD_DIR= "\$HOME/download";
     } // lib.optionalAttrs config.programs.steam.enable { 
