@@ -13,7 +13,7 @@
     ];
 
   options = {
-    desktop.enable = lib.mkEnableOption "enables torrent client";
+    desktop.enable = lib.mkEnableOption "enables desktop features";
     programs.gimp.enable = lib.mkEnableOption "enables gimp";
     programs.blender.enable = lib.mkEnableOption "enables blender";
   };
