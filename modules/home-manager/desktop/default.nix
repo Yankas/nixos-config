@@ -63,7 +63,7 @@
     };
     theme = {
       package = pkgs.matcha-gtk-theme;
-      name = "Matcha-dark-sea";
+      name = "Matcha-dark-aliz";
     };
     iconTheme = {
       package = pkgs.qogir-icon-theme;
