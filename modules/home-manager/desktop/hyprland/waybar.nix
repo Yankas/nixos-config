@@ -215,7 +215,7 @@ in
 
       # DAY OF THE WEEK
       "clock#1" = {
-        format = "{:%a}";
+        format = "<span text_transform=\"upper_case\">{:%a}</span>";
         tooltip = false;
       };
 
@@ -285,11 +285,11 @@ in
         format = "{player_icon} {title} ";
         format-paused = "{status_icon} {title} ";
         player-icons = {
-          default = " ▶️ ";
+          default = "";
           mpv = " 🎵";
         };
         status-icons = {
-          "paused" = "⏸️ ";
+          "paused" = "";
         };
         tooltip = false;
       };
