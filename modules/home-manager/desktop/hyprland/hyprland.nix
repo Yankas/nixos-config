@@ -152,7 +152,7 @@ in
         "10, monitor:$m_right"
         "name:$ws_games,desc:games, monitor:$m_right"
         "special:teamspeak, on-created-empty:TeamSpeak"
-        "special:whatsapp, on-created-empty:${whatsapp}/bin/whatsapp"
+        "special:whatsapp, on-created-empty:whatsapp"
         "special:discord, on-created-empty:discord"
       ] 
       ++ (if config.programs.steam.enable then ["special:$ws_steam, on-created-empty:steam" ] else [])
