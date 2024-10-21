@@ -67,7 +67,7 @@
         modules = [
           # > Our main nixos configuration file <
           ./hosts/desktop/configuration.nix
-          chaotic.nixosModules.default
+          inputs.chaotic.nixosModules.default
         ];
       };
       server = nixpkgs.lib.nixosSystem {
