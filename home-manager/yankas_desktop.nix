@@ -29,8 +29,8 @@
     wallpaper = "hgss.png";
   };
 
-  programs = {
-    #torrent.enable = true;
+  home.programs = {
+    torrent.enable = true;
   };
 
   games = {
