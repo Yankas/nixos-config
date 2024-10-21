@@ -29,7 +29,7 @@
     wallpaper = "hgss.png";
   };
 
-  home.programs = {
+  config.programs = {
     torrent.enable = true;
   };
 
