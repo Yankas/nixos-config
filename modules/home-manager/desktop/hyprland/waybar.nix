@@ -175,6 +175,7 @@ in
       ];
       "custom/weather" = {
         exec = "curl 'wttr.in?format=%t'";
+        max-length = "7";
         interval = 360;
       };
       "group/hardware" = {
