@@ -10,6 +10,7 @@
     programs.sddm-dev.enable = lib.mkEnableOption "enables tools for sddm theme creation";  
     programs.godot.enable = lib.mkEnableOption "enables godot 4 engine";
     programs.tiled.enable = lib.mkEnableOption "enables tiled map editor";
+    programs.virtualization.enable = lib.mkEnableOption "enables tiled map editor";
   };
   config = {
     environment.systemPackages = with pkgs;
@@ -27,4 +28,9 @@
         cmake
       ] else []);
   };
+
+  virtualisation.libvirtd = lib.mkIf programs.virtualization.enable  {
+      enable = true;
+  };
+  programs.virt-manager.enable = lib.mkIf programs.virtualization.enable true;
 }

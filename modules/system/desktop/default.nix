@@ -9,7 +9,7 @@
     [ # Include the results of the hardware scan.
       ./audio.nix
       ./dev-tools.nix
-      ./virt-manager.nix
+      ./programs.nix
     ];
 
   options = {

@@ -78,6 +78,7 @@
     gimp.enable = true;
     blender.enable = true;
     sddm-dev.enable = true;
+    virtualization.enable = true;
   };
 
 
