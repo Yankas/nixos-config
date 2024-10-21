@@ -8,6 +8,7 @@
 
   options = {
     programs.torrent.enable = lib.mkEnableOption "enables torrent client";
+    programs.torrent.enable = lib.mkEnableOption "enables torrent client";
     programs.gimp.enable = lib.mkEnableOption "enables gimp";
     programs.blender.enable = lib.mkEnableOption "enables blender";
   };
@@ -81,7 +82,7 @@
     };
 
     home.packages = with pkgs;
-      #(if config.programs.torrent.enable then [ qbittorrent ] else []);
+      (if config.programs.torrent.enable then [ qbittorrent ] else []);
     
     home.pointerCursor = {
       gtk.enable = true;
