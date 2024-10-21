@@ -81,7 +81,7 @@
     };
 
     home.packages = with pkgs;
-      (if config.programs.torrent.enable then [ qbittorrent ] else []);
+      #(if config.programs.torrent.enable then [ qbittorrent ] else []);
     
     home.pointerCursor = {
       gtk.enable = true;
