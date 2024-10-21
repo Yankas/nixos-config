@@ -65,7 +65,7 @@
   programs = {
     rider.enable = true;
     torrent.enable = true;
-    #godot.enable = true;
+    godot.enable = true;
     tiled.enable = true;
     steam.enable = true;
     gimp.enable = true;
