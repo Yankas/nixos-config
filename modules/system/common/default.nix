@@ -4,13 +4,12 @@
     ./msrv-integration.nix
   ];
 
-  nixpkgs = {
-    overlays = [ outputs.overlays.additions ];
-    config.allowUnfree = true;
-  };
-
-
   config = {
+    nixpkgs = {
+      overlays = [ outputs.overlays.additions ];
+      config.allowUnfree = true;
+    };
+
     nix = let
       flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
     in {
