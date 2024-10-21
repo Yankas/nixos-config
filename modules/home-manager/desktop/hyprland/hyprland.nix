@@ -94,7 +94,7 @@ in
         disable_splash_rendering = true;
         initial_workspace_tracking = 2;
         force_default_wallpaper = 0; # Set to 0 or 1 to disable the anime mascot wallpapers
-      }
+      };
       
       decoration = {
         # See https://wiki.hyprland.org/Configuring/Variables/ for more
