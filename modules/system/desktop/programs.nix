@@ -32,5 +32,5 @@
   virtualisation.libvirtd = lib.mkIf programs.virtualization.enable  {
       enable = true;
   };
-  programs.virt-manager.enable = lib.mkIf programs.virtualization.enable true;
+  programs.virt-manager.enable = (lib.mkIf programs.virtualization.enable true);
 }
