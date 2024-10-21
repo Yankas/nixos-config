@@ -215,7 +215,7 @@ in
 
       # DAY OF THE WEEK
       "clock#1" = {
-        format = "<span text_transform=\"upper_case\">{:%a}</span>";
+        format = "<span text_transform=\"uppercase\">{:%a}</span>";
         tooltip = false;
       };
 
