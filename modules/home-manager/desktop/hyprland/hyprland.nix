@@ -10,9 +10,6 @@ let
       ${pkgs.swaybg}/bin/swaybg -i /run/current-system/sw/share/wallpapers/$1
     '';
 in
-let whatsapp = pkgs.writeShellScriptBin "whatsapp"  ''
-#!/bin/sh
-chromium --new-window --app=https://web.whatsapp.com/''; in
 {
     options = {
       hyprland.enable = lib.mkEnableOption "enable custom hyprland config";
@@ -89,19 +86,7 @@ chromium --new-window --app=https://web.whatsapp.com/''; in
         # Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
         allow_tearing = false;
         resize_on_border = true;
-        extend_border_grab_area = 20;
-      };
-
-      master = {
-        no_gaps_when_only = 1;
-        smart_resizing = false;
-      };
-
-      misc = {
-        vrr = 1;
-        animate_manual_resizes = false;
-        animate_mouse_windowdragging = false;
-        disable_hyprland_logo = true;
+        extend_border_grab_area = 20;whatsapp
         disable_splash_rendering = true;
         force_default_wallpaper = 0; # Set to 0 or 1 to disable the anime mascot wallpapers
         initial_workspace_tracking = 2;
@@ -166,13 +151,12 @@ chromium --new-window --app=https://web.whatsapp.com/''; in
         "8, monitor:$m_right"
         "10, monitor:$m_right"
         "name:$ws_games,desc:games, monitor:$m_right"
-        "special:qbittorrent, on-created-empty:qbittorrent"
         "special:teamspeak, on-created-empty:TeamSpeak"
         "special:whatsapp, on-created-empty:${whatsapp}/bin/whatsapp"
         "special:discord, on-created-empty:discord"
       ] 
-      ++ (if config.programs.steam.enable then ["special:$ws_steam, on-created-empty:steam" ] else []);
-
+      ++ (if config.programs.steam.enable then ["special:$ws_steam, on-created-empty:steam" ] else [])
+      ++ (if config.programs.torrent.enable then ["special:qbittorrent, on-created-empty:${pkgs.qbittorrent}/bin/qbittorrent" ] else []);
       # KEY BINDINGS
       bind =
       [
@@ -230,9 +214,6 @@ chromium --new-window --app=https://web.whatsapp.com/''; in
         "$mod SHIFT, T, togglespecialworkspace, discord"
         "$mod CTRL SHIFT, T, movetoworkspacesilent, special:discord"
           
-        "$mod, B, togglespecialworkspace, qbittorrent"
-        "$mod CTRL, B, movetoworkspacesilent, special:qbittorrent"
-
         "$mod, T, togglespecialworkspace, teamspeak"
         "$mod CTRL, T, movetoworkspacesilent, special:teamspeak"
 
@@ -242,6 +223,10 @@ chromium --new-window --app=https://web.whatsapp.com/''; in
       ++ (if config.programs.steam.enable then [ 
         "$mod, S, togglespecialworkspace, $ws_steam"
         "$mod CTRL, S, movetoworkspacesilent, special:$ws_steam"
+      ] else [])
+      ++ (if config.programs.torrent.enable then [ 
+        "$mod, B, togglespecialworkspace, qbittorrent"
+        "$mod CTRL, B, movetoworkspacesilent, special:qbittorrent"
       ] else []);
       
 
@@ -339,8 +324,8 @@ chromium --new-window --app=https://web.whatsapp.com/''; in
         "tile, class:($steam_game_class)"
         "workspace name:$ws_games, initialClass:($steam_game_class)"
         "monitor $m_right, initialClass:($steam_game_class)"
-      ] 
-      else []);
+      ] else [])
+      ++ (if config.programs.torrent.enable then [ ] else []);
     };
   };
 }

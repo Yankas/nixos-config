@@ -1,4 +1,9 @@
 { config, pkgs, lib, nix-colors, ... }:
+let whatsapp = pkgs.writeShellScriptBin "whatsapp"  ''
+  #!/bin/sh
+  chromium --new-window --app=https://web.whatsapp.com/
+''; 
+in
 {
   imports = [
     ./gaming/default.nix
@@ -8,6 +13,7 @@
 
   options = with lib; {
     programs.torrent.enable = mkEnableOption "enables torrent client";
+    programs.whatsappweb.enable = mkEnableOption "script to start whatsapp web in an application browser window";
     programs.gimp.enable = mkEnableOption "enables gimp";
     programs.blender.enable = mkEnableOption "enables blender";
   };
@@ -81,8 +87,8 @@
     };
 
     home.packages = with pkgs;
-      (if config.programs.torrent.enable then [ qbittorrent ] else []);
-    
+      (if config.programs.torrent.enable then [ qbittorrent ] else [])
+      (if config.programs.whatsappweb.enable then [ whatsapp ] else []);
     home.pointerCursor = {
       gtk.enable = true;
       # x11.enable = true;
