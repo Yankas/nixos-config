@@ -1,4 +1,12 @@
 { config, lib, pkgs, outputs, inputs, ... }:
+let update = pkgs.writeShellScriptBin "update" ''
+  #!/bin/sh
+  cd /etc/nixos
+  git add . 
+  git commit -m.
+  sudo nixos-rebuild switch --flake /etc/nixos#default";
+  '';
+in
 {
   imports =
     [
@@ -66,7 +74,6 @@
     home.aliases = {
       ll = "ls -l";
       update = "(cd /etc/nixos && git add . && git commit -m.); sudo nixos-rebuild switch --flake /etc/nixos#default";
-      update-home = "home-manager switch --flake /etc/nixos/#yankas@yankas-desktop";
       cp = "cp -iv";
       mv = "mv -iv";
       rm = "rm -Iv";
