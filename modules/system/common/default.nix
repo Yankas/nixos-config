@@ -4,6 +4,11 @@
     ./msrv-integration.nix
   ];
 
+  nixpkgs = {
+    overlays = [ outputs.overlays.additions ];
+    config.allowUnfree = true;
+  };
+
 
   config = {
     nix = let
@@ -23,8 +28,7 @@
     };
 
     networking.networkmanager.enable = true;
-    nixpkgs.overlays = [ outputs.overlays.additions ];
-    nixpkgs.config.allowUnfree = true;
+
     time.timeZone = "Europe/Berlin";
 
     programs.zsh.enable = true;
@@ -45,14 +49,21 @@
       unrar
     ];
 
-    programs.gnupg.agent = {
-      enable = true;
-      enableSSHSupport = true;
+    programs = {
+      gnupg.agent = {
+        enable = true;
+        enableSSHSupport = true;
+      };
+      git = {
+        enable = true;
+        package = pkgs.gitFull;
+      };
     };
 
+
+
     programs.git = {
-      enable = true;
-      package = pkgs.gitFull;
+
     };
 
     boot.loader.systemd-boot.enable = true;
@@ -61,9 +72,6 @@
 
     networking.defaultGateway = lib.mkDefault  "192.168.1.1";
     networking.nameservers = lib.mkDefault  [ "8.8.8.8" ];
-    # Set your time zone.
-
-
     # Select internationalisation properties.
     # i18n.defaultLocale = "en_US.UTF-8";
     # console = {

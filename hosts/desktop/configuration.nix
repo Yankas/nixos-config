@@ -47,9 +47,10 @@
     description = "Guest";
     initialPassword = "123456";
     extraGroups = [ "networkmanager" ];
-    uid=2000;
+    uid=1999;
     shell = pkgs.fish;
 	};
+
   services.teamviewer.enable = true;
   services.xserver.videoDrivers = [ "amdgpu" ]; 
 
@@ -61,6 +62,13 @@
         guest = import ../../home-manager/guest_desktop.nix;
       };
     };
+
+
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
+  services.blueman.enable = true;
 
   programs = {
     rider.enable = true;

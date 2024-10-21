@@ -30,36 +30,26 @@
     programs.gamemode.enable = (if config.programs.steam.enable then lib.mkDefault true else lib.mkDefault false);
 
     xdg.mime.enable = true;
-    security.rtkit.enable = true;
+
     hardware.graphics = {
       enable32Bit = true;
     };
 
-    services.printing.enable = true;
 
-  services.displayManager.defaultSession = "hyprland";
-    services.displayManager.sddm = {
-      enable = true;
-      wayland.enable = true;
-      
-      #theme="sugar-dark";
+
+    services = {
+      gvfs.enable = true; # USB auto mounting
+      xserver.enable = true;
+      printing.enable = true;
+      displayManager = {
+        defaultSession = "hyprland";
+        sddm = {
+          enable = true;
+          wayland.enable = true;
+        };
+      };
     };
 
-    environment.etc = {
-    "xdg/user-dirs.defaults".text = ''
-      DOWNLOAD=download
-      DOCUMENTS=/doc
-      MUSIC=/mus
-      PICTURES=/pic
-      VIDEOS=/vid
-    '';
-    };
-
-    services.gvfs.enable = true; # USB auto mounting
-
-    services.xserver = {
-      enable = true;
-    };
 
     fonts.packages = with pkgs; [
       noto-fonts
@@ -73,7 +63,6 @@
       proggyfonts
       corefonts
       vistafonts
-
       fighting-spirit
       die-in-a-fire
     ];
@@ -86,8 +75,6 @@
       enable = true;
       xwayland.enable = true;
     }; 
-
-    environment.pathsToLink = [ "/share/wallpapeBrs" ];
 
     systemd = {
       user.services.polkit-gnome-authentication-agent-1 = {
@@ -105,39 +92,55 @@
       };
     };
 
-    security.pam.loginLimits = [
-      {
-          domain = "*";
-          type = "-";
-          item = "memlock";
-          value = "unlimited";
-      }
-    ];
+    security = {
+      pam.loginLimits = [
+        {
+            domain = "*";
+            type = "-";
+            item = "memlock";
+            value = "unlimited";
+        }
+      ];
+      rtkit.enable = true;
+    };
 
-    environment.sessionVariables.NIXOS_OZONE_WL = "1";
-    environment.systemPackages = with pkgs; [
-      pcmanfm
-      peazip
 
-      pragha
-      wrapGAppsHook
+    enviornment = {
+      pathsToLink = [ "/share/wallpapers" ];
+      sessionVariables.NIXOS_OZONE_WL = "1";
+      etc = {
+        "xdg/user-dirs.defaults".text = ''
+          DOWNLOAD=download
+          DOCUMENTS=/doc
+          MUSIC=/mus
+          PICTURES=/pic
+          VIDEOS=/vid
+        '';
+      };
+      systemPackages = with pkgs; [
+        pcmanfm
+        peazip
 
-      chromium
-      seahorse
-      kitty
+        pragha
+        wrapGAppsHook
 
-      playerctl
-      wl-clipboard
+        chromium
+        seahorse
+        kitty
 
-      fuzzel
-      waybar
-      satty
-      grim
-    ]
-    ++ (if config.programs.blender.enable then [ blender-hip ] else [])
-    ++ (if config.programs.gimp.enable then [ gimp ] else [])
-    ++ (if config.programs.steam.enable then [ protonup ] else []) # proton ge installer
-    ++ (if config.programs.steam.enable then [ mangohud ] else []); 
+        playerctl
+        wl-clipboard
+
+        fuzzel
+        waybar
+        satty
+        grim
+      ]
+      ++ (if config.programs.blender.enable then [ blender-hip ] else [])
+      ++ (if config.programs.gimp.enable then [ gimp ] else [])
+      ++ (if config.programs.steam.enable then [ protonup ] else []) # proton ge installer
+      ++ (if config.programs.steam.enable then [ mangohud ] else []); 
+    };
   };
   
 
