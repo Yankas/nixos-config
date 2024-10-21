@@ -8,7 +8,6 @@
 
   options = {
     programs.torrent.enable = lib.mkEnableOption "enables torrent client";
-    programs.torrent.enable = lib.mkEnableOption "enables torrent client";
     programs.gimp.enable = lib.mkEnableOption "enables gimp";
     programs.blender.enable = lib.mkEnableOption "enables blender";
   };
