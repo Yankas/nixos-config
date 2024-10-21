@@ -88,10 +88,17 @@
       poweroff = "sudo poweroff";
       shutdown = "sudo shutdown";
     };
+    
 
     home.sessionVariables = {
       EDITOR = "nvim";
       VISUAL = "nvim";
+      XDG_CACHE_HOME  = "\$HOME/.cache";
+      XDG_CONFIG_HOME = "\$HOME/.config";
+      XDG_DATA_HOME   = "\$HOME/.local/share";
+      XDG_STATE_HOME  = "\$HOME/.local/state";
+      XDG_DOCUMENTS_DIR="/doc";
+      XDG_DOWNLOAD_DIR= "\$HOME/download";
     } // lib.optionalAttrs config.programs.steam.enable { 
       STEAM_EXTRA_COMBAT_TOOLS_PATHS = lib.mkIf config.programs.steam.enable "\${HOME}/.steam/root/compatibilitytools.d";
     } // lib.optionalAttrs config.programs.minecraft.enable { 
