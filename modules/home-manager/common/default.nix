@@ -4,7 +4,7 @@ let update = pkgs.writeShellScriptBin "update" ''
   cd /etc/nixos
   git add . 
   git commit -m.
-  sudo nixos-rebuild switch --flake /etc/nixos#default";
+  sudo nixos-rebuild switch --flake /etc/nixos#default
   '';
 in
 {
