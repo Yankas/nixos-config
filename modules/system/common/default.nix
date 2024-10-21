@@ -1,7 +1,8 @@
-{ config, lib, pkgs, outputs, inputs, ... }:
+{ config, lib, pkgs, outputs, inputs, chaotic, ... }:
 {
   imports = [ 
     ./msrv-integration.nix
+    chaotic.nixosModules.default
   ];
 
 

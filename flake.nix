@@ -12,6 +12,8 @@
     # nix colors support
     nix-colors.url = "github:misterio77/nix-colors";
 
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+
     # Home manager
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
