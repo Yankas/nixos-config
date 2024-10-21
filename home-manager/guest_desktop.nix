@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, outputs, ... }:
+{ config, pkgs, lib, inputs, outputs, ... }:
 {
   imports = [ 
     outputs.homeManagerModules.common
@@ -17,13 +17,6 @@
       BROWSER = "chromium";
     };
   };
-  options = {
-    desktop.enable = lib.mkEnableOption "enables torrent client";
-    programs.torrent.enable = lib.mkEnableOption "enables torrent client";
-    programs.gimp.enable = lib.mkEnableOption "enables gimp";
-    programs.blender.enable = lib.mkEnableOption "enables blender";
-  };
-
 
   programs = {
     home-manager.enable = true;   # Let Home Manager install and manage itself.
