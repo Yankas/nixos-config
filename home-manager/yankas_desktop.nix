@@ -29,6 +29,10 @@
     wallpaper = "hgss.png";
   };
 
+  programs = {
+    torrent.enable = true;
+  };
+
   games = {
     saves.enable = true;
     minecraft.enable = true;

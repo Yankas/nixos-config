@@ -14,7 +14,6 @@
 
   options = {
     desktop.enable = lib.mkEnableOption "enables torrent client";
-    programs.torrent.enable = lib.mkEnableOption "enables torrent client";
     programs.gimp.enable = lib.mkEnableOption "enables gimp";
     programs.blender.enable = lib.mkEnableOption "enables blender";
   };
@@ -135,7 +134,6 @@
       satty
       grim
     ]
-    ++ (if config.programs.torrent.enable then [ qbittorrent ] else [])
     ++ (if config.programs.blender.enable then [ blender-hip ] else [])
     ++ (if config.programs.gimp.enable then [ gimp ] else [])
     ++ (if config.programs.steam.enable then [ protonup ] else []) # proton ge installer

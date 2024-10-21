@@ -124,7 +124,7 @@ chromium --new-window --app=https://web.whatsapp.com/''; in
       };
       
       render = {
-        #TODO: reevaluate causes flicker in fullscreen
+        #TODO: reevaluate, currently causes flicker in fullscreen
         direct_scanout = false;
       };
 
@@ -167,11 +167,11 @@ chromium --new-window --app=https://web.whatsapp.com/''; in
         "10, monitor:$m_right"
         "name:$ws_games,desc:games, monitor:$m_right"
         "special:qbittorrent, on-created-empty:qbittorrent"
-        "special:$ws_steam, on-created-empty:steam"
         "special:teamspeak, on-created-empty:TeamSpeak"
         "special:whatsapp, on-created-empty:${whatsapp}/bin/whatsapp"
         "special:discord, on-created-empty:discord"
-      ];
+      ] 
+      ++ (if config.programs.steam.enable then ["special:$ws_steam, on-created-empty:steam" ] else []);
 
       # KEY BINDINGS
       bind =
@@ -233,27 +233,25 @@ chromium --new-window --app=https://web.whatsapp.com/''; in
         "$mod, B, togglespecialworkspace, qbittorrent"
         "$mod CTRL, B, movetoworkspacesilent, special:qbittorrent"
 
-        "$mod, S, togglespecialworkspace, $ws_steam"
-        "$mod CTRL, S, movetoworkspacesilent, special:$ws_steam"
-
         "$mod, T, togglespecialworkspace, teamspeak"
         "$mod CTRL, T, movetoworkspacesilent, special:teamspeak"
 
         "$mod, W, togglespecialworkspace, whatsapp"
         "$mod CTRL, W, movetoworkspacesilent, special:whatsapp"
-      ];
+      ]
+      ++ (if config.programs.steam.enable then [ 
+        "$mod, S, togglespecialworkspace, $ws_steam"
+        "$mod CTRL, S, movetoworkspacesilent, special:$ws_steam"
+      ] else []);
+      
 
       binde =
       [
         # Example volume button that allows press and hold, volume limited to 150%
         ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
-      ];
-      
-      bindl = [
         ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
         ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-      ];
-      
+      ];      
 
       bindm =
       [
@@ -269,7 +267,6 @@ chromium --new-window --app=https://web.whatsapp.com/''; in
         "float, class:(org.freedesktop.impl.portal.desktop.kde)"
         "float, initialClass:(xdg-desktop-portal-gtk)"
         
-
         #"nomaximizerequest, class:.* # You'll probably like this."
         "float, initialTitle:(Paradox Launcher)"
 
@@ -313,21 +310,6 @@ chromium --new-window --app=https://web.whatsapp.com/''; in
         "float, class:(TeamSpeak), title:(TeamSpeak)"
         "size 1400 1000, class:(TeamSpeak), title:(TeamSpeak)"
         "center, class:(TeamSpeak), title:(TeamSpeak)"
-        
-        # steam
-        "workspace special:Steam, initialClass:(^steam$), initialTitle:(^Steam$)"
-        "noinitialfocus, initialClass:(^steam$), initialTitle:(^Steam$)"
-        "workspace special:Steam, initialClass:(^steam$), initialTitle:(^Sign in to Steam$)"
-        "noinitialfocus, initialClass:(^steam$), initialTitle:(^Sign in to Steam$)"
-    
-
-        # steam games
-        "noinitialfocus, class:($steam_game_class)"
-        "tile, class:($steam_game_class)"
-        "workspace name:$ws_games, initialClass:($steam_game_class)"
-        #"windowdance, class:($steam_game_class)"
-        "monitor $m_right, initialClass:($steam_game_class)"
-
 
         # gamescope
         "workspace name:$ws_games, class:(^gamescope$)"
@@ -345,7 +327,20 @@ chromium --new-window --app=https://web.whatsapp.com/''; in
         "size 1400 1000, initialClass:(discord)"
         "center, initialClass:(discord)"
         "focusonactivate 0, initialClass:(^discord$)"
-      ];
+      ]
+      ++ (if config.programs.steam.enable then [ 
+        # STEAM CLIENT
+        "workspace special:Steam, initialClass:(^steam$), initialTitle:(^Steam$)"
+        "noinitialfocus, initialClass:(^steam$), initialTitle:(^Steam$)"
+        "workspace special:Steam, initialClass:(^steam$), initialTitle:(^Sign in to Steam$)"
+        "noinitialfocus, initialClass:(^steam$), initialTitle:(^Sign in to Steam$)"
+        # STEAM GAMES
+        "noinitialfocus, class:($steam_game_class)"
+        "tile, class:($steam_game_class)"
+        "workspace name:$ws_games, initialClass:($steam_game_class)"
+        "monitor $m_right, initialClass:($steam_game_class)"
+      ] 
+      else []);
     };
   };
 }
