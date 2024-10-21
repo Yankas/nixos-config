@@ -15,7 +15,7 @@
       inputs.home-manager.nixosModules.home-manager
       outputs.systemModules.common
       outputs.systemModules.desktop
-      outputs.systemModules.ddclient
+      #outputs.systemModules.ddclient
     ];
   boot.supportedFilesystems = [ "ntfs" ];
 
