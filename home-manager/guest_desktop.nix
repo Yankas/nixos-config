@@ -14,7 +14,7 @@
     #packages = [];
     #file = {};
     sessionVariables = {
-      BROWSER = "chromium";
+      BROWSER = "chromium"; 
     };
   };
 
