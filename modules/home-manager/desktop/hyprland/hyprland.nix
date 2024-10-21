@@ -30,7 +30,7 @@ chromium --new-window --app=https://web.whatsapp.com/''; in
           "${set-bg}/bin/set-bg ${config.home.wallpaper}"
         ];
       };
-    }
+    };
 
   config = lib.mkIf config.hyprland.enable {
     wayland.windowManager.hyprland.systemd.variables = ["--all"];
