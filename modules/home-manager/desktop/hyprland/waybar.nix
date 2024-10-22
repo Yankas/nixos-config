@@ -4,6 +4,9 @@ let color = {
   background-accent = "#1A1A1A";
   text              = "#FDF6E3";
   text-highlight    = "#FF4221";
+}; in
+let font =  { 
+    size         = "20px";
 };
 in
 {
@@ -12,7 +15,7 @@ in
     systemd.enable = true;
     style = ''
       * {
-        font-size: 20px;
+        font-size: ${font.size};
         font-family: "Fighting Spirit turbo", sans-serif
       }
 
@@ -112,12 +115,11 @@ in
       #mpris {
         font-family: "Die in a fire PG", sans-serif;
         text-shadow: unset;
-        font-size: 20px;
         padding: 0px 10px;
       }
 
       #clock, #custom-weather  {
-        font-size: 20px;
+        font-size: ${font.size};
         color: ${color.text-highlight};
       }
 
