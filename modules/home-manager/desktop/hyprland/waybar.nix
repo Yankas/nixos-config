@@ -90,7 +90,7 @@ in
       #mpris.icon {
         background-size: 24px 24px;
         background-repeat: no-repeat;
-        background-position: 10px 0px;
+        background-position: 10px 50%;
         margin-left: 0px;
       
         padding-left: 20px;
