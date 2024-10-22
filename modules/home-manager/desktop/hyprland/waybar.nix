@@ -87,7 +87,23 @@ in
         color: #b58900;
       }
       
+      #mpris.icon {
+        background-size: 24px 24px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
 
+      #mpris.icon.playing {
+        background-image: url("/etc/nixos/modules/home-manager/assets/waybar-playing.png");
+      }
+
+      #mpris.icon.paused {
+        background-image: url("/etc/nixos/modules/home-manager/assets/waybar-paused.png");
+      }
+
+      #mpris.icon.stopped {
+        background-image: url("/etc/nixos/modules/home-manager/assets/waybar-paused.png");
+      }
 
       #mpris {
         font-family: "Die in a fire PG", sans-serif;
@@ -135,7 +151,7 @@ in
         "custom/left-arrow-dark"
         "custom/left-arrow-light"
         "custom/left-arrow-dark"
-        "mpris#icon"
+
         "mpris"
         "custom/right-arrow-dark"
         "custom/right-arrow-light"
