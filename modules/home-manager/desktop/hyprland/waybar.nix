@@ -90,9 +90,10 @@ in
       #mpris.icon {
         background-size: 24px 24px;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: left;
         margin-left: 0px;
-        padding-left: 15px;
+      
+        padding-left: 5px;
         background-color: ${color.background-accent};
       }
 
@@ -308,7 +309,7 @@ in
       };
 
       "mpris#icon" = {
-        format = " ";
+        format = "";
         player-icons = {
           default = "";
           mpv = "";
