@@ -91,6 +91,7 @@ in
         background-size: 24px 24px;
         background-repeat: no-repeat;
         background-position: center;
+        margin-left: -15px;
       }
 
       #mpris.icon.playing {
@@ -305,7 +306,7 @@ in
       };
 
       "mpris#icon" = {
-        format = "";
+        format = " ";
         player-icons = {
           default = "";
           mpv = "";
