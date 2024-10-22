@@ -91,7 +91,6 @@ in
         background-image: url("/etc/nixos/modules/home-manager/assets/waybar-play.png");
         background-size: 25px 25px;
         background-repeat: no-repeat;
-        background-color: white;
         background-position: center;
       }
 
