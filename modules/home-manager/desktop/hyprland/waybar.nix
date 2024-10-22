@@ -151,7 +151,7 @@ in
         "custom/left-arrow-dark"
         "custom/left-arrow-light"
         "custom/left-arrow-dark"
-
+        "mpris#icon"
         "mpris"
         "custom/right-arrow-dark"
         "custom/right-arrow-light"
@@ -305,7 +305,7 @@ in
       };
 
       "mpris#icon" = {
-        format = "{status-icon}";
+        format = "";
         player-icons = {
           default = "";
           mpv = "";
