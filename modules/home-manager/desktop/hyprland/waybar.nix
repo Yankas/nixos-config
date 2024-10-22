@@ -86,14 +86,24 @@ in
       #disk {
         color: #b58900;
       }
-
+      
       #mpris.icon {
-        background-image: url("/etc/nixos/modules/home-manager/assets/waybar-play.png");
         background-size: 25px 25px;
         background-repeat: no-repeat;
         background-position: center;
       }
 
+      #mpris.icon.playing {
+        background-image: url("/etc/nixos/modules/home-manager/assets/waybar-playing.png");
+      }
+
+      #mpris.icon.paused {
+        background-image: url("/etc/nixos/modules/home-manager/assets/waybar-paused.png");
+      }
+
+      #mpris.icon.stopped {
+        background-image: url("/etc/nixos/modules/home-manager/assets/waybar-paused.png");
+      }
 
       #mpris {
         font-family: "Die in a fire PG", sans-serif;
