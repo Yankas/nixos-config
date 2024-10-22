@@ -133,6 +133,7 @@ in
         "custom/left-arrow-dark"
         "custom/left-arrow-light"
         "custom/left-arrow-dark"
+        "mpris#icon"
         "mpris"
         "custom/right-arrow-dark"
         "custom/right-arrow-light"
@@ -285,17 +286,21 @@ in
         special-visible-only = true;
       };
 
-      mpris = {
-        format = "{player_icon} {title} ";
-        format-paused = "{status_icon} {title} ";
+      "mpris#icon" = {
         player-icons = {
-          default = ">";
-          mpv = "M";
+          default = " ";
+          mpv = " ";
         };
         status-icons = {
-          "paused" = "P";
-          "stopped" = "S";
+          "paused" = " ";
+          "stopped" = " ";
         };
+        tooltip = false;
+      };
+
+      mpris = {
+        format = "{title} ";
+        format-paused = "{title} ";
         tooltip = false;
       };
 
