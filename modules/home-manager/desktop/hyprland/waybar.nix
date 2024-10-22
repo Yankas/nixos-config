@@ -87,6 +87,18 @@ in
         color: #b58900;
       }
 
+      #mpris.icon {
+        background-image: url("/etc/nixos/modules/home-manager/assets/waybar-play.png");
+        background-size: 48px 48px;
+        background-repeat: no-repeat;
+        background-color: white;
+        background-position: center;
+        padding-left: 30px;
+        margin-left: 30px;
+        color: red;
+      }
+
+
       #mpris {
         font-family: "Die in a fire PG", sans-serif;
         text-shadow: unset;
