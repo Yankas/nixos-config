@@ -91,7 +91,7 @@ in
         background-size: 24px 24px;
         background-repeat: no-repeat;
         background-position: center;
-        margin-left: -15px;
+        margin-left: -10px;
       }
 
       #mpris.icon.playing {
