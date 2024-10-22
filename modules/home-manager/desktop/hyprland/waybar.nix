@@ -93,7 +93,7 @@ in
         background-position: center;
         margin-left: 0px;
       
-        padding-left: 5px;
+        padding-left: 20px;
         background-color: ${color.background-accent};
       }
 
