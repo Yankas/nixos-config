@@ -287,6 +287,7 @@ in
       };
 
       "mpris#icon" = {
+        format = "{status} ";
         player-icons = {
           default = " ";
           mpv = " ";
