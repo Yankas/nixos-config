@@ -88,7 +88,7 @@ in
       }
       
       #mpris.icon {
-        background-size: 25px 25px;
+        background-size: 24px 24px;
         background-repeat: no-repeat;
         background-position: center;
       }
@@ -305,14 +305,14 @@ in
       };
 
       "mpris#icon" = {
-        format = "{status-icon} ";
+        format = " {status-icon}  ";
         player-icons = {
-          default = " ";
-          mpv = " ";
+          default = "";
+          mpv = "";
         };
         status-icons = {
-          "paused" = " ";
-          "stopped" = " ";
+          "paused" = "";
+          "stopped" = "";
         };
         tooltip = false;
       };
