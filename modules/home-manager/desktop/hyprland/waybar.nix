@@ -91,7 +91,8 @@ in
         background-size: 24px 24px;
         background-repeat: no-repeat;
         background-position: center;
-        margin-left: -0px;
+        margin-left: 0px;
+        padding-left: 5px;
         background-color: ${color.background-accent};
       }
 
