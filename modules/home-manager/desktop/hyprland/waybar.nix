@@ -289,11 +289,12 @@ in
         format = "{player_icon} {title} ";
         format-paused = "{status_icon} {title} ";
         player-icons = {
-          default = "";
-          mpv = " 🎵";
+          default = ">";
+          mpv = "M";
         };
         status-icons = {
-          "paused" = "";
+          "paused" = "P";
+          "stopped" = "S";
         };
         tooltip = false;
       };

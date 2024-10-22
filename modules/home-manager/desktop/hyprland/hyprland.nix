@@ -156,11 +156,12 @@ in
         "10, monitor:$m_right"
         "name:$ws_games,desc:games, monitor:$m_right"
         "special:teamspeak, on-created-empty:TeamSpeak"
-        "special:whatsapp, on-created-empty:whatsapp"
         "special:discord, on-created-empty:discord"
       ] 
       ++ (if config.programs.steam.enable then ["special:$ws_steam, on-created-empty:steam" ] else [])
-      ++ (if config.programs.torrent.enable then ["special:qbittorrent, on-created-empty:${pkgs.qbittorrent}/bin/qbittorrent" ] else []);
+      ++ (if config.programs.torrent.enable then ["special:qbittorrent, on-created-empty:${pkgs.qbittorrent}/bin/qbittorrent" ] else [])
+      ++ (if config.programs.whatsappweb.enable then ["special:whatsapp, on-created-empty:whatsapp" ] else []);
+
       # KEY BINDINGS
       bind =
       [
@@ -220,9 +221,6 @@ in
           
         "$mod, T, togglespecialworkspace, teamspeak"
         "$mod CTRL, T, movetoworkspacesilent, special:teamspeak"
-
-        "$mod, W, togglespecialworkspace, whatsapp"
-        "$mod CTRL, W, movetoworkspacesilent, special:whatsapp"
       ]
       ++ (if config.programs.steam.enable then [ 
         "$mod, S, togglespecialworkspace, $ws_steam"
@@ -231,6 +229,10 @@ in
       ++ (if config.programs.torrent.enable then [ 
         "$mod, B, togglespecialworkspace, qbittorrent"
         "$mod CTRL, B, movetoworkspacesilent, special:qbittorrent"
+      ] else [])
+      ++ (if config.programs.whatsappweb.enable then [ 
+        "$mod, W, togglespecialworkspace, whatsapp"
+        "$mod CTRL, W, movetoworkspacesilent, special:whatsapp"
       ] else []);
       
 
