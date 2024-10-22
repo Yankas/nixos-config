@@ -305,7 +305,7 @@ in
       };
 
       "mpris#icon" = {
-        format = "   ";
+        format = " ";
         player-icons = {
           default = "";
           mpv = "";
