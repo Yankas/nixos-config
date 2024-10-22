@@ -44,6 +44,7 @@ in
       #battery,
       #disk,
       #mpris,
+      #mpris.icon,
       #custom-weather,
       #tray {
         background: ${color.background-accent};
@@ -305,7 +306,7 @@ in
       };
 
       "mpris#icon" = {
-        format = " {status-icon}  ";
+        format = "{status-icon}   ";
         player-icons = {
           default = "";
           mpv = "";
