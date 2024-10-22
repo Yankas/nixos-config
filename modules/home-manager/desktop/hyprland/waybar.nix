@@ -92,7 +92,7 @@ in
         background-repeat: no-repeat;
         background-position: center;
         margin-left: 0px;
-        padding-left: 30px;
+        padding-left: 25px;
         background-color: ${color.background-accent};
       }
 
