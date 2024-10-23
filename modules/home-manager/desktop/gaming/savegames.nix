@@ -155,6 +155,8 @@ in
       #".local/share/Steam/steamapps/compatdata/2749118746/pfx/drive_c/users/steamuser/AppData/LocalLow/Vector3 Studio/Sunkenland".source = "${config.home.homeDirectory}/.saves/sunkenland";
       #".local/share/Steam/steamapps/compatdata/2637654718/pfx/drive_c/users/steamuser/AppData/LocalLow/Dead Mage/Children of Morta".source = "${config.home.homeDirectory}/.saves/children-of-morta";
 
+      } // lib.optionalAttrs (saves.enable && nintendo.switch.enabled) { 
+        ".config/Ryujinx".source = link "ryujinx";
       };
     };
   }
