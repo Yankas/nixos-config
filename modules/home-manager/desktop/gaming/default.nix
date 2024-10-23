@@ -24,7 +24,7 @@ in
   config = with config.games; {
 
     home.file = {
-    }  // lib.optionalAttrs saves.enable && nintendo.switch.enabled { 
+    }  // lib.optionalAttrs (saves.enable && nintendo.switch.enabled) { 
       ".config/Ryujinx".source = link "ryujinx";
     };
 
