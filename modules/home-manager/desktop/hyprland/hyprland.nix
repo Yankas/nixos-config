@@ -156,10 +156,10 @@ in
         "10, monitor:$m_right"
         "name:$ws_games,desc:games, monitor:$m_right"
         "special:teamspeak, on-created-empty:TeamSpeak"
-        "special:discord, on-created-empty:discord"
       ] 
       ++ (if config.programs.steam.enable then ["special:$ws_steam, on-created-empty:steam" ] else [])
       ++ (if config.programs.torrent.enable then ["special:qbittorrent, on-created-empty:${pkgs.qbittorrent}/bin/qbittorrent" ] else [])
+      ++ (if config.programs.torrent.enable then ["special:discord, on-created-empty:${pkgs.discord}/bin/discord" ] else [])
       ++ (if config.programs.whatsappweb.enable then ["special:whatsapp, on-created-empty:whatsapp" ] else []);
 
       # KEY BINDINGS
@@ -215,9 +215,6 @@ in
         # Scroll through existing workspaces with mainMod + scroll
         "$mod, mouse_down, workspace, e+1"
         "$mod, mouse_up, workspace, e-1"
-
-        "$mod SHIFT, T, togglespecialworkspace, discord"
-        "$mod CTRL SHIFT, T, movetoworkspacesilent, special:discord"
           
         "$mod, T, togglespecialworkspace, teamspeak"
         "$mod CTRL, T, movetoworkspacesilent, special:teamspeak"
@@ -236,6 +233,10 @@ in
       ++ (if config.programs.whatsappweb.enable then [ 
         "$mod, W, togglespecialworkspace, whatsapp"
         "$mod CTRL, W, movetoworkspacesilent, special:whatsapp"
+      ] else [])
+      ++ (if config.programs.discord.enable then [ 
+        "$mod SHIFT, T, togglespecialworkspace, discord"
+        "$mod CTRL SHIFT, T, movetoworkspacesilent, special:discord"
       ] else []);
       
 
@@ -295,7 +296,7 @@ in
         "noblur,class:^(xwaylandvideobridge)$"
 
         # whatsapp
-        "workspace special:whatsapp, title:(web.whatsapp.com.*)"
+        "workspace special:whatsapp silent, title:(web.whatsapp.com.*)"
         "float, title:(web.whatsapp.com.*)"
         "size 1400 1000, title:(web.whatsapp.com.*)"
         "center, title:(web.whatsapp.com.*)"
@@ -314,18 +315,17 @@ in
         "monitor $m_right, class:(leagueclient[ux]*.exe)"
         "noanim, class:(leagueclient[ux]*.exe)"
 
-        # discord
-        "workspace special:discord, initialClass:(discord)"
-        "noinitialfocus, initialClass:(discord)"
-        "float, initialClass:(discord)"
-        "size 1400 1000, initialClass:(discord)"
-        "center, initialClass:(discord)"
-        "focusonactivate 0, initialClass:(^discord$)"
-
         # SCREENSHOTS / SATTY
         "fullscreen, class:(^com.gabm.satty$)"
         "noanim, class:(^com.gabm.satty$)"
       ]
+      ++ (if config.programs.discord.enable then [
+        # discord
+        "workspace special:discord silent, initialClass:(discord)"
+        "float, initialClass:(discord)"
+        "size 1400 1000, initialClass:(discord)"
+        "center, initialClass:(discord)"
+      ] else [])
       ++ (if config.programs.steam.enable then [ 
         # STEAM CLIENT
         "workspace special:Steam, initialClass:(^steam$), initialTitle:(^Steam$)"
@@ -339,7 +339,7 @@ in
         "monitor $m_right, initialClass:($steam_game_class)"
       ] else [])
       ++ (if config.programs.torrent.enable then [
-        "workspace special:qbittorrent, initialClass:(^org.qbittorrent.qBittorrent$)"
+        "workspace special:qbittorrent silent, initialClass:(^org.qbittorrent.qBittorrent$)"
         
       ] else [])
       ++ (if config.games.nintendo.switch.enable then [ 

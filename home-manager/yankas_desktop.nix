@@ -38,6 +38,7 @@
     saves.enable = true;
     minecraft.enable = true;
     thesims4-updater.enable = true;
+    discord.enable = true;
     ps3.enable = true;
     psp.enable = true;
     nintendo = {
