@@ -78,7 +78,7 @@
 
   programs = {
     rider.enable = true;
-    #godot.enable = true;
+    godot.enable = true;
     tiled.enable = true;
     steam.enable = true;
     gimp.enable = true;
