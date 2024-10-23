@@ -16,7 +16,7 @@ in
     programs.whatsappweb.enable = mkEnableOption "script to start whatsapp web in an application browser window";
     programs.gimp.enable = mkEnableOption "enables gimp";
     programs.blender.enable = mkEnableOption "enables blender";
-    programs.discord.enable = mkEnableOption "enables discord;
+    programs.discord.enable = mkEnableOption "enables discord";
   };
 
   config = {
