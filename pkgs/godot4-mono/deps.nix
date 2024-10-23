@@ -36,7 +36,7 @@
   })
   (fetchNuGet {
     pname = "Microsoft.AspNetCore.App.Ref";
-    version = "6.0.33";
+    version = "6.0.35";
     hash = "sha256-GcPiO+iI0JsHYlqURAmzWjOnDX2jDCUY4jYaIwr8ojs=";
   })
   (fetchNuGet {
@@ -236,12 +236,12 @@
   })
   (fetchNuGet {
     pname = "Microsoft.NETCore.App.Host.win-x86";
-    version = "6.0.33";
+    version = "6.0.35";
     hash = "sha256-OybB5ATvnnPEsKAdn5a/UdjSPcT78wlf38YNmuRWBZg=";
   })
   (fetchNuGet {
     pname = "Microsoft.NETCore.App.Ref";
-    version = "6.0.33";
+    version = "6.0.35";
     hash = "sha256-BiGUcXo1FQTlZdR6ndhUQ8lrYG3KaGXNXRVF+Fc3L28=";
   })
   (fetchNuGet {
