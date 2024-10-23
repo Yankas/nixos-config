@@ -301,7 +301,7 @@ in
         "size 1400 1000, title:(web.whatsapp.com.*)"
         "center, title:(web.whatsapp.com.*)"
 
-        "workspace special:teamspeak, class:(TeamSpeak), title:(TeamSpeak)"
+        "workspace special:teamspeak silent, class:(TeamSpeak), title:(TeamSpeak)"
         "float, class:(TeamSpeak), title:(TeamSpeak)"
         "size 1400 1000, class:(TeamSpeak), title:(TeamSpeak)"
         "center, class:(TeamSpeak), title:(TeamSpeak)"
