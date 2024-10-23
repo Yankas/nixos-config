@@ -99,7 +99,6 @@
     # COMMS
     mumble
     teamspeak5_client
-    discord
     vscode
     wineWowPackages.stable
     yankas-wallpapers
