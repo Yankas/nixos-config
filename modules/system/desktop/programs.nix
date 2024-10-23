@@ -12,6 +12,8 @@
     programs.tiled.enable = lib.mkEnableOption "enables tiled map editor";
     programs.virtualization.enable = lib.mkEnableOption "enables tiled map editor";
   };
+
+  
   config = {
     environment.systemPackages = with pkgs;
       (if config.programs.godot.enable then [ /*godot_4-mono*/ dotnet-sdk_8] else [])

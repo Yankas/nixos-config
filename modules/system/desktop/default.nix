@@ -7,7 +7,6 @@
 {
     imports =
     [ # Include the results of the hardware scan.
-      ./audio.nix
       ./programs.nix
     ];
 
@@ -46,6 +45,12 @@
           enable = true;
           wayland.enable = true;
         };
+      };
+      pipewire = {
+        enable = true;
+        alsa.enable = true;
+        alsa.support32Bit = true;
+        pulse.enable = true;
       };
     };
 
@@ -134,6 +139,7 @@
         waybar
         satty
         grim
+        easyeffects
       ]
       ++ (if config.programs.blender.enable then [ blender-hip ] else [])
       ++ (if config.programs.gimp.enable then [ gimp ] else [])

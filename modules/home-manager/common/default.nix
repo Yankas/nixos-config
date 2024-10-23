@@ -8,8 +8,7 @@ let update = pkgs.writeShellScriptBin "update" ''
   '';
 in
 {
-  imports =
-    [
+  imports = [
       ./lf.nix
     ];
   options = {
