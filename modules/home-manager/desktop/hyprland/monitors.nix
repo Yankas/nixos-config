@@ -16,7 +16,7 @@
       };
     };
   };
-  config = mkIf hyprland.enable  {
+  config = lib.mkIf hyprland.enable  {
     wayland.windowManager.hyprland.settings = {
 
     };
