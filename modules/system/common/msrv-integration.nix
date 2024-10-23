@@ -39,7 +39,7 @@
     };
 
     fileSystems."/pic" = {
-      device = "192.168.1.2:/srv/pics";
+      device = "192.168.1.2:/srv/pic";
       fsType = "nfs";
       options = [ "x-systemd.automount" "noauto" ];
     };
