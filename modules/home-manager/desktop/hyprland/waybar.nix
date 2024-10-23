@@ -193,7 +193,7 @@ in
         "custom/weather"
         "custom/left-arrow-light"
         "custom/left-arrow-dark"
-        #"bluetooth"
+        "bluetooth"
         "tray"
       ];
       "custom/weather" = {
@@ -249,6 +249,10 @@ in
         format = "{:%H:%M}";
         tooltip = false;
         interval = 1;
+      };
+
+      bluetooth = {
+        format = "";
       };
 
 
