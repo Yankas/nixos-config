@@ -120,8 +120,6 @@
         pcmanfm
         peazip
 
-        flameshot
-
         pragha
         wrapGAppsHook
 

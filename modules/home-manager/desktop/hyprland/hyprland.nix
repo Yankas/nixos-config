@@ -221,6 +221,9 @@ in
           
         "$mod, T, togglespecialworkspace, teamspeak"
         "$mod CTRL, T, movetoworkspacesilent, special:teamspeak"
+
+        # SCREENSHOTS
+        ''$mod SHIFT, S, exec, grim -o "$(hyprctl monitors -j | jq -r '.[] | select(.focused)| .name')" - | satty --filename - --fullscreen --initial-tool crop''
       ]
       ++ (if config.programs.steam.enable then [ 
         "$mod, S, togglespecialworkspace, $ws_steam"
