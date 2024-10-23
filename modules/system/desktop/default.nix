@@ -5,10 +5,9 @@
   ... 
 }: 
 {
-    imports =
-    [ # Include the results of the hardware scan.
-      ./programs.nix
-    ];
+  imports = [
+    ./programs.nix
+  ];
 
   options = {
     desktop.enable = lib.mkEnableOption "enables desktop features";
@@ -32,8 +31,6 @@
     hardware.graphics = {
       enable32Bit = true;
     };
-
-
 
     services = {
       gvfs.enable = true; # USB auto mounting
@@ -72,7 +69,7 @@
     ];
 
     fonts.fontconfig.defaultFonts = {
-      monospace = [ "Consolas" "Fira Code" ];
+      monospace = [ "Fira Code" "Consolas" ];
     };
 
     programs.hyprland = {

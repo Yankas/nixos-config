@@ -183,9 +183,6 @@ in
         "pulseaudio"
         "custom/left-arrow-light"
         "custom/left-arrow-dark"
-        #"memory"
-        #"custom/left-arrow-light"
-        #"custom/left-arrow-dark"
         "group/hardware"
         #"battery"
         #"custom/left-arrow-light"
@@ -196,6 +193,7 @@ in
         "custom/weather"
         "custom/left-arrow-light"
         "custom/left-arrow-dark"
+        "bluetooth"
         "tray"
       ];
       "custom/weather" = {
