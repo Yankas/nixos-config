@@ -132,6 +132,9 @@
         playerctl
         wl-clipboard
 
+        nixd
+        alejandra
+
         fuzzel
         waybar
         satty
