@@ -340,8 +340,8 @@ in
       ] else [])
       ++ (if config.programs.torrent.enable then [ ] else [])
       ++ (if config.games.nintendo._3ds.enable then [ 
-        "workspace name:$ws_games, initialClass:(^Ryujinx$)"
-        "noinitialfocus, initialClass:($Ryujinx)"
+        "workspace special:$ws_games, initialClass:(^Ryujinx$)"
+        "noinitialfocus, initialClass:(^Ryujinx$)"
       ] else []);      
     };
   };
