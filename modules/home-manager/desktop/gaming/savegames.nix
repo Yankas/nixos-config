@@ -26,7 +26,7 @@ in
       ".local/share/Colossal Order/Monster Sanctuary".source = link "monster-sanctuary";
       ".local/share/PrismLauncher/instances".source = lib.mkIf config.games.minecraft.enable (link "minecraft");
       ".config/ppsspp/PSP".source = lib.mkIf config.games.psp.enable (link "psp");
-      ".config/ppsspp/Loop Hero".source = link "loop-hero";
+      ".config/Loop Hero".source = link "loop-hero";
       "${steamPath 560130 "Saved Games/Pillars of Eternity II"}".source = link "pillars-of-eternity2";
       "${steamPath 40390  "Saved Games/Risen2/SaveGames"}".source = link "risen2";
       "${steamPath 466240 "Saved Games/deceit"}".source = link "deceit";
