@@ -96,7 +96,6 @@ in
         background-repeat: no-repeat;
         background-position: 10px 50%;
         margin-left: 0px;
-      
         padding-left: 20px;
         background-color: ${color.background-accent};
       }
@@ -119,7 +118,7 @@ in
         padding: 0px 10px;
       }
 
-      #clock, #custom-weather  {
+      #clock, #custom-weather, #bluetooth  {
         font-size: ${font.size};
         color: ${color.text-highlight};
       }
