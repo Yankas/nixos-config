@@ -345,7 +345,7 @@ in
       ++ (if config.games.nintendo.switch.enable then [ 
         "workspace name:$ws_games, initialClass:(^Ryujinx$)"
         "noinitialfocus, initialClass:(^Ryujinx$)"
-        "suppressevent activate, initialClass:(^Ryujinx$)"
+        "suppressevent activate activatefocus, initialClass:(^Ryujinx$)"
       ] else []);      
     };
   };
