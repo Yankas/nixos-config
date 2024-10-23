@@ -219,6 +219,10 @@ in
         "$mod, T, togglespecialworkspace, teamspeak"
         "$mod CTRL, T, movetoworkspacesilent, special:teamspeak"
 
+        # SCRATCHPAD;
+        "exec-once=[workspace special; size 75% 20%;move 12.5% 40] kitty"
+        "bind=,F12,togglespecialworkspace"
+
         # SCREENSHOTS
         ''$mod SHIFT, S, exec, ${pkgs.grim}/bin/grim -o "$(hyprctl monitors -j | jq -r '.[] | select(.focused)| .name')" - | ${pkgs.satty}/bin/satty --filename - --fullscreen --initial-tool crop''
       ]
