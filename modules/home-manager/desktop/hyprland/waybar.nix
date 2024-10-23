@@ -48,7 +48,8 @@ in
       #disk,
       #mpris,
       #custom-weather,
-      #tray {
+      #tray,
+      #bluetooth {
         background: ${color.background-accent};
         text-shadow: 1px 1px #DDD;
       }
