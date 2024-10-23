@@ -345,7 +345,7 @@ in
         "workspace special:qbittorrent silent, initialClass:(^org.qbittorrent.qBittorrent$)"
       ] else [])
       ++ (if config.games.nintendo.switch.enable then [ 
-        "workspace name:$ws_games silent, initialClass:(^Ryujinx$)"
+        "workspace name:$ws_games, initialClass:(^Ryujinx$)"
       ] else []);      
     };
   };
