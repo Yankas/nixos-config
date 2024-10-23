@@ -15,7 +15,7 @@ in
 
   config = {
       #steamLink 1623730 "AppData/Local/Pal/Saved" "palworld"
-    home.file = lib.mkIf config.games.saves.enable {
+    home.file = lib.mkIf config.games.saves.enable ({
       # Proton Games
       
       # Native Games
@@ -156,6 +156,6 @@ in
       #".local/share/Steam/steamapps/compatdata/2637654718/pfx/drive_c/users/steamuser/AppData/LocalLow/Dead Mage/Children of Morta".source = "${config.home.homeDirectory}/.saves/children-of-morta";
       } // lib.optionalAttrs (config.games.saves.enable && config.games.nintendo.switch.enable) { 
         ".config/Ryujinx".source = link "ryujinx";
-      };
+      });
     };
   }
