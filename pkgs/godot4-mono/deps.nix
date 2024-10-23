@@ -242,7 +242,7 @@
   (fetchNuGet {
     pname = "Microsoft.NETCore.App.Ref";
     version = "6.0.35";
-    hash = "sha256-BiGUcXo1FQTlZdR6ndhUQ8lrYG3KaGXNXRVF+Fc3L28=";
+    hash = "sha256-IcpSbsSHgYBbNVvbcXfmRRM9bdx3pogLncO4RuXEab0=";
   })
   (fetchNuGet {
     pname = "Microsoft.NETCore.Platforms";
