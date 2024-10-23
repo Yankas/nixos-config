@@ -21,7 +21,13 @@ in
     games.thesims4-updater.enable = lib.mkEnableOption "enables tools to update the sims 4";
   };
 
-  config = {
+  config = with config.games; {
+
+    home.file = {
+    }  // lib.optionalAttrs saves.enable && nintendo.switch.enabled { 
+      ".config/Ryujinx".source = link "ryujinx";
+    };
+
     home.packages = with pkgs;
     (if config.games.minecraft.enable then [ prismlauncher ] else [])
     ++ (if config.games.thesims4-updater.enable then [ ts4-update ts4-unlock] else []);

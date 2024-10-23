@@ -16,6 +16,9 @@ in
 
 
   config = {
+
+    } // lib.optionalAttrs config.programs.git.enable { 
+
     home.packages = with pkgs;
     (if config.games.nintendo.ds.enable then [ melonDS xdelta ] else [])
     ++ (if config.games.nintendo._3ds.enable then [ lime3ds ] else [])
@@ -24,6 +27,5 @@ in
     ++ (if config.games.nintendo.switch-utils.enable then [ switch-flash ] else [])
     ++ (if config.games.psp.enable then [ ppsspp-sdl-wayland ] else [])
     ++ (if config.games.ps3.enable then [ rpcs3 ] else []);
-
   };
 }
