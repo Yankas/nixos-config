@@ -52,6 +52,7 @@
       #"waybar"
       "steam"
       "${pkgs.discord}/bin/discord"
+      "xrandr --output DP-2 --primary"
   ];
 
   wayland.windowManager.hyprland.settings = {    
