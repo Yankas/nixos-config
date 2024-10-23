@@ -341,7 +341,8 @@ in
       ++ (if config.programs.torrent.enable then [] else [])
       ++ (if config.games.nintendo.switch.enable then [ 
         "workspace name:$ws_games, initialClass:(^Ryujinx$)"
-        "noinitialfocus, class:(^Ryujinx$)"
+        "noinitialfocus, initialClass:(^Ryujinx$)"
+        "supressevent activate, initialClass:(^Ryujinx$)"
       ] else []);      
     };
   };
