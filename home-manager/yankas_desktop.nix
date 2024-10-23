@@ -54,7 +54,7 @@
       #"/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
       #"waybar"
       "steam"
-      "discord"
+      "${pkgs.discord}/bin/discord"
   ];
 
   wayland.windowManager.hyprland.settings = {    

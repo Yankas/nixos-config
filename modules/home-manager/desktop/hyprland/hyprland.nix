@@ -341,7 +341,7 @@ in
       ++ (if config.programs.torrent.enable then [ ] else [])
       ++ (if config.games.nintendo._3ds.enable then [ 
         "workspace name:$ws_games, initialClass:(^Ryujinx$)"
-        "noinitialfocus, class:($Ryujinx)"
+        "noinitialfocus, initialClass:($Ryujinx)"
       ] else []);      
     };
   };
