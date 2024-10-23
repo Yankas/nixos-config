@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 {
   options = {
-    hyprland.monitor {
+    hyprland.monitors = {
       layout = mkOption {
         default = "single";
         type = with types; nullOr ( enum[ "single" "dual" "dual+ext"]);
