@@ -23,10 +23,10 @@ in
 
   config = with config.games; {
 
-    home.file = {
-    }  // lib.optionalAttrs (saves.enable && nintendo.switch.enabled) { 
-      ".config/Ryujinx".source = link "ryujinx";
-    };
+    #home.file = {
+    #}  // lib.optionalAttrs (saves.enable && nintendo.switch.enabled) { 
+    #  ".config/Ryujinx".source = link "ryujinx";
+    #};
 
     home.packages = with pkgs;
     (if config.games.minecraft.enable then [ prismlauncher ] else [])
