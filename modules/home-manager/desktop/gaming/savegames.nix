@@ -154,7 +154,7 @@ in
       #".local/share/Steam/steamapps/compatdata/3406660281/pfx/drive_c/users/steamuser/AppData/LocalLow/MinMax Games/Clanfolk".source = link "${config.home.homeDirectory}/.saves/kingdoms-reborn";
       #".local/share/Steam/steamapps/compatdata/2749118746/pfx/drive_c/users/steamuser/AppData/LocalLow/Vector3 Studio/Sunkenland".source = "${config.home.homeDirectory}/.saves/sunkenland";
       #".local/share/Steam/steamapps/compatdata/2637654718/pfx/drive_c/users/steamuser/AppData/LocalLow/Dead Mage/Children of Morta".source = "${config.home.homeDirectory}/.saves/children-of-morta";
-      } // lib.optionalAttrs (saves.enable && nintendo.switch.enable) { 
+      } // lib.optionalAttrs (config.games.saves.enable && config.games.nintendo.switch.enable) { 
         ".config/Ryujinx".source = link "ryujinx";
       };
     };
