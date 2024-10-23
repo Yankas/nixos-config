@@ -310,6 +310,9 @@ in
         "workspace name:$ws_games, class:(^gamescope$)"
         "workspace name:$ws_games, class:(^gamescope$)"
 
+        # blueman
+        "float, initialClass:(^.blueman-manager-wrapped$)"
+
         #leagueoflegends #TODO: remove
         "workspace name:$ws_games, class:(leagueclient[ux]*.exe)"
         "monitor $m_right, class:(leagueclient[ux]*.exe)"

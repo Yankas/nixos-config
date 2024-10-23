@@ -20,6 +20,7 @@
   boot.supportedFilesystems = [ "ntfs" ];
 
   desktop.enable = true;
+  
   networking = {
     hostName = "yankas-desktop";
     interfaces.enp6s0.ipv4.addresses = [{ 
@@ -51,8 +52,12 @@
     shell = pkgs.fish;
 	};
 
-  services.teamviewer.enable = true;
-  services.xserver.videoDrivers = [ "amdgpu" ]; 
+  services = {
+    teamviewer.enable = true;
+    xserver.videoDrivers = [ "amdgpu" ]; 
+    blueman.enable = true;
+  };
+
 
   home-manager = {
       extraSpecialArgs = { inherit inputs outputs; };
@@ -68,7 +73,8 @@
     enable = true;
     powerOnBoot = true;
   };
-  services.blueman.enable = true;
+
+
 
   programs = {
     rider.enable = true;
@@ -90,7 +96,7 @@
     tor-browser
     ark
     imagemagick
-    
+
     # MULTIMEDIA
     jellyfin-media-player
     vlc

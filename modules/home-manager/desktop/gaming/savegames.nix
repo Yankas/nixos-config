@@ -28,6 +28,7 @@ in
       ".config/ppsspp/PSP".source = lib.mkIf psp.enable (link "psp");
       ".config/Loop Hero".source = link "loop-hero";
       ".config/Ryujinx".source = lib.mkIf nintendo.switch.enable (link "ryujinx");
+      ".config/unity3d/Clever Endeavour Games/Ultimate Chicken Horse".source = link "ultimate-chicken-horse";
       "${steamPath 560130 "Saved Games/Pillars of Eternity II"}".source = link "pillars-of-eternity2";
       "${steamPath 40390  "Saved Games/Risen2/SaveGames"}".source = link "risen2";
       "${steamPath 466240 "Saved Games/deceit"}".source = link "deceit";
