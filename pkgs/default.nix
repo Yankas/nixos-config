@@ -9,5 +9,5 @@ pkgs: {
   fighting-spirit = pkgs.callPackage ./fonts/fighting-spirit.nix { };
   die-in-a-fire = pkgs.callPackage ./fonts/die-in-a-fire.nix { };
   yankas-wallpapers = pkgs.callPackage ./yankas-wallpapers/default.nix {};
-  fusee-launcher = pkgs.callPackage ./fusee-launcher/default.nix
+  fusee-launcher = pkgs.callPackage ./fusee-launcher/default.nix { };
 }
