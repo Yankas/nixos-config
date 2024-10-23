@@ -24,9 +24,10 @@ in
       ".local/share/Pokemon Rejuvenation".source = link "pokemon-rejuvenation";
       ".local/share/Colossal Order/Cities_Skylines".source = link "cities-skylines";
       ".local/share/Colossal Order/Monster Sanctuary".source = link "monster-sanctuary";
-      ".local/share/PrismLauncher/instances".source = lib.mkIf config.games.minecraft.enable (link "minecraft");
-      ".config/ppsspp/PSP".source = lib.mkIf config.games.psp.enable (link "psp");
+      ".local/share/PrismLauncher/instances".source = lib.mkIf minecraft.enable (link "minecraft");
+      ".config/ppsspp/PSP".source = lib.mkIf psp.enable (link "psp");
       ".config/Loop Hero".source = link "loop-hero";
+      ".config/Ryujinx".source = lib.mkIf nintendo.switch.enable (link "ryujinx");
       "${steamPath 560130 "Saved Games/Pillars of Eternity II"}".source = link "pillars-of-eternity2";
       "${steamPath 40390  "Saved Games/Risen2/SaveGames"}".source = link "risen2";
       "${steamPath 466240 "Saved Games/deceit"}".source = link "deceit";
@@ -155,8 +156,6 @@ in
       #".local/share/Steam/steamapps/compatdata/3406660281/pfx/drive_c/users/steamuser/AppData/LocalLow/MinMax Games/Clanfolk".source = link "${config.home.homeDirectory}/.saves/kingdoms-reborn";
       #".local/share/Steam/steamapps/compatdata/2749118746/pfx/drive_c/users/steamuser/AppData/LocalLow/Vector3 Studio/Sunkenland".source = "${config.home.homeDirectory}/.saves/sunkenland";
       #".local/share/Steam/steamapps/compatdata/2637654718/pfx/drive_c/users/steamuser/AppData/LocalLow/Dead Mage/Children of Morta".source = "${config.home.homeDirectory}/.saves/children-of-morta";
-      } // lib.optionalAttrs (nintendo.switch.enable) { 
-        ".config/Ryujinx".source = link "ryujinx";
       });
     };
   }
