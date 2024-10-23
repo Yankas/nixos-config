@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }:
 {
-  options = {
+  options = with lib; {
     hyprland.monitors = {
       layout = mkOption {
         default = "single";
