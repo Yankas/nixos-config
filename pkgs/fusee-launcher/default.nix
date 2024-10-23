@@ -1,27 +1,36 @@
 { lib
-, python3
+, stdenv
 , fetchFromGitHub
+, python3
 }:
 
-buildPythonPackage rec {
+stdenv.mkDerivation {
 	pname = "fusee-launcher";
 	version = "0.0.1";
-	src = ./.;
+	#format = "pyproject";
 
-	format = "pyproject";
+  src = fetchFromGitHub {
+    owner = "benzhu56";
+    repo = "fusee-launcher";
+    rev = "main";
+    hash = "sha256-XG6mlJbXlfFTgFmc9jv1Eth6iZUaC/AN4Th77aKw9GE=";
+  };
 
-	propagatedBuildInputs = [
-		setuptools
-    pyusb
-		(buildPythonPackage rec {
-			pname = "fusee-launcher";
-			version = "1.1";
-			src = fetchFromGitHub {
-				owner = "Yankas";
-				repo = "fusee-launcher";
-				rev = "final";
-				#sha256 = "112816d44bf4c0da8e8f442aed370020e16594e8888c8ddb10a699779dc666eb";
-			};
-		})
+  installPhase = ''
+    install fusee-launcher.py -Dm 755 $out/bin/fusee-launcher/fusee-launcher.py 
+    cp ./*.bin $out/bin/fusee-launcher
+    cp ./Reboot.txt $out/bin/fusee-launcher
+    cp ./*.py $out/bin/fusee-launcher
+    install fusee-launcher.py . -Dm 755 Reboot.txt
+    ln -s $out/bin/fusee-launcher $out/bin/fusee-launcher
+  '';
+
+  buildPhase = '''';
+
+
+	propagatedBuildInputs = with python3.pkgs; [
+    (pkgs.python3.withPackages (pythonPackages: with pythonPackages; [
+      pyusb
+    ]))
 	];
 }
