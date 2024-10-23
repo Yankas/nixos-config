@@ -4,7 +4,7 @@
     hyprland.monitors = {
       layout = mkOption {
         default = "single";
-        type = with types; nullOr ( enum[ "single" "dual" "dual+ext"]);
+        type = with types; enum[ "single" "dual"];
       };
       primary = mkOption {
         default = "DP-1";
@@ -18,6 +18,8 @@
   };
   config = lib.mkIf config.hyprland.enable  {
     wayland.windowManager.hyprland.settings = {
+      
+      
 
     };
   };
