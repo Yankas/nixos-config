@@ -1,5 +1,7 @@
-with import <nixpkgs> {};
-with pkgs.python3Packages;
+{ lib
+, python3
+, fetchFromGitHub
+}:
 
 buildPythonPackage rec {
 	pname = "fusee-launcher";
