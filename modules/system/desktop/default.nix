@@ -121,6 +121,7 @@
       systemPackages = with pkgs; [
         pcmanfm
         peazip
+        file-roller
 
         pragha
         wrapGAppsHook
