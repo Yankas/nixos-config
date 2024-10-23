@@ -338,11 +338,14 @@ in
         "workspace name:$ws_games, initialClass:($steam_game_class)"
         "monitor $m_right, initialClass:($steam_game_class)"
       ] else [])
-      ++ (if config.programs.torrent.enable then [] else [])
+      ++ (if config.programs.torrent.enable then [
+        "workspace name:$ws_games, initialClass:(^Ryujinx$)"
+        org.qbittorrent.qBittorrent
+      ] else [])
       ++ (if config.games.nintendo.switch.enable then [ 
         "workspace name:$ws_games, initialClass:(^Ryujinx$)"
         "noinitialfocus, initialClass:(^Ryujinx$)"
-        "supressevent activate, initialClass:(^Ryujinx$)"
+        "suppressevent activate, initialClass:(^Ryujinx$)"
       ] else []);      
     };
   };
