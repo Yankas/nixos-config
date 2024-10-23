@@ -49,7 +49,7 @@ in
       "$menu" = "fuzzel";
 
       exec = config.hyprland.autostart.onReload
-        ++ [ "[workspace special scratchpad; size 75% 20%;move 12.5% 40] kitty" ];
+        ++ [ "[workspace special:scratchpad; size 75% 20%;move 12.5% 40] kitty"];
       exec-once = config.hyprland.autostart.onStart;
       env =
       [
