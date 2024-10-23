@@ -339,8 +339,8 @@ in
         "monitor $m_right, initialClass:($steam_game_class)"
       ] else [])
       ++ (if config.programs.torrent.enable then [
-        "workspace name:$ws_games, initialClass:(^Ryujinx$)"
-        org.qbittorrent.qBittorrent
+        "workspace special:qbittorrent, initialClass:(^org.qbittorrent.qBittorrent$)"
+        
       ] else [])
       ++ (if config.games.nintendo.switch.enable then [ 
         "workspace name:$ws_games, initialClass:(^Ryujinx$)"
