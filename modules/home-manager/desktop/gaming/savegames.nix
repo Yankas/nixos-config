@@ -13,7 +13,7 @@ in
       };
     };
 
-  config = with config.games; {
+  config = {
       #steamLink 1623730 "AppData/Local/Pal/Saved" "palworld"
     home.file = lib.mkIf config.games.saves.enable {
       # Proton Games
