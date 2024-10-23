@@ -343,11 +343,9 @@ in
       ] else [])
       ++ (if config.programs.torrent.enable then [
         "workspace special:qbittorrent silent, initialClass:(^org.qbittorrent.qBittorrent$)"
-        
       ] else [])
       ++ (if config.games.nintendo.switch.enable then [ 
         "workspace name:$ws_games silent, initialClass:(^Ryujinx$)"
-        "noinitialfocus, initialClass:(^Ryujinx$)"
       ] else []);      
     };
   };

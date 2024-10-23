@@ -40,7 +40,6 @@ in
       "${steamPath 1218210 "AppData/Roaming/TRAGsoft/Coromon"}".source = link "coromon";
       "${steamPath 1222670 "Documents/Electronic Arts/The Sims 4"}".source = link "the-sims4";
       "${config.games.saves.directory}/the-sims4/Mods/.savecc".source = link "the-sims4/SaveCC";
-
       "${steamPath 1549250  "AppData/Local/RzGame"}".source = link "undecember";
       "${steamPath 1822550  "AppData/Roaming/MicroCivilization"}".source = link "microcivilization";
       "${steamPath 345180   "AppData/Roaming/Victor Vran"}".source = link "victor-vran";

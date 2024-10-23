@@ -18,10 +18,6 @@
     isSudoer = true;
     enableNixpkgsReleaseCheck = false;
     stateVersion = "24.05";
-    packages = [
-
-
-    ];
     file = {};
     sessionVariables = {
       BROWSER = "chromium";
