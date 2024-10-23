@@ -321,6 +321,10 @@ in
         "size 1400 1000, initialClass:(discord)"
         "center, initialClass:(discord)"
         "focusonactivate 0, initialClass:(^discord$)"
+
+        # SCREENSHOTS / SATTY
+        "fullscreen, class:(^com.gabm.satty$)"
+        "noanim, class:(^com.gabm.satty$)"
       ]
       ++ (if config.programs.steam.enable then [ 
         # STEAM CLIENT
