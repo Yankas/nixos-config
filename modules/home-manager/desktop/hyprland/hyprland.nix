@@ -48,7 +48,8 @@ in
       "$fileManager" = "thunar";
       "$menu" = "fuzzel";
 
-      exec = config.hyprland.autostart.onReload;
+      exec = config.hyprland.autostart.onReload
+        ++ [ "[workspace special scratchpad; size 75% 20%;move 12.5% 40] kitty" ];
       exec-once = config.hyprland.autostart.onStart;
       env =
       [
@@ -220,8 +221,7 @@ in
         "$mod CTRL, T, movetoworkspacesilent, special:teamspeak"
 
         # SCRATCHPAD;
-        "exec-once=[workspace special; size 75% 20%;move 12.5% 40] kitty"
-        "bind=,F12,togglespecialworkspace"
+        ",F12,togglespecialworkspace, scratchpad"
 
         # SCREENSHOTS
         ''$mod SHIFT, S, exec, ${pkgs.grim}/bin/grim -o "$(hyprctl monitors -j | jq -r '.[] | select(.focused)| .name')" - | ${pkgs.satty}/bin/satty --filename - --fullscreen --initial-tool crop''
