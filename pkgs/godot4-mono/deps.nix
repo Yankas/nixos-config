@@ -37,7 +37,7 @@
   (fetchNuGet {
     pname = "Microsoft.AspNetCore.App.Ref";
     version = "6.0.35";
-    hash = "sha256-GcPiO+iI0JsHYlqURAmzWjOnDX2jDCUY4jYaIwr8ojs=";
+    hash = "sha256-BxvIeZIaBdC0wyDQqKW0E5axSRSrtQk3oEPsT287014=";
   })
   (fetchNuGet {
     pname = "Microsoft.Bcl.AsyncInterfaces";
