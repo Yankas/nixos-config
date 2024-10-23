@@ -121,8 +121,7 @@
       systemPackages = with pkgs; [
         pcmanfm
         peazip
-        file-roller
-        nautilus
+        engrampa
 
         pragha
         wrapGAppsHook
