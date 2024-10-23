@@ -13,7 +13,7 @@
       secondary = mkOption {
         default = "DP-2";
         type = with types; str;
-      }
+      };
     };
   };
   config = mkIf hyprland.enable  {
