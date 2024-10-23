@@ -122,6 +122,7 @@
         pcmanfm
         peazip
         file-roller
+        nautilus
 
         pragha
         wrapGAppsHook
