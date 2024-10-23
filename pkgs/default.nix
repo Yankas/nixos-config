@@ -3,7 +3,7 @@
 pkgs: {
   # example = pkgs.callPackage ./example { };
   
-  #godot4-mono = pkgs.callPackage ./godot4-mono/default.nix { };
+  godot4-mono = pkgs.callPackage ./godot4-mono/default.nix { };
   # replaced by chatoic package
 
   fighting-spirit = pkgs.callPackage ./fonts/fighting-spirit.nix { };

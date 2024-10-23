@@ -141,14 +141,17 @@ stdenv.mkDerivation rec {
   buildPhase = ''
     echo "Starting Build"
     scons p=${withPlatform} target=${withTarget} precision=${withPrecision} module_mono_enabled=yes mono_glue=no
+
     echo "Generating Glue"
     if [[ ${withPrecision} == *double* ]]; then
         bin/godot.${withPlatform}.${withTarget}.${withPrecision}.x86_64.mono --headless --generate-mono-glue modules/mono/glue
     else
         bin/godot.${withPlatform}.${withTarget}.x86_64.mono --headless --generate-mono-glue modules/mono/glue
     fi
+
     echo "Building Assemblies"
     scons p=${withPlatform} target=${withTarget} precision=${withPrecision} module_mono_enabled=yes mono_glue=yes
+
     echo "Building C#/.NET Assemblies"
     python modules/mono/build_scripts/build_assemblies.py --godot-output-dir bin --precision=${withPrecision}
   '';
@@ -158,7 +161,9 @@ stdenv.mkDerivation rec {
     mkdir -p "$out/bin"
     cp bin/godot.* $out/bin/godot4-mono
     cp -r bin/GodotSharp/ $out/bin/
+
     installManPage misc/dist/linux/godot.6
+
     mkdir -p "$out"/share/{applications,icons/hicolor/scalable/apps}
     cp misc/dist/linux/org.godotengine.Godot.desktop "$out/share/applications/org.godotengine.Godot4-Mono.desktop"
     substituteInPlace "$out/share/applications/org.godotengine.Godot4-Mono.desktop" \
@@ -166,6 +171,7 @@ stdenv.mkDerivation rec {
       --replace-quiet "Godot Engine" "Godot Engine ${version} (Mono, $(echo "${withPrecision}" | sed 's/.*/\u&/') Precision)"
     cp icon.svg "$out/share/icons/hicolor/scalable/apps/godot.svg"
     cp icon.png "$out/share/icons/godot.png"
+
     wrapProgram $out/bin/godot4-mono \
       --set DOTNET_ROOT ${dotnet-sdk_8} \
       --prefix PATH : "${lib.makeBinPath [
