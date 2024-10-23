@@ -32,13 +32,13 @@
   programs = {
     torrent.enable = true;
     whatsappweb.enable = true;
+    discord.enable = true;
   };
 
   games = {
     saves.enable = true;
     minecraft.enable = true;
     thesims4-updater.enable = true;
-    discord.enable = true;
     ps3.enable = true;
     psp.enable = true;
     nintendo = {
