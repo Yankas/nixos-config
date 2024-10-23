@@ -20,7 +20,7 @@
   boot.supportedFilesystems = [ "ntfs" ];
 
   desktop.enable = true;
-  
+
   networking = {
     hostName = "yankas-desktop";
     interfaces.enp6s0.ipv4.addresses = [{ 
@@ -78,7 +78,7 @@
 
   programs = {
     rider.enable = true;
-    godot.enable = true;
+    #godot.enable = true;
     tiled.enable = true;
     steam.enable = true;
     gimp.enable = true;
