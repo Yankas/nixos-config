@@ -21,7 +21,7 @@
         # Example: Exec=gedit %f
     '';  
 
-    ".local/share/pcmanfm/actions/edit.desktop".text = 
+    ".local/share/applications/edit.desktop".text = 
     ''
         [Desktop Entry]
         Type=Action
