@@ -23,6 +23,8 @@
       # Example: Exec=gedit %f
     '';
 
+    ".local/share/file-manager/actions/test.desktop".text = builtins.readFile "./edit.desktop" 
+
     
   
   };
