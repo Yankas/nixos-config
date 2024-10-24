@@ -130,8 +130,7 @@
         kitty
 
         playerctl
-        wl-clipboard
-
+        
         nixd
         alejandra
         satty
