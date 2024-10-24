@@ -7,7 +7,7 @@
 
 
   config.home.file = {
-    /*".local/share/file-manager/actions".text =  ''
+    ".local/share/file-manager/actions/edit.desktop".text =  ''
         [Desktop Entry]
         Type=Action
         Profiles=profile_id
@@ -19,7 +19,7 @@
         MimeTypes=all/allfiles
         Exec=exec gedit %f
         # Example: Exec=gedit %f
-    '';  */
+    ''; 
 
   };
 
