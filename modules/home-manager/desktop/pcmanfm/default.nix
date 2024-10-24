@@ -21,7 +21,7 @@
       MimeTypes=MIME-types (semicolon separated)
       Exec=command and arguments
       # Example: Exec=gedit %f
-    ''
+    '';
 
     
   
