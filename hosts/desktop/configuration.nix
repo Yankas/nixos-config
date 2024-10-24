@@ -94,6 +94,7 @@
     thunar-volman 
     thunar-media-tags-plugin
   ];
+  services.tumbler.enable = true; 
 
   environment.systemPackages = with pkgs; [
     
