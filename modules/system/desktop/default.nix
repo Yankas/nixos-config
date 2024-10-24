@@ -120,7 +120,6 @@
       };
       systemPackages = with pkgs; [
         pcmanfm
-        thunar
         peazip
 
         pragha

@@ -46,6 +46,9 @@
     };
   };
 
+  programs.thunar.enable = true;
+  programs.xfconf.enable = true;
+
 
   hyprland.enable = true;
   hyprland.autostart.onStart = [
