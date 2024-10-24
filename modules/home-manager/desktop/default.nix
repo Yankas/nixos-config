@@ -9,6 +9,7 @@ in
     ./gaming/default.nix
     ./hyprland/default.nix
     ./misc.nix
+    ./pcmanfm/default.nix
   ];
 
 
