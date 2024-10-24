@@ -7,12 +7,12 @@
 
 
   config.home.file = {
-    ".local/share/file-manager/actions/edit.desktop".text =  ''
+    ".local/share/file-manager/actions".text =  ''
         [Desktop Entry]
         Type=Action
         Profiles=profile_id
-        Name=EDIT
-        Icon=Icon name
+        Name=Editor
+        Icon=text-editor
         # Example: Icon=text-editor
         
         [X-Action-Profile profile_id]
