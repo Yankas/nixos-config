@@ -89,6 +89,11 @@
 
   programs.thunar.enable = true;
   programs.xfconf.enable = true;
+  programs.thunar.plugins = with pkgs.xfce; [ 
+    thunar-archive-plugin 
+    thunar-volman 
+    thunar-media-tags-plugin
+  ];
 
   environment.systemPackages = with pkgs; [
     
