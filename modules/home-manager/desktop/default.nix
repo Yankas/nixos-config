@@ -14,6 +14,10 @@ in
 
 
   options = with lib; {
+    assets = lib.mkOption {
+      type = with types; str;
+      default = "/etc/nixos/assets";
+    };
     programs.torrent.enable = mkEnableOption "enables torrent client";
     programs.whatsappweb.enable = mkEnableOption "script to start whatsapp web in an application browser window";
     programs.gimp.enable = mkEnableOption "enables gimp";
