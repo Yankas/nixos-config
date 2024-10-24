@@ -30,7 +30,12 @@
         qtcreator
         cmake
       ] else []);
-
+      
+      environment.variables = {
+        LD_LIBRARY_PATH = with pkgs; lib.makeLibraryPath [
+          ]
+          ++ (if programs.rider.enable then fontconfig else []);
+      };
 
 
 
