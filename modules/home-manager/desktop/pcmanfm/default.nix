@@ -6,7 +6,7 @@
   };
 
 
-  config = {
+  config.home.file = {
     ".local/share/file-manager/actions/edit.desktop".text = 
     ''
       [Desktop Entry]
