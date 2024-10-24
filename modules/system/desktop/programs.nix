@@ -22,7 +22,8 @@
         jetbrains.rider 
         dotnet-sdk_8 
         dotnet-sdk_7 
-        dotnet-sdk_6 
+        dotnet-sdk_6
+        buildDotnetModule
         ] else [])
       ++ (if config.programs.sddm-dev.enable then [
         qt5.full
