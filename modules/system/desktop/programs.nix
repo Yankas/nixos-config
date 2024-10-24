@@ -34,7 +34,7 @@
       environment.variables = {
         LD_LIBRARY_PATH = with pkgs; lib.makeLibraryPath [
           ]
-          ++ (if config.programs.rider.enable then fontconfig else []);
+          ++ (if config.programs.rider.enable then [ fontconfig ] else []);
       };
 
 
