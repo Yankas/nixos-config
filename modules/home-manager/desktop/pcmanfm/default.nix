@@ -7,7 +7,7 @@
 
 
   config = {
-    ".local/share/file-manager/actions/action".text = bultins.readFile "Edit.desktop"
+    ".local/share/pcmanfm/actions/action".text = bultins.readFile "Edit.desktop"
 
     
     
