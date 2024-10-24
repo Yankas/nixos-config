@@ -44,7 +44,7 @@ in
       "$ws_games" = "🎮";
       "$m_left" = "DP-1";
       "$m_right" = "DP-2";
-      "$terminal" = "kitty";
+      "$terminal" = "${pkgs.kitty}/bin/kitty";
       "$fileManager" = "thunar";
 
       exec = config.hyprland.autostart.onReload;

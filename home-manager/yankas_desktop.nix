@@ -29,6 +29,7 @@
     torrent.enable = true;
     whatsappweb.enable = true;
     discord.enable = true;
+    steam.enable = true;
   };
 
   games = {
@@ -77,7 +78,6 @@
       "file:///iso/ Iso"
       "file:///mus/ Music"
   ];
-  programs.steam.enable = true;
 
   programs.git = {
     userEmail = "christopher.sbrisny@gmail.com";
