@@ -87,8 +87,8 @@
     virtualization.enable = true;
   };
 
-    programs.thunar.enable = true;
-    programs.xfconf.enable = true;
+  programs.thunar.enable = true;
+  programs.xfconf.enable = true;
 
   environment.systemPackages = with pkgs; [
     

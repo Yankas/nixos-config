@@ -46,8 +46,7 @@
     };
   };
 
-  programs.thunar.enable = true;
-  programs.xfconf.enable = true;
+
 
 
   hyprland.enable = true;
@@ -56,7 +55,7 @@
       #"waybar"
       "steam"
       "${pkgs.discord}/bin/discord"
-      "xrandr --output DP-2 --primary"
+      "xrandr --output DP-2 --primary" 
   ];
 
   wayland.windowManager.hyprland.settings = {    
