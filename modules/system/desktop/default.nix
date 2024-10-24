@@ -120,6 +120,7 @@
       };
       systemPackages = with pkgs; [
         pcmanfm
+        thunar
         peazip
 
         pragha
@@ -130,7 +131,7 @@
         kitty
 
         playerctl
-        
+
         nixd
         alejandra
         satty

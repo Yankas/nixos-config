@@ -10,6 +10,7 @@
     ".local/share/file-manager/actions/edit.desktop".text =  ''
         [Desktop Entry]
         Type=Action
+        Tooltip=TestActions
         Profiles=profile_id
         Name=Editor
         Icon=text-editor
