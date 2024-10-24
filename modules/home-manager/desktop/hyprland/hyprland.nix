@@ -330,9 +330,9 @@ in
       ] else [])
       ++ (if config.programs.steam.enable then [ 
         # STEAM CLIENT
-        "workspace special:Steam, initialClass:(^steam$), initialTitle:(^Steam$)"
+        "workspace special:Steam silent, initialClass:(^steam$), initialTitle:(^Steam$)"
         "noinitialfocus, initialClass:(^steam$), initialTitle:(^Steam$)"
-        "workspace special:Steam, initialClass:(^steam$), initialTitle:(^Sign in to Steam$)"
+        "workspace special:Steam silent, initialClass:(^steam$), initialTitle:(^Sign in to Steam$)"
         "noinitialfocus, initialClass:(^steam$), initialTitle:(^Sign in to Steam$)"
         # STEAM GAMES
         "noinitialfocus, class:($steam_game_class)"
