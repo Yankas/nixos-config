@@ -11,7 +11,7 @@ in
     ./misc.nix
   ];
 
-  assets = "/etc/nixos/assets";
+
 
   options = with lib; {
     programs.torrent.enable = mkEnableOption "enables torrent client";
@@ -22,6 +22,7 @@ in
   };
 
   config = {
+    assets = "/etc/nixos/assets";
     colorScheme = {
       slug = "rocket";
       name = "Rocket";
