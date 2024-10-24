@@ -105,6 +105,9 @@
       rtkit.enable = true;
     };
 
+      programs.thunar.enable = true;
+      programs.xfconf.enable = true;
+
 
     environment = {
       pathsToLink = [ "/share/wallpapers" ];
