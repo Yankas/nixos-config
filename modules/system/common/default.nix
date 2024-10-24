@@ -41,7 +41,7 @@
       jq
       tre # improved tree
       rename 
-      nodePackages.insect
+      #nodePackages.insect
       # ARCHIVE
       atool
       unzip
