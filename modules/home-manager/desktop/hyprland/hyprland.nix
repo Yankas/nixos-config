@@ -46,7 +46,6 @@ in
       "$m_right" = "DP-2";
       "$terminal" = "kitty";
       "$fileManager" = "thunar";
-      "$menu" = "fuzzel";
 
       exec = config.hyprland.autostart.onReload;
       exec-once = config.hyprland.autostart.onStart;
@@ -171,7 +170,7 @@ in
         "$mod SHIFT, M, exit"
         "$mod, E, exec, $fileManager"
         "$mod, V, togglefloating"
-        "$mod, space, exec, $menu"
+        "$mod, space, exec, ${pkgs.fuzzel}/bin/fuzzel"
         "$mod, C, exec, $BROWSER"
         #"$mod, P, pseudo, # dwindle
         #"$mod, J, togglesplit, # dwindle

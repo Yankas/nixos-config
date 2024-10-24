@@ -41,6 +41,7 @@
       jq
       tre # improved tree
       rename 
+      insect
       # ARCHIVE
       atool
       unzip

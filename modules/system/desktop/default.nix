@@ -134,9 +134,6 @@
 
         nixd
         alejandra
-
-        fuzzel
-        waybar
         satty
         grim
         easyeffects
