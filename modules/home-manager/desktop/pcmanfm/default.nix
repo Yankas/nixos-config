@@ -7,7 +7,7 @@
 
 
   config = {
-    ".local/share/file-manager/actions/edit.desktop".text = (builtins.readFile "./edit.desktop");
+    ".local/share/file-manager/actions/edit.desktop".text = "./edit.desktop";
 
     
   
