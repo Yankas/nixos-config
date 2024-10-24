@@ -11,6 +11,8 @@ in
     ./misc.nix
   ];
 
+  assets = "/etc/nixos/assets";
+
   options = with lib; {
     programs.torrent.enable = mkEnableOption "enables torrent client";
     programs.whatsappweb.enable = mkEnableOption "script to start whatsapp web in an application browser window";

@@ -101,15 +101,15 @@ in
       }
 
       #mpris.icon.playing {
-        background-image: url("/etc/nixos/modules/home-manager/assets/waybar-playing.png");
+        background-image: url("${config.assets}/waybar-playing.png");
       }
 
       #mpris.icon.paused {
-        background-image: url("/etc/nixos/modules/home-manager/assets/waybar-paused.png");
+        background-image: url("${config.assets}/waybar-paused.png");
       }
 
       #mpris.icon.stopped {
-        background-image: url("/etc/nixos/modules/home-manager/assets/waybar-paused.png");
+        background-image: url("${config.assets}/waybar-paused.png");
       }
 
       #mpris {
