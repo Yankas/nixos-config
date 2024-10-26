@@ -7,7 +7,6 @@ mkShell {
     xorg.libX11
     xorg.libX11.dev
     zlib
-    libICE
   ];
   LD_LIBRARY_PATH = lib.makeLibraryPath [
     # required by avalonia
@@ -15,6 +14,7 @@ mkShell {
     xorg.libX11
     xorg.libX11.dev
     xorg.libICE
+    xorg.libSM
     zlib
   ];
   packages = [
