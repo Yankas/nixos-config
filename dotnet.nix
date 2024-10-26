@@ -10,10 +10,11 @@ mkShell {
     libICE
   ];
   LD_LIBRARY_PATH = lib.makeLibraryPath [
+    # required by avalonia
     fontconfig
     xorg.libX11
     xorg.libX11.dev
-    libICE
+    xorg.libICE
     zlib
   ];
   packages = [
