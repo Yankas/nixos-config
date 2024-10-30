@@ -140,8 +140,6 @@
         satty
         grim
         easyeffects
-
-
         kanshi # dynamic monitor configuration
       ]
       ++ (if config.programs.blender.enable then [ blender-hip ] else [])

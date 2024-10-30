@@ -44,6 +44,7 @@ in
 {
   imports = [
     ./waybar.nix
+    ./fuzzel.nix
   ];
 
   options = {
