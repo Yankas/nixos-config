@@ -10,6 +10,12 @@ let
       ${pkgs.swaybg}/bin/swaybg -i /run/current-system/sw/share/wallpapers/$1
     '';
 in
+let
+    setup-audio-ws = pkgs.writeShellScriptBin "setup-audio-ws" ''
+      pgrep pavucontrol || ${pkgs.pavucontrol}/bin/pavucontrol
+      pgrep .easyeffects-wr || ${pkgs.easyeffects}/bin/easyeffects
+    '';
+in
 {
     options = {
       hyprland.enable = lib.mkEnableOption "enable custom hyprland config";
@@ -24,12 +30,14 @@ in
         type = with lib.types; listOf str;
         description = "list of commands to run when hyprland first initializes";
         default = [];
+
       };
       hyprland.autostart.onReload = lib.mkOption {
         type = with lib.types; listOf str;
         description = "list of commands to every time hyprland reloads";
         default = [ 
           "${set-bg}/bin/set-bg ${config.home.wallpaper}"
+          "${setup-audio-ws}/bin/setup-audio-ws"
         ];
       };
     };
@@ -51,19 +59,7 @@ in
       exec-once = config.hyprland.autostart.onStart;
       env =
       [
-        "QT_AUTO_SCREEN_SCALE_FACTOR,1"
-        "QT_QPA_PLATFORM,wayland;xcb"
-        "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
-        "QT_QPA_PLATFORMTHEME,qt5ct"
-        "GDK_BACKEND,wayland,x11"
-        "_JAVA_AWT_WM_NONREPARENTING,1"
-        "SDL_VIDEO_DRIVER,x11"
-      ]
-      ++ (if config.hyprland.disableHardwareCursor then [ "WLR_NO_HARDWARE_CURSORS,1" ] else []);
-
-      input = {
-        kb_layout = "us";
-        kb_variant = "altgr-intl";
+        "QT_AUTO_SCREEN_SCALE_FACTOR,1"class
         kb_model = "pc104";
         float_switch_override_focus = 0;
         natural_scroll = 0;
@@ -74,9 +70,7 @@ in
           natural_scroll = false;
         };
       };
-
-      general = {
-        layout = "master";
+setup-audio-ws
         gaps_in = "3, 3, 3, 3";
         gaps_out = "5,0,0,0"; # top, right, bottom, left
         border_size = 2;
@@ -154,11 +148,12 @@ in
         "8, monitor:$m_right"
         "10, monitor:$m_right"
         "name:$ws_games,desc:games, monitor:$m_right"
-        "special:teamspeak, on-created-empty:TeamSpeak"
+        "special:teamspeak, on-created-empty:TeamSpeak"\
+        "special:audio, on-created-empty:${setup-audio-ws}/bin/setup-audio-ws"
       ] 
       ++ (if config.programs.steam.enable then ["special:$ws_steam, on-created-empty:steam" ] else [])
       ++ (if config.programs.torrent.enable then ["special:qbittorrent, on-created-empty:${pkgs.qbittorrent}/bin/qbittorrent" ] else [])
-      ++ (if config.programs.torrent.enable then ["special:discord, on-created-empty:${pkgs.discord}/bin/discord" ] else [])
+      ++ (if config.programs.discord.enable then ["special:discord, on-created-empty:${pkgs.discord}/bin/discord" ] else [])
       ++ (if config.programs.whatsappweb.enable then ["special:whatsapp, on-created-empty:whatsapp" ] else []);
 
       # KEY BINDINGS
@@ -213,13 +208,14 @@ in
 
         # Scroll through existing workspaces with mainMod + scroll
         "$mod, mouse_down, workspace, e+1"
-        "$mod, mouse_up, workspace, e-1"
-          
-        "$mod, T, togglespecialworkspace, teamspeak"
-        "$mod CTRL, T, movetoworkspacesilent, special:teamspeak"
+        "$mod, mouse_up, workspace, e-1"S
 
         # SCREENSHOTS
         ''$mod SHIFT, S, exec, ${pkgs.grim}/bin/grim -o "$(hyprctl monitors -j | jq -r '.[] | select(.focused)| .name')" - | ${pkgs.satty}/bin/satty --filename - --fullscreen --initial-tool crop''
+        
+        # AUDIO WORKSPACE
+        "$mod, A, togglespecialworkspace, audio"
+        "$mod CTRL, A, movetoworkspacesilent, special:audio"
       ]
       ++ (if config.programs.steam.enable then [ 
         "$mod, S, togglespecialworkspace, $ws_steam"
@@ -283,10 +279,12 @@ in
         "float, initialClass:(peazip)"
         "float, initialClass:(peazip)"
         
-        #pavucontrol
-        "float, class:(pavucontrol)"
-        "size 1400 1000, class:(pavucontrol)"
-        "center, class:(pavucontrol)"
+        # AUDIO
+        #"float, class:(pavucontrol)"
+        #"size 1400 1000, class:(pavucontrol)"
+        #"center, class:(pavucontrol)"
+        "workspace special:audio silent, initialClass:(pavucontrol)"
+        "workspace special:audio silent, initialClass:(com.github.wwmm.easyeffects)"
 
         "opacity 0.0 override 0.0 override,class:^(xwaylandvideobridge)$"
         "noanim,class:^(xwaylandvideobridge)$"
@@ -349,4 +347,4 @@ in
       ] else []);      
     };
   };
-}
+}class
