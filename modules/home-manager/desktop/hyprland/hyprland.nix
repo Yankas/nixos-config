@@ -49,16 +49,16 @@ in
 
   options = {
     monitors = {
-      primary = lib.mkOption { 
-        type = lib.types.str; 
+      primary = lib.mkOption {
+        type = lib.types.str;
         default = "DP-1";
       };
-      secondary = lib.mkOption { 
-        type = lib.types.str; 
+      secondary = lib.mkOption {
+        type = lib.types.str;
         default = "DP-2";
       };
       external = lib.mkOption {
-        type = lib.types.str; 
+        type = lib.types.str;
         default = "HDMI-A-1";
       };
     };
@@ -67,7 +67,7 @@ in
 
     hyprland.modKey = lib.mkOption {
       default = "SUPER";
-      type = lib.types.str; 
+      type = lib.types.str;
     };
 
     hyprland.autostart.onStart = lib.mkOption {
@@ -79,20 +79,20 @@ in
     hyprland.autostart.onReload = lib.mkOption {
       type = with lib.types; listOf str;
       description = "list of commands to every time hyprland reloads";
-      default = [ 
+      default = [
         "${set-bg}/bin/set-bg ${config.home.wallpaper}"
         "${setup-audio-ws}/bin/setup-audio-ws"
       ];
     };
   };
-  
+
   config = lib.mkIf config.hyprland.enable {
-    home.packages = with pkgs; [ 
-      tv 
+    home.packages = with pkgs; [
+      tv
     ];
     wayland.windowManager.hyprland.systemd.variables = ["--all"];
     wayland.windowManager.hyprland.enable = true;
-    wayland.windowManager.hyprland.settings = {    
+    wayland.windowManager.hyprland.settings = {
 
       "$mod" = config.hyprland.modKey;
       "$ws_steam" = "Steam";
@@ -148,7 +148,7 @@ in
         initial_workspace_tracking = 2;
         force_default_wallpaper = 0; # Set to 0 or 1 to disable the anime mascot wallpapers
       };
-      
+
       decoration = {
         # See https://wiki.hyprland.org/Configuring/Variables/ for more
         rounding = 0; # was 10
@@ -164,7 +164,7 @@ in
         shadow_render_power = 3;
         "col.shadow" = "rgba(1a1a1aee)";
       };
-      
+
       render = {
         #TODO: reevaluate, currently causes flicker in fullscreen
         direct_scanout = false;
@@ -173,7 +173,7 @@ in
       animations = {
         enabled = true;
         bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
-        animation = 
+        animation =
         [
           "windows, 1, 5, myBezier"
           "windowsOut, 1, 7, default, popin 80%"
@@ -210,7 +210,7 @@ in
         "name:$ws_games,desc:games, monitor:$m_right"
         "special:teamspeak, on-created-empty:TeamSpeak"
         "special:audio, on-created-empty:${setup-audio-ws}/bin/setup-audio-ws"
-      ] 
+      ]
       ++ (if config.programs.steam.enable then ["special:$ws_steam, on-created-empty:steam" ] else [])
       ++ (if config.programs.torrent.enable then ["special:qbittorrent, on-created-empty:${pkgs.qbittorrent}/bin/qbittorrent" ] else [])
       ++ (if config.programs.discord.enable then ["special:discord, on-created-empty:${pkgs.discord}/bin/discord" ] else [])
@@ -276,28 +276,31 @@ in
 
         # SCREENSHOTS
         ''$mod SHIFT, S, exec, ${pkgs.grim}/bin/grim -o "$(hyprctl monitors -j | jq -r '.[] | select(.focused)| .name')" - | ${pkgs.satty}/bin/satty --filename - --fullscreen --initial-tool crop''
-        
+
+        # VS CODE - QUICK
+        "$mod, E, exec, code --profile Quick"
+
         # AUDIO WORKSPACE
         "$mod, A, togglespecialworkspace, audio"
         "$mod CTRL, A, movetoworkspacesilent, special:audio"
       ]
-      ++ (if config.programs.steam.enable then [ 
+      ++ (if config.programs.steam.enable then [
         "$mod, S, togglespecialworkspace, $ws_steam"
         "$mod CTRL, S, movetoworkspacesilent, special:$ws_steam"
       ] else [])
-      ++ (if config.programs.torrent.enable then [ 
+      ++ (if config.programs.torrent.enable then [
         "$mod, B, togglespecialworkspace, qbittorrent"
         "$mod CTRL, B, movetoworkspacesilent, special:qbittorrent"
       ] else [])
-      ++ (if config.programs.whatsappweb.enable then [ 
+      ++ (if config.programs.whatsappweb.enable then [
         "$mod, W, togglespecialworkspace, whatsapp"
         "$mod CTRL, W, movetoworkspacesilent, special:whatsapp"
       ] else [])
-      ++ (if config.programs.discord.enable then [ 
+      ++ (if config.programs.discord.enable then [
         "$mod SHIFT, T, togglespecialworkspace, discord"
         "$mod CTRL SHIFT, T, movetoworkspacesilent, special:discord"
       ] else []);
-      
+
 
       binde =
       [
@@ -305,13 +308,13 @@ in
         ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
         ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
         ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-      ];      
+      ];
 
       bindm =
       [
         # Move/resize windows with mainMod + LMB/RMB and dragging
         "$mod, mouse:272, movewindow"
-        "$mod, mouse:273, resizew"     
+        "$mod, mouse:273, resizew"
       ];
 
       "$steam_game_class" = "steam_app_.*";
@@ -320,14 +323,14 @@ in
         # file picker
         "float, class:(org.freedesktop.impl.portal.desktop.kde)"
         "float, initialClass:(xdg-desktop-portal-gtk)"
-        
+
         #"nomaximizerequest, class:.* # You'll probably like this."
         "float, initialTitle:(Paradox Launcher)"
 
         # chromium popup windows
         "float, initialClass:(^chrome.*Default$)"
 
-        # godot 
+        # godot
         "tile, initialTitle:(^Godot$)"
         "size 800 900, initialClass:(^Godot$), initialTitle:(^Create New Node$)"
         "center, initialClass:(^Godot$), initialTitle:(^Create New Node$)"
@@ -342,7 +345,7 @@ in
         # peazip
         "float, initialClass:(peazip)"
         "float, initialClass:(peazip)"
-        
+
         # AUDIO
         #"float, class:(pavucontrol)"
         #"size 1400 1000, class:(pavucontrol)"
@@ -355,6 +358,10 @@ in
         "noinitialfocus,class:^(xwaylandvideobridge)$"
         "maxsize 1 1,class:^(xwaylandvideobridge)$"
         "noblur,class:^(xwaylandvideobridge)$"
+
+        # VSCODE
+        "float, initialTitle:(^.*Quick.*- Visual Studio Code$)"
+        "size 1400 1000, class:(TeamSpeak), (^.*Quick.*- Visual Studio Code$)"
 
         # whatsapp
         "workspace special:whatsapp silent, title:(web.whatsapp.com.*)"
@@ -394,7 +401,7 @@ in
         "size 1400 1000, initialClass:(discord)"
         "center, initialClass:(discord)"
       ] else [])
-      ++ (if config.programs.steam.enable then [ 
+      ++ (if config.programs.steam.enable then [
         # STEAM CLIENT
         "workspace special:Steam silent, initialClass:(^steam$), initialTitle:(^Steam$)"
         "noinitialfocus, initialClass:(^steam$), initialTitle:(^Steam$)"
@@ -409,7 +416,7 @@ in
       ++ (if config.programs.torrent.enable then [
         "workspace special:qbittorrent silent, initialClass:(^org.qbittorrent.qBittorrent$)"
       ] else [])
-      ++ (if config.games.nintendo.switch.enable then [ 
+      ++ (if config.games.nintendo.switch.enable then [
         "workspace name:$ws_games silent, initialClass:(^Ryujinx$)"
         "monitor $m_right, initialClass:(^Ryujinx$)"
       ] else []);

@@ -7,7 +7,6 @@ let colors = {
   text-highlight    = "FF4221";
 }; in
 {
-
   xdg.configFile."fuzzel/fuzzel.ini".text = lib.generators.toINIWithGlobalSection { } {
     globalSection = {
       font = "Die in a fire PG:size=15";
@@ -21,9 +20,6 @@ let colors = {
       # Number of spaces a tab is expanded to 
       tabs = 4;
       exit-on-keyboard-focus-loss = yes;
-
-
-
     };
 
     sections = {
@@ -46,13 +42,6 @@ let colors = {
         width = 2;
         radius = 10;
       };
-
-
-
-
-
     };
-
-
   };
 }
