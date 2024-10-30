@@ -29,14 +29,14 @@ let colors = {
     sections = {
       colors = {
         # BACKGROUND COLORS
-        background = "${colors.background}";
-        selection = "${colors.background}";
+        background = "${colors.background}FF";
+        selection = "${colors.background}FF";
         # TEXT COLORS
-        text = "${colors.text}";
-        input = "${colors.text-highlight}";
-        match = "${colors.text-highlight}";
-        selection-text = "${colors.text-highlight}";
-        selection-match = "${colors.text}";
+        text = "${colors.text}FF";
+        input = "${colors.text-highlight}FF";
+        match = "${colors.text-highlight}FF";
+        selection-text = "${colors.text-highlight}FF";
+        selection-match = "${colors.text}FF";
         counter = colors.text-highlight;
       };
 
