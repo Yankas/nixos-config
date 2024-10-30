@@ -22,7 +22,8 @@ let tv = ''
   fi
 
   hyprctl keyword 'monitor HDMI-A-1, disable'
-''
+'';
+in
 {
     options = {
       hyprland.enable = lib.mkEnableOption "enable custom hyprland config";
