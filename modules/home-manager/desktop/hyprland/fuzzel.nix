@@ -33,6 +33,7 @@ let colors = {
         selection = "${colors.background}FF";
         border = "${colors.background-accent}FF";
         # TEXT COLORS
+        prompt = "${colors.text}FF";
         text = "${colors.text}FF";
         input = "${colors.text-highlight}FF";
         match = "${colors.text}FF";
