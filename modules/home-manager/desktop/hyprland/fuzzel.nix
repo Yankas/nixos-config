@@ -31,13 +31,14 @@ let colors = {
         # BACKGROUND COLORS
         background = "${colors.background}FF";
         selection = "${colors.background}FF";
+        border = "${colors.background-accent}FF";
         # TEXT COLORS
         text = "${colors.text}FF";
         input = "${colors.text-highlight}FF";
         match = "${colors.text}FF";
         selection-text = "${colors.text-highlight}FF";
         selection-match = "${colors.text-highlight}FF";
-        counter = colors.text-highlight;
+        counter = "${colors.text-highlight}FF";
       };
 
       #border = {
