@@ -1,11 +1,18 @@
 { config, pkgs, lib, ... }:
+let yes = "yes"; in
 {
 
   xdg.configFile."fuzzel/fuzzel.ini".text = lib.generators.toINIWithGlobalSection { } {
     globalSection = {
-      font = "Die in a fire PG:size=20";
-      use-bold = "yes";
-      dpi-aware = true;
+      font = "Die in a fire PG:size=15";
+      use-bold = yes;
+      dpi-aware = yes;
+      icons-enabled = yes;
+      #password-character = "*";
+      lines = 20;
+      width = 50; # in characters
+
+
 
     };
 
