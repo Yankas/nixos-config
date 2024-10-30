@@ -223,7 +223,7 @@ in
         "$mod, return, exec, $terminal"
         "$mod, Q, killactive"
         "$mod SHIFT, M, exit"
-        "$mod, E, exec, $fileManager"
+        "$mod, E, exec, ${pkg.thunar}/bin/thunar"
         "$mod, V, togglefloating"
         "$mod, space, exec, ${pkgs.fuzzel}/bin/fuzzel"
         "$mod, C, exec, $BROWSER"
