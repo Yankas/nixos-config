@@ -70,7 +70,7 @@
           # > Our main nixos configuration file <
           ./hosts/desktop/configuration.nix
           inputs.chaotic.nixosModules.default
-          style
+          inputs.style
         ];
       };
       server = nixpkgs.lib.nixosSystem {
