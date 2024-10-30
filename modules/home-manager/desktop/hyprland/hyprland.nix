@@ -213,7 +213,17 @@ in
       ++ (if config.programs.steam.enable then ["special:$ws_steam, on-created-empty:steam" ] else [])
       ++ (if config.programs.torrent.enable then ["special:qbittorrent, on-created-empty:${pkgs.qbittorrent}/bin/qbittorrent" ] else [])
       ++ (if config.programs.discord.enable then ["special:discord, on-created-empty:${pkgs.discord}/bin/discord" ] else [])
-      ++ (if config.programs.whatsappweb.enable then ["special:    ./hyprland.nix
+      ++ (if config.programs.whatsappweb.enable then ["special:whatsapp, on-created-empty:whatsapp" ] else []);
+
+
+      # KEY BINDINGS
+      bind =
+      [
+        # Example binds, se https://wiki.hyprland.org/Configuring/Binds/ for more
+        "$mod, return, exec, $terminal"
+        "$mod, Q, killactive"
+        "$mod SHIFT, M, exit"
+        "$mod, E, exec, $fileManager"
         "$mod, V, togglefloating"
         "$mod, space, exec, ${pkgs.fuzzel}/bin/fuzzel"
         "$mod, C, exec, $BROWSER"
