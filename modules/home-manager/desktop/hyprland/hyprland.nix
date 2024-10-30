@@ -223,7 +223,10 @@ in
         "$mod, return, exec, $terminal"
         "$mod, Q, killactive"
         "$mod SHIFT, M, exit"
+
         "$mod, E, exec, ${pkgs.xfce.thunar}/bin/thunar"
+        "$mod SHIFT, E, exec, ${pkgs.xfce.thunar}/bin/thunar --name thunar-floating"
+
         "$mod, V, togglefloating"
         "$mod, space, exec, ${pkgs.fuzzel}/bin/fuzzel"
         "$mod, C, exec, $BROWSER"
@@ -362,6 +365,10 @@ in
         "float, class:(TeamSpeak), title:(TeamSpeak)"
         "size 1400 1000, class:(TeamSpeak), title:(TeamSpeak)"
         "center, class:(TeamSpeak), title:(TeamSpeak)"
+
+        #THUNAR
+        "size 1400 1000, initialClass:(^thunar-floating$)"
+        "float, initialClass:(^thunar-floating$)"
 
         # gamescope
         "workspace name:$ws_games, class:(^gamescope$)"
