@@ -132,6 +132,7 @@
         kitty
 
         playerctl
+        libcec
 
         nixd
         alejandra
