@@ -36,7 +36,7 @@
       gvfs.enable = true; # USB auto mounting
       xserver.enable = true;
       printing.enable = lib.mkDefault true;
-      preload.enable = true;
+      preload.enable = lib.mkDefault true;
       displayManager = {
         defaultSession = "hyprland";
         sddm = {
