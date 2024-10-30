@@ -40,10 +40,10 @@ let colors = {
         counter = colors.text-highlight;
       };
 
-      border = {
-        #width = 1;
-        #radius = 10;
-      };
+      #border = {
+      #  #width = 1;
+      #  #radius = 10;
+      #};
 
 
 
