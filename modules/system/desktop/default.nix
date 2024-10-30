@@ -139,6 +139,7 @@
         satty
         grim
         easyeffects
+        nodePackages.tv-remote-cli
 
         kanshi # dynamic monitor configuration
       ]
