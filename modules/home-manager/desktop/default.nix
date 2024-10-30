@@ -137,6 +137,10 @@ in
         enabled_layouts = "vertical";
         sync_to_monitor = "no";
       };
+      keybindings = {
+        "ctrl+c" = "copy_and_clear_or_interrupt";
+        "ctrl+v" = "ctrl+v paste_from_clipboard";
+      };
     };
   };
 }

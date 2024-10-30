@@ -30,7 +30,7 @@ let tv = pkgs.writeShellScriptBin "tv" ''
 
   if [ $subcmd = "on" ]; then
     echo "enabling output $out"
-    hyprctl keyword 'monitor '"$out"', 1920x1080, 5120x0, 1'
+    hyprctl keyword 'monitor '"$out"', 3840x2160@60.00Hz, 5120x0, 1'
     hyprctl keyword workspace 🎮, desc:games, monitor:$out
   fi
 
