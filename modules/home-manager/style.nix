@@ -5,4 +5,4 @@ let style =  {
     text              = "FDF6E3";
     text-highlight    = "FF4221";
   };
-}
+};
