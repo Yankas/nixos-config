@@ -37,7 +37,7 @@ let colors = {
         match = "${colors.text-highlight}";
         selection-text = "${colors.text-highlight}";
         selection-match = "${colors.text}";
-        counter = ${colors.text-highlight};
+        counter = colors.text-highlight;
       };
 
       border = {
