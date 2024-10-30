@@ -51,7 +51,7 @@ in
     };
   
   config = lib.mkIf config.hyprland.enable {
-    home.packages = with pkgs; [ tv ];
+    #home.packages = with pkgs; [ tv ];
     wayland.windowManager.hyprland.systemd.variables = ["--all"];
     wayland.windowManager.hyprland.enable = true;
     wayland.windowManager.hyprland.settings = {    
