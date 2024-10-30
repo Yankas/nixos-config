@@ -59,7 +59,19 @@ in
       exec-once = config.hyprland.autostart.onStart;
       env =
       [
-        "QT_AUTO_SCREEN_SCALE_FACTOR,1"class
+        "QT_AUTO_SCREEN_SCALE_FACTOR,1"
+        "QT_QPA_PLATFORM,wayland;xcb"
+        "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
+        "QT_QPA_PLATFORMTHEME,qt5ct"
+        "GDK_BACKEND,wayland,x11"
+        "_JAVA_AWT_WM_NONREPARENTING,1"
+        "SDL_VIDEO_DRIVER,x11"
+      ]
+      ++ (if config.hyprland.disableHardwareCursor then [ "WLR_NO_HARDWARE_CURSORS,1" ] else []);
+
+      input = {
+        kb_layout = "us";
+        kb_variant = "altgr-intl";
         kb_model = "pc104";
         float_switch_override_focus = 0;
         natural_scroll = 0;
@@ -70,7 +82,9 @@ in
           natural_scroll = false;
         };
       };
-setup-audio-ws
+
+      general = {
+        layout = "master";
         gaps_in = "3, 3, 3, 3";
         gaps_out = "5,0,0,0"; # top, right, bottom, left
         border_size = 2;
