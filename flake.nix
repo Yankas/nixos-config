@@ -26,10 +26,10 @@
     ...
   } @ inputs: let
     inherit (self) outputs;
-    
+
     defaultPackage.x86_64-linux = home-manager.defaultPackage.x86_64-linux;
     defaultPackage.x86_64-darwin = home-manager.defaultPackage.x86_64-darwin;
-    
+
     # Supported systems for your flake packages, shell, etc.
     systems = [
       "aarch64-linux"
