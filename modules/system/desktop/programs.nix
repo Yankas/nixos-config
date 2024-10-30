@@ -37,8 +37,6 @@
           ++ (if config.programs.rider.enable then [ fontconfig ] else []));
       };
 
-
-
     virtualisation.libvirtd = lib.mkIf config.programs.virtualization.enable  {
       enable = true;
     };
