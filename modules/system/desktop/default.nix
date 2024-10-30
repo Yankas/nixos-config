@@ -138,6 +138,7 @@
         satty
         grim
         easyeffects
+        dpms
 
         kanshi # dynamic monitor configuration
       ]

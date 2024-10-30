@@ -5,16 +5,18 @@ let color = {
   text              = "FDF6E3";
   text-highlight    = "FF4221";
 }; in
-let
-    set-bg = pkgs.writeShellScriptBin "set-bg" ''
+let set-bg = pkgs.writeShellScriptBin "set-bg" ''
       ${pkgs.swaybg}/bin/swaybg -i /run/current-system/sw/share/wallpapers/$1
     '';
 in
-let
-    setup-audio-ws = pkgs.writeShellScriptBin "setup-audio-ws" ''
+let setup-audio-ws = pkgs.writeShellScriptBin "setup-audio-ws" ''
       pgrep pavucontrol || ${pkgs.pavucontrol}/bin/pavucontrol
       pgrep .easyeffects-wr || ${pkgs.easyeffects}/bin/easyeffects
     '';
+in
+let toggle-tv 
+
+
 in
 {
     options = {
