@@ -16,7 +16,7 @@ let setup-audio-ws = pkgs.writeShellScriptBin "setup-audio-ws" ''
 in
 let tv = pkgs.writeShellScriptBin "tv" ''
   out="${config.monitors.external}"
-  primary="${conifg.monitors.primary}"
+  primary="${config.monitors.primary}"
   if [ -z "$1" ]; then
       echo "usage: use \"tv [on|off|toggle]\""
       exit 1
