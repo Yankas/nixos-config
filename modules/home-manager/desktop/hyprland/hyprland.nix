@@ -162,7 +162,7 @@ in
         "8, monitor:$m_right"
         "10, monitor:$m_right"
         "name:$ws_games,desc:games, monitor:$m_right"
-        "special:teamspeak, on-created-empty:TeamSpeak"\
+        "special:teamspeak, on-created-empty:TeamSpeak"
         "special:audio, on-created-empty:${setup-audio-ws}/bin/setup-audio-ws"
       ] 
       ++ (if config.programs.steam.enable then ["special:$ws_steam, on-created-empty:steam" ] else [])
