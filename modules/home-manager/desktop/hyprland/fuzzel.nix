@@ -31,7 +31,7 @@ let colors = {
         # BACKGROUND COLORS
         background = "${colors.background}FF";
         selection = "${colors.background}FF";
-        border = "${colors.background-accent}FF";
+        border = "${colors.text-highlight}FF";
         # TEXT COLORS
         prompt = "${colors.text}FF";
         text = "${colors.text}FF";
