@@ -278,7 +278,7 @@ in
         ''$mod SHIFT, S, exec, ${pkgs.grim}/bin/grim -o "$(hyprctl monitors -j | jq -r '.[] | select(.focused)| .name')" - | ${pkgs.satty}/bin/satty --filename - --fullscreen --initial-tool crop''
 
         # VS CODE - QUICK
-        "$mod SHIFT, E, exec, code --profile Quick"
+        "$mod, N, exec, code --profile Quick"
 
         # AUDIO WORKSPACE
         "$mod, A, togglespecialworkspace, audio"
