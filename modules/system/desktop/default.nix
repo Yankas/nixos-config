@@ -139,7 +139,7 @@
         satty
         grim
         easyeffects
-        nodePackages.tv-remote-cli
+        nodePackages.samsung-remote
 
         kanshi # dynamic monitor configuration
       ]
