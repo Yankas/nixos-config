@@ -15,13 +15,26 @@ let setup-audio-ws = pkgs.writeShellScriptBin "setup-audio-ws" ''
     '';
 in
 let tv = pkgs.writeShellScriptBin "tv" ''
-  if [ -z "$var" ]
-  then
-    echo "usage: use "tv on" or "tv off"
-    exit 1
+  out="HDMI-A-1"
+  if [ -z "$1" ]; then
+      echo "usage: use \"tv on\" or \"tv off\""
+      exit 1
+  fi
+  subcmd="$1"
+
+  if [ subcmd = "toggle" ]; then
+    hyprctl monitors | grep HDMI && subcmd="on" || subcmd="off"
   fi
 
-  hyprctl keyword 'monitor HDMI-A-1, disable'
+  if [ $subcmd = "on" ]; then
+    echo "enabling output $out"
+    hyprctl keyword 'monitor '"$out"', 1920x1080, 5120x0, 1'
+  fi
+
+  if [ $subcmd = "off" ]; then
+    echo "disabling output $out"
+    hyprctl keyword 'monitor '"$out"', disable'
+  fi
 '';
 in
 {
