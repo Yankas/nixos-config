@@ -1,11 +1,11 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, style, ... }:
 let color = {
   background        = "#292B2E";
   background-accent = "#1A1A1A";
   text              = "#FDF6E3";
   text-highlight    = "#FF4221";
 }; in
-let font =  { 
+let font =  {
     size         = "20px";
 };
 in
@@ -29,7 +29,7 @@ in
 
       #custom-right-arrow-dark,
       #custom-left-arrow-dark {
-        color: ${color.background-accent};
+        color: ${style.colors.background-accent};
       }
       #custom-right-arrow-light,
       #custom-left-arrow-light {
@@ -78,7 +78,7 @@ in
       #memory {
         color: #2aa198;
       }
-      
+
       #cpu {
         color: #6c71c4;
       }
@@ -90,7 +90,7 @@ in
       #disk {
         color: #b58900;
       }
-      
+
       #mpris.icon {
         background-size: 24px 24px;
         background-repeat: no-repeat;
@@ -143,12 +143,12 @@ in
       height = 30;
       layer = "top";
       position = "top";
-      tray = { 
-        spacing = 10; 
+      tray = {
+        spacing = 10;
       };
 
-      modules-left = [ 
-        "hyprland/workspaces" 
+      modules-left = [
+        "hyprland/workspaces"
         "custom/right-arrow-dark"
         "privacy"
         ];
@@ -278,7 +278,7 @@ in
         "scroll-step" = 5;
         "on-click" = "hyprctl dispatch togglespecialworkspace audio";
       };
-      
+
       memory = {
         interval = 5;
         format = "Mem {}%";
