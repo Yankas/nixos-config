@@ -17,6 +17,7 @@ in
 let tv = pkgs.writeShellScriptBin "tv" ''
   out="${config.monitors.external}"
   primary="${config.monitors.primary}"
+
   if [ -z "$1" ]; then
       echo "usage: use \"tv [on|off|toggle]\""
       exit 1
@@ -24,7 +25,7 @@ let tv = pkgs.writeShellScriptBin "tv" ''
   subcmd="$1"
 
   if [ subcmd = "toggle" ]; then
-    hyprctl monitors | grep HDMI && subcmd="on" || subcmd="off"
+    hyprctl monitors | grep $out && subcmd="on" || subcmd="off"
   fi
 
   if [ $subcmd = "on" ]; then
@@ -41,47 +42,51 @@ let tv = pkgs.writeShellScriptBin "tv" ''
 '';
 in
 {
-    options = {
-      monitors = {
-        primary = lib.mkOption { 
-          type = lib.types.str; 
-          default = "DP-1";
-        };
-        secondary = lib.mkOption { 
-          type = lib.types.str; 
-          default = "DP-2";
-        };
-        external = lib.mkOption {
-          type = lib.types.str; 
-          default = "HDMI-A-1";
-        };
-      };
-      hyprland.enable = lib.mkEnableOption "enable custom hyprland config";
-      hyprland.disableHardwareCursor = lib.mkEnableOption  "disable the hardware cursor";
+  imports = [
+    ./waybar.nix
+  ];
 
-      hyprland.modKey = lib.mkOption {
-        default = "SUPER";
+  options = {
+    monitors = {
+      primary = lib.mkOption { 
         type = lib.types.str; 
+        default = "DP-1";
       };
-
-      hyprland.autostart.onStart = lib.mkOption {
-        type = with lib.types; listOf str;
-        description = "list of commands to run when hyprland first initializes";
-        default = [];
-
+      secondary = lib.mkOption { 
+        type = lib.types.str; 
+        default = "DP-2";
       };
-      hyprland.autostart.onReload = lib.mkOption {
-        type = with lib.types; listOf str;
-        description = "list of commands to every time hyprland reloads";
-        default = [ 
-          "${set-bg}/bin/set-bg ${config.home.wallpaper}"
-          "${setup-audio-ws}/bin/setup-audio-ws"
-        ];
+      external = lib.mkOption {
+        type = lib.types.str; 
+        default = "HDMI-A-1";
       };
     };
+    hyprland.enable = lib.mkEnableOption "enable custom hyprland config";
+    hyprland.disableHardwareCursor = lib.mkEnableOption  "disable the hardware cursor";
+
+    hyprland.modKey = lib.mkOption {
+      default = "SUPER";
+      type = lib.types.str; 
+    };
+
+    hyprland.autostart.onStart = lib.mkOption {
+      type = with lib.types; listOf str;
+      description = "list of commands to run when hyprland first initializes";
+      default = [];
+
+    };
+    hyprland.autostart.onReload = lib.mkOption {
+      type = with lib.types; listOf str;
+      description = "list of commands to every time hyprland reloads";
+      default = [ 
+        "${set-bg}/bin/set-bg ${config.home.wallpaper}"
+        "${setup-audio-ws}/bin/setup-audio-ws"
+      ];
+    };
+  };
   
   config = lib.mkIf config.hyprland.enable {
-    home.packages = with pkgs; [ 
+    home.packages = with pkgs; with config [ 
       tv 
     ];
     wayland.windowManager.hyprland.systemd.variables = ["--all"];
@@ -94,7 +99,6 @@ in
       "$m_left" = "DP-1";
       "$m_right" = "DP-2";
       "$terminal" = "${pkgs.kitty}/bin/kitty";
-      "$fileManager" = "thunar";
 
       exec = config.hyprland.autostart.onReload;
       exec-once = config.hyprland.autostart.onStart;
@@ -209,16 +213,7 @@ in
       ++ (if config.programs.steam.enable then ["special:$ws_steam, on-created-empty:steam" ] else [])
       ++ (if config.programs.torrent.enable then ["special:qbittorrent, on-created-empty:${pkgs.qbittorrent}/bin/qbittorrent" ] else [])
       ++ (if config.programs.discord.enable then ["special:discord, on-created-empty:${pkgs.discord}/bin/discord" ] else [])
-      ++ (if config.programs.whatsappweb.enable then ["special:whatsapp, on-created-empty:whatsapp" ] else []);
-
-      # KEY BINDINGS
-      bind =
-      [
-        # Example binds, se https://wiki.hyprland.org/Configuring/Binds/ for more
-        "$mod, return, exec, $terminal"
-        "$mod, Q, killactive"
-        "$mod SHIFT, M, exit"
-        "$mod, E, exec, $fileManager"
+      ++ (if config.programs.whatsappweb.enable then ["special:    ./hyprland.nix
         "$mod, V, togglefloating"
         "$mod, space, exec, ${pkgs.fuzzel}/bin/fuzzel"
         "$mod, C, exec, $BROWSER"

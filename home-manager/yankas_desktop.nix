@@ -25,6 +25,12 @@
     wallpaper = "hgss.png";
   };
 
+  monitors = {
+    primary = "DP-2";
+    secondary = "DP-1";
+    external = "HDMI-A-1";
+  };
+
   programs = {
     torrent.enable = true;
     whatsappweb.enable = true;
