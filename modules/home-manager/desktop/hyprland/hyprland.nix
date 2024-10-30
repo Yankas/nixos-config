@@ -360,8 +360,8 @@ in
         "noblur,class:^(xwaylandvideobridge)$"
 
         # VSCODE
-        "float, initialTitle:(^.*Quick.*- Visual Studio Code$)"
-        "size 1400 1000, class:(TeamSpeak), (^.*Quick.*- Visual Studio Code$)"
+        "float, title:(^.*Quick.*- Visual Studio Code$)"
+        "size 1400 1000, class:(TeamSpeak), title(^.*Quick.*- Visual Studio Code$)"
 
         # whatsapp
         "workspace special:whatsapp silent, title:(web.whatsapp.com.*)"
