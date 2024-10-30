@@ -276,7 +276,7 @@ in
           ];
         };
         "scroll-step" = 5;
-        "on-click" = "${pkgs.pavucontrol}/bin/pavucontrol";
+        "on-click" = "hyprctl dispatch togglespecialworkspace audio";
       };
       
       memory = {
