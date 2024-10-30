@@ -34,9 +34,9 @@ let colors = {
         # TEXT COLORS
         text = "${colors.text}FF";
         input = "${colors.text-highlight}FF";
-        match = "${colors.text-highlight}FF";
+        match = "${colors.text}FF";
         selection-text = "${colors.text-highlight}FF";
-        selection-match = "${colors.text}FF";
+        selection-match = "${colors.text-highlight}FF";
         counter = colors.text-highlight;
       };
 
