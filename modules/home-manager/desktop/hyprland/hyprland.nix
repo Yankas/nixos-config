@@ -222,7 +222,7 @@ in
 
         # Scroll through existing workspaces with mainMod + scroll
         "$mod, mouse_down, workspace, e+1"
-        "$mod, mouse_up, workspace, e-1"S
+        "$mod, mouse_up, workspace, e-1"
 
         # SCREENSHOTS
         ''$mod SHIFT, S, exec, ${pkgs.grim}/bin/grim -o "$(hyprctl monitors -j | jq -r '.[] | select(.focused)| .name')" - | ${pkgs.satty}/bin/satty --filename - --fullscreen --initial-tool crop''
