@@ -14,7 +14,7 @@ let setup-audio-ws = pkgs.writeShellScriptBin "setup-audio-ws" ''
       pgrep .easyeffects-wr || ${pkgs.easyeffects}/bin/easyeffects
     '';
 in
-let tv = pkgs.callPackage (pkgs.writeShellScriptBin ''
+let tv = pkgs.writeShellScriptBin "tv" ''
   if [ -z "$var" ]
   then
     echo "usage: use "tv on" or "tv off"
@@ -22,7 +22,7 @@ let tv = pkgs.callPackage (pkgs.writeShellScriptBin ''
   fi
 
   hyprctl keyword 'monitor HDMI-A-1, disable'
-'');
+'';
 in
 {
     options = {
@@ -51,7 +51,9 @@ in
     };
   
   config = lib.mkIf config.hyprland.enable {
-    home.packages = with pkgs; [ tv ];
+    home.packages = with pkgs; [ 
+      tv 
+    ];
     wayland.windowManager.hyprland.systemd.variables = ["--all"];
     wayland.windowManager.hyprland.enable = true;
     wayland.windowManager.hyprland.settings = {    
