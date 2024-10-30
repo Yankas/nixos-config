@@ -7,7 +7,7 @@ in
 {
   imports = [
     ./gaming/default.nix
-    ./hyprland/default.nix
+    ./hyprland/hyprland.nix
     ./misc.nix
     ./pcmanfm/default.nix
   ];
