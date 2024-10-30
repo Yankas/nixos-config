@@ -25,6 +25,7 @@ in
       ".local/share/Colossal Order/Cities_Skylines".source = link "cities-skylines";
       ".local/share/Colossal Order/Monster Sanctuary".source = link "monster-sanctuary";
       ".local/share/PrismLauncher/instances".source = lib.mkIf minecraft.enable (link "minecraft");
+      ".local/share/RogueLegacy/RogueLegacyStorageContainer/AllPlayers".source = link "rogue-legacy";
       ".config/ppsspp/PSP".source = lib.mkIf psp.enable (link "psp");
       ".config/Loop Hero".source = link "loop-hero";
       ".config/Ryujinx".source = lib.mkIf nintendo.switch.enable (link "ryujinx");

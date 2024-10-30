@@ -96,7 +96,8 @@ in
     };
 
     home.packages = with pkgs;
-      (if config.programs.torrent.enable then [ qbittorrent ] else [])
+      [ numbat ]
+      ++(if config.programs.torrent.enable then [ qbittorrent ] else [])
       ++ (if config.programs.whatsappweb.enable then [ whatsapp ] else [])
       ++ (if config.programs.discord.enable then [ discord ] else []);
 
