@@ -278,7 +278,7 @@ in
         ''$mod SHIFT, S, exec, ${pkgs.grim}/bin/grim -o "$(hyprctl monitors -j | jq -r '.[] | select(.focused)| .name')" - | ${pkgs.satty}/bin/satty --filename - --fullscreen --initial-tool crop''
 
         # VS CODE - QUICK
-        "$mod, N, exec, code --profile Quick"
+        "$mod, N, exec, [floating] code --profile Quick"
 
         # AUDIO WORKSPACE
         "$mod, A, togglespecialworkspace, audio"
@@ -358,10 +358,6 @@ in
         "noinitialfocus,class:^(xwaylandvideobridge)$"
         "maxsize 1 1,class:^(xwaylandvideobridge)$"
         "noblur,class:^(xwaylandvideobridge)$"
-
-        # VSCODE
-        "float, title:(.*Quick.*)"
-        "size 1400 1000, class:(TeamSpeak), title(^.*Quick.*- Visual Studio Code$)"
 
         # whatsapp
         "workspace special:whatsapp silent, title:(web.whatsapp.com.*)"
