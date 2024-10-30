@@ -1,3 +1,4 @@
+{}:
 let style =  {
   colors = {
     background        = "292B2E";
