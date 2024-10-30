@@ -15,9 +15,10 @@ let setup-audio-ws = pkgs.writeShellScriptBin "setup-audio-ws" ''
     '';
 in
 let tv = pkgs.writeShellScriptBin "tv" ''
-  out="HDMI-A-1"
+  out="${config.monitors.external}"
+  primary="${conifg.monitors.primary}"
   if [ -z "$1" ]; then
-      echo "usage: use \"tv on\" or \"tv off\""
+      echo "usage: use \"tv [on|off|toggle]\""
       exit 1
   fi
   subcmd="$1"
@@ -29,16 +30,33 @@ let tv = pkgs.writeShellScriptBin "tv" ''
   if [ $subcmd = "on" ]; then
     echo "enabling output $out"
     hyprctl keyword 'monitor '"$out"', 1920x1080, 5120x0, 1'
+    hyprctl keyword workspace 🎮, desc:games, monitor:$out
+    hyprctl keyword 'workspace 
   fi
 
   if [ $subcmd = "off" ]; then
     echo "disabling output $out"
     hyprctl keyword 'monitor '"$out"', disable'
+    hyprctl keyword workspace 🎮, desc:games, monitor:$primary
   fi
 '';
 in
 {
     options = {
+      monitors = {
+        primary = lib.mkOption { 
+          type = lib.types.str; 
+          default = "DP-1";
+        };
+        secondary = lib.mkOption { 
+          type = lib.types.str; 
+          default = "DP-2";
+        };
+        external = lib.mkOption {
+          type = lib.types.str; 
+          default = "HDMI-A-1";
+        };
+      };
       hyprland.enable = lib.mkEnableOption "enable custom hyprland config";
       hyprland.disableHardwareCursor = lib.mkEnableOption  "disable the hardware cursor";
 
