@@ -14,7 +14,7 @@ let setup-audio-ws = pkgs.writeShellScriptBin "setup-audio-ws" ''
       pgrep .easyeffects-wr || ${pkgs.easyeffects}/bin/easyeffects
     '';
 in
-let tv = ''
+let tv = pkgs.writeShellScriptBin ''
   if [ -z "$var" ]
   then
     echo "usage: use "tv on" or "tv off"
