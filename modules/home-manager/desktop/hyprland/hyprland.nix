@@ -14,10 +14,6 @@ let setup-audio-ws = pkgs.writeShellScriptBin "setup-audio-ws" ''
       pgrep .easyeffects-wr || ${pkgs.easyeffects}/bin/easyeffects
     '';
 in
-let toggle-tv 
-
-
-in
 {
     options = {
       hyprland.enable = lib.mkEnableOption "enable custom hyprland config";
