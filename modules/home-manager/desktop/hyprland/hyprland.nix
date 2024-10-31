@@ -226,7 +226,7 @@ in
         "$mod SHIFT, M, exit"
 
         "$mod, E, exec, ${pkgs.xfce.thunar}/bin/thunar"
-        "$mod SHIFT, E, exec, [float] ${pkgs.xfce.thunar}/bin/thunar"
+        "$mod SHIFT, E, exec, [floating] ${pkgs.xfce.thunar}/bin/thunar"
 
         "$mod, V, togglefloating"
         "$mod, space, exec, ${pkgs.fuzzel}/bin/fuzzel"
@@ -372,7 +372,7 @@ in
         "center, class:(TeamSpeak), title:(TeamSpeak)"
 
         #THUNAR
-        "workspace m, initialClass:(^thunar.*$)"
+        "workspace m, initialClass:(^thunar$)"
         "size 1400 1000, initialClass:(^thunar$)"
 
         # gamescope
