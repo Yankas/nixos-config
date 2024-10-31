@@ -69,7 +69,6 @@
           # > Our main nixos configuration file <
           ./hosts/desktop/configuration.nix
           inputs.chaotic.nixosModules.default
-          outputs.homeManagerModules.style
         ];
       };
       server = nixpkgs.lib.nixosSystem {

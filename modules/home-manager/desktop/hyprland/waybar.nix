@@ -29,7 +29,7 @@ in
 
       #custom-right-arrow-dark,
       #custom-left-arrow-dark {
-        color: ${style.colors.background-accent};
+        color: ${color.background-accent};
       }
       #custom-right-arrow-light,
       #custom-left-arrow-light {
