@@ -1,4 +1,4 @@
-{ config, pkgs, lib, style, ... }:
+{ config, pkgs, lib, ... }:
 let color = {
   background        = "292B2E";
   background-accent = "1A1A1A";
@@ -151,7 +151,7 @@ in
 
       decoration = {
         # See https://wiki.hyprland.org/Configuring/Variables/ for more
-        rounding = 10; # was 10
+        rounding = 0; # was 10
         blur = {
             enabled = true;
             size = 3;
@@ -273,6 +273,9 @@ in
         # Scroll through existing workspaces with mainMod + scroll
         "$mod, mouse_down, workspace, e+1"
         "$mod, mouse_up, workspace, e-1"
+
+        "$mod, T, togglespecialworkspace, teamspeak"
+        "$mod CTRL, T, movetoworkspacesilent, special:teamspeak"
 
         # SCREENSHOTS
         ''$mod SHIFT, S, exec, ${pkgs.grim}/bin/grim -o "$(hyprctl monitors -j | jq -r '.[] | select(.focused)| .name')" - | ${pkgs.satty}/bin/satty --filename - --fullscreen --initial-tool crop''
