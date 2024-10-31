@@ -412,7 +412,10 @@ in
       ++ (if config.programs.torrent.enable then [
         "workspace special:qbittorrent silent, initialTitle:(^qBittorrent v.*$)"
         "float, initialClass:(^org.qbittorrent.qBittorrent$)"
+        "size 1400 1000, initialClass:(^org.qbittorrent.qBittorrent$)"
         "tile, initialTitle:(^qBittorrent v.*$)"
+
+
       ] else [])
       ++ (if config.games.nintendo.switch.enable then [
         "workspace name:$ws_games silent, initialClass:(^Ryujinx$)"
