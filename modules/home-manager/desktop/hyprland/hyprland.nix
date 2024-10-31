@@ -372,6 +372,7 @@ in
         "center, class:(TeamSpeak), title:(TeamSpeak)"
 
         #THUNAR
+        "workspace m, initialClass:(^thunar.*$)"
         "size 1400 1000, initialClass:(^thunar-floating$)"
         "float, initialClass:(^thunar-floating$)"
 
