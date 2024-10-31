@@ -226,7 +226,7 @@ in
         "$mod SHIFT, M, exit"
 
         "$mod, E, exec, ${pkgs.xfce.thunar}/bin/thunar"
-        "$mod SHIFT, E, exec, ${pkgs.xfce.thunar}/bin/thunar --name thunar-floating"
+        "$mod SHIFT, E, exec, [float] ${pkgs.xfce.thunar}/bin/thunar"
 
         "$mod, V, togglefloating"
         "$mod, space, exec, ${pkgs.fuzzel}/bin/fuzzel"
@@ -373,8 +373,7 @@ in
 
         #THUNAR
         "workspace m, initialClass:(^thunar.*$)"
-        "size 1400 1000, initialClass:(^thunar-floating$)"
-        "float, initialClass:(^thunar-floating$)"
+        "size 1400 1000, initialClass:(^thunar$)"
 
         # gamescope
         "workspace name:$ws_games, class:(^gamescope$)"
