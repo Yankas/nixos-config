@@ -410,9 +410,9 @@ in
         "monitor $m_right, initialClass:($steam_game_class)"
       ] else [])
       ++ (if config.programs.torrent.enable then [
-        "workspace special:qbittorrent silent, initialClass:(^org.qbittorrent.qBittorrent$)"
-        "workspace unset, initialClass:(^org.qbittorrent.qBittorrent$), initialTitle(^(?!.*qBittorrent).*$)"
+        "workspace special:qbittorrent silent, initialTitle:(^qBittorrent v.*$)"
         "float, initialClass:(^org.qbittorrent.qBittorrent$), initialTitle(^(?!.*qBittorrent).*$)"
+        "tile special:qbittorrent silent, initialTitle:(^qBittorrent v.*$)"
       ] else [])
       ++ (if config.games.nintendo.switch.enable then [
         "workspace name:$ws_games silent, initialClass:(^Ryujinx$)"
