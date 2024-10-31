@@ -417,6 +417,13 @@ in
         "workspace special:qbittorrent, initialClass:(^org.qbittorrent.qBittorrent$), initialTitle:(^Preferences$)"
         "workspace special:qbittorrent, initialClass:(^org.qbittorrent.qBittorrent$), initialTitle:(^Rename$)"
         "size 600 100, initialClass:(^org.qbittorrent.qBittorrent$), initialTitle:(^Rename$)"
+        "workspace special:qbittorrent, initialClass:(^org.qbittorrent.qBittorrent$), initialTitle:(^Choose save path$)"
+        "workspace special:qbittorrent, initialClass:(^org.qbittorrent.qBittorrent$), initialTitle:(^Manage Cookies$)"
+        "workspace special:qbittorrent, initialClass:(^org.qbittorrent.qBittorrent$), initialTitle:(^Statistics$)"
+        "workspace special:qbittorrent, initialClass:(^org.qbittorrent.qBittorrent$), initialTitle:(^Torrent Creator$)"
+        "size 600 100, initialClass:(^org.qbittorrent.qBittorrent$), initialTitle:(^Add Tags$)"
+        "workspace special:qbittorrent, initialClass:(^org.qbittorrent.qBittorrent$), initialTitle:(^Add Tags$)"
+        "workspace special:qbittorrent, initialClass:(^org.qbittorrent.qBittorrent$), initialTitle:(^Torrent Options$)"
       ] else [])
       ++ (if config.games.nintendo.switch.enable then [
         "workspace name:$ws_games silent, initialClass:(^Ryujinx$)"
