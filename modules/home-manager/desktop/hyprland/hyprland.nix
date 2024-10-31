@@ -414,7 +414,7 @@ in
         "float, initialClass:(^org.qbittorrent.qBittorrent$)"
         "size 1400 1000, initialClass:(^org.qbittorrent.qBittorrent$)"
         "tile, initialTitle:(^qBittorrent v.*$)"
-
+        "workspace special:qbittorrent silent, initialClass:(^org.qbittorrent.qBittorrent$), initialTitle:(^Preferences$)"
 
       ] else [])
       ++ (if config.games.nintendo.switch.enable then [
