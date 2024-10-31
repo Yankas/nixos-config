@@ -11,7 +11,6 @@
       outputs.homeManagerModules.common
       outputs.homeManagerModules.desktop
       inputs.nix-colors.homeManagerModules.default
-      outputs.style
     ];
 
   home = {
