@@ -151,7 +151,7 @@ in
 
       decoration = {
         # See https://wiki.hyprland.org/Configuring/Variables/ for more
-        rounding = 0; # was 10
+        rounding = 10; # was 10
         blur = {
             enabled = true;
             size = 3;
