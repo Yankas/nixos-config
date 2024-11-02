@@ -17,7 +17,7 @@ in
       #steamLink 1623730 "AppData/Local/Pal/Saved" "palworld"
     home.file = lib.mkIf config.games.saves.enable (with config.games; {
       # Proton Games
-      
+
       # Native Games
       ".local/share/NeposGames/Nebuchadnezzar".source = link "nebuchadnezzar";
       ".local/share/Paradox Interactive/Crusader Kings III/".source = link "crusader-kings3";
@@ -25,11 +25,13 @@ in
       ".local/share/Colossal Order/Cities_Skylines".source = link "cities-skylines";
       ".local/share/Colossal Order/Monster Sanctuary".source = link "monster-sanctuary";
       ".local/share/PrismLauncher/instances".source = lib.mkIf minecraft.enable (link "minecraft");
-      ".local/share/RogueLegacy/RogueLegacyStorageContainer/AllPlayers".source = link "rogue-legacy";
+      ".local/share/RogueLegacy/RogueLegacyStorageContainer/AllPlayers/".source = link "rogue-legacy";
       ".config/ppsspp/PSP".source = lib.mkIf psp.enable (link "psp");
       ".config/Loop Hero".source = link "loop-hero";
       ".config/Ryujinx".source = lib.mkIf nintendo.switch.enable (link "ryujinx");
       ".config/unity3d/Clever Endeavour Games/Ultimate Chicken Horse".source = link "ultimate-chicken-horse";
+      ".config/unity3d/Contingent99/Wizard of Legend/".source = link "wizard-of-legend";
+      ".config/unity3d/Placeholder Gameworks/Death and Taxes/".source = link "death-and-taxes";
       "${steamPath 560130 "Saved Games/Pillars of Eternity II"}".source = link "pillars-of-eternity2";
       "${steamPath 40390  "Saved Games/Risen2/SaveGames"}".source = link "risen2";
       "${steamPath 466240 "Saved Games/deceit"}".source = link "deceit";
@@ -49,9 +51,9 @@ in
       "${steamPath 899770   "AppData/LocalLow/Eleventh Hour Games/Last Epoch"}".source = link "last-epoch";
       "${steamPath 404590   "AppData/LocalLow/Games Farm s_r_o_/Vikings_ Wolves of Midgard/saves"}".source = link "vikings-wolfs-of-midgard";
       "${steamPath 892970   "AppData/LocalLow/IronGate/Valheim"}".source = link "valheim";
-      "${steamPath 527230   "AppData/LocalLow/LocalLow/IronOak Games/FTK/save"}".source = link "for-the-king";   
-      "${steamPath 1166290  "AppData/LocalLow/Placeholder Gameworks/Death and Taxes/Saves"}".source = link "death-and-taxes";
-      "${steamPath 1096530  "AppData/LocalLow/Tactical Adventures/Solasta"}".source = link "solasta";  
+      "${steamPath 527230   "AppData/LocalLow/LocalLow/IronOak Games/FTK/save"}".source = link "for-the-king";
+
+      "${steamPath 1096530  "AppData/LocalLow/Tactical Adventures/Solasta"}".source = link "solasta";
       "${steamPath 287390   "Documents/4a games/Metro Last Light"}".source = link "metro-last-light";
       "${steamPath 43110    "Documents/4a games/metro 2033"}".source = link "metro-2033";
       "${steamPath 48240    "Documents/ANNO 2070"}".source = link "anno2070";
@@ -94,6 +96,8 @@ in
       "${steamPath 17410    "Documents/EA Games/Mirror's Edge"}".source = link "mirrors-edge";
       "${steamPath 261550   "/Documents/Mount and Blade II Bannerlord"}".source = link "mount-and-blade2-bannerlord";
 
+
+
       #"STEAM_PREFIX/Documents/Documents/Mount and Blade II Bannerlord".source =  link "${config.home.homeDirectory}/.saves/mount-and-blade2-bannerlord";
 
       #"STEAM_PREFIX/Documents/My Games/Titan Quest".source =  link "${config.home.homeDirectory}/.saves/titan-quest";
@@ -125,7 +129,7 @@ in
 
       #"STEAM_PREFIX/Documents/My Games/Titan Quest - Immortal Throne".source =  link "${config.home.homeDirectory}/.saves/titan-quest-immortal-throne";
       #"STEAM_PREFIX/Documents/My Games/Wasteland3/Save Games".source =  link "${config.home.homeDirectory}/.saves/wasteland3";
-      
+
       #"STEAM_PREFIX/Documents/NStW".source =  link "${config.home.homeDirectory}/.saves/nobody-saves-the-world";
       #"STEAM_PREFIX/Documents/Prince of Persia/Save".source =  link "${config.home.homeDirectory}/.saves/prince-of-persia";
       #"STEAM_PREFIX/Documents/Shadow Warrior DX11".source =  link "${config.home.homeDirectory}/.saves/shadow-warrior";

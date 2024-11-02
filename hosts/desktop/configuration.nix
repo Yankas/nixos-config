@@ -2,28 +2,34 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ 
+{
   inputs,
   outputs,
   lib,
   config,
   pkgs,
-  ... 
+  ...
 }: {
-  imports = [ 
+  imports = [
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.home-manager
       outputs.systemModules.common
       outputs.systemModules.desktop
+      inputs.sops-nix.nixosModules.sops
       #outputs.systemModules.ddclient
     ];
+
+  #sops.defaultSopsFile = ./secrets/secrets.yaml;
+  #sops.defaultSopsFormat = "yaml";
+  #sops.age.keyFile = "home/u";
+
   boot.supportedFilesystems = [ "ntfs" ];
 
   desktop.enable = true;
 
   networking = {
     hostName = "yankas-desktop";
-    interfaces.enp6s0.ipv4.addresses = [{ 
+    interfaces.enp6s0.ipv4.addresses = [{
       address = "192.168.1.10";
       prefixLength = 24;
     }];
@@ -54,7 +60,7 @@
 
   services = {
     teamviewer.enable = true;
-    xserver.videoDrivers = [ "amdgpu" ]; 
+    xserver.videoDrivers = [ "amdgpu" ];
     blueman.enable = true;
   };
 
@@ -89,15 +95,15 @@
 
   programs.thunar.enable = true;
   programs.xfconf.enable = true;
-  programs.thunar.plugins = with pkgs.xfce; [ 
-    thunar-archive-plugin 
-    thunar-volman 
+  programs.thunar.plugins = with pkgs.xfce; [
+    thunar-archive-plugin
+    thunar-volman
     thunar-media-tags-plugin
   ];
-  services.tumbler.enable = true; 
+  services.tumbler.enable = true;
 
   environment.systemPackages = with pkgs; [
-    
+
     # BROWSER
     firefox
     tor-browser
@@ -122,4 +128,3 @@
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
   system.stateVersion = "24.05"; # DO NOT CHANGE
 }
-
