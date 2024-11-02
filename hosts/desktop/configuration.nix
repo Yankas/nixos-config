@@ -15,7 +15,7 @@
       inputs.home-manager.nixosModules.home-manager
       outputs.systemModules.common
       outputs.systemModules.desktop
-      inputs.sops-nix.nixosModules.sops
+      #inputs.sops-nix.nixosModules.sops
       #outputs.systemModules.ddclient
     ];
 
