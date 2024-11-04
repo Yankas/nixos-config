@@ -82,7 +82,7 @@ in
       default = [
         "${set-bg}/bin/set-bg ${config.home.wallpaper}"
         "${setup-audio-ws}/bin/setup-audio-ws"
-        "xrandr --output ${config.home.monitors.primary} --primary"
+        "xrandr --output ${config.monitors.primary} --primary"
       ];
     };
   };
