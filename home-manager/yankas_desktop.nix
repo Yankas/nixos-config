@@ -23,6 +23,9 @@
     sessionVariables = {
       BROWSER = "chromium";
     };
+    packages = with pkgs; [
+      whipper
+    ];
     wallpaper = "hgss.png";
   };
 

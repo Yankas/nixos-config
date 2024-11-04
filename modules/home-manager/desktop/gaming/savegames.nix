@@ -14,9 +14,8 @@ in
     };
 
   config = {
-      #steamLink 1623730 "AppData/Local/Pal/Saved" "palworld"
     home.file = lib.mkIf config.games.saves.enable (with config.games; {
-      # Proton Games
+
 
       # Native Games
       ".local/share/NeposGames/Nebuchadnezzar".source = link "nebuchadnezzar";
@@ -32,6 +31,8 @@ in
       ".config/unity3d/Clever Endeavour Games/Ultimate Chicken Horse".source = link "ultimate-chicken-horse";
       ".config/unity3d/Contingent99/Wizard of Legend/".source = link "wizard-of-legend";
       ".config/unity3d/Placeholder Gameworks/Death and Taxes/".source = link "death-and-taxes";
+
+      # Proton Games
       "${steamPath 560130 "Saved Games/Pillars of Eternity II"}".source = link "pillars-of-eternity2";
       "${steamPath 40390  "Saved Games/Risen2/SaveGames"}".source = link "risen2";
       "${steamPath 466240 "Saved Games/deceit"}".source = link "deceit";

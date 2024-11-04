@@ -1,4 +1,10 @@
 {lib, ...}:
+let mkOptionColor = color: mkOption {
+    type = with types; str;
+    default = color;
+
+  };
+in
 {
   options = {
     style.colors = {
