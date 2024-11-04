@@ -115,8 +115,10 @@ in
       shutdown = "sudo shutdown";
     };
 
-    home.packages =
-      (if config.home.isSudoer then [ update ] else []);
+    home.packages = [
+      mvln
+      ]
+      ++(if config.home.isSudoer then [ update ] else []);
 
 
     home.sessionVariables = {
