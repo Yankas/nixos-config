@@ -1,6 +1,6 @@
 { config, lib, pkgs, outputs, inputs, ... }:
 {
-  imports = [ 
+  imports = [
     ./msrv-integration.nix
   ];
 
@@ -40,13 +40,14 @@
       eza # ls replacement
       jq
       tre # improved tree
-      rename 
+      rename
       #nodePackages.insect
       # ARCHIVE
       atool
       unzip
       p7zip
       unrar
+      usbutils
     ];
 
     programs = {
@@ -78,6 +79,6 @@
     #   keyMap = "us";
     #   useXkbConfig = true; # use xkb.options in tty.
     # };
-  };  
+  };
 
 }
