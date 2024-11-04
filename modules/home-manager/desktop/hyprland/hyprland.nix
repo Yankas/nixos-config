@@ -47,7 +47,7 @@ in
     ./fuzzel.nix
   ];
 
-  options = rec {
+  options = {
     monitors = {
       primary = lib.mkOption {
         type = lib.types.str;
@@ -82,7 +82,6 @@ in
       default = [
         "${set-bg}/bin/set-bg ${config.home.wallpaper}"
         "${setup-audio-ws}/bin/setup-audio-ws"
-        "xrandr --output ${config.home.monitors.primary} --primary"
       ];
     };
   };
@@ -103,7 +102,9 @@ in
       "$terminal" = "${pkgs.kitty}/bin/kitty";
 
       exec = config.hyprland.autostart.onReload;
-      exec-once = config.hyprland.autostart.onStart;
+      exec-once = config.hyprland.autostart.onStart ++
+        "xrandr --output ${config.home.monitors.primary} --primary"
+;
       env =
       [
         "QT_AUTO_SCREEN_SCALE_FACTOR,1"
