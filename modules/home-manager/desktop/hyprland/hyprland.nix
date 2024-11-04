@@ -47,7 +47,7 @@ in
     ./fuzzel.nix
   ];
 
-  options = {
+  options = rec {
     monitors = {
       primary = lib.mkOption {
         type = lib.types.str;
