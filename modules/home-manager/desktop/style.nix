@@ -1,8 +1,7 @@
 {lib, ...}:
-let mkOptionColor = color: mkOption {
+let mkOptionColor = color: lib.mkOption {
     type = with types; str;
     default = color;
-
   };
 in
 {
