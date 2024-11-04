@@ -103,7 +103,7 @@ in
 
       exec = config.hyprland.autostart.onReload;
       exec-once = config.hyprland.autostart.onStart ++
-        "xrandr --output ${config.monitors.primary} --primary";
+        ["xrandr --output ${config.monitors.primary} --primary"];
       env =
       [
         "QT_AUTO_SCREEN_SCALE_FACTOR,1"
