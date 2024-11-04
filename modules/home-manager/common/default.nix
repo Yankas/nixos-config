@@ -9,17 +9,17 @@ let update = pkgs.writeShellScriptBin "update" ''
 in
 let mvln = pkgs.writeShellScriptBin "mvln" ''
   while [ $# -gt 1 ]; do
-    eval "target=\$\{$#}"
+    eval "target=\''${$#}"
     original="$1"
     if [ -d "$target" ]; then
-      target="$target/$\{original##*/}"
+      target="$target/''${original##*/}"
     fi
     mv -- "$original" "$target"
     case "$original" in
       */*)
         case "$target" in
           /*) :;;
-          *) target="$(cd -- "$(dirname -- "$target")" && pwd)/$\{target##*/}"
+          *) target="$(cd -- "$(dirname -- "$target")" && pwd)/''${target##*/}"
         esac
     esac
     ln -s -- "$target" "$original"
