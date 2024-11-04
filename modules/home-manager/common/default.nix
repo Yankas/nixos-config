@@ -2,11 +2,31 @@
 let update = pkgs.writeShellScriptBin "update" ''
   #!/bin/sh
   cd /etc/nixos
-  git add . 
+  git add .
   git commit -m.
   sudo nixos-rebuild switch --flake /etc/nixos#default
   '';
 in
+let mvln = pkgs.writeShellScriptBin "mvln" ''
+  while [ $# -gt 1 ]; do
+    eval "target=\${$#}"
+    original="$1"
+    if [ -d "$target" ]; then
+      target="$target/${original##*/}"
+    fi
+    mv -- "$original" "$target"
+    case "$original" in
+      */*)
+        case "$target" in
+          /*) :;;
+          *) target="$(cd -- "$(dirname -- "$target")" && pwd)/${target##*/}"
+        esac
+    esac
+    ln -s -- "$target" "$original"
+    shift
+  done
+'';
+
 {
   imports = [
       ./lf.nix
@@ -81,12 +101,12 @@ in
       diff = "diff --color=auto";
       now = "'date +\"%T\"'";
       ipe = "curl ipinfo.io/ip";
-    } // lib.optionalAttrs config.programs.git.enable { 
+    } // lib.optionalAttrs config.programs.git.enable {
       g = "git";
       gco = "git checkout";
       gc = "git commit";
       clone = "git clone";
-    } // lib.optionalAttrs config.home.isSudoer { 
+    } // lib.optionalAttrs config.home.isSudoer {
       mount = "sudo mount";
       umount = "sudo umount";
       reboot = "sudo reboot";
@@ -94,21 +114,21 @@ in
       shutdown = "sudo shutdown";
     };
 
-    home.packages = 
+    home.packages =
       (if config.home.isSudoer then [ update ] else []);
-    
+
 
     home.sessionVariables = {
       EDITOR = "nvim";
       VISUAL = "nvim";
       XDG_DOCUMENTS_DIR="/doc";
       XDG_DOWNLOAD_DIR= "\$HOME/download";
-    } // lib.optionalAttrs config.programs.steam.enable { 
+    } // lib.optionalAttrs config.programs.steam.enable {
       STEAM_EXTRA_COMBAT_TOOLS_PATHS = lib.mkIf config.programs.steam.enable "\${HOME}/.steam/root/compatibilitytools.d";
-    } // lib.optionalAttrs config.programs.minecraft.enable { 
+    } // lib.optionalAttrs config.programs.minecraft.enable {
       MINECRAFT_HOME = lib.mkIf config.games.minecraft.enable "\${HOME}/.local/share/PrismLauncher/instances";
     };
 
   };
-  
+
 }
