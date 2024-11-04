@@ -10,7 +10,7 @@
     style.fonts = {
       monospace = "Fira Code Mono";
       decorative = "Fighting Spirit turbo";
-      title = "Die in a fire PG"
+      title = "Die in a fire PG";
     };
   };
 
