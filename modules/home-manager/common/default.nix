@@ -66,17 +66,9 @@ in
       enable = true;
       enableCompletion = true;
       autosuggestion.enable = true;
-      syntaxHighlighting.enable = true;
-      shellAliases = config.home.aliases;
-      oh-my-zsh = {
-        enable = true;
-        plugins = [ "git" "thefuck" ];
-        theme = "robbyrussell";
-        };
-      };
-
-      fish = {
-        enable = true;
+      poweroff = "sudo poweroff";
+      shutdown = "sudo shutdown";
+    };
         shellAbbrs = config.home.aliases;
         interactiveShellInit = ''
           set fish_greeting # Disable greeting
