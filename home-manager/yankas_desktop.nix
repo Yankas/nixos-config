@@ -25,6 +25,7 @@
     };
     packages = with pkgs; [
       whipper
+      tauon
     ];
     wallpaper = "hgss.png";
   };

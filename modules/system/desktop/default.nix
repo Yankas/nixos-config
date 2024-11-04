@@ -1,9 +1,9 @@
-{ 
+{
   lib,
   config,
   pkgs,
-  ... 
-}: 
+  ...
+}:
 {
   imports = [
     ./programs.nix
@@ -76,7 +76,7 @@
     programs.hyprland = {
       enable = true;
       xwayland.enable = true;
-    }; 
+    };
 
     systemd = {
       user.services.polkit-gnome-authentication-agent-1 = {
@@ -145,9 +145,9 @@
       ++ (if config.programs.blender.enable then [ blender-hip ] else [])
       ++ (if config.programs.gimp.enable then [ gimp ] else [])
       ++ (if config.programs.steam.enable then [ protonup ] else []) # proton ge installer
-      ++ (if config.programs.steam.enable then [ mangohud ] else []); 
+      ++ (if config.programs.steam.enable then [ mangohud ] else []);
     };
   };
-  
+
 
 }
