@@ -26,6 +26,7 @@ let mvln = pkgs.writeShellScriptBin "mvln" ''
     shift
   done
 '';
+in
 
 {
   imports = [
