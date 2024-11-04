@@ -2,7 +2,7 @@
 let whatsapp = pkgs.writeShellScriptBin "whatsapp"  ''
   #!/bin/sh
   chromium --new-window --app=https://web.whatsapp.com/
-''; 
+'';
 in
 {
   imports = [
@@ -10,6 +10,7 @@ in
     ./hyprland/hyprland.nix
     ./misc.nix
     ./pcmanfm/default.nix
+    ./style.nix
   ];
 
 

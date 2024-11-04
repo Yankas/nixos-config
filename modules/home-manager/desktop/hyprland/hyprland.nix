@@ -82,6 +82,7 @@ in
       default = [
         "${set-bg}/bin/set-bg ${config.home.wallpaper}"
         "${setup-audio-ws}/bin/setup-audio-ws"
+        "xrandr --output ${config.home.monitors.primary} --primary"
       ];
     };
   };
@@ -408,6 +409,11 @@ in
         "tile, class:($steam_game_class)"
         "workspace name:$ws_games, initialClass:($steam_game_class)"
         "monitor $m_right, initialClass:($steam_game_class)"
+        # MISC
+        "tile, initialClass:(^Slay the Spire$)"
+        "workspace name:$ws_games, initialClass:(^Slay the Spire$)"
+        "tile, initialClass:(^WizardOfLegend.x86_64$)"
+        "workspace name:$ws_games, initialClass:(^WizardOfLegend.x86_64$)"
       ] else [])
       ++ (if config.programs.torrent.enable then [
         "workspace special:qbittorrent silent, initialTitle:(^qBittorrent v.*$)"

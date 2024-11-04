@@ -17,7 +17,7 @@ let colors = {
       lines = 20;
       # width is in characters
       width = 50;
-      # Number of spaces a tab is expanded to 
+      # Number of spaces a tab is expanded to
       tabs = 4;
       exit-on-keyboard-focus-loss = yes;
     };
