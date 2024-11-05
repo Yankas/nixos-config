@@ -1,6 +1,6 @@
 { config, lib, pkgs, outputs, inputs, ... }:
 let update = pkgs.writeShellScriptBin "update" ''
-  #!/bin/sh
+  rm -rf $HOME/.config/gtk-3.0/bookmarks
   cd /etc/nixos
   git add .
   git commit -m.
