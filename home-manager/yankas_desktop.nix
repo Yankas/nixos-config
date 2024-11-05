@@ -27,6 +27,7 @@
       whipper
       tauon
       strawberry
+      body-utils
     ];
     wallpaper = "hgss.png";
   };
