@@ -31,12 +31,17 @@
 
     systemd.tmpfiles.settings = {
       "10-nixcfg-permissions" = {
-        "/etc/nixos/" = {
+        "/etc/nixos" = {
           Z = {
             mode = "0770";
             user = "root";
             group = "nixcfg";
           };
+          z = {
+            mode = "0775";
+            user = "root";
+            group = "nixcfg";
+          }
         };
         "/etc/nixos/**/" = {
           z = {
