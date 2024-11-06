@@ -22,9 +22,9 @@ let tv = pkgs.writeShellScriptBin "tv" ''
       echo "usage: use \"tv [on|off|toggle]\""
       exit 1
   fi
-  subcmd="$1"};
+  subcmd="$1"
 
-    home.packages = ["toggle" ]; then
+  if [ subcmd = "toggle" ]; then
     hyprctl monitors | grep $out && subcmd="on" || subcmd="off"
   fi
 
