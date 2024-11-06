@@ -112,7 +112,7 @@ in
       reboot = "sudo reboot";
       poweroff = "sudo poweroff";
       shutdown = "sudo shutdown";
-      nixcfg = "nix-shell ./dotnet.nix --run 'nohup /etc/nixos/nixos.code-workspace &'"
+      nixcfg = "nix-shell ./dotnet.nix --run 'nohup /etc/nixos/nixos.code-workspace &'";
     };
 
     home.packages = [
