@@ -41,10 +41,7 @@ let tv = pkgs.writeShellScriptBin "tv" ''
   fi
 '';
 in
-let screenshot = pkgs.writeShellScriptBin "screenshot" ''
-  ${pkgs.grim}/bin/grim -o "$(hyprctl monitors -j | jq -r '.[] | select(.focused)| .name')" - | ${pkgs.satty}/bin/satty --filename - --fullscreen --initial-tool crop
-'';
-in
+
 {
   imports = [
     ./waybar.nix
