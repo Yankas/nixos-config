@@ -24,6 +24,12 @@
       options = [ "x-systemd.automount" "noauto" ];
     };
 
+    fileSystems."/bak" = {
+      device = "${msrv.host}:/srv/backup";
+      fsType = "nfs";
+      options = [ "x-systemd.automount" "noauto" ];
+    };
+
     fileSystems."/vid" = {
       device = "${msrv.host}:/srv/video";
       fsType = "nfs";
