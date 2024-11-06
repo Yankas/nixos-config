@@ -90,7 +90,7 @@ in
       };
     };
 
-    home.homeDirectory = "/home/${config.home.user}";
+    home.homeDirectory = "/home/${config.home.username}";
 
     home.aliases = {
       ll = "ls -l";
