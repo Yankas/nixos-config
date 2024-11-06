@@ -22,7 +22,7 @@ let tv = pkgs.writeShellScriptBin "tv" ''
       echo "usage: use \"tv [on|off|toggle]\""
       exit 1
   fi
-  subcmd="$    };
+  subcmd="$1"};
 
     home.packages = ["toggle" ]; then
     hyprctl monitors | grep $out && subcmd="on" || subcmd="off"
@@ -39,7 +39,6 @@ let tv = pkgs.writeShellScriptBin "tv" ''
     hyprctl keyword 'monitor '"$out"', disable'
     hyprctl keyword workspace 🎮, desc:games, monitor:$primary
   fi
-  "
 '';
 in
 let screenshot = pkgs.writeShellScriptBin "screenshot" ''
