@@ -41,7 +41,7 @@
             mode = "0775";
             user = "root";
             group = "nixcfg";
-          }
+          };
         };
         "/etc/nixos/**/" = {
           z = {
