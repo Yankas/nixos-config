@@ -44,7 +44,7 @@
             user = "root";
             group = "nixcfg";
           };
-        }
+        };
       };
     };
 
