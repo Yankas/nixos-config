@@ -33,7 +33,7 @@
       "10-nixcfg-permissions" = {
         "/etc/nixos" = {
           Z = {
-            mode = "0664";
+            mode = "04";
             user = "root";
             group = "nixcfg";
           };
@@ -44,7 +44,7 @@
           };
         };
         "/etc/nixos/**/" = {
-          z = {
+          Z = {
             mode = "0775";
             user = "root";
             group = "nixcfg";
