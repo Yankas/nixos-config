@@ -29,7 +29,7 @@
 
     users.groups.nixcfg.gid = 1500;
 
-    sytemd.tmpfiles.settings = {
+    systemd.tmpfiles.settings = {
       "10-nixcfg-permissions" = {
         "/etc/nixos/" = {
           Z = {
