@@ -7,7 +7,7 @@
 {
   options = {
     msrv.host = {
-      type = with lib.type; str;
+      type = with lib.types; str;
       default = "192.168.1.2";
     };
     msrv.mount.documents = lib.mkEnableOption "mounts msrv:/srv/documents to /doc";
@@ -19,31 +19,31 @@
 
   config = with config; {
     fileSystems."/doc" = {
-      device = "${msrv.host}:/srv/docs";
+      device = "${config.msrv.host}:/srv/docs";
       fsType = "nfs";
       options = [ "x-systemd.automount" "noauto" ];
     };
 
     fileSystems."/vid" = {
-      device = "${msrv.host}:/srv/video";
+      device = "${config.msrv.host}:/srv/video";
       fsType = "nfs";
       options = [ "x-systemd.automount" "noauto" ];
     };
 
     fileSystems."/iso" = {
-      device = "${msrv.host}:/srv/iso";
+      device = "${config.msrv.host}:/srv/iso";
       fsType = "nfs";
       options = [ "x-systemd.automount" "noauto" ];
     };
 
     fileSystems."/mus" = {
-      device = "${msrv.host}:/srv/music";
+      device = "${config.msrv.host}:/srv/music";
       fsType = "nfs";
       options = [ "x-systemd.automount" "noauto" ];
     };
 
     fileSystems."/pic" = {
-      device = "${msrv.host}:/srv/photo";
+      device = "${config.msrv.host}:/srv/photo";
       fsType = "nfs";
       options = [ "x-systemd.automount" "noauto" ];
     };
