@@ -43,7 +43,7 @@
             mode = "0774";
             user = "root";
             group = "nixcfg";
-          }
+          };
         }
       };
     };
