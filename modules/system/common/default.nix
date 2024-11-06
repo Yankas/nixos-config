@@ -39,7 +39,7 @@
           };
         };
       };
-}
+    };
 
     networking.networkmanager.enable = true;
 
