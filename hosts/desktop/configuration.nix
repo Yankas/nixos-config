@@ -43,7 +43,7 @@
     home = "/home/yankas";
     description = "Yankas";
     initialPassword = "123456";
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [ "wheel" "networkmanager" "nixcfg" ];
     uid=1000;
     shell = pkgs.fish;
 	};
@@ -53,7 +53,7 @@
     home = "/home/guest";
     description = "Guest";
     initialPassword = "123456";
-    extraGroups = [ "networkmanager" "nixcfg" ];
+    extraGroups = [ "networkmanager" ];
     uid=1999;
     shell = pkgs.fish;
 	};
