@@ -38,6 +38,13 @@
             group = "nixcfg";
           };
         };
+        "/etc/nixos/**" = {
+          Z = {
+            mode = "0774";
+            user = "root";
+            group = "nixcfg";
+          }
+        }
       };
     };
 
