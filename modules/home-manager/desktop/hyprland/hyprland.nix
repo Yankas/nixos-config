@@ -22,9 +22,9 @@ let tv = pkgs.writeShellScriptBin "tv" ''
       echo "usage: use \"tv [on|off|toggle]\""
       exit 1
   fi
-  subcmd="$1"
+  subcmd="$    };
 
-  if [ subcmd = "toggle" ]; then
+    home.packages = ["toggle" ]; then
     hyprctl monitors | grep $out && subcmd="on" || subcmd="off"
   fi
 
@@ -43,7 +43,8 @@ let tv = pkgs.writeShellScriptBin "tv" ''
 in
 let screenshot = pkgs.writeShellScriptBin "screenshot" ''
   ${pkgs.grim}/bin/grim -o "$(hyprctl monitors -j | jq -r '.[] | select(.focused)| .name')" - | ${pkgs.satty}/bin/satty --filename - --fullscreen --initial-tool crop
-''
+'';
+in
 {
   imports = [
     ./waybar.nix
