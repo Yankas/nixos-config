@@ -7,7 +7,7 @@
 {
   options = {
     msrv.host = {
-      type = with lib.types; str;
+      type = with lib.type; str;
       default = "192.168.1.2";
     };
     msrv.mount.documents = lib.mkEnableOption "mounts msrv:/srv/documents to /doc";
