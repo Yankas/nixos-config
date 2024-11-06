@@ -39,6 +39,7 @@ let tv = pkgs.writeShellScriptBin "tv" ''
     hyprctl keyword 'monitor '"$out"', disable'
     hyprctl keyword workspace 🎮, desc:games, monitor:$primary
   fi
+  "
 '';
 in
 let screenshot = pkgs.writeShellScriptBin "screenshot" ''
