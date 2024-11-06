@@ -6,7 +6,7 @@
 }:
 {
   options = {
-    msrv.host = mkOption {
+    msrv.host = lib.mkOption {
       type = with lib.types; str;
       default = "192.168.1.2";
     };
