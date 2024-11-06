@@ -1,5 +1,5 @@
 { config, lib, pkgs, outputs, inputs, ... }:
-let update = pkgs.writeShellScriptBin "update" ''taua
+let update = pkgs.writeShellScriptBin "update" ''
   rm -rf $HOME/.config/gtk-3.0/bookmarks
   cd /etc/nixos
   git add .
