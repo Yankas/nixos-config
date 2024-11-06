@@ -90,10 +90,6 @@ in
         package = pkgs.qogir-icon-theme;
         name = "Qogir-ubuntu-dark";
       };
-
-      gtk3.bookmarks = [
-        "file:///home/yankas/download Downloads"
-      ];
     };
 
     home.packages = with pkgs;

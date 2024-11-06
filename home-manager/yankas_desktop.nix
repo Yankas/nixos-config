@@ -15,7 +15,6 @@
 
   home = {
     username = "yankas";
-    homeDirectory = "/home/yankas";
     isSudoer = true;
     enableNixpkgsReleaseCheck = false;
     stateVersion = "24.05";
@@ -88,8 +87,10 @@
       "file:///home/${config.home.username}/source Source"
       "file:///doc/ Documents"
       "file:///pic/ Pictures"
-      "file:///iso/ Iso"
       "file:///mus/ Music"
+      "file:///vid/ Video"
+      "file:///home/yankas/download Downloads"
+      "file:///iso/ Iso"
   ];
 
   programs.git = {

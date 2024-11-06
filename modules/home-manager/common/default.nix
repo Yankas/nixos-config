@@ -90,6 +90,8 @@ in
       };
     };
 
+    home.homeDirectory = "/home/${home.user}"
+
     home.aliases = {
       ll = "ls -l";
       cp = "cp -iv";
