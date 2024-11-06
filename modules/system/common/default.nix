@@ -56,7 +56,7 @@
       jq
       tre # improved tree
       rename
-      #nodePackages.insect
+
       # ARCHIVE
       atool
       unzip
@@ -86,7 +86,7 @@
     programs.mtr.enable = true; # diagnostic tool combines ping + traceroute
 
     networking.defaultGateway = lib.mkDefault  "192.168.1.1";
-    networking.nameservers = lib.mkDefault  [ "8.8.8.8" ];
+    networking.nameservers = lib.mkDefault  [ "8.8.8.8" "8.8.4.4" ];
     # Select internationalisation properties.
     # i18n.defaultLocale = "en_US.UTF-8";
     # console = {
