@@ -1,5 +1,5 @@
 { config, lib, pkgs, outputs, inputs, ... }:
-let update = pkgs.writeShellScriptBin "update" ''
+let update = pkgs.writeShellScriptBin "update" ''taua
   rm -rf $HOME/.config/gtk-3.0/bookmarks
   cd /etc/nixos
   git add .
@@ -27,7 +27,6 @@ let mvln = pkgs.writeShellScriptBin "mvln" ''
   done
 '';
 in
-
 {
   imports = [
       ./lf.nix
@@ -113,6 +112,7 @@ in
       reboot = "sudo reboot";
       poweroff = "sudo poweroff";
       shutdown = "sudo shutdown";
+      nixcfg = "nix-shell ./dotnet.nix --run 'nohup /etc/nixos/nixos.code-workspace &'"
     };
 
     home.packages = [

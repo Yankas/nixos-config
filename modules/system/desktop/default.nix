@@ -137,8 +137,6 @@
 
         nixd
         alejandra
-        satty
-        grim
         easyeffects
         kanshi # dynamic monitor configuration
       ]

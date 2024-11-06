@@ -41,6 +41,9 @@ let tv = pkgs.writeShellScriptBin "tv" ''
   fi
 '';
 in
+let screenshot = pkgs.writeShellScriptBin "screenshot" ''
+  ${pkgs.grim}/bin/grim -o "$(hyprctl monitors -j | jq -r '.[] | select(.focused)| .name')" - | ${pkgs.satty}/bin/satty --filename - --fullscreen --initial-tool crop
+''
 {
   imports = [
     ./waybar.nix
@@ -89,6 +92,8 @@ in
   config = lib.mkIf config.hyprland.enable {
     home.packages = with pkgs; [
       tv
+      pavucontrol
+      easyeffects
     ];
     wayland.windowManager.hyprland.systemd.variables = ["--all"];
     wayland.windowManager.hyprland.enable = true;
@@ -279,7 +284,7 @@ in
         "$mod CTRL, T, movetoworkspacesilent, special:teamspeak"
 
         # SCREENSHOTS
-        ''$mod SHIFT, S, exec, ${pkgs.grim}/bin/grim -o "$(hyprctl monitors -j | jq -r '.[] | select(.focused)| .name')" - | ${pkgs.satty}/bin/satty --filename - --fullscreen --initial-tool crop''
+        ''$mod SHIFT, S, exec, ${screenshot}/bin/screenshot''
 
         # AUDIO WORKSPACE
         "$mod, A, togglespecialworkspace, audio"

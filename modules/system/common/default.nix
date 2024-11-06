@@ -26,6 +26,21 @@
       nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
     };
 
+
+    users.groups.nixcfg.gid = 1500;
+
+    sytemd.tmpfiles.settings = {
+      "10-nixcfg-permissions" = {
+        "/etc/nixos/" = {
+          Z = {
+            mode = "0664";
+            user = "root";
+            group = "nixcfg";
+          };
+        };
+      };
+}
+
     networking.networkmanager.enable = true;
 
     time.timeZone = "Europe/Berlin";

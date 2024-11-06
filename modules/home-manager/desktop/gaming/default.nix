@@ -24,7 +24,7 @@ in
   config =  {
 
     #home.file = {
-    #}  
+    #}
 
     home.packages = with pkgs;
     (if config.games.minecraft.enable then [ prismlauncher ] else [])

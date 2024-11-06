@@ -53,7 +53,7 @@
     home = "/home/guest";
     description = "Guest";
     initialPassword = "123456";
-    extraGroups = [ "networkmanager" ];
+    extraGroups = [ "networkmanager" "nixcfg" ];
     uid=1999;
     shell = pkgs.fish;
 	};
