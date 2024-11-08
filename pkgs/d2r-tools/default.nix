@@ -1,7 +1,7 @@
 { lib, fetchzip, fetchurl, pkgs }:
 fetchzip {
   name = "d2r-tools";
-  hash = "sha256-ofi5lJfJGL4/R/gYD0SQxczU3PCFFE5L9Nec1E4KXuE=";
+  hash = "sha256-kpk8uyPj+dguoHWZKNPdzmGG8AM1RZtbht9KA/E3Umw=";
   url = "http://nix.yank.as/d2r-tools.tar.gz";
 
   nativeBuildInputs = [];
@@ -9,11 +9,12 @@ fetchzip {
   downloadToTemp = true;
   stripRoot = false;
   postFetch = ''
-    mkdir -p $out/share/d2rtools
+
     echo "LBBUBERFWEFWE"
     ls -als $out
     pwd
     echo "Ddqwedfqwd"
+    mkdir -p $out/share/d2rtools
     #tar -xzvf d2r-tools.tar.gz  -C $out/share/d2rtools
     mv $out/*.exe $out/share/d2rtools/*
   '';
