@@ -24,7 +24,6 @@
     };
     packages = with pkgs; [
       whipper
-      tauon
       strawberry
       body-utils
     ];
