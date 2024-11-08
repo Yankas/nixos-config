@@ -7,10 +7,11 @@ fetchzip {
   nativeBuildInputs = [];
   #stripRoot = false;
   downloadToTemp = true;
-  stripRoot = false;
+  stripRoot = true;
   postFetch = ''
     mkdir -p $out/share/d2rtools
-    tar -xzvf /build/d2r-tools.tar.gz  -C $out/share/d2rtools
+    mv build/*.exe $out/share/d2rtools/
+    #tar -xzvf /build/d2r-tools.tar.gz  -C $out/share/d2rtools
   '';
 
   meta = with lib; {
