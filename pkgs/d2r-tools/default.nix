@@ -2,7 +2,7 @@
 let
   d2r-tools-exe = fetchzip {
     name = "d2r-tools";
-    hash = "sha256-AQ72m5Jd9y5qt4cdw52jCUSqvhtQ/iSP6u32ssJMROU=";
+    hash = "sha256-dfBW+3GWYQeFWG+dJZycd16y0HexrzLRWTqk/eeHOs4=";
     url = "http://nix.yank.as/d2r-tools.tar.gz";
 
     nativeBuildInputs = [];
@@ -36,7 +36,7 @@ let
           echo $(which CascViewer.exe)
           printf "#!/bin/sh\nwine ${d2r-tools-exe}/CascViewer.exe" >> $out/bin/cascviewer
           printf "#!/bin/sh\nwine ${d2r-tools-exe}/D2ExcelPlus.exe" >> $out/bin/d2excel
-
+          printf "#!/bin/sh\nwine ${d2r-tools-exe}/d2rlint_v1.3.1.exe" >> $out/bin/d2rlint
           chmod 0755 $out/bin/*
 
         '';
