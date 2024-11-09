@@ -54,7 +54,7 @@
       switch.enable = true;
       gba.enable = true;
       ds.enable = true;
-      #_3ds.enable = true;
+      _3ds.enable = true;
     };
   };
 
