@@ -140,7 +140,7 @@
         easyeffects
         kanshi # dynamic monitor configuration
       ]
-      ++ (if config.programs.blender.enable then [ blender-hip ] else [])
+      #++ (if config.programs.blender.enable then [ blender-hip ] else [])
       ++ (if config.programs.gimp.enable then [ gimp ] else [])
       ++ (if config.programs.steam.enable then [ protonup ] else []) # proton ge installer
       ++ (if config.programs.steam.enable then [ mangohud ] else []);
