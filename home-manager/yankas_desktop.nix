@@ -26,6 +26,7 @@
       whipper
       strawberry
       body-utils
+      d2r-tools
     ];
     wallpaper = "hgss.png";
   };
