@@ -2,7 +2,7 @@
 let
   d2r-tools-exe = fetchzip {
     name = "d2r-tools";
-    hash = "sha256-zki5VWAT6NxlZvonMvYmsUmzR4toIBzh6S6mOGXCzbY=";
+    hash = "";
     url = "http://nix.yank.as/d2r-tools.tar.gz";
 
     nativeBuildInputs = [];
