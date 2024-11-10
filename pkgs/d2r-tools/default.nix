@@ -32,7 +32,7 @@ let
         desktopName = "CascViewer";
         comment = "Tool to view Casc Files for various Blizzard games";
         genericName = "Archive Viewer";
-        categories = [ "Game" ];
+        categories = [ "Development" ];
         exec = "cascviewer";
       })
       (makeDesktopItem {
@@ -40,7 +40,7 @@ let
         desktopName = "AFJ Sheet Editor";
         comment = "Tool to edit Diablo II spreadsheets";
         genericName = "Spreadsheet Editor";
-        categories = [ "Game" ];
+        categories = [ "Development" ];
         exec = "afjsheet";
       })
   ];
