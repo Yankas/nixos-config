@@ -24,48 +24,47 @@ let
 
 
   d2r-tools = stdenv.mkDerivation rec {
-      desktopItems = [
-        (makeDesktopItem {
-          name = "cascviewer";
-          desktopName = "CascViewer";
-          comment = "Tool to view Casc Files for various Blizzard games";
-          genericName = "Archive Viewer";
-          categories = [ "Game" ];
-          exec = "cascviewer";
-        })
-        (makeDesktopItem {
-          name = "d2excel";
-          desktopName = "D2Excel";
-          comment = "Tool to edit Diablo II spreadsheets";
-          genericName = "Spreadsheet Editor";
-          categories = [ "Game" ];
-          exec = "cascviewer";
-        })
-      ];
+    name = "d2r-tools";
 
+    nativeBuildInputs = [
+      copyDesktopItems
+    ];
+    buildInputs = [
+      d2r-tools-exe
 
+    ];
 
-      name = "d2r-tools";
-        nativeBuildInputs = [
-          copyDesktopItems
-        ];
-        buildInputs = [
-          d2r-tools-exe
+    desktopItems = [
+      (makeDesktopItem {
+        name = "cascviewer";
+        desktopName = "CascViewer";
+        comment = "Tool to view Casc Files for various Blizzard games";
+        genericName = "Archive Viewer";
+        categories = [ "Game" ];
+        exec = "cascviewer";
+      })
+      (makeDesktopItem {
+        name = "d2excel";
+        desktopName = "D2Excel";
+        comment = "Tool to edit Diablo II spreadsheets";
+        genericName = "Spreadsheet Editor";
+        categories = [ "Game" ];
+        exec = "cascviewer";
+      })
+  ];
 
-        ];
+  unpackPhase = "true";
 
-        unpackPhase = "true";
+  installPhase = ''
+    mkdir -p $out/bin
+    printf "#!/bin/sh\nwine ${d2r-tools-exe}/CascViewer.exe" >> $out/bin/cascviewer
+    printf "#!/bin/sh\nwine ${d2r-tools-exe}/D2ExcelPlus.exe" >> $out/bin/d2excel
+    printf "#!/bin/sh\nwine ${d2r-tools-exe}/d2rlint.exe" >> $out/bin/d2rlint
+    chmod 0755 $out/bin/*
+  '';
 
-        installPhase = ''
-          mkdir -p $out/bin
-          printf "#!/bin/sh\nwine ${d2r-tools-exe}/CascViewer.exe" >> $out/bin/cascviewer
-          printf "#!/bin/sh\nwine ${d2r-tools-exe}/D2ExcelPlus.exe" >> $out/bin/d2excel
-          printf "#!/bin/sh\nwine ${d2r-tools-exe}/d2rlint.exe" >> $out/bin/d2rlint
-          chmod 0755 $out/bin/*
-
-        '';
-      description = "Tools for modding Diablo II Ressurected, including CascViewer and D2EXcel";
-      #license = lib.licenses.unfree;
-      #platforms = platforms.all;
+  description = "Tools for modding Diablo II Ressurected, including CascViewer and D2EXcel";
+  #license = lib.licenses.unfree;
+  #platforms = platforms.all;
   }; in
 d2r-tools
