@@ -12,16 +12,7 @@ let
     postFetch = ''
       chmod -R 755 $out/*
     '';
-
-    meta = with lib; {
-      description = "Tools for modding Diablo II Ressurected, including CascViewer and D2EXcel";
-      #license = lib.licenses.unfree;
-      platforms = platforms.all;
-    };
   };
-
-
-
 
   d2r-tools = stdenv.mkDerivation rec {
     name = "d2r-tools";
@@ -61,6 +52,8 @@ let
     printf "#!/bin/sh\nwine ${d2r-tools-exe}/D2ExcelPlus.exe" >> $out/bin/d2excel
     printf "#!/bin/sh\nwine ${d2r-tools-exe}/d2rlint.exe" >> $out/bin/d2rlint
     chmod 0755 $out/bin/*
+
+    runHook postInstall
   '';
 
   description = "Tools for modding Diablo II Ressurected, including CascViewer and D2EXcel";
