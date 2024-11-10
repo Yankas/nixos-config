@@ -18,13 +18,14 @@ let
     name = "d2r-tools";
 
     nativeBuildInputs = [
+      # copyDesktopItems is run in postInstall hook make sure to call
+      # it from installPhase with "runHook postInstall"
       copyDesktopItems
     ];
     buildInputs = [
       d2r-tools-exe
 
     ];
-
     desktopItems = [
       (makeDesktopItem {
         name = "cascviewer";
@@ -35,12 +36,12 @@ let
         exec = "cascviewer";
       })
       (makeDesktopItem {
-        name = "d2excel";
-        desktopName = "D2Excel";
+        name = "afjsheetedit";
+        desktopName = "AFJ Sheet Editor";
         comment = "Tool to edit Diablo II spreadsheets";
         genericName = "Spreadsheet Editor";
         categories = [ "Game" ];
-        exec = "cascviewer";
+        exec = "afjsheet";
       })
   ];
 
@@ -49,14 +50,14 @@ let
   installPhase = ''
     mkdir -p $out/bin
     printf "#!/bin/sh\nwine ${d2r-tools-exe}/CascViewer.exe" >> $out/bin/cascviewer
-    printf "#!/bin/sh\nwine ${d2r-tools-exe}/D2ExcelPlus.exe" >> $out/bin/d2excel
+    printf "#!/bin/sh\nwine ${d2r-tools-exe}/afjsheet.exe" >> $out/bin/afjsheet
     printf "#!/bin/sh\nwine ${d2r-tools-exe}/d2rlint.exe" >> $out/bin/d2rlint
     chmod 0755 $out/bin/*
 
     runHook postInstall
   '';
 
-  description = "Tools for modding Diablo II Ressurected, including CascViewer and D2EXcel";
+  description = "Tools for modding Diablo II Ressurected, including CascViewer and AFJ SHeeteditor and d2rlint";
   #license = lib.licenses.unfree;
   #platforms = platforms.all;
   }; in
