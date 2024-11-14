@@ -50,9 +50,9 @@ let
 
   installPhase = ''
     mkdir -p $out/bin
-    printf "#!/bin/sh\nwine ${d2r-tools-exe}/CascViewer.exe \"$@\"" >> $out/bin/cascviewer
-    printf "#!/bin/sh\nwine ${d2r-tools-exe}/afjsheet.exe \"$@\"" >> $out/bin/afjsheet
-    printf "#!/bin/sh\nwine ${d2r-tools-exe}/d2rlint.exe \"$@\"" >> $out/bin/d2rlint
+    printf "#!/bin/sh\nwine ${d2r-tools-exe}/CascViewer.exe \"\$@\"" >> $out/bin/cascviewer
+    printf "#!/bin/sh\nwine ${d2r-tools-exe}/afjsheet.exe \"\$@\"" >> $out/bin/afjsheet
+    printf "#!/bin/sh\nwine ${d2r-tools-exe}/d2rlint.exe \"\$@\"" >> $out/bin/d2rlint
     chmod 0755 $out/bin/*
 
     runHook postInstall
