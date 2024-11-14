@@ -42,6 +42,7 @@ let
         genericName = "Spreadsheet Editor";
         categories = [ "Development" ];
         exec = "afjsheet";
+        mimeTypes = [ "text/plain" ];
       })
   ];
 
