@@ -57,6 +57,8 @@
       tre # improved tree
       rename
 
+      file
+
       # ARCHIVE
       atool
       unzip
