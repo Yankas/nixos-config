@@ -41,7 +41,7 @@ let
         comment = "Tool to edit Diablo II spreadsheets";
         genericName = "Spreadsheet Editor";
         categories = [ "Development" ];
-        exec = "afjsheet";
+        exec = "afjsheet %F";
         mimeTypes = [ "text/plain" ];
       })
   ];
