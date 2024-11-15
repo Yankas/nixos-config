@@ -58,6 +58,8 @@
       rename
 
       file
+      wpsoffice
+
 
       # ARCHIVE
       atool
