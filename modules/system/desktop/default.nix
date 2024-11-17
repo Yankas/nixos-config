@@ -67,6 +67,9 @@
       vistafonts
       fighting-spirit
       die-in-a-fire
+      wpsoffice
+      bottles
+
     ];
 
     fonts.fontconfig.defaultFonts = {

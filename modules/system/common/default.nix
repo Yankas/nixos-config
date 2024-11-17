@@ -58,9 +58,6 @@
       rename
 
       file
-      wpsoffice
-      bottles
-
 
       # ARCHIVE
       atool

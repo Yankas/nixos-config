@@ -93,6 +93,8 @@
     virtualization.enable = true;
   };
 
+  virtualisation.waydroid.enable = true;
+
   programs.thunar.enable = true;
   programs.xfconf.enable = true;
   programs.thunar.plugins = with pkgs.xfce; [

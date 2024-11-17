@@ -27,6 +27,7 @@
       strawberry
       body-utils
       d2r-tools
+      bottles
     ];
     wallpaper = "hgss.png";
   };
