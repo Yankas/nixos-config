@@ -67,7 +67,6 @@
       vistafonts
       fighting-spirit
       die-in-a-fire
-      #wpsoffice
 
 
     ];
@@ -142,6 +141,7 @@
         alejandra
         easyeffects
         kanshi # dynamic monitor configuration
+        wpsoffice
       ]
       #TODO: reenable bender
       #++ (if config.programs.blender.enable then [ blender-hip ] else [])
