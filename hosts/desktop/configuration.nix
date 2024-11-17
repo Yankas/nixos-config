@@ -20,17 +20,6 @@
     ];
 
 
-  /* NUR SETUP */
-  packageOverrides = pkgs: {
-    nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
-      inherit pkgs;
-    };
-  };
-
-
-  /* NUR END */
-
-
   #sops.defaultSopsFile = ./secrets/secrets.yaml;
   #sops.defaultSopsFormat = "yaml";
   #sops.age.keyFile = "home/u";
@@ -135,7 +124,7 @@
     vscode
     wineWowPackages.stable
     yankas-wallpapers
-    nur.repos.ataraxiasjel.waydroid-script
+    config.nur.repos.ataraxiasjel.waydroid-script
   ];
 
   # Configure keymap in X11

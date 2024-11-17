@@ -19,6 +19,8 @@
     #inputs.sops-nix.url = "github:Mic92/sops-nix";
     #inputs.sops-nix.inputs.nixpkgs.follows = "nixpkgs";
 
+    # NUR
+    nur.url = github:nix-community/NUR;
     # Home manager
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -74,6 +76,7 @@
           # > Our main nixos configuration file <
           ./hosts/desktop/configuration.nix
           inputs.chaotic.nixosModules.default
+          nur.nixosModules.nur
         ];
       };
       server = nixpkgs.lib.nixosSystem {
