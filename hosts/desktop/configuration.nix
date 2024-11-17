@@ -19,6 +19,25 @@
       #outputs.systemModules.ddclient
     ];
 
+
+  /* NUR SETUP */
+  packageOverrides = pkgs: {
+    nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
+      inherit pkgs;
+    };
+  };
+
+  builtins.fetchTarball {
+    # Get the revision by choosing a version from https://github.com/nix-community/NUR/commits/master
+    url = "https://github.com/nix-community/NUR/archive/3a6a6f4da737da41e27922ce2cfacf68a109ebce.tar.gz";
+    # Get the hash by running `nix-prefetch-url --unpack <url>` on the above url
+    sha256 = "04387gzgl8y555b3lkz9aiw9xsldfg4zmzp930m62qw8zbrvrshd";
+  }
+
+
+  /* NUR END */
+
+
   #sops.defaultSopsFile = ./secrets/secrets.yaml;
   #sops.defaultSopsFormat = "yaml";
   #sops.age.keyFile = "home/u";
@@ -123,6 +142,7 @@
     vscode
     wineWowPackages.stable
     yankas-wallpapers
+    nur.repos.ataraxiasjel.waydroid-script
   ];
 
   # Configure keymap in X11
