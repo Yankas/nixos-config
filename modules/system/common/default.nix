@@ -59,6 +59,7 @@
 
       file
       wpsoffice
+      bottles
 
 
       # ARCHIVE
