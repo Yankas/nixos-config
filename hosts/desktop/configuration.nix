@@ -125,6 +125,7 @@
     wineWowPackages.stable
     yankas-wallpapers
     config.nur.repos.ataraxiasjel.waydroid-script
+    python3
   ];
 
   # Configure keymap in X11
