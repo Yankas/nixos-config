@@ -28,7 +28,7 @@
       body-utils
       d2r-tools
       bottles
-
+      solaar
     ];
     wallpaper = "hgss.png";
   };
