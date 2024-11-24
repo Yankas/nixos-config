@@ -142,6 +142,8 @@
         easyeffects
         kanshi # dynamic monitor configuration
         wpsoffice
+        wl-clipboard
+        wl-clipboard-x11
       ]
       #TODO: reenable bender
       #++ (if config.programs.blender.enable then [ blender-hip ] else [])
