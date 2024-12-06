@@ -64,7 +64,7 @@
 
 
   hyprland.enable = true;
-  hyprland.disableHardwareCursor = true;
+  hyprland.disableHardwareCursor = false;
   hyprland.autostart.onStart = [
       #"/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
       #"waybar"
