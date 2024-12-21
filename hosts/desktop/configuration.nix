@@ -124,7 +124,7 @@
     vscode
     wineWowPackages.stable
     yankas-wallpapers
-    config.nur.repos.ataraxiasjel.waydroid-script
+    nur.repos.ataraxiasjel.waydroid-script
     python3
   ];
 
