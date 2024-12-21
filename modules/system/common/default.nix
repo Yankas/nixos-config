@@ -8,6 +8,7 @@
     nixpkgs = {
       overlays = [ outputs.overlays.additions ];
       config.allowUnfree = true;
+      config.permittedInsecurePackages = true;
     };
 
     nix = let
