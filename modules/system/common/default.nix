@@ -8,7 +8,12 @@
     nixpkgs = {
       overlays = [ outputs.overlays.additions ];
       config.allowUnfree = true;
-      config.permittedInsecurePackages = true;
+      config.permittedInsecurePackages = [
+        "dotnet-sdk-6.0.428"
+        "dotnet-runtime-6.0.36"
+        "dotnet-sdk-7.0.410"
+
+        ];
     };
 
     nix = let
