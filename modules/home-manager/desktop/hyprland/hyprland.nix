@@ -42,7 +42,7 @@ let tv = pkgs.writeShellScriptBin "tv" ''
 '';
 in
 let screenshot = pkgs.writeShellScriptBin "screenshot" ''
-  ${pkgs.grim}/bin/grim -o "$(hyprctl monitors -j | jq -r '.[] | select(.focused)| .name')" - | ${pkgs.satty}/bin/satty --filename - --fullscreen --output-filename /pic/out/$(date '+%Y%m%d-%H:%M:%S').png --initial-tool crop
+  ${pkgs.grim}/bin/grim -o "$(hyprctl monitors -j | jq -r '.[] | select(.focused)| .name')" - | ${pkgs.satty}/bin/satty --filame - --fullscreen --output-filename /pic/out/$(date '+%Y%m%d-%H:%M:%S').png --initial-tool crop
 '';
 in
 {
@@ -166,10 +166,11 @@ in
             vibrancy = 0.1696;
             special = false;
           };
-        drop_shadow = true;
-        shadow_range = 4;
-        shadow_render_power = 3;
-        "col.shadow" = "rgba(1a1a1aee)";
+        # TODO: REMOVED IN UPDATE / REPLACE
+        #drop_shadow = true;
+        #shadow_range = 4;
+        #shadow_render_power = 3;
+        #"col.shadow" = "rgba(1a1a1aee)";
       };
 
       render = {
