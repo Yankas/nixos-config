@@ -4,10 +4,6 @@
     ./msrv-integration.nix
   ];
 
-	nixpkgs.config.permittedInsecurePackages = [
-                "archiver-3.5.1"
-              ];
-
 
   config = {
     nixpkgs = {
@@ -20,6 +16,10 @@
 
         ];
     };
+
+    nixpkgs.config.permittedInsecurePackages = [
+       "archiver-3.5.1"
+    ];
 
     nix = let
       flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
