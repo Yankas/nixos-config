@@ -4,6 +4,11 @@
     ./msrv-integration.nix
   ];
 
+	nixpkgs.config.permittedInsecurePackages = [
+                "archiver-3.5.1"
+              ];
+
+
   config = {
     nixpkgs = {
       overlays = [ outputs.overlays.additions ];
