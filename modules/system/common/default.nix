@@ -13,13 +13,11 @@
         "dotnet-sdk-6.0.428"
         "dotnet-runtime-6.0.36"
         "dotnet-sdk-7.0.410"
+	"archiver-3.5.1"
 
         ];
     };
 
-    nixpkgs.config.permittedInsecurePackages = [
-       "archiver-3.5.1"
-    ];
 
     nix = let
       flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;

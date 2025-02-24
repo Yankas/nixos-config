@@ -42,7 +42,7 @@ let tv = pkgs.writeShellScriptBin "tv" ''
 '';
 in
 let screenshot = pkgs.writeShellScriptBin "screenshot" ''
-  ${pkgs.grim}/bin/grim -o "$(hyprctl monitors -j | jq -r '.[] | select(.focused)| .name')" - | ${pkgs.satty}/bin/satty --filame - --fullscreen --output-filename /pic/out/$(date '+%Y%m%d-%H:%M:%S').png --initial-tool crop
+  ${pkgs.grim}/bin/grim -o "$(hyprctl monitors -j | jq -r '.[] | select(.focused)| .name')" - | ${pkgs.satty}/bin/satty --filename - --fullscreen --output-filename /pic/out/$(date '+%Y%m%d-%H:%M:%S').png --initial-tool crop
 '';
 in
 {
