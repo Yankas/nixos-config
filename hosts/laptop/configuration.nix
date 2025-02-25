@@ -123,8 +123,8 @@
     teamspeak5_client
     vscode
     wineWowPackages.stable
-    yankas-wallpapers
-    nur.repos.ataraxiasjel.waydroid-script
+   # yankas-wallpapers
+   # nur.repos.ataraxiasjel.waydroid-script
     python3
   ];
 
