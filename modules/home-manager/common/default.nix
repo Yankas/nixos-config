@@ -37,6 +37,7 @@ in
        description = "list of shell aliases";
     };
     home.isSudoer = lib.mkEnableOption "is this user a sudoer";
+    hyprland.hasBattery = lib.mkEnableOption "support for battery";
     programs.steam.enable = lib.mkEnableOption "additional steam configuration";
     programs.minecraft.enable = lib.mkEnableOption "additional steam configuration";
   };
