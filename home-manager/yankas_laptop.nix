@@ -34,29 +34,28 @@
   };
 
   monitors = {
-    primary = "DP-2";
-    secondary = "DP-1";
+    primary = "LVDS-1";
     external = "HDMI-A-1";
   };
 
   programs = {
-    torrent.enable = true;
+    #torrent.enable = true;
     whatsappweb.enable = true;
     discord.enable = true;
     steam.enable = true;
   };
 
   games = {
-    saves.enable = true;
-    minecraft.enable = true;
-    thesims4-updater.enable = true;
-    ps3.enable = true;
-    psp.enable = true;
+    #saves.enable = true;
+    #minecraft.enable = true;
+    #thesims4-updater.enable = true;
+    #ps3.enable = true;
+    #psp.enable = true;
     nintendo = {
-      switch.enable = true;
+      #switch.enable = true;
       gba.enable = true;
       ds.enable = true;
-      _3ds.enable = true;
+      #_3ds.enable = true;
     };
   };
 
@@ -74,8 +73,7 @@
 
   wayland.windowManager.hyprland.settings = {
     monitor = [
-      "$m_left, 2560x1440@144, 0x0, 1, vrr, 2"
-      "$m_right, 2560x1440@144, 2560x0, 1, vrr, 2"
+      "$m_left, 1280x800@60, 0x0, 1"
     ];
   };
 
