@@ -130,7 +130,7 @@
         pragha
         wrapGAppsHook
 
-        chromium
+        (chromium.override { enableWideVine = true; })
         seahorse
         kitty
 
