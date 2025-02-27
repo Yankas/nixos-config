@@ -80,6 +80,13 @@
           nur.modules.nixos.default
         ];
       };
+      laptop = nixpkgs.lib.nixosSystem {
+	specialArgs = { inherit inputs outputs; };
+	modules = [
+	  ./hosts/laptop/configuration.nix
+	];
+
+	};
       server = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [

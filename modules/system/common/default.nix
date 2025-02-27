@@ -14,7 +14,10 @@
         "dotnet-runtime-6.0.36"
         "dotnet-sdk-7.0.410"
 	"archiver-3.5.1"
+<<<<<<< HEAD
 
+=======
+>>>>>>> refs/remotes/github/main
         ];
     };
 
