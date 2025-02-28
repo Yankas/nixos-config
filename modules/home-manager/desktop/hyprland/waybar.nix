@@ -6,7 +6,7 @@ let color = {
   text-highlight    = "#FF4221";
 }; in
 let font =  {
-    size         = "20px";
+    size  = "20px";
 };
 in
 {
@@ -15,7 +15,7 @@ in
     systemd.enable = true;
     style = ''
       * {
-        font-size: ${font.size};
+        font-size: ${waybar.fontsize};
         font-family: "Fighting Spirit turbo", sans-serif
       }
 
@@ -119,7 +119,7 @@ in
       }
 
       #clock, #custom-weather, #bluetooth  {
-        font-size: ${font.size};
+        font-size: ${waybar.fontsize};
         color: ${color.text-highlight};
       }
 
@@ -135,7 +135,7 @@ in
 
       tooltip label {
         font-family: Consolas, monospace;
-        font-size: 25px;
+        font-size: ${waybar.fontsize + 5};
       }
     '';
 
@@ -186,7 +186,6 @@ in
         "group/hardware"
       ]
       ++ (if config.laptopMode.enable then [
-          "battery"
           "custom/left-arrow-light"
           "custom/left-arrow-dark"
           "battery"
@@ -302,7 +301,7 @@ in
           warning = 30;
           critical = 15;
         };
-        format = "{icon} {capacity}%";
+        format = "PWR: {capacity}%";
         format-icons = [
           ""
           ""

@@ -74,6 +74,12 @@ in
       type = lib.types.str;
     };
 
+    waybar.fontsize = lib.mkOption {
+      default = 20;
+      type = lib.types.int;
+
+    }
+
     hyprland.autostart.onStart = lib.mkOption {
       type = with lib.types; listOf str;
       description = "list of commands to run when hyprland first initializes";
@@ -131,9 +137,6 @@ in
         special_fallthrough = true;
         mouse_refocus = false; # fixes steam menus disappearing
         sensitivity = 0; # -1.0 - 1.0, 0 means no modification.
-        touchpad = {
-          natural_scroll = false;
-        };
       };
 
       general = {
