@@ -140,7 +140,7 @@ in
     '';
 
     settings = [{
-      height = 30;
+      height = config.waybar.height;
       layer = "top";
       position = "top";
       tray = {

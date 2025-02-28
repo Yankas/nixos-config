@@ -79,6 +79,11 @@ in
       type = lib.types.int;
     };
 
+    waybar.height = lib.mkOption {
+      default = 30;
+      type = lib.types.int;
+    };
+
     hyprland.autostart.onStart = lib.mkOption {
       type = with lib.types; listOf str;
       description = "list of commands to run when hyprland first initializes";

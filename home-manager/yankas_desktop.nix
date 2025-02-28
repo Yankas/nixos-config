@@ -12,7 +12,6 @@
       outputs.homeManagerModules.desktop
       inputs.nix-colors.homeManagerModules.default
     ];
-  waybar.fontsize = 10;
   home = {
     username = "yankas";
     isSudoer = true;
@@ -32,6 +31,8 @@
     ];
     wallpaper = "hgss.png";
   };
+  waybar.fontsize = 14;
+  waybar.height = 20;
 
   monitors = {
     primary = "DP-2";

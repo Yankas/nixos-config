@@ -14,6 +14,9 @@
     ];
 
   laptopMode.enable = true;
+  waybar.fontsize = 14;
+  waybar.height = 20;
+
   home = {
     username = "yankas";
     isSudoer = true;
