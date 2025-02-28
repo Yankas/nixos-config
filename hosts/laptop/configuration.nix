@@ -27,6 +27,7 @@
   boot.supportedFilesystems = [ "ntfs" ];
 
   desktop.enable = true;
+  services.tlp.enable = true;
 
   networking = {
     hostName = "yankas-desktop";

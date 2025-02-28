@@ -184,6 +184,15 @@ in
         "custom/left-arrow-light"
         "custom/left-arrow-dark"
         "group/hardware"
+      ]
+      ++ (if config.laptopMode.enable then [
+          "battery"
+          "custom/left-arrow-light"
+          "custom/left-arrow-dark"
+          "battery"
+        ]
+        else [])
+      ++ [
         #"battery"
         #"custom/left-arrow-light"
         #"custom/left-arrow-dark"
