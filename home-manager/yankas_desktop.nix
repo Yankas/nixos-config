@@ -31,8 +31,6 @@
     ];
     wallpaper = "hgss.png";
   };
-  waybar.fontsize = 14;
-  waybar.height = 20;
 
   monitors = {
     primary = "DP-2";
@@ -62,8 +60,9 @@
   };
 
 
-
-  laptopMode.enable = true;
+  #waybar.fontsize = 14;
+  #waybar.height = 20;
+  #laptopMode.enable = true;
   hyprland.enable = true;
   hyprland.disableHardwareCursor = false;
   hyprland.autostart.onStart = [
