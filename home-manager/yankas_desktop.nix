@@ -12,7 +12,7 @@
       outputs.homeManagerModules.desktop
       inputs.nix-colors.homeManagerModules.default
     ];
-
+  waybar.fontsize.= 10
   home = {
     username = "yankas";
     isSudoer = true;
