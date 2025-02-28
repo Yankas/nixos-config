@@ -178,7 +178,7 @@ in
         direct_scanout = false;
       };
 
-      animations = lib.mkIf (config.laptopMode.enable == false) {
+      animations = (lib.mkIf (config.laptopMode.enable == false) {
         enabled = true;
         bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
         animation =
@@ -190,7 +190,7 @@ in
           "fade, 1, 7, default"
           "workspaces, 0"
         ];
-      };
+      });
 
       dwindle = {
         # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
@@ -372,21 +372,7 @@ in
         "workspace special:whatsapp silent, title:(web.whatsapp.com.*)"
         "float, title:(web.whatsapp.com.*)"
         "size 1400 1000, title:(web.whatsapp.com.*)"
-        "center, title:(web.whatsapp.com.*)"
-
-        "workspace special:teamspeak silent, class:(TeamSpeak), title:(TeamSpeak)"
-        "float, class:(TeamSpeak), title:(TeamSpeak)"
-        "size 1400 1000, class:(TeamSpeak), title:(TeamSpeak)"
-        "center, class:(TeamSpeak), title:(TeamSpeak)"
-
-        #THUNAR
-        "workspace m, initialClass:(^thunar$)"
-
-        # gamescope
-        "workspace name:$ws_games, class:(^gamescope$)"
-        "workspace name:$ws_games, class:(^gamescope$)"
-
-        # blueman
+        "center, title:(web.whatsapp.com.*)"lib,
         "float, initialClass:(^.blueman-manager-wrapped$)"
 
         #leagueoflegends #TODO: remove
