@@ -15,7 +15,7 @@ in
     systemd.enable = true;
     style = ''
       * {
-        font-size: ${waybar.fontsize};
+        font-size: ${config.waybar.fontsize};
         font-family: "Fighting Spirit turbo", sans-serif
       }
 
@@ -119,7 +119,7 @@ in
       }
 
       #clock, #custom-weather, #bluetooth  {
-        font-size: ${waybar.fontsize};
+        font-size: ${config.waybar.fontsize};
         color: ${color.text-highlight};
       }
 
@@ -135,7 +135,7 @@ in
 
       tooltip label {
         font-family: Consolas, monospace;
-        font-size: ${waybar.fontsize + 5};
+        font-size: ${config.waybar.fontsize + 5};
       }
     '';
 
