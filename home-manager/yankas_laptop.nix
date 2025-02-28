@@ -13,6 +13,7 @@
       inputs.nix-colors.homeManagerModules.default
     ];
 
+  laptopMode.enable = true;
   home = {
     username = "yankas";
     isSudoer = true;
