@@ -26,8 +26,6 @@
     packages = with pkgs; [
       whipper
       strawberry
-      body-utils
-      d2r-tools
       bottles
       solaar
     ];
@@ -47,21 +45,11 @@
   };
 
   games = {
-    #saves.enable = true;
-    #minecraft.enable = true;
-    #thesims4-updater.enable = true;
-    #ps3.enable = true;
-    #psp.enable = true;
     nintendo = {
-      #switch.enable = true;
       gba.enable = true;
       ds.enable = true;
-      #_3ds.enable = true;
     };
   };
-
-
-
 
   hyprland.enable = true;
   hyprland.disableHardwareCursor = false;
@@ -76,6 +64,13 @@
     monitor = [
       "$m_left, 1280x800@60, 0x0, 1"
     ];
+    inputs = {
+      touchpad = {
+        natural_scroll = true;
+        clickfinger_behavior = true;
+        tap-to-click = true;
+      };
+    };
   };
 
   gtk = {
