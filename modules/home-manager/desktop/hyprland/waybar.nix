@@ -193,10 +193,6 @@ in
         ]
         else [])
       ++ [
-        #"battery"
-        #"custom/left-arrow-light"
-        #"custom/left-arrow-dark"
-        #"battery"
         "custom/left-arrow-light"
         "custom/left-arrow-dark"
         "custom/weather"

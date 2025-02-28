@@ -62,7 +62,7 @@
 
 
 
-
+  laptopMode.enable = true;
   hyprland.enable = true;
   hyprland.disableHardwareCursor = false;
   hyprland.autostart.onStart = [
