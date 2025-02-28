@@ -64,7 +64,7 @@
     monitor = [
       "$m_left, 1280x800@60, 0x0, 1"
     ];
-    inputs = {
+    input = {
       touchpad = {
         natural_scroll = true;
         clickfinger_behavior = true;
