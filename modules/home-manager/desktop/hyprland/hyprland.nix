@@ -77,8 +77,7 @@ in
     waybar.fontsize = lib.mkOption {
       default = 20;
       type = lib.types.int;
-
-    }
+    };
 
     hyprland.autostart.onStart = lib.mkOption {
       type = with lib.types; listOf str;
