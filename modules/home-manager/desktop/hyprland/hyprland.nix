@@ -372,7 +372,7 @@ in
         "workspace special:whatsapp silent, title:(web.whatsapp.com.*)"
         "float, title:(web.whatsapp.com.*)"
         "size 1400 1000, title:(web.whatsapp.com.*)"
-        "center, title:(web.whatsapp.com.*)"lib,
+        "center, title:(web.whatsapp.com.*)"
         "float, initialClass:(^.blueman-manager-wrapped$)"
 
         #leagueoflegends #TODO: remove
