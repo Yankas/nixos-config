@@ -178,10 +178,10 @@ in
         direct_scanout = false;
       };
 
-      animations = (lib.mkIf (config.laptopMode.enable == false) {
-        enabled = true;
+      animations =  {
+        enabled = (config.laptopMode.enable == false);
         bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
-        animation =
+        animation = lib.mkIf (config.laptopMode.enable == false)
         [
           "windows, 1, 5, myBezier"
           "windowsOut, 1, 7, default, popin 80%"
@@ -190,7 +190,8 @@ in
           "fade, 1, 7, default"
           "workspaces, 0"
         ];
-      });
+      };
+
 
       dwindle = {
         # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
