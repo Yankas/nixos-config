@@ -120,6 +120,7 @@ in
 
     home.packages = [
       mvln
+      libnotify
       ]
       ++(if config.home.isSudoer then [ update ] else []);
 
