@@ -49,6 +49,7 @@ in
   imports = [
     ./waybar.nix
     ./fuzzel.nix
+    ./notifications.nix
   ];
 
   options = {
