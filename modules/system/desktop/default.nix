@@ -126,6 +126,7 @@
       systemPackages = with pkgs; [
         pcmanfm
         peazip
+        libnotify
 
         pragha
         wrapGAppsHook
