@@ -34,6 +34,7 @@
     nixpkgs,
     home-manager,
     nur,
+    clipboard-sync,
     ...
   } @ inputs: let
     inherit (self) outputs;
