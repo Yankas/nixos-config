@@ -35,7 +35,7 @@
     services = {
       gvfs.enable = true; # USB auto mounting
       xserver.enable = true;
-      clipboard-sync.enable = lib.mkDefaul true;
+      clipboard-sync.enable = lib.mkDefault true;
       printing.enable = lib.mkDefault true;
       preload.enable = lib.mkDefault true;
       displayManager = {
