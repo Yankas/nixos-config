@@ -15,6 +15,9 @@
     # CHAOTIC NIX
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
+    # Clipboard sync
+    clipboard-sync.url = "github:dnut/clipboard-sync";
+
     # SOPS SECRETS
     #inputs.sops-nix.url = "github:Mic92/sops-nix";
     #inputs.sops-nix.inputs.nixpkgs.follows = "nixpkgs";
@@ -76,6 +79,7 @@
         modules = [
           # > Our main nixos configuration file <
           ./hosts/desktop/configuration.nix
+          clipboard-sync.nixosModules.default
           inputs.chaotic.nixosModules.default
           nur.modules.nixos.default
         ];
@@ -83,6 +87,7 @@
       laptop = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs outputs; };
         modules = [
+          clipboard-sync.nixosModules.default
           ./hosts/laptop/configuration.nix
         ];
 	    };
