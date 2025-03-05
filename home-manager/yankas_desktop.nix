@@ -28,6 +28,7 @@
       d2r-tools
       bottles
       solaar
+      libreoffice
     ];
     wallpaper = "hgss.png";
   };
