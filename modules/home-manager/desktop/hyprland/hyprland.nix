@@ -85,6 +85,9 @@ in
       type = lib.types.int;
     };
 
+    programs.waybar.showBattery = lib.mkEnableOption "enable battery display.";
+    programs.waybar.showWifi = lib.mkEnableOption "show Wifi.";
+
     hyprland.autostart.onStart = lib.mkOption {
       type = with lib.types; listOf str;
       description = "list of commands to run when hyprland first initializes";
