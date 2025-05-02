@@ -85,10 +85,9 @@ in
       type = lib.types.int;
     };
 
-    desktop.nasBookmarks.enable = lib.mkEnableOption "enable GTK bookmarks for the NAS/File Server"
 
-    programs.waybar.showBattery = lib.mkEnableOption "enable battery display.";
-    programs.waybar.showWifi = lib.mkEnableOption "show Wifi.";
+    #programs.waybar.showBattery = lib.mkEnableOption "enable battery display.";
+    #programs.waybar.showWifi = lib.mkEnableOption "show Wifi.";
 
     hyprland.autostart.onStart = lib.mkOption {
       type = with lib.types; listOf str;
