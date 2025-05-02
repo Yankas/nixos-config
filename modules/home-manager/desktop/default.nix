@@ -19,6 +19,8 @@ in
       type = with types; str;
       default = "/etc/nixos/assets";
     };
+
+    desktop.nasBookmarks.enable = lib.mkEnableOption "enable GTK bookmarks for the NAS/File Server";
     laptopMode.enable = mkEnableOption "enables various laptop options";
     programs.torrent.enable = mkEnableOption "enables torrent client";
     programs.whatsappweb.enable = mkEnableOption "script to start whatsapp web in an application browser window";
@@ -90,6 +92,16 @@ in
         package = pkgs.qogir-icon-theme;
         name = "Qogir-ubuntu-dark";
       };
+
+      gtk3.bookmarks = lib.mkif desktop.nasBookmarks.enable [
+        "file:///home/${config.home.username}/source Source"
+        "file:///doc/ Documents"
+        "file:///pic/ Pictures"
+        "file:///mus/ Music"
+        "file:///vid/ Video"
+        "file:///home/yankas/download Downloads"
+        "file:///iso/ Iso"
+      ];
     };
 
     home.packages = with pkgs;

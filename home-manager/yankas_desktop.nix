@@ -11,16 +11,13 @@
       outputs.homeManagerModules.common
       outputs.homeManagerModules.desktop
       inputs.nix-colors.homeManagerModules.default
+      ./desktop_common.nix
     ];
+
   home = {
     username = "yankas";
     isSudoer = true;
-    enableNixpkgsReleaseCheck = false;
     stateVersion = "24.05";
-    file = {};
-    sessionVariables = {
-      BROWSER = "chromium";
-    };
     packages = with pkgs; [
       whipper
       strawberry
@@ -28,7 +25,6 @@
       d2r-tools
       bottles
       solaar
-      libreoffice
     ];
     wallpaper = "hgss.png";
   };
@@ -38,6 +34,7 @@
     secondary = "DP-1";
     external = "HDMI-A-1";
   };
+
 
   programs = {
     torrent.enable = true;
@@ -64,11 +61,7 @@
   #waybar.fontsize = 14;
   #waybar.height = 20;
   #laptopMode.enable = true;
-  hyprland.enable = true;
-  hyprland.disableHardwareCursor = false;
   hyprland.autostart.onStart = [
-      #"/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
-      #"waybar"
       "steam"
       "${pkgs.discord}/bin/discord"
   ];
@@ -87,15 +80,7 @@
     #};
   };
 
-  gtk.gtk3.bookmarks = [
-      "file:///home/${config.home.username}/source Source"
-      "file:///doc/ Documents"
-      "file:///pic/ Pictures"
-      "file:///mus/ Music"
-      "file:///vid/ Video"
-      "file:///home/yankas/download Downloads"
-      "file:///iso/ Iso"
-  ];
+  desktop.nasBookmarks.enable = true;
 
   programs.git = {
     userEmail = "christopher.sbrisny@gmail.com";

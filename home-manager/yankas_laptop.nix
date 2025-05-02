@@ -11,6 +11,7 @@
       outputs.homeManagerModules.common
       outputs.homeManagerModules.desktop
       inputs.nix-colors.homeManagerModules.default
+      ./desktop_common.nix
     ];
 
   laptopMode.enable = true;
@@ -20,12 +21,7 @@
   home = {
     username = "yankas";
     isSudoer = true;
-    enableNixpkgsReleaseCheck = false;
     stateVersion = "24.05";
-    file = {};
-    sessionVariables = {
-      BROWSER = "chromium";
-    };
     packages = with pkgs; [
       whipper
       strawberry
@@ -41,7 +37,6 @@
   };
 
   programs = {
-    #torrent.enable = true;
     whatsappweb.enable = true;
     discord.enable = true;
     steam.enable = true;
@@ -54,12 +49,7 @@
     };
   };
 
-  hyprland.enable = true;
-  hyprland.disableHardwareCursor = false;
   hyprland.autostart.onStart = [
-      #"/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
-      #"waybar"
-      "steam"
       "${pkgs.discord}/bin/discord"
   ];
 
@@ -76,22 +66,8 @@
     };
   };
 
-  gtk = {
-    #font = {
-    #  name = "Die in a fire PG";
-    #  size = 12;
-    #};
-  };
+  desktop.nasBookmarks.enable = true;
 
-  gtk.gtk3.bookmarks = [
-      "file:///home/${config.home.username}/source Source"
-      "file:///doc/ Documents"
-      "file:///pic/ Pictures"
-      "file:///mus/ Music"
-      "file:///vid/ Video"
-      "file:///home/yankas/download Downloads"
-      "file:///iso/ Iso"
-  ];
 
   programs.git = {
     userEmail = "christopher.sbrisny@gmail.com";
