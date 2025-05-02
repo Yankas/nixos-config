@@ -11,7 +11,7 @@
     packages = with pkgs; [
       libreoffice
 
-    ]
+    ];
   };
 
   hyprland.autostart.onStart = [
