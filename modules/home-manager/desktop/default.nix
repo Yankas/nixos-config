@@ -93,7 +93,7 @@ in
         name = "Qogir-ubuntu-dark";
       };
 
-      gtk3.bookmarks = lib.mkif desktop.nasBookmarks.enable [
+      gtk3.bookmarks = lib.mkif config.desktop.nasBookmarks.enable [
         "file:///home/${config.home.username}/source Source"
         "file:///doc/ Documents"
         "file:///pic/ Pictures"
