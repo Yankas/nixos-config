@@ -12,11 +12,10 @@
       outputs.homeManagerModules.desktop
       inputs.nix-colors.homeManagerModules.default
       ./desktop_common.nix
+      ./yankas_common.nix
     ];
 
   home = {
-    username = "yankas";
-    isSudoer = true;
     stateVersion = "24.05";
     packages = with pkgs; [
       whipper
@@ -38,9 +37,6 @@
 
   programs = {
     torrent.enable = true;
-    whatsappweb.enable = true;
-    discord.enable = true;
-    steam.enable = true;
   };
 
   games = {
@@ -51,8 +47,6 @@
     psp.enable = true;
     nintendo = {
       switch.enable = true;
-      gba.enable = true;
-      ds.enable = true;
       _3ds.enable = true;
     };
   };
@@ -64,6 +58,7 @@
   hyprland.autostart.onStart = [
       "steam"
       "${pkgs.discord}/bin/discord"
+      "qbittorrent"
   ];
 
   wayland.windowManager.hyprland.settings = {
@@ -82,9 +77,5 @@
 
   desktop.nasBookmarks.enable = true;
 
-  programs.git = {
-    userEmail = "christopher.sbrisny@gmail.com";
-    userName = "yankas";
-  };
 
 }
