@@ -15,7 +15,7 @@
   };
 
   home = {
-    username = yankas;
+    username = "yankas";
     isSudoer = true;
   };
 
