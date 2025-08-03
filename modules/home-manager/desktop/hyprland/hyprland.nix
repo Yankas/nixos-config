@@ -276,8 +276,11 @@ in
 
       ] ++
       lib.lists.forEach [ 1 2 3 4 5 6 7 8 9 10] (wsNum:
-        let ws = toString 5; in
+        let ws = toString wsNum; in
+        [
         "$mod, ${ws}, workspace, ${ws}"
+        "$mod SHIFT, ${ws}, movetoworkspace, ${ws}"
+        ]
       )
       ++
       [
