@@ -78,7 +78,7 @@ in
     };
 
     waybar.fontsize = lib.mkOption {
-      default = 20;al:Steam
+      default = 20;
     };
   };
 
