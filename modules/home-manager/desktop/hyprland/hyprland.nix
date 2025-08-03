@@ -5,6 +5,8 @@ let color = {
   text              = "FDF6E3";
   text-highlight    = "FF4221";
 }; in
+let initial-class-steam = "$steam_proton^"; # old = steam_app_.*
+in
 let set-bg = pkgs.writeShellScriptBin "set-bg" ''
       ${pkgs.swaybg}/bin/swaybg -i /run/current-system/sw/share/wallpapers/$1
     '';
@@ -87,7 +89,7 @@ in
 
 
     #programs.waybar.showBattery = lib.mkEnableOption "enable battery display.";
-    #programs.waybar.showWifi = lib.mkEnableOption "show Wifi.";
+    #rprograms.waybar.showWifi = lib.mkEnableOption "show Wifi.";
 
     hyprland.autostart.onStart = lib.mkOption {
       type = with lib.types; listOf str;
@@ -301,7 +303,7 @@ in
         # SCREENSHOTS
         ''$mod SHIFT, S, exec, ${screenshot}/bin/screenshot''
 
-        # AUDIO WORKSPACE
+      # AUDIO WORKSPACE
         "$mod, A, togglespecialworkspace, audio"
         "$mod CTRL, A, movetoworkspacesilent, special:audio"
       ]
@@ -321,7 +323,6 @@ in
         "$mod SHIFT, T, togglespecialworkspace, discord"
         "$mod CTRL SHIFT, T, movetoworkspacesilent, special:discord"
       ] else []);
-
 
       binde =
       [
@@ -377,7 +378,13 @@ in
 
         "opacity 0.0 override 0.0 override,class:^(xwaylandvideobridge)$"
         "noanim,class:^(xwaylandvideobridge)$"
-        "noinitialfocus,class:^(xwaylandvideobridge)$"
+        "noinitialfocus,class:^(xwaylandvideobridge)$"# AUDIO WORKSPACEinitial_steam_class
+      ] else [])
+      ++ (if config.programs.discord.enable then [
+        "$mod SHIFT, T, togglespecialworkspace, discord"
+        "$mod CTRL SHIFT, T, movetoworkspacesilent, special:discord"
+      ] else []);
+
         "maxsize 1 1,class:^(xwaylandvideobridge)$"
         "noblur,class:^(xwaylandvideobridge)$"
 
@@ -411,10 +418,10 @@ in
         "workspace special:Steam silent, initialClass:(^steam$), initialTitle:(^Sign in to Steam$)"
         "noinitialfocus, initialClass:(^steam$), initialTitle:(^Sign in to Steam$)"
         # STEAM GAMES
-        "noinitialfocus, class:($steam_game_class)"
-        "tile, class:($steam_game_class)"
-        "workspace name:$ws_games, initialClass:($steam_game_class)"
-        "monitor $m_right, initialClass:($steam_game_class)"
+        "noinitialfocus, initalClass:(${initial-class-steam})"
+        "tile, initialClass:(${initial-class-steam})"
+        "workspace name:$ws_games, initialClass:(${initial-class-steam})"
+        "monitor $m_right, initialClass:(${initial-class-steam})"
         # MISC
         "tile, initialClass:(^Slay the Spire$)"
         "workspace name:$ws_games, initialClass:(^Slay the Spire$)"

@@ -12,8 +12,6 @@ in
     ./style.nix
   ];
 
-
-
   options = with lib; {
     assets = lib.mkOption {
       type = with types; str;

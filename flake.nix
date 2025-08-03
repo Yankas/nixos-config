@@ -99,6 +99,13 @@
           ./hosts/server/configuration.nix
         ];
       };
+      install = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [
+          # > Our main nixos configuration file <
+          ./hosts/install/configuration.nix
+        ];
+      };
     };
 
     # Standalone home-manager configuration entrypoint

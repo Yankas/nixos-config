@@ -48,5 +48,7 @@
     };
   };
 
+  programs.kitty.settigs.font_size = 14;
+
   desktop.nasBookmarks.enable = true;
 }

@@ -18,6 +18,12 @@ def get_age(dob, time):
         age -= 1
     return age
 
+def calc_bmi(weight_in_kg, height_in_m):
+    round(float(weight_in_kg) / height_in_m**2, 2)
+
+def calc_bfp(bmi, age):
+    round(1.2 * bmi + 0.23 * age - 16.2, 2)
+
 def main():
     if(len(sys.argv) < 2):
         with open(weight_file) as f:
@@ -29,7 +35,6 @@ def main():
     arg = sys.argv[1]
     match arg:
         case "list":
-            # age = get_age()
             height_in_m = float(read_all(height_file)) / 100
             import csv
             date_of_birth = datetime.strptime(read_all(dob_file).strip(), "%Y-%m-%d")
@@ -41,9 +46,9 @@ def main():
                 for row in dataset:
                     time = row[0][0:10]
                     weight = row[1]
-                    bmi = round(float(weight) / height_in_m**2, 2)
+                    bmi = calc_bmi(weight, height_in_m)
                     age = get_age(date_of_birth, datetime.strptime(time, "%Y-%m-%d"))
-                    est_bfp = round(1.2 * bmi + 0.23 * age - 16.2, 2)
+                    est_bfp = calc_bfp(bmi, age)
                     print(f"{time}\t{weight}kg\t\t{bmi}\t\t{est_bfp}"  )
         case "edit":
             import subprocess,os
