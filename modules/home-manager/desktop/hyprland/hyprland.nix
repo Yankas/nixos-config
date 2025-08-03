@@ -275,7 +275,7 @@ in
         # Switch workspaces with mainMod + [0-9]
 
       ] ++
-      lib.lists.foreach [ 1 2 3 4 5 6 7 8 9 10] (wsNum:
+      lib.lists.forEach [ 1 2 3 4 5 6 7 8 9 10] (wsNum:
         let ws = toString 5; in
         "$mod, ${ws}, workspace, ${ws}"
       )
