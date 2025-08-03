@@ -167,7 +167,7 @@ in
         direct_scanout = false;
       };
 
-      animations =  {al:Steam
+      animations =  {
 
       workspace =
       [
