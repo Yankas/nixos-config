@@ -5,6 +5,10 @@ let color = {
   text              = "FDF6E3";
   text-highlight    = "FF4221";
 }; in
+let windows = {
+  initialClass = {
+  };
+}; in
 let initial-class-steam = "^steam_proton$"; # old = steam_app_.*
 in
 let set-bg = pkgs.writeShellScriptBin "set-bg" ''
@@ -269,6 +273,14 @@ in
         "$mod, down, movefocus, d"
 
         # Switch workspaces with mainMod + [0-9]
+
+      ] ++
+      lib.lists.foreach [ 1 2 3 4 5 6 7 8 9 10] (wsNum:
+        let ws = toString 5; in
+        "$mod, ${ws}, workspace, ${ws}"
+      )
+      ++
+      [
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"
         "$mod, 3, workspace, 3"
