@@ -79,6 +79,31 @@ in
 
     waybar.fontsize = lib.mkOption {
       default = 20;
+      type = lib.types.int;
+    };
+
+    waybar.height = lib.mkOption {
+      default = 30;
+      type = lib.types.int;
+    };
+
+
+    #programs.waybar.showBattery = lib.mkEnableOption "enable battery display.";
+    #rprograms.waybar.showWifi = lib.mkEnableOption "show Wifi.";
+
+    hyprland.autostart.onStart = lib.mkOption {
+      type = with lib.types; listOf str;
+      description = "list of commands to run when hyprland first initializes";
+      default = [];
+
+    };
+    hyprland.autostart.onReload = lib.mkOption {
+      type = with lib.types; listOf str;
+      description = "list of commands to every time hyprland reloads";
+      default = [
+        "${set-bg}/bin/set-bg ${config.home.wallpaper}"
+        "${setup-audio-ws}/bin/setup-audio-ws"
+      ];
     };
   };
 
@@ -168,6 +193,30 @@ in
       };
 
       animations =  {
+        enabled = (config.laptopMode.enable == false);
+        bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
+        animation = lib.mkIf (config.laptopMode.enable == false)
+        [
+          "windows, 1, 5, myBezier"
+          "windowsOut, 1, 7, default, popin 80%"
+          "border, 1, 10, default"
+          "borderangle, 1, 8, default"
+          "fade, 1, 7, default"
+          "workspaces, 0"
+        ];
+      };
+
+
+      dwindle = {
+        # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
+        pseudotile = true; # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
+        preserve_split = true; # you probably want this
+      };
+
+      gestures = {
+        # See https://wiki.hyprland.org/Configuring/Variables/ for more
+        workspace_swipe = false;
+      };
 
       workspace =
       [
