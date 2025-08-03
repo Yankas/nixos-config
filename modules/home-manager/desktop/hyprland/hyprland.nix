@@ -419,7 +419,7 @@ in
         "workspace special:Steam silent, initialClass:(^steam$), initialTitle:(^Sign in to Steam$)"
         "noinitialfocus, initialClass:(^steam$), initialTitle:(^Sign in to Steam$)"
         # STEAM GAMES
-        "noinitialfocus, initalClass:(${initial-class-steam})"
+        "noinitialfocus, initialClass:(${initial-class-steam})"
         "tile, initialClass:(${initial-class-steam})"
         "workspace name:$ws_games, initialClass:(${initial-class-steam})"
         "monitor $m_right, initialClass:(${initial-class-steam})"
