@@ -378,8 +378,26 @@ in
 
         "opacity 0.0 override 0.0 override,class:^(xwaylandvideobridge)$"
         "noanim,class:^(xwaylandvideobridge)$"
-        "noinitialfocus,class:^(xwaylandvideobridge)$"# AUDIO WORKSPACEinitial_steam_class
-      ] else [])
+        "noinitialfocus,class:^(xwaylandvideobridge)$"
+        "maxsize 1 1,class:^(xwaylandvideobridge)$"
+        "noblur,class:^(xwaylandvideobridge)$"
+
+        # whatsapp
+        "workspace special:whatsapp silent, title:(web.whatsapp.com.*)"
+        "float, title:(web.whatsapp.com.*)"
+        "size 1400 1000, title:(web.whatsapp.com.*)"
+        "center, title:(web.whatsapp.com.*)"
+        "float, initialClass:(^.blueman-manager-wrapped$)"
+
+        #leagueoflegends #TODO: remove
+        "workspace name:$ws_games, class:(leagueclient[ux]*.exe)"
+        "monitor $m_right, class:(leagueclient[ux]*.exe)"
+        "noanim, class:(leagueclient[ux]*.exe)"
+
+        # SCREENSHOTS / SATTY
+        "fullscreen, class:(^com.gabm.satty$)"
+        "noanim, class:(^com.gabm.satty$)"
+      ]
       ++ (if config.programs.discord.enable then [
         "$mod SHIFT, T, togglespecialworkspace, discord"
         "$mod CTRL SHIFT, T, movetoworkspacesilent, special:discord"
