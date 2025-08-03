@@ -397,11 +397,6 @@ in
         # SCREENSHOTS / SATTY
         "fullscreen, class:(^com.gabm.satty$)"
         "noanim, class:(^com.gabm.satty$)"
-      ]
-      ++ (if config.programs.discord.enable then [
-        "$mod SHIFT, T, togglespecialworkspace, discord"
-        "$mod CTRL SHIFT, T, movetoworkspacesilent, special:discord"
-      ] else []);
 
         "maxsize 1 1,class:^(xwaylandvideobridge)$"
         "noblur,class:^(xwaylandvideobridge)$"
