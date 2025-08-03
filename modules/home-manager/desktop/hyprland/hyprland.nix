@@ -5,7 +5,7 @@ let color = {
   text              = "FDF6E3";
   text-highlight    = "FF4221";
 }; in
-let initial-class-steam = "$steam_proton^"; # old = steam_app_.*
+let initial-class-steam = "^steam_proton$"; # old = steam_app_.*
 in
 let set-bg = pkgs.writeShellScriptBin "set-bg" ''
       ${pkgs.swaybg}/bin/swaybg -i /run/current-system/sw/share/wallpapers/$1
@@ -78,32 +78,7 @@ in
     };
 
     waybar.fontsize = lib.mkOption {
-      default = 20;
-      type = lib.types.int;
-    };
-
-    waybar.height = lib.mkOption {
-      default = 30;
-      type = lib.types.int;
-    };
-
-
-    #programs.waybar.showBattery = lib.mkEnableOption "enable battery display.";
-    #rprograms.waybar.showWifi = lib.mkEnableOption "show Wifi.";
-
-    hyprland.autostart.onStart = lib.mkOption {
-      type = with lib.types; listOf str;
-      description = "list of commands to run when hyprland first initializes";
-      default = [];
-
-    };
-    hyprland.autostart.onReload = lib.mkOption {
-      type = with lib.types; listOf str;
-      description = "list of commands to every time hyprland reloads";
-      default = [
-        "${set-bg}/bin/set-bg ${config.home.wallpaper}"
-        "${setup-audio-ws}/bin/setup-audio-ws"
-      ];
+      default = 20;al:Steam
     };
   };
 
@@ -192,31 +167,7 @@ in
         direct_scanout = false;
       };
 
-      animations =  {
-        enabled = (config.laptopMode.enable == false);
-        bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
-        animation = lib.mkIf (config.laptopMode.enable == false)
-        [
-          "windows, 1, 5, myBezier"
-          "windowsOut, 1, 7, default, popin 80%"
-          "border, 1, 10, default"
-          "borderangle, 1, 8, default"
-          "fade, 1, 7, default"
-          "workspaces, 0"
-        ];
-      };
-
-
-      dwindle = {
-        # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
-        pseudotile = true; # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
-        preserve_split = true; # you probably want this
-      };
-
-      gestures = {
-        # See https://wiki.hyprland.org/Configuring/Variables/ for more
-        workspace_swipe = false;
-      };
+      animations =  {al:Steam
 
       workspace =
       [
@@ -386,19 +337,7 @@ in
         "workspace special:whatsapp silent, title:(web.whatsapp.com.*)"
         "float, title:(web.whatsapp.com.*)"
         "size 1400 1000, title:(web.whatsapp.com.*)"
-        "center, title:(web.whatsapp.com.*)"
-        "float, initialClass:(^.blueman-manager-wrapped$)"
-
-        #leagueoflegends #TODO: remove
-        "workspace name:$ws_games, class:(leagueclient[ux]*.exe)"
-        "monitor $m_right, class:(leagueclient[ux]*.exe)"
-        "noanim, class:(leagueclient[ux]*.exe)"
-
-        # SCREENSHOTS / SATTY
-        "fullscreen, class:(^com.gabm.satty$)"
-        "noanim, class:(^com.gabm.satty$)"
-
-        "maxsize 1 1,class:^(xwaylandvideobridge)$"
+        "center, title:(web.whatsapp.com.*)"al:Steam
         "noblur,class:^(xwaylandvideobridge)$"
 
         # whatsapp
