@@ -48,7 +48,7 @@
     };
   };
 
-  programs.kitty.settigs.font_size = 14;
+  programs.kitty.settings.font_size = 14;
 
   desktop.nasBookmarks.enable = true;
 }

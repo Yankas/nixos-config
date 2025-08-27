@@ -132,7 +132,7 @@ in
         allow_remote_control = true;
         scrollback_lines = 3000;
         scrollback_pager_history_size = 8;
-        font_size = 20;
+        font_size = lib.mkDefault 20;
         adjust_baseline = -3;
         font_family = "Fira Code";
         bold_font = "auto";
