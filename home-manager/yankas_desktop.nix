@@ -59,6 +59,7 @@
       "steam"
       "${pkgs.discord}/bin/discord"
       "qbittorrent"
+      "easyeffects"
   ];
 
   wayland.windowManager.hyprland.settings = {

@@ -275,12 +275,12 @@ in
 
 
       ] ++  # Switch workspaces with mainMod + [0-9]
-      lib.lists.forEach [ 1 2 3 4 5 6 7 8 9 10 "$wsgames"] (wsNum:
+      lib.lists.forEach [ 1 2 3 4 5 6 7 8 9 10 ] (wsNum:
         let ws = toString wsNum; in
         "$mod, ${ws}, workspace, ${ws}"
       )
       ++  # Move active window to a workspace with mainMod + SHIFT + [0-9]
-      lib.lists.forEach [ 1 2 3 4 5 6 7 8 9 10 "$wsgames"] (wsNum:
+      lib.lists.forEach [ 1 2 3 4 5 6 7 8 9 10 ] (wsNum:
         let ws = toString wsNum; in
         "$mod SHIFT, ${ws}, movetoworkspace, ${ws}"
       ) ++
