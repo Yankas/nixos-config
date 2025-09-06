@@ -420,6 +420,12 @@ in
         "tile, initialClass:(${initial-class-steam})"
         "workspace name:$ws_games, initialClass:(${initial-class-steam})"
         "monitor $m_right, initialClass:(${initial-class-steam})"
+
+        "noinitialfocus, initialClass:(steam_app_.*)"
+        "tile, initialClass:(steam_app_.*)"
+        "workspace name:$ws_games, initialClass:(steam_app_.*)"
+        "monitor $m_right, initialClass:(steam_app_.*)"
+
         # MISC
         "tile, initialClass:(^Slay the Spire$)"
         "workspace name:$ws_games, initialClass:(^Slay the Spire$)"
