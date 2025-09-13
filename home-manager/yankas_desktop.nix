@@ -24,6 +24,7 @@
       d2r-tools
       bottles
       solaar
+      dos2unix
     ];
     wallpaper = "hgss.png";
   };
