@@ -25,6 +25,11 @@
       bottles
       solaar
       dos2unix
+      (heroic.override {
+          extraPkgs = pkgs: [
+            pkgs.gamescope
+          ];
+        })
     ];
     wallpaper = "hgss.png";
   };
