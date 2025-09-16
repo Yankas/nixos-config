@@ -18,10 +18,10 @@
       #inputs.sops-nix.nixosModules.sops
       #outputs.systemModules.ddclient
     ];
+      nixpkgs.config.permittedInsecurePackages = [
+                      "dotnet-sdk-7.0.410"
+                    ];
 
-    nixpkgs.config.permittedInsecurePackages = [
-                "electron-33.4.11"
-              ];
 
   #sops.defaultSopsFile = ./secrets/secrets.yaml;
   #sops.defaultSopsFormat = "yaml";
