@@ -19,10 +19,6 @@
       #outputs.systemModules.ddclient
     ];
 
-  nixpkgs.config.permittedInsecurePackages = [
-                "electron-33.4.11"
-              ];
-
   #sops.defaultSopsFile = ./secrets/secrets.yaml;
   #sops.defaultSopsFormat = "yaml";
   #sops.age.keyFile = "home/u";
