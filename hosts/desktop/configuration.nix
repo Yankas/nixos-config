@@ -18,10 +18,12 @@
       #inputs.sops-nix.nixosModules.sops
       #outputs.systemModules.ddclient
     ];
-      nixpkgs.config.permittedInsecurePackages = [
-                      "dotnet-sdk-7.0.410"
-                      "dotnet-sdk-6.0.428"
-                    ];
+
+    nixpkgs.config.permittedInsecurePackages = [
+                    "dotnet-sdk-7.0.410"
+                    "dotnet-sdk-6.0.428"
+                    "archiver-3.5.1"
+                  ];
 
 
   #sops.defaultSopsFile = ./secrets/secrets.yaml;
