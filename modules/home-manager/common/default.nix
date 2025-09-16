@@ -58,6 +58,11 @@ in
       };
     };
 
+      nixpkgs.config.permittedInsecurePackages = [
+              "electron-33.4.11"
+              "dotnet-sdk-7.0.410"
+            ];
+
     programs = {
       home-manager.enable = true;
       git.enable = true;
