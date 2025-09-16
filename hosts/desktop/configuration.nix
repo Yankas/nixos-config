@@ -20,6 +20,7 @@
     ];
       nixpkgs.config.permittedInsecurePackages = [
                       "dotnet-sdk-7.0.410"
+                      "dotnet-sdk-6.0.428"
                     ];
 
 
