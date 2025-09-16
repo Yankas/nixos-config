@@ -10,6 +10,11 @@
     enableNixpkgsReleaseCheck = false;
     packages = with pkgs; [
       libreoffice
+      (heroic.override {
+  extraPkgs = pkgs: [
+    pkgs.gamescope
+  ];
+})
 
     ];
   };
