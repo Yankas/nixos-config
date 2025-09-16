@@ -106,12 +106,6 @@
   services.tumbler.enable = true;
 
   environment.systemPackages = with pkgs; [
-      (heroic.override {
-      extraPkgs = pkgs: [
-        pkgs.gamescope
-      ];
-    })
-
     # BROWSER
     firefox
     tor-browser
