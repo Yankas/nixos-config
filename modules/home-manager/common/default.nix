@@ -130,6 +130,7 @@ in
 
 
     home.sessionVariables = {
+      DOTNET_ROOT = "${pkgs.dotnet-sdk}/share/dotnet";
       EDITOR = "nvim";
       VISUAL = "nvim";
       XDG_DOCUMENTS_DIR="/doc";
