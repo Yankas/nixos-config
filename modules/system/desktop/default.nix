@@ -114,7 +114,7 @@
     environment = {
       pathsToLink = [ "/share/wallpapers" ];
       sessionVariables.NIXOS_OZONE_WL = "1";
-      sessionVariables.DOTNET_ROOT = "${pkgs.dotnet-sdk_8}/share/dotnet";
+      sessionVariables.DOTNET_ROOT = "${pkgs.dotnetCorePackages.dotnet_8.sdk}/share/dotnet";
       etc = {
         "xdg/user-dirs.defaults".text = ''
           DOWNLOAD=download
